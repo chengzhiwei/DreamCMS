@@ -1,6 +1,6 @@
 <?php
-
-$mysql_config = require("Config/config.php");
+include_once 'Config/functions.php';
+$mysql_config = require("Config/system.php");
 $site_config = array(
     'DEFAULT_MODULE' => 'Index', // 默认模块
     'TMPL_TEMPLATE_SUFFIX' => '.php',
