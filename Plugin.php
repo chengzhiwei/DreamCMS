@@ -5,7 +5,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<'))
 
 define('APP_DEBUG', True);
 
-// 定义应用目录
+//定义应用目录
 define('APP_PATH', './Plugin/');
 
 define('APP_NAME', 'Plugin');
