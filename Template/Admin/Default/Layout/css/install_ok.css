@@ -1,0 +1,29 @@
+.install-msg {
+    padding: 10px 20px;
+    color: #777;
+    line-height: 31px;
+    font-size: 14px;
+    overflow: hidden;
+    clear: both;
+}
+
+.over-link {
+    padding: 0px 40px;
+    line-height: 41px;
+    overflow: hidden;
+    clear: both;
+}
+
+.over-link a {
+    line-height: 14px;
+    padding: 6px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #EEE #CCC #CCC #EEE;
+    background: #FAFAFA;
+    color: #333;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    text-decoration: none;
+}

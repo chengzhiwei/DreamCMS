@@ -1,0 +1,43 @@
+body{
+    color: #000;
+}
+.add_txt .t_table{
+    background: #fff;
+}
+
+.add_txt table.add_box td{
+    border-right:0px;
+    border-bottom: 1px dotted #BCBCBC;
+    padding: 8px 10px;
+}
+
+.add_now.t_table{
+    width: 97%;
+    margin: 0 auto;
+}
+
+.add_now.t_table td{
+    border: 0px;
+}
+
+.add_box.t_table{
+    border-right:1px solid #dedede;
+}
+
+.t_table.add_box td.tlt_td {
+    padding-bottom: 0px;
+    border-bottom: 1px solid #dedede;
+}
+
+.map{
+    padding-left: 14px;
+    margin-bottom: 10px;
+}
+
+.map a:hover{
+    color: red;
+}
+
+.map .f_map{
+    text-decoration: underline;
+}

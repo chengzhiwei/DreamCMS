@@ -1,0 +1,17 @@
+<volist name="lang" id="l">
+    <a href="{$l['href']}" >{:L($l['lang'])}</a> <span>|</span>
+</volist>
+<volist name="menu" id="m">
+    <li class="menu01" style="width:163px;">
+
+        <a href="{$m['href']}">{$m['title']}</a>
+        <dl style="width: 163px; display: none;">
+            <dd>
+            <volist name="m['child']" id="c">
+                <a href="{$c['title']}" title="广告技术" ><span>{$c['title']}</span></a>
+            </volist>
+            </dd>
+        </dl>
+    <li class="line"></li>
+</li>
+</volist>

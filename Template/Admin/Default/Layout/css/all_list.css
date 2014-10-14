@@ -1,0 +1,77 @@
+body{
+    color: #000;
+}
+.top_btn.t_table{
+    border:1px solid #ccd9b9;
+    background: none;
+}
+
+.top_btn.t_table td{
+    border:none
+}
+
+.txt_list{
+    margin:0  auto 15px;
+}
+
+.txt_list td{
+    background: #fff;
+}
+
+.txt_list thead td{
+    background: #FBFCE2;
+}
+
+.txt_list caption{
+    text-align: left;
+    line-height: 28px;
+    border:1px solid #dedede ;
+    border-bottom: 0;
+}
+
+.txt_list a{
+    text-decoration: underline;
+}
+
+.txt_list a:hover{
+    color: red;
+}
+
+.txt_current.t_table{
+    margin-top: 15px;
+}
+
+.txt_current.t_table td{
+    border:1px solid #dedede;
+    border-bottom: 0px;
+    padding-left: 15px;
+    height: 30px;
+}
+
+.l_column{
+    border:1px solid #ccd9b9;
+    width: 11%;
+}
+
+.l_column p{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #4D6C2F;
+    background: url(../images/dedeexplode.gif) 5px center no-repeat #dedede;
+    cursor:pointer;
+}
+
+.l_column ul li{
+    height: 28px;
+    line-height: 28px;
+    border-bottom:1px dotted #dedede;
+    padding-left: 25px;
+    background: url(../images/arr4.gif) 15px center no-repeat;
+
+}
+
+.w100{
+    width: 88%;
+}

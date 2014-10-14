@@ -1,0 +1,202 @@
+/* CSS Document */
+html {
+	overflow-y: hidden;
+}
+.head {
+	width: 100%;
+	height: 37px;
+	overflow: hidden;
+	z-index: 8;
+	position: relative;
+}
+.top {
+	height: 37px;
+	width: 100%;
+	background: #699c03;
+	overflow: hidden;
+	clear: both;
+}
+.top .top_logo {
+	width: 170px;
+	height: 37px;
+	float: left;
+	line-height: 37px;
+	text-align: center;
+        background:url(../images/top_logo.png) left top repeat-x;
+
+}
+.top .top_link {
+	float: right;
+	padding: 5px 10px 0px 0px;
+}
+.top .top_link ul {
+	float: left;
+	padding: 8px 0px 0px 0px;
+	line-height: 14px;
+	overflow: hidden;
+}
+.top .top_link ul li {
+	float: left;
+	color: #CBDAB3;
+	border-right: 1px solid #61910F;
+	margin-right: -1px;
+}
+.top .top_link ul li.welcome {
+	border-right: none;
+	color: #A8C280;
+	padding-right: 6px;
+}
+.top .top_link ul li a {
+	color: #CBDAB3;
+	padding-left: 11px;
+	padding-right: 11px;
+	text-decoration: none;
+}
+.top .top_link ul li a:hover {
+	color: white;
+	text-decoration: underline;
+}
+.top .top_link .quick {
+	padding: 3px 0px 0px 0px;
+	float: left;
+}
+.top .top_link .quick a {
+	display: block;
+	text-decoration: none;
+	color: #C60;
+	float: left;
+	line-height: 21px;
+	height: 21px;
+	overflow: hidden;
+}
+.top .top_link .quick a.ac_qucikmenu {
+	width: 81px;
+	background: url(../images/quick_bg.gif) left top no-repeat;
+	letter-spacing: 1px;
+	text-indent: 8px;
+}
+.top .top_link .quick a.ac_qucikadd {
+	width: 19px;
+	background: url(../images/quick_bg.gif) right top no-repeat;
+}
+/*左边*/
+.left {
+	position: absolute;
+	top: 38px;
+	width: 212px;
+	left: 0px;
+	bottom: 0px;
+	z-index: 7;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+body.showmenu .left {
+	display: block;
+}
+.menu {
+	height: 100%;
+}
+a.mm div {
+	background: url(../images/leftmbg1.gif) no-repeat;
+	height: 37px!important;
+	height: 47px;
+	padding: 6px 4px 4px 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+	font-weight: bold;
+	color: #475645;
+	cursor: pointer;
+}
+a.mmac div {
+	background: url(../images/leftbg2.gif) no-repeat;
+	height: 37px!important;
+	height: 47px;
+	padding: 6px 4px 4px 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+	font-weight: bold;
+	color: #325304;
+}
+a.mm:hover div {
+	background: url(../images/leftbg2.gif) no-repeat;
+	color: #4F7632;
+}
+.mmf {
+	height: 1px;
+	padding: 5px 7px 5px 7px;
+}
+#mainct {
+	padding-top: 8px;
+	background: url(../images/idnbg1.gif) repeat-y;
+}
+
+dl.bitem {
+	clear: both;
+	width: 140px;
+	margin: 0px 0px 5px 12px;
+	background: url(../images/menunewbg2.gif) repeat-x;
+}
+dl.bitem1 {
+	background: url(../images/menunewbg.gif) repeat-x;
+}
+dl.bitem dt {
+	height: 25px;
+	line-height: 25px;
+	padding-left: 35px;
+	cursor: pointer;
+}
+dl.bitem dt b {
+	color: #4D6C2F;
+}
+dl.bitem dd {
+	padding: 3px 3px 3px 3px;
+	background-color: white;
+}
+.sitem {
+	d/*isplay: none;*/
+}
+.sitemu li {
+	padding: 0px 0px 0px 18px;
+	line-height: 22px;
+	background: url(../images/arr4.gif) no-repeat 5px 9px;
+}
+/*右边*/
+.main {
+	margin-left: 212px;
+}
+.app_content {
+	width: 99.99%;
+}
+
+/*语言*/
+.qucikmenu {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 29px;
+    z-index: 9;
+}
+
+.qucikmenu ul {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e7e7e7;
+    list-style: none outside none;
+    width: 98px;
+}
+.qucikmenu ul li {
+    display: block;
+    text-align: left;
+}
+
+.qucikmenu ul li a {
+    color: #666666;
+    display: block;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.qucikmenu ul li:hover{
+	background:#eee;
+}

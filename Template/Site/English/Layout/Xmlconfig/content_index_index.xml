@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <module>
+       
+        <type>article</type>
+        
+        <cid>1</cid>
+        
+        <order></order>
+       
+        <position></position>
+       
+        <limit></limit>
+        
+        <field>*</field>
+        
+        <thumb></thumb>
+        
+        <where>nam=:name and pwd=:pwd|1,2
+            (name='1' and p='2') or ('a'=3)
+        </where>
+        
+        <return></return>
+    </module>
+    
+    <module>
+        <type>html</type>
+        <id>1</id>
+        <return></return>
+    </module>
+</root>

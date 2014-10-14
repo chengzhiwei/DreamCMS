@@ -1,0 +1,18 @@
+<div>
+    <volist name="lang" id="l">
+        <a href="{$l['href']}" >{:L($l['lang'])}</a><br />
+    </volist>
+
+
+</div>
+<ul>
+    <li>
+        <a href="">{:L('HOME')}</a>
+    </li>
+    <volist name="menu" id="m">
+        <li>
+              <a href="{$m['href']}">{$m['title']}</a>
+        </li>
+    </volist>
+</ul>
+

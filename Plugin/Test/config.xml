@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <name>Plugin Test</name>
+    <author>Dream CMS</author>
+    <contact>Dream CMS@***.com</contact>
+    <desc>插件描述</desc>
+    <vhook>        
+        <name></name>
+        <hoolval></hoolval>
+        <method></method>
+        <desc></desc>
+    </vhook>
+    <vhook>        
+        <name></name>
+        <hoolval></hoolval>
+        <method></method>
+        <desc></desc>
+    </vhook>
+</root>

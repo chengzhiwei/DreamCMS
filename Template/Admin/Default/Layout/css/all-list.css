@@ -1,0 +1,38 @@
+body{
+    color: #000;
+}
+.top_btn.t_table{
+    border:1px solid #ccd9b9;
+    background: none;
+}
+
+.top_btn.t_table td{
+    border:none
+}
+
+.txt_list{
+    margin: 15px auto;
+}
+
+.txt_list td{
+    background: #fff;
+}
+
+.txt_list thead td{
+    background: #FBFCE2;
+}
+
+.txt_list caption{
+    text-align: left;
+    line-height: 28px;
+    border:1px solid #dedede ;
+    border-bottom: 0;
+}
+
+.txt_list a{
+    text-decoration: underline;
+}
+
+.txt_list a:hover{
+    color: red;
+}

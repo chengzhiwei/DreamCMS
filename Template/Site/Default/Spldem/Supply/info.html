@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            table
+            {
+                border-collapse: collapse;
+                border: none;
+                width: 100%;
+            }
+            td
+            {
+                border: solid #000 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr style="text-align: center">
+                <td>ID</td>
+                <td>名称</td>
+                <td>单位</td>
+                <td>价格</td>
+                <td>status</td>
+                <td>open</td>
+                <td>下架时间</td>
+                <td>发布时间</td>
+                <td>pic</td>
+                <td>最少起售</td>
+                <td>已售量</td>
+                <td>价格区间</td>
+                <td>salesnum</td>
+                <td>online</td>
+                <td>pricesee</td>
+            </tr>
+            <volist name="info['list']" id="i">
+                <tr style="text-align: center">
+                    <td>{$i['id']}</td>
+                    <td>{$i['name']}</td>
+                    <td>{$i['unit']}</td>
+                    <td>{$i['price']}</td>
+                    <td>
+                        <eq name="i['status']" value="00">正常</eq>
+                        <eq name="i['status']" value="99">删除</eq>
+                        <eq name="i['status']" value="66">强制下架</eq>
+                    </td>
+                    <td>
+                        <eq name="i['open']" value="00">上架</eq>
+                        <eq name="i['open']" value="01">下架</eq>
+                    </td>
+                    <td>
+                        <?php 
+                        if($i['endtime'] == '0'){
+                        echo "无限期";
+                        }else{
+                        echo date('Y-m-d H:i:s',$i['endtime']);
+                        }
+                        ?>
+                    </td>
+                    <td><?php echo date('Y-m-d H:i:s',$i['updtime']);?></td>
+                    <td><img src="<?php echo C('FEILONG_DOMAIN').'/Uploads/'.$i['uid'].'/'.$i['pic'];?>" style="width: 100px;height: 100px;"></td>
+                    <td>{$i['salesmin']}</td>
+                    <td>{$i['salesstock']}</td>
+                    <td>
+                        <?php 
+                        $data=unserialize($i['pricenum']);
+                        if(!empty($data[0])){
+                        foreach($data as $d){
+                        echo '购买<font color=red>'.$d['sums'].'</font>个及以上<font color=red>:'.$d['price']."</font><br>";
+                        }
+                        }
+
+                        ?>
+                    </td>
+                    <td>{$i['salesnum']}</td>
+                    <td>
+                        <eq name="i['online']" value="00">不可在线购买</eq>
+                        <eq name="i['online']" value="01">可在线购买</eq>
+                    </td>
+                    <td>
+
+                        <eq name="i['pricesee']" value="00">价格会员可见</eq>
+                        <eq name="i['pricesee']" value="01">价格所有人可见</eq>
+                    </td>
+                </tr>
+            </volist>  
+        </table>
+    </body>
+</html>

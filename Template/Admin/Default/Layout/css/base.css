@@ -1,0 +1,264 @@
+﻿/* CSS Document */
+
+/*reset*/
+html {
+	overflow-y: scroll;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	vertical-align: baseline;
+}
+i, cite, em, var, address, dfn {
+	font-style: normal;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-size: 12px;
+	color: #666;
+	line-height: 1;
+	background-color: #fff;
+	font-family: Arial, Tahoma, Simsun, Helvetica, sans-serif;
+	-webkit-text-size-adjust: none;
+}
+.auto {
+	overflow: auto;
+	_zoom: 1
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td {
+	word-break: break-all;
+	word-wrap: break-word;
+	line-height: 1.5;
+}
+input:-moz-placeholder {
+ color: #666;
+}
+
+::-webkit-input-placeholder {
+ color: #666;
+}
+input {
+	outline: none;
+}
+/*base*/
+.FmYahei {
+	font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+}
+.FmAril {
+	font-family: Arial, Tahoma, Simsun, Helvetica, sans-serif;
+}
+a {
+	color: #666;
+	text-decoration: none;
+ _hide-focus: expression(this.hideFocus=true);
+	outline: none
+}
+a:hover {
+	color: #F60;
+	text-decoration: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.cl {
+	clear: both;
+}
+.F10 {
+	font-size: 10px;
+}
+.F11 {
+	font-size: 11px;
+}
+.F12 {
+	font-size: 12px;
+}
+.F13 {
+	font-size: 13px;
+}
+.F14 {
+	font-size: 14px;
+}
+.F15 {
+	font-size: 15px;
+}
+.F16 {
+	font-size: 16px;
+}
+.F18 {
+	font-size: 18px;
+}
+.block {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+.widthMax {
+	width: 1000px;
+	margin: 0 auto;
+}
+.cRed {
+	color: #e60012;
+}
+.cWhite {
+	color: #FFF;
+}
+.cGreen {
+	color: #0d803b;
+}
+.cGreen2 {
+	color: #22ac38
+}
+.cLightGreen {
+	color: #88FCE5;
+}
+.cGray {
+	color: #434343;
+}
+.cGray1 {
+	color: #999;
+}
+.cGray2 {
+	color: #DEDEDE;
+}
+.cGray3 {
+	color: #333;
+}
+.cBlue {
+	color: #053c7e;
+}
+.cLightBlue {
+	color: #06f;
+}
+.cBlue2 {
+	color: #384766;
+}
+.cBlack {
+	color: #000;
+}
+.cOrange {
+	color: #f60;
+}
+.cYellow {
+	color: #FF0
+}
+/*右边*/
+a:link {
+	font-size: 9pt;
+	color: black;
+	text-decoration: none;
+	font-family: "宋体";
+}
+a:visited {
+	font-size: 9pt;
+	color: black;
+	text-decoration: none;
+	font-family: "宋体";
+}
+.t_body {
+	background: url(../images/allbg.gif) repeat;
+	margin: 8px;
+}
+.box {
+	border: 1px solid #dedede;
+	background-color: #fff;
+}
+.t_table {
+	width: 98%;
+	border-right: none;
+	border-bottom: none;
+	border-spacing: 1px;
+	background-color: #CFCFCF;
+	-webkit-margin-start: auto;
+	-webkit-margin-end: auto;
+	margin:0 auto;
+}
+.t_table thead {
+	background: #FBFCE2;
+}
+.t_table td {
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+.tlt_td {
+	height: 28px;
+	background: url(../images/tbg.gif) repeat-x;
+	padding-left: 10px;
+}
+b, strong {
+	color: #660;
+}
+.np {
+	border: none;
+}
+.coolbg {
+	border: none;
+	border-right: 1px solid #ACACAC;
+	border-bottom: 1px solid #ACACAC;
+	padding: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background: #CCC url(../images/allbtbg2.gif);
+	cursor: pointer;
+}
+input[type='checkbox'], input[type='radio'] {
+	vertical-align: -2px;
+}
+.marg{
+	margin-top:6px;
+}
+
+/*切换门*/
+.switch{
+	border: 1px solid #dedede;
+	border-bottom:none;
+	background:#E5F2D0;
+	padding:5px 10px;
+	display:block;
+	float:left;
+	margin-right:5px;
+	border-radius:3px 3px 0 0;
+}
+.switch span{
+	text-decoration:underline;
+}
+.switch.current{
+	background:#eee;
+}
+.switch.current span{
+	text-decoration:none;
+}
+
+.map{
+	padding-left:15px;
+}
+.map span{
+	display:inline-block;
+	padding:0 5px;
+	font-family: "宋体";
+}
+a.f_map{
+	text-decoration:underline;
+}
+	

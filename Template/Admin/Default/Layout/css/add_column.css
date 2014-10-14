@@ -1,0 +1,59 @@
+/* CSS Document */
+.main{
+	padding:10px;
+}
+a:hover{
+	color: #f60;
+}
+.menu{
+	padding:10px 0 0 14px;
+}
+.t_table {
+	border:1px solid #dedede;
+	color:#000;
+}
+.t_table td {
+	border-right:none;
+	border-bottom: 1px dotted #dedede;
+	padding-left:5px;
+}
+.p_width{
+	width:60px;
+}
+.san{
+	font-family:sans-serif;
+}
+input{
+	margin:0;
+}
+.w_width{
+	width:250px;
+}
+.t_label{
+	width:75px;
+	display:inline-block;
+}
+.t_label input{
+	margin-right:5px;
+}
+.ls_label{
+	display:block;
+	padding:5px 0;
+}
+.ls_label input{
+	margin-right:5px;
+}
+.g_tarea{
+	height:23px;
+	margin-left:0;
+}
+.l_tarea{
+	height:50px;
+}
+.p_btn{
+	padding:10px;
+}
+.p_btn a{
+	margin-right:20px;
+}
+	

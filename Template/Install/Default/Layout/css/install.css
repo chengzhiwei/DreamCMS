@@ -1,0 +1,344 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    background-color:#FFF;
+}
+
+ul{
+    list-style:none;
+}
+a{
+    color:#06C;
+}
+a:hover{
+    color:#669900;
+    text-decoration:none;
+}
+input,button,select{
+    vertical-align:middle;
+}
+.fc-690{
+    color:#690;
+}
+.fs-14{
+    font-size:14px;
+}
+
+.top_head{
+    background:url(../images/top-bg.png) left top repeat-x;
+}
+
+.top{
+    width:960px;
+    height:72px;
+    overflow:hidden;
+    margin:0px auto;
+}
+.top .top-logo{
+    width:280px;
+    height:72px;
+    float:left;
+    padding-left:10px;
+    background:url(../images/top-logo.png) 10px 0px no-repeat;
+    overflow:hidden;
+}
+.top .top-logo h1{
+    font-size:0px;
+    line-height:1000%;
+}
+.top .top-link{
+    height:15px;
+    padding:12px 12px 0px 0px;
+    overflow:hidden;
+}
+.top .top-link ul{
+    height:15px;
+    float:right;
+    overflow:hidden;
+}
+.top .top-link ul li{
+    float:left;
+    padding-left:10px;
+    padding-right:10px;
+    border-left:1px solid #E8F5E3;
+    margin-left:-1px;
+    line-height:14px;
+}
+.top .top-link ul li a{
+    text-decoration:none;
+    color:#555;
+}
+.top .top-version{
+    height:40px;
+    float:right;
+    padding:7px 12px 0px 0px;
+}
+.top .top-version h2{
+    color:#E8F5E3;
+    font-size:26px;
+    font-style:italic;
+    cursor:default;
+}
+
+.main{
+    width:900px;
+    margin:14px auto 0px;
+}
+
+.main .pleft{
+    width:168px;
+    float:left;
+    cursor:default;
+    padding-top:6px;
+}
+.main .pright{
+    width:720px;
+    float:right;
+}
+
+.pr-title{
+    width:720px;
+    height:22px;
+    margin:8px auto 0px;
+    background:url(../images/boxtitle_bg.gif) 0px 20px repeat-x;
+    overflow:hidden;
+}
+
+.pr-title h3{
+    width:158px;
+    height:22px;
+    line-height:22px;
+    overflow:hidden;
+    display:block;
+    font-size:12px;
+    padding-top:1px;
+    text-indent:10px;
+    background:url(../images/boxtitle_bg.gif) 0px -2px no-repeat;
+    letter-spacing:2px;
+    color:#6D8A4F;
+    font-weight:bold;
+}
+
+.t1{
+    width:162px;
+}
+.t1 dt{
+    width:162px;
+    height:25px;
+    line-height:25px;
+    background:url(../images/leftbox-tbg.png) no-repeat;
+    font-weight:bold;
+    color:#7D9F5C;
+    text-indent:10px;
+    letter-spacing:2px;
+}
+.t1 dd{
+    width:160px;
+    background-color:#FAFDF9;
+    border:1px solid #E0ECD4;
+}
+.t1 dd ul{
+    width:158px;
+    border:1px solid #FFF;
+    overflow:hidden;
+    padding:10px 0px;
+    background:url(../images/step-ico-bg.png) 20px 21px no-repeat;
+}
+.t1 dd ul li{
+    height:40px;
+    line-height:36px;
+    text-indent:52px;
+    display:block;
+    color:#888;
+    font-size:14px;
+}
+.t1 dd ul li.succeed{
+    color:#690;
+    background:url(../images/ico-step-succeed.png) 23px 14px no-repeat;
+}
+.t1 dd ul li.now{
+    color:#FF9900;
+    font-weight:bold;
+    background:url(../images/ico-step-now.png) 23px 14px no-repeat;
+}
+
+.btn_back {
+    width: 104px;
+    height: 34px;
+    border: none;
+    background: url(../images/but_back.gif) no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 100px;
+}
+
+.btn_next {
+    width: 104px;
+    height: 34px;
+    border: none;
+    background: url(../images/but_next.gif) no-repeat;
+    cursor: pointer;
+    margin-left: 10px;
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 100px;
+}
+
+.twbox{
+    width:706px;
+    border:1px solid #CFDCC9;
+    font-size:12px;
+    overflow:hidden;
+    margin:8px auto;
+
+}
+
+
+.twbox thead tr td{
+    background:url(../images/body_title_bg.gif) -1px -1px repeat-x;
+    height:31px;
+    line-height:31px;
+    text-indent:10px;
+}
+
+.twbox thead tr td strong{
+    letter-spacing:2px;
+    margin-right:14px;
+    color:#FFF;
+    font-size:14px;
+}
+
+
+.twbox thead tr td span{
+    color:#CDA;
+}
+
+
+.twbox thead tr td  p{
+    height:31px;
+    display:inline;
+    float:right;
+    margin:-31px 10px 0 0;
+    overflow:hidden;
+}
+.twbox thead tr td  p *{
+    float:right;
+}
+.twbox thead tr td a.thlink{
+    color:#FFF;
+}
+.twbox thead tr td a.thlink:hover{
+    color:#FFFF00;
+    text-decoration:none;
+}
+
+
+.twbox tbody {
+    overflow:hidden;
+    text-align:left;
+}
+
+.twbox tbody tr th{
+    background:#F9FCEF;
+    color:#6D8A4F;
+    line-height:21px;
+    height:21px;
+    text-indent:30px;
+    font-weight:normal;
+    border-bottom:1px solid #EFF7D8;
+    letter-spacing:2px;
+}
+
+.twbox tbody tr td{
+    padding:7px;
+    border-bottom:1px solid #F2F2F2;
+    color:#333;
+    vertical-align:top;
+}
+
+.twbox tbody tr td p{
+    line-height:21px;
+}
+.twbox tbody tr td p strong img{
+    vertical-align:middle;
+}
+.twbox tbody tr td img{
+    vertical-align:top;
+    margin:0px 10px 5px 0px;
+
+}
+.twbox tbody tr td small{
+    color:#888;
+}
+
+.twbox tfoot tr td{
+    padding:10px;
+    line-height:25px;
+    text-align:center;
+}
+.twbox tfoot tr td p{
+    line-height:21px;
+    margin-bottom:10px;
+}
+
+input.but{
+    height:26px;
+    padding-left:6px;
+    padding-right:6px;
+    line-height:26px;
+    font-weight:bold;
+    letter-spacing:1px;
+    color:#FFF;
+    background-color:#FC3;
+}
+
+.onetd{
+    width:120px;
+    text-align:right;
+    line-height:25px;
+}
+
+.input_txt{
+    padding: 4px 8px 4px 6px;
+    border: 1px solid #AAA;
+    font-size: 12px;
+    color: #000;
+    width: 200px;
+}
+
+.tip_block {
+    width: 458px;
+    margin: 40px auto 0;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.tip_block h2 {
+    line-height: 30px;
+    height: 30px;
+    border-bottom: 1px solid #dadada;
+    background: #fafafa;
+    font-size: 14px;
+    color: #000;
+}
+
+.tip_content {
+    padding: 20px 40px 0px;
+    height: 115px;
+}
+
+.tip_content p {
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.tip_content a {
+    text-decoration: underline;
+    color: #551a8b;
+}

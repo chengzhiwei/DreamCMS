@@ -1,0 +1,25 @@
+/* CSS Document */
+.pr-agreement{
+	padding:16px;
+	line-height:21px;
+	color:#666;
+	height:300px;
+	overflow-y:scroll;
+}
+.pr-agreement strong{
+	display:block;
+	color:#333;
+	line-height:27px;
+	margin-top:6px;
+}
+.pr-agreement p{
+	text-indent:30px;
+}
+
+
+.btn-box{
+	margin-top:15px;
+	border-top:1px solid #DDD;
+	padding:10px 6px;
+	vertical-align:middle;
+}

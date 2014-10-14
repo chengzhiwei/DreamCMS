@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    padding: 0;
+    margin: 0
+}
+
+.popBoxV3Bg {
+    background: #000;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.popBoxV3Box {
+    border: 2px solid #B7C2CB;
+    position: fixed;
+    left: 50%;
+    background: url('popBoxV3Head.png') top repeat-x #fff;
+    z-index: 1000;
+}
+
+.popBoxV3Head {
+    height: 40px;
+    padding: 0 0 0 10px;
+}
+
+.popBoxV3Til {
+    float: left;
+    font-size: 16px;
+    color: #000;
+    font-family: '微软雅黑', sans-serif;
+    position: relative;
+    top: 12px;
+}
+
+a.popBoxV3Til {
+    color: #666;
+}
+a.popBoxV3Til:hover{
+    color: #f60;
+}
+a.popBoxV3Til.cur {
+    color: #000;
+}
+
+.popBoxV3Line {
+    display: block;
+    float: left;
+    margin: 0 10px;
+    height: 26px;
+    width: 1px;
+    overflow: hidden;
+    background:url("popBoxV3Line.png");
+    position: relative;
+    top: 7px;
+}
+
+.popBoxV3Close {
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url("../popBoxV3/popBoxV3Close.gif");
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+
+.popBoxV3Body {
+    display: none;
+}
+
+.popBoxV3Body.cur {
+    display: block;
+	background:#fff;
+}

@@ -1,0 +1,143 @@
+body.login{
+    background: #f7f7f7;
+}
+
+.login_block{
+    width: 660px;
+    margin: 144px auto 0;
+    border:5px solid #eeeeee;
+    padding: 15px 30px 10px;
+    background: #fff;
+}
+
+.top_title{
+    line-height: 20px;
+}
+
+.top_title h1{
+    font-size:18px;
+    font-weight: bold;
+    float: left;
+}
+
+.top_title a{
+    float: right;
+}
+
+.notice{
+    border:1px solid #f2dd8c;
+    background: #ffffcc;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+.notice span{
+    background:url(../images/warning.gif) 0 center no-repeat;
+    padding-left: 24px;
+}
+
+.login_main form{
+    width: 308px;
+    background: url(../images/fg.gif) right 0 no-repeat;
+    margin-left: 30px;
+}
+
+.login_main form input{
+    width: 144px;
+    border:1px solid #707070;
+    height: 22px;
+    line-height: 22px;
+    background: #fff;
+}
+
+.login_main form label{
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+}
+
+.login_main form p{
+    margin-bottom: 12px;
+    line-height: 26px;
+}
+
+.login_main form p label,.login_main form p input,.login_main form p img,.login_main form p span{
+    float: left;
+}
+
+.code img{
+    margin: 3px 5px 0;
+}
+
+.code span{
+    cursor:pointer;
+}
+
+.login_main .code input{
+    width:62px ;
+}
+
+.login_btn{
+    margin-left:60px;
+}
+
+.login_main .login_btn input{
+    width: 80px;
+    background: #5aa202;
+    border:0px;
+    border-radius: 2px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: bold;
+} 
+.green{
+    color: #22ac38;
+}
+
+.fw{
+    font-weight: bold;
+}
+
+.blue{
+    color: #256eb1;
+}
+
+.copy_right{
+    text-align: right;
+}
+
+/* 登录提示  login-tip */
+.tip_block{
+    width: 458px;
+    margin: 40px auto 0;
+    border:1px solid #dadada;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.tip_block h2{
+    line-height: 30px;
+    height: 30px;
+    border-bottom: 1px solid #dadada;
+    background: #fafafa;
+    font-size: 14px;
+    color: #000;
+}
+
+.tip_content{
+    padding: 20px 40px 0px;
+    height: 115px;
+}
+
+.tip_content p{
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.tip_content a{
+    text-decoration: underline;
+    color: #551a8b;
+}
