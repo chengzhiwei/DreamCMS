@@ -11,7 +11,8 @@ return array(
     'SITE_TITLE' => '中国飞龙网企业官网',
     'SITE_KEYWORD' => '中国飞龙网d',
     'SITE_DESC' => '中国飞龙网',
-    'COOKIE_TOKEN'=>'RTG123',
+    'COOKIE_TOKEN' => 'RTG123',
+    'PWD_TOKEN' => 'RTG123',
     'AUTOLOAD_NAMESPACE' => array(
         'Model' => getcwd() . '\Model',
     ),

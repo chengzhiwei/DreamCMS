@@ -15,7 +15,8 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
 
     private function _chkauth()
     {
-        if (!cookie('share_admin'))
+
+        if (!session('Dream_admin'))
         {
             $this->redirect('Auth/Login/login');
         }

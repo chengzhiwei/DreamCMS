@@ -85,7 +85,7 @@ function delDirAndFile($dirName, $echo = 1, $echotxt = '更新缓存')
     return TRUE;
 }
 
-function cusMd5($str)
+function cusMd5($str,$hy)
 {
-    return md5(C('COOKIE_TOKEN') . $str);
+    return md5($hy . $str);
 }

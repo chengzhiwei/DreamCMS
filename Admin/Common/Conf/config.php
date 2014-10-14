@@ -1,4 +1,5 @@
 <?php
+
 include_once 'Config/functions.php';
 $mysql_config = require("Config/system.php");
 $site_config = array(
@@ -8,6 +9,8 @@ $site_config = array(
     'LANG_SWITCH_ON' => true,
     'DEFAULT_LANG' => 'zh-cn',
     'LANG_LIST' => 'zh-cn',
-    'ADMIN_THEME' => 'Default',
+    'ADMIN_THEME' => 'bootstrap',
+    'LAYOUT_ON' => true,
+    'LAYOUT_NAME' => 'Layout/layout',
 );
 return array_merge($site_config, $mysql_config);

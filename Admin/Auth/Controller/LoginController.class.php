@@ -15,14 +15,19 @@ class LoginController extends \Common\Controller\AdminbaseController
     {
         if (IS_POST)
         {
+            $verify = new \Think\Verify();
+            if (!$verify->check(I('post.code')))
+            {
+                $this->error(L('VERIFY_ERR'));
+            }
             $pwd = I('post.pwd');
             $adminModel = DD('Admin');
             $admininfo = $adminModel->findbyname();
-            if ($admininfo['pwd'] == \cusMd5($pwd))
+            if ($admininfo['pwd'] == \cusMd5($pwd, C('PWD_TOKEN')))
             {
                 unset($admininfo['pwd']);
-                cookie('share_admin', $admininfo);
-                $this->success(L('LOGIN_SUCCESS'), U('Index/Index/index'));
+                session('Dream_admin', $admininfo);
+                $this->redirect('Index/Index/index');
             } else
             {
                 $this->error(L('ACCOUNT_FAILE'));

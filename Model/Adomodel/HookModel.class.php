@@ -12,4 +12,9 @@ class HookModel extends \Think\Model\AdvModel
         return $this->cache(true)->where($condition)->find();
     }
 
+    public function selbytype($type = 0)
+    {
+        
+    }
+
 }

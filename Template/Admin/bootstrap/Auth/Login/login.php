@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome.min.css" />
 
         <!--[if IE 7]>
-          <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+          <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome-ie7.min.css" />
         <![endif]-->
 
         <!-- page specific plugin styles -->
@@ -87,8 +87,9 @@
 
                                                     <div class="clearfix">
                                                         <label class="inline">
-                                                            <input type="checkbox" class="ace" />
-                                                            <span class="lbl"> <?php echo L('REMEMBER_ME'); ?></span>
+                                                          
+                                                            <span class="lbl"> <input type="text" name="code" value="" placeholder="<?php echo L('VERIFY')?>" style="width: 100px;" /></span>
+                                                            <span class="lbl"><img src="<?php echo U('Auth/Login/verify')?>" /></span>
                                                         </label>
 
                                                         <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
@@ -105,19 +106,7 @@
                                                 <span class="bigger-110">Or Login Using</span>
                                             </div>
 
-                                            <div class="social-login center">
-                                                <a class="btn btn-primary">
-                                                    <i class="icon-facebook"></i>
-                                                </a>
-
-                                                <a class="btn btn-info">
-                                                    <i class="icon-twitter"></i>
-                                                </a>
-
-                                                <a class="btn btn-danger">
-                                                    <i class="icon-google-plus"></i>
-                                                </a>
-                                            </div>
+                                            
                                         </div><!-- /widget-main -->
 
                                         <div class="toolbar clearfix">
