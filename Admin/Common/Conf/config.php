@@ -11,6 +11,5 @@ $site_config = array(
     'LANG_LIST' => 'zh-cn',
     'ADMIN_THEME' => 'bootstrap',
     'LAYOUT_ON' => true,
-    'LAYOUT_NAME' => 'Layout/layout',
 );
 return array_merge($site_config, $mysql_config);

@@ -544,7 +544,8 @@
                         </div><!-- #nav-search -->
                     </div>
 
-                    {__CONTENT__}
+                    <?php include $view?>
+                    
                 </div>
 
                 <div class="ace-settings-container" id="ace-settings-container">

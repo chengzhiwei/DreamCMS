@@ -22,4 +22,24 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
         }
     }
 
+    /**
+     * 重写DISPLAY方法 支持PHP模板引擎的模板布局
+     * @param string $view
+     */
+    public function display($view = '')
+    {
+        if (C('LAYOUT_ON'))
+        {
+            if ($view == '')
+            {
+                $view = TMPL_PATH . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . C('TMPL_TEMPLATE_SUFFIX');
+            }
+            $this->assign('view', $view);
+            parent::display(TMPL_PATH . 'Layout/layout.php');
+        } else
+        {
+            parent::display();
+        }
+    }
+
 }
