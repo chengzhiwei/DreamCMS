@@ -27,7 +27,7 @@
 
         <!-- ace settings handler -->
 
-      
+
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -35,6 +35,7 @@
         <script src="<?php echo JS_PATH; ?>html5shiv.js"></script>
         <script src="<?php echo JS_PATH; ?>respond.min.js"></script>
         <![endif]-->
+
     </head>
 
     <body>
@@ -55,20 +56,22 @@
                         </small>
                     </a><!-- /.brand -->
                 </div><!-- /.navbar-header -->
-                
+
                 <div class="navbar-header pull-right" role="navigation">
-                    <ul class="nav ace-nav" id="grouplist">
-                        <?php foreach($authgrouplist as $key=> $li){
+                    <ul class="nav ace-nav">
+                        <?php
+                        foreach ($authgrouplist as $key => $li)
+                        {
                             ?>
-                        <li class="<?php echo $key==0?"green":"light-blue"?>">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <?php echo $li['title'];?>
-                            </a>
-                        </li>
-                                <?php
-                        }?>
-                        
-                       
+                            <li class="<?php echo $key == 0 ? "green" : "light-blue" ?> grouplist">
+                                <a rel="<?php echo $li['id']; ?>" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <?php echo $li['title']; ?>
+                                </a>
+                            </li>
+                        <?php }
+                        ?>
+
+
 
                         <li class="light-blue">
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
@@ -192,299 +195,10 @@
                         <li class="active">
                             <a href="index.html">
                                 <i class="icon-dashboard"></i>
-                                <span class="menu-text"> 控制台 </span>
+                                <span class="menu-text" id="all_menu-text"> 控制台 </span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="typography.html">
-                                <i class="icon-text-width"></i>
-                                <span class="menu-text"> 文字排版 </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="dropdown-toggle">
-                                <i class="icon-desktop"></i>
-                                <span class="menu-text"> UI 组件 </span>
-
-                                <b class="arrow icon-angle-down"></b>
-                            </a>
-
-                            <ul class="submenu">
-                                <li>
-                                    <a href="elements.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        组件
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="buttons.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        按钮 &amp; 图表
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="treeview.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        树菜单
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="jquery-ui.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        jQuery UI
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="nestable-list.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        可拖拽列表
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="dropdown-toggle">
-                                        <i class="icon-double-angle-right"></i>
-
-                                        三级菜单
-                                        <b class="arrow icon-angle-down"></b>
-                                    </a>
-
-                                    <ul class="submenu">
-                                        <li>
-                                            <a href="#">
-                                                <i class="icon-leaf"></i>
-                                                第一级
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="dropdown-toggle">
-                                                <i class="icon-pencil"></i>
-
-                                                第四级
-                                                <b class="arrow icon-angle-down"></b>
-                                            </a>
-
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="icon-plus"></i>
-                                                        添加产品
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="icon-eye-open"></i>
-                                                        查看商品
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#" class="dropdown-toggle">
-                                <i class="icon-list"></i>
-                                <span class="menu-text"> 表格 </span>
-
-                                <b class="arrow icon-angle-down"></b>
-                            </a>
-
-                            <ul class="submenu">
-                                <li>
-                                    <a href="tables.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        简单 &amp; 动态
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="jqgrid.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        jqGrid plugin
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#" class="dropdown-toggle">
-                                <i class="icon-edit"></i>
-                                <span class="menu-text"> 表单 </span>
-
-                                <b class="arrow icon-angle-down"></b>
-                            </a>
-
-                            <ul class="submenu">
-                                <li>
-                                    <a href="form-elements.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        表单组件
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="form-wizard.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        向导提示 &amp; 验证
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="wysiwyg.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        编辑器
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="dropzone.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        文件上传
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="widgets.html">
-                                <i class="icon-list-alt"></i>
-                                <span class="menu-text"> 插件 </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="calendar.html">
-                                <i class="icon-calendar"></i>
-
-                                <span class="menu-text">
-                                    日历
-                                    <span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-                                        <i class="icon-warning-sign red bigger-130"></i>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="gallery.html">
-                                <i class="icon-picture"></i>
-                                <span class="menu-text"> 相册 </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="dropdown-toggle">
-                                <i class="icon-tag"></i>
-                                <span class="menu-text"> 更多页面 </span>
-
-                                <b class="arrow icon-angle-down"></b>
-                            </a>
-
-                            <ul class="submenu">
-                                <li>
-                                    <a href="profile.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        用户信息
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="inbox.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        收件箱
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="pricing.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        售价单
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="invoice.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        购物车
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="timeline.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        时间轴
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="login.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        登录 &amp; 注册
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#" class="dropdown-toggle">
-                                <i class="icon-file-alt"></i>
-
-                                <span class="menu-text">
-                                    其他页面
-                                    <span class="badge badge-primary ">5</span>
-                                </span>
-
-                                <b class="arrow icon-angle-down"></b>
-                            </a>
-
-                            <ul class="submenu">
-                                <li>
-                                    <a href="faq.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        帮助
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="error-404.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        404错误页面
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="error-500.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        500错误页面
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="grid.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        网格
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="blank.html">
-                                        <i class="icon-double-angle-right"></i>
-                                        空白页面
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul><!-- /.nav-list -->
 
                     <div class="sidebar-collapse" id="sidebar-collapse">
@@ -526,8 +240,8 @@
                         </div><!-- #nav-search -->
                     </div>
 
-                    <?php include $view?>
-                    
+                    <?php include $view ?>
+
                 </div>
 
                 <div class="ace-settings-container" id="ace-settings-container">
@@ -631,9 +345,52 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
         <!-- inline scripts related to this page -->
 
         <script type="text/javascript">
-            $('#grouplist').find('a').click(function(){
-                alert('1');
+
+            $('.grouplist').find('a').click(function () {
+                obj = $(this).parent().parent().find('.green');
+                obj.removeClass('green');
+                obj.addClass('light-blue');
+                $(this).parent().removeClass('light-blue');
+                $(this).parent().addClass('green');
+                getleftmenu($(this));
             });
+            getleftmenu($('.grouplist:first').find('a'));
+
+            function getleftmenu(groupobj)
+            {
+                $('#all_menu-text').text(groupobj.text());
+                $.ajax({
+                    type: "post",
+                    url: "<?php echo U('Index/Index/getleftmenu') ?>",
+                    data: {gid: groupobj.attr('rel')},
+                    dataType: 'json',
+                    success: function (data) {
+                        var menu = '<li>';
+                        $.each(data, function (i, item) {
+                            menu += '<a href="#" class="dropdown-toggle">';
+                            menu += ' <i class="' + item.cls + '"></i>';
+                            menu += '<span class="menu-text"> ' + item.title + ' </span>';
+                            menu += '<b class="arrow icon-angle-down"></b>';
+                            menu += ' </a>';
+                            menu += ' <ul class="submenu">';
+                            $.each(item.child, function (i, subitem) {
+                                menu += ' <li>';
+                                menu += ' <a href="faq.html">';
+                                menu += ' <i class="icon-double-angle-right"></i>';
+                                menu += subitem.title;
+                                menu += ' </a>';
+                                menu += ' </li>';
+                            });
+                            menu += ' </ul>';
+
+                        });
+                        menu += '</li>';
+                        $('.nav-list').find('.active').nextAll().remove();
+                        $('.nav-list').find('.active').after(menu);
+                    }
+                });
+            }
+
         </script>
     </body>
 </html>

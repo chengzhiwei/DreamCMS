@@ -14,4 +14,15 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
         }
         return $this->where($condition)->select();
     }
+    
+    public function selbygid($gid,$isshow='')
+    {
+        $condition=array();
+        $condition['gid']=$gid;
+        if($isshow!='')
+        {
+            $condition['isshow']=$isshow;
+        }
+        return $this->where($condition)->select();
+    }
 }
