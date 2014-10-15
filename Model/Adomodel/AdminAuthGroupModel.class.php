@@ -25,5 +25,9 @@ class AdminAuthGroupModel extends \Think\Model\AdvModel
             return false;
         }
     }
-
+    
+    public function selall($order='sort')
+    {
+        return $this->order($order)->select();
+    }
 }

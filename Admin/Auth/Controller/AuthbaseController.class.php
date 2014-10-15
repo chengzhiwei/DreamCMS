@@ -11,6 +11,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
     {
         parent::__construct();
         $this->_chkauth();
+        $this->_common();
     }
 
     private function _chkauth()
@@ -22,6 +23,12 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
         }
     }
 
+    private function _common()
+    {
+        $authgroupmodel=DD('AdminAuthGroup');
+        $authgrouplist=$authgroupmodel->selall();
+        $this->assign('authgrouplist',$authgrouplist);
+    }
     /**
      * 重写DISPLAY方法 支持PHP模板引擎的模板布局
      * @param string $view

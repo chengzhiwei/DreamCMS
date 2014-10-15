@@ -16,6 +16,7 @@ class IndexController extends \Auth\Controller\AuthbaseController
         $this->assign('langlist', $langlist);
         $this->assign('menu', $menu);
         $this->assign('admin', $admin);
+        $this->assign('a','aaa');
         $this->display();
     }
 

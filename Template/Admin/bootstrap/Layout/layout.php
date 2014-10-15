@@ -27,7 +27,7 @@
 
         <!-- ace settings handler -->
 
-        <script src="<?php echo JS_PATH; ?>ace-extra.min.js"></script>
+      
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -55,38 +55,20 @@
                         </small>
                     </a><!-- /.brand -->
                 </div><!-- /.navbar-header -->
-
+                
                 <div class="navbar-header pull-right" role="navigation">
-                    <ul class="nav ace-nav">
-                        <li class="green">
+                    <ul class="nav ace-nav" id="grouplist">
+                        <?php foreach($authgrouplist as $key=> $li){
+                            ?>
+                        <li class="<?php echo $key==0?"green":"light-blue"?>">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                内容管理
+                                <?php echo $li['title'];?>
                             </a>
                         </li>
-                        <li class="light-blue">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-
-                                系统设置
-                            </a>
-                        </li>
-                        <li  class="light-blue">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                权限管理
-                            </a>
-
-
-                        </li>
-                        <li  class="light-blue">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                组件模块
-                            </a>
-                        </li >
-
-                        <li  class="light-blue">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                插件钩子
-                            </a>
-                        </li>
+                                <?php
+                        }?>
+                        
+                       
 
                         <li class="light-blue">
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
@@ -649,7 +631,9 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
         <!-- inline scripts related to this page -->
 
         <script type="text/javascript">
-            
+            $('#grouplist').find('a').click(function(){
+                alert('1');
+            });
         </script>
     </body>
 </html>
