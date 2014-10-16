@@ -12,6 +12,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
         parent::__construct();
         $this->_chkauth();
         $this->_common();
+        $this->_nowpermissions();
     }
 
     private function _chkauth()
@@ -25,10 +26,11 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
 
     private function _common()
     {
-        $authgroupmodel=DD('AdminAuthGroup');
-        $authgrouplist=$authgroupmodel->selall();
-        $this->assign('authgrouplist',$authgrouplist);
+        $authgroupmodel = DD('AdminAuthGroup');
+        $authgrouplist = $authgroupmodel->selall();
+        $this->assign('authgrouplist', $authgrouplist);
     }
+
     /**
      * 重写DISPLAY方法 支持PHP模板引擎的模板布局
      * @param string $view
@@ -46,6 +48,18 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
         } else
         {
             parent::display();
+        }
+    }
+
+    private function _nowpermissions()
+    {
+        $actionmod = DD('AdminAuthAction');
+        $actioninfo = $actionmod->findbyGMA(MODULE_NAME, CONTROLLER_NAME, ACTION_NAME);
+        if ($actioninfo)
+        {
+            $this->assign('group_id', $actioninfo['gid']);
+            $this->assign('controller_id', $actioninfo['controller_id']);
+            $this->assign('action_id', $actioninfo['id']);
         }
     }
 

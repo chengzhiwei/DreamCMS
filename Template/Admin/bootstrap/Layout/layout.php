@@ -63,7 +63,7 @@
                         foreach ($authgrouplist as $key => $li)
                         {
                             ?>
-                            <li class="<?php echo $key == 0 ? "green" : "light-blue" ?> grouplist">
+                            <li class="<?php echo $key == 0 ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
                                 <a rel="<?php echo $li['id']; ?>" data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <?php echo $li['title']; ?>
                                 </a>
@@ -192,7 +192,7 @@
                     </div><!-- #sidebar-shortcuts -->
 
                     <ul class="nav nav-list">
-                        <li class="active">
+                        <li class="active" id="mod_title">
                             <a href="index.html">
                                 <i class="icon-dashboard"></i>
                                 <span class="menu-text" id="all_menu-text"> 控制台 </span>
@@ -352,17 +352,26 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
                 obj.addClass('light-blue');
                 $(this).parent().removeClass('light-blue');
                 $(this).parent().addClass('green');
-                getleftmenu($(this));
+                getleftmenu($(this).attr('rel'));
             });
-            getleftmenu($('.grouplist:first').find('a'));
-
-            function getleftmenu(groupobj)
+            group_id='<?php echo $group_id?>';
+            if(group_id=='')
             {
-                $('#all_menu-text').text(groupobj.text());
+                getleftmenu($('.grouplist:first').find('a').attr('rel'));
+            }
+            else
+            {
+                getleftmenu(group_id);
+            }
+
+            function getleftmenu(gid)
+            {
+                
+                $('#all_menu-text').text($('#grouplist'+gid).text());
                 $.ajax({
                     type: "post",
                     url: "<?php echo U('Index/Index/getleftmenu') ?>",
-                    data: {gid: groupobj.attr('rel')},
+                    data: {gid: $('#grouplist'+gid).find('a').attr('rel')},
                     dataType: 'json',
                     success: function (data) {
                         var menu = '<li>';
@@ -373,20 +382,23 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
                             menu += '<b class="arrow icon-angle-down"></b>';
                             menu += ' </a>';
                             menu += ' <ul class="submenu">';
-                            $.each(item.child, function (i, subitem) {
-                                menu += ' <li>';
-                                menu += ' <a href="faq.html">';
-                                menu += ' <i class="icon-double-angle-right"></i>';
-                                menu += subitem.title;
-                                menu += ' </a>';
-                                menu += ' </li>';
-                            });
+                            if(item.child!=null)
+                            {
+                                $.each(item.child, function (i, subitem) {
+                                    menu += ' <li>';
+                                    menu += ' <a href="faq.html">';
+                                    menu += ' <i class="icon-double-angle-right"></i>';
+                                    menu += subitem.title;
+                                    menu += ' </a>';
+                                    menu += ' </li>';
+                                });
+                            }
                             menu += ' </ul>';
 
                         });
                         menu += '</li>';
-                        $('.nav-list').find('.active').nextAll().remove();
-                        $('.nav-list').find('.active').after(menu);
+                        $('.nav-list').find('#mod_title').nextAll().remove();
+                        $('.nav-list').find('#mod_title').after(menu);
                     }
                 });
             }
