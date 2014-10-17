@@ -375,7 +375,7 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
                             menu += ' <ul class="submenu">';
                             $.each(item.child, function (i, subitem) {
                                 menu += ' <li>';
-                                menu += ' <a href="faq.html">';
+                                menu += ' <a href="'+subitem.url+'">';
                                 menu += ' <i class="icon-double-angle-right"></i>';
                                 menu += subitem.title;
                                 menu += ' </a>';

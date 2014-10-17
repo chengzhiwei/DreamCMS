@@ -32,12 +32,13 @@ class IndexController extends \Auth\Controller\AuthbaseController
             {
                 $ctl_arr[$li['id']] = $li;
             }
-
+            
             $actionmod = DD('AdminAuthAction');
             $actionlist = $actionmod->selbygid($gid, 1);
             $ac_arr = array();
             foreach ($actionlist as $key => $ac)
             {
+                $ac['url']= URL($ac['group'] . '/' . $ac['controller'] . '/' . $ac['action'], '', $ac['app']);
                 $ac_arr[$ac['cid']][] = $ac;
             }
             $menu = array();

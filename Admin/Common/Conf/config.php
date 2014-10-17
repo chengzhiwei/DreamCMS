@@ -10,6 +10,6 @@ $site_config = array(
     'DEFAULT_LANG' => 'zh-cn',
     'LANG_LIST' => 'zh-cn',
     'ADMIN_THEME' => 'bootstrap',
-    'LAYOUT_ON' => true,
+    'IS_LAYOUT' => true,
 );
 return array_merge($site_config, $mysql_config);

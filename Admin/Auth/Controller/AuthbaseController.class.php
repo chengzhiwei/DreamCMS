@@ -35,7 +35,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
      */
     public function display($view = '')
     {
-        if (C('LAYOUT_ON'))
+        if (C('IS_LAYOUT'))
         {
             if ($view == '')
             {
