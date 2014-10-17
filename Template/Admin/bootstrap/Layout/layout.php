@@ -2,9 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>控制台 - Bootstrap后台管理系统模版Ace下载</title>
-        <meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
-        <meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+        <title>DreamCMS 后台管理系统</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- basic styles -->
         <link href="<?php echo CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
@@ -69,7 +67,7 @@
                             ?>
                             <li class="<?php echo $group_id ==  $li['id'] ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
                                 <a rel="<?php echo $li['id']; ?>" data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                    <?php echo $li['title']; ?>
+                                    <?php echo L($li['langconf']); ?>
                                 </a>
                             </li>
                         <?php }

@@ -15,10 +15,10 @@
 
             <form role="form" class="form-horizontal">
                 <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 用户名 </label>
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('USERNAME');?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" class="col-xs-10 col-sm-5" placeholder="Username" id="form-field-1">
+                        <input type="text" class="col-xs-10 col-sm-5" placeholder="<?php echo L('USERNAME');?>" id="form-field-1">
                     </div>
                 </div>
 

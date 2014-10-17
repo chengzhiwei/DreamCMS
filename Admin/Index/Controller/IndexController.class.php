@@ -16,10 +16,10 @@ class IndexController extends \Auth\Controller\AuthbaseController
         $this->assign('langlist', $langlist);
         $this->assign('menu', $menu);
         $this->assign('admin', $admin);
-        $this->assign('a','aaa');
+        $this->assign('a', 'aaa');
         $this->display();
     }
-    
+
     public function getleftmenu()
     {
         if (IS_AJAX)
@@ -30,15 +30,17 @@ class IndexController extends \Auth\Controller\AuthbaseController
             $ctl_arr = array();
             foreach ($controllerlist as $key => $li)
             {
+                $li['title'] = L($li['langconf']);
                 $ctl_arr[$li['id']] = $li;
             }
-            
+
             $actionmod = DD('AdminAuthAction');
             $actionlist = $actionmod->selbygid($gid, 1);
             $ac_arr = array();
             foreach ($actionlist as $key => $ac)
             {
-                $ac['url']= URL($ac['group'] . '/' . $ac['controller'] . '/' . $ac['action'], '', $ac['app']);
+                $ac['titlr']=L($ac['langconf']);
+                $ac['url'] = URL($ac['group'] . '/' . $ac['controller'] . '/' . $ac['action'], '', $ac['app']);
                 $ac_arr[$ac['cid']][] = $ac;
             }
             $menu = array();

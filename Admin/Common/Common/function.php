@@ -85,7 +85,44 @@ function delDirAndFile($dirName, $echo = 1, $echotxt = '更新缓存')
     return TRUE;
 }
 
-function cusMd5($str,$hy)
+function cusMd5($str, $hy)
 {
     return md5($hy . $str);
+}
+
+/**
+ * 写配置文件
+ * @param string $path
+ * @param string $content
+ * @param int $isappend 是否追加
+ */
+function writeconf($path, $content)
+{
+    $o_content = include $path;
+    $new_conf = $content;
+    if ($o_content)
+    {
+        $new_conf = array_merge($content, $o_content);
+    }
+    $str = "<?php \r\n return " . var_export($new_conf, true) . "; \r\n?>";
+
+    return writefile($path, $str);
+}
+
+function writefile($path, $content, $isappend = 0)
+{
+    if ($isappend === 1)
+    {
+        $type = 'a+';
+    } else
+    {
+        $type = 'w+';
+    }
+    chmod($path, 0777); // 以最高操作权限操作当前目录
+    $file = fopen($path, $type); // a模式就是一种追加模式，如果是w模式则会删除之前的内容再添加
+    fwrite($file, $content);
+    fclose($file);
+    // 销毁文件资源句柄变量
+    unset($file);
+    return true;
 }
