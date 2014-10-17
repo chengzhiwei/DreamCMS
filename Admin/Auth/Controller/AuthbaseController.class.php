@@ -58,7 +58,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
         if ($actioninfo)
         {
             $this->assign('group_id', $actioninfo['gid']);
-            $this->assign('controller_id', $actioninfo['controller_id']);
+            $this->assign('controller_id', $actioninfo['cid']);
             $this->assign('action_id', $actioninfo['id']);
         }
     }

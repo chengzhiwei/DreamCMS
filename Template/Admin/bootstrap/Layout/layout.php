@@ -60,10 +60,14 @@
                 <div class="navbar-header pull-right" role="navigation">
                     <ul class="nav ace-nav">
                         <?php
+                        if(!$group_id)
+                        {
+                            $group_id==2;
+                        }
                         foreach ($authgrouplist as $key => $li)
                         {
                             ?>
-                            <li class="<?php echo $key == 0 ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
+                            <li class="<?php echo $group_id ==  $li['id'] ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
                                 <a rel="<?php echo $li['id']; ?>" data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <?php echo $li['title']; ?>
                                 </a>
@@ -354,8 +358,8 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
                 $(this).parent().addClass('green');
                 getleftmenu($(this).attr('rel'));
             });
-            group_id='<?php echo $group_id?>';
-            if(group_id=='')
+            group_id = '<?php echo $group_id ?>';
+            if (group_id == '')
             {
                 getleftmenu($('.grouplist:first').find('a').attr('rel'));
             }
@@ -366,48 +370,51 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
 
             function getleftmenu(gid)
             {
-                
-                $('#all_menu-text').text($('#grouplist'+gid).text());
+
+                $('#all_menu-text').text($('#grouplist' + gid).text());
                 $.ajax({
                     type: "post",
                     url: "<?php echo U('Index/Index/getleftmenu') ?>",
-                    data: {gid: $('#grouplist'+gid).find('a').attr('rel')},
+                    data: {gid: $('#grouplist' + gid).find('a').attr('rel')},
                     dataType: 'json',
                     success: function (data) {
-                        var menu = '<li>';
+                        var menu = '';
+                        var ccls = '';
+                        var acls = '';
                         $.each(data, function (i, item) {
+                            ccls = '';
+                            if (item.id == '<?php echo $controller_id; ?>')
+                            {
+                                ccls = 'active open';
+                            }
+                            menu += '<li class="' + ccls + '">';
                             menu += '<a href="#" class="dropdown-toggle">';
                             menu += ' <i class="' + item.cls + '"></i>';
                             menu += '<span class="menu-text"> ' + item.title + ' </span>';
                             menu += '<b class="arrow icon-angle-down"></b>';
                             menu += ' </a>';
                             menu += ' <ul class="submenu">';
-<<<<<<< HEAD
-                            $.each(item.child, function (i, subitem) {
-                                menu += ' <li>';
-                                menu += ' <a href="'+subitem.url+'">';
-                                menu += ' <i class="icon-double-angle-right"></i>';
-                                menu += subitem.title;
-                                menu += ' </a>';
-                                menu += ' </li>';
-                            });
-=======
-                            if(item.child!=null)
+
+                            if (item.child != null)
                             {
                                 $.each(item.child, function (i, subitem) {
-                                    menu += ' <li>';
-                                    menu += ' <a href="faq.html">';
+                                     acls = '';
+                                    if (subitem.id == '<?php echo $action_id; ?>')
+                                    {
+                                        acls = 'active ';
+                                    }
+                                    menu += ' <li  class="' + acls + '">';
+                                    menu += ' <a href=" ' + subitem.url + '">';
                                     menu += ' <i class="icon-double-angle-right"></i>';
                                     menu += subitem.title;
                                     menu += ' </a>';
                                     menu += ' </li>';
                                 });
                             }
->>>>>>> origin/master
                             menu += ' </ul>';
-
+                            menu += '</li>';
                         });
-                        menu += '</li>';
+
                         $('.nav-list').find('#mod_title').nextAll().remove();
                         $('.nav-list').find('#mod_title').after(menu);
                     }
