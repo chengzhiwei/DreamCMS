@@ -63,11 +63,46 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            
+            $data = I('post.');
+            $path = 'Lang/Admin/zh-cn/Common/Comm_auth.php';
+            $conf = array($data['langconf'] => $data['title']);
+            \writeconf($path, $conf);
+            $actionmod = DD('AdminAuthAction');
+            $b = $actionmod->addAction();
+            if ($b)
+            {
+                $this->success('ok');
+            }
         } else
         {
+            //获取分组
+            $groupmod = DD('AdminAuthGroup');
+            $grouplist = $groupmod->selall();
+            $this->assign('grouplist', $grouplist);
             $this->display();
         }
+    }
+
+    public function getmodulebygid()
+    {
+        if (IS_POST)
+        {
+            $ctlmod = DD('AdminAuthController');
+            $list = $ctlmod->selbygid(I('post.gid'));
+            foreach ($list as $key => $val)
+            {
+                $list[$key]['title'] = L($val['langconf']);
+            }
+            echo json_encode($list);
+        }
+    }
+
+    /**
+     * 权限列表
+     */
+    public function actions()
+    {
+        $this->display();
     }
 
 }

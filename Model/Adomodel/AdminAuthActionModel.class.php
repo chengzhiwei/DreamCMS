@@ -44,4 +44,26 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
         return $this->cache(TRUE)->where($condition)->find();
     }
 
+    public function addAction($data = array())
+    {
+        if (!$data)
+        {
+            $data = I('post.');
+        }
+        if ($this->create($data))
+        {
+
+            if ($this->add())
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        } else
+        {
+            return false;
+        }
+    }
+
 }

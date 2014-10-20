@@ -33,6 +33,24 @@
         <script src="<?php echo JS_PATH; ?>html5shiv.js"></script>
         <script src="<?php echo JS_PATH; ?>respond.min.js"></script>
         <![endif]-->
+        <!-- basic scripts -->
+        <!--[if !IE]> -->
+        <script src="<?php echo JS_PATH ?>jquery-2.0.3.min.js"></script>
+        <!-- <![endif]-->
+        <!--[if IE]>
+        <script src="<?php echo JS_PATH ?>jquery-1.10.2.min.js"></script>
+        <![endif]-->
+        <!--[if !IE]> -->
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-2.0.3.min.js'>" + "<" + "script>");
+        </script>
+        <!-- <![endif]-->
+        <!--[if IE]>
+        <script type="text/javascript">
+        window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2.min.js'>"+"<"+"script>");
+        </script>
+        <![endif]-->
+
 
     </head>
 
@@ -58,14 +76,14 @@
                 <div class="navbar-header pull-right" role="navigation">
                     <ul class="nav ace-nav">
                         <?php
-                        if(!$group_id)
+                        if (!$group_id)
                         {
-                            $group_id=2;
+                            $group_id = 2;
                         }
                         foreach ($authgrouplist as $key => $li)
                         {
                             ?>
-                            <li class="<?php echo $group_id ==  $li['id'] ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
+                            <li class="<?php echo $group_id == $li['id'] ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
                                 <a rel="<?php echo $li['id']; ?>" data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <?php echo L($li['langconf']); ?>
                                 </a>
@@ -300,31 +318,7 @@
             </a>
         </div><!-- /.main-container -->
 
-        <!-- basic scripts -->
 
-        <!--[if !IE]> -->
-
-        <script src="<?php echo JS_PATH ?>jquery-2.0.3.min.js"></script>
-
-        <!-- <![endif]-->
-
-        <!--[if IE]>
-<script src="<?php echo JS_PATH ?>jquery-1.10.2.min.js"></script>
-<![endif]-->
-
-        <!--[if !IE]> -->
-
-        <script type="text/javascript">
-                            window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-2.0.3.min.js'>" + "<" + "script>");
-        </script>
-
-        <!-- <![endif]-->
-
-        <!--[if IE]>
-<script type="text/javascript">
-window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2.min.js'>"+"<"+"script>");
-</script>
-<![endif]-->
 
         <script type="text/javascript">
             if ("ontouchend" in document)
@@ -396,7 +390,7 @@ window.jQuery || document.write("<script src='<?php echo JS_PATH ?>jquery-1.10.2
                             if (item.child != null)
                             {
                                 $.each(item.child, function (i, subitem) {
-                                     acls = '';
+                                    acls = '';
                                     if (subitem.id == '<?php echo $action_id; ?>')
                                     {
                                         acls = 'active ';
