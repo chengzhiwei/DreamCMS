@@ -60,7 +60,7 @@
                         <?php
                         if(!$group_id)
                         {
-                            $group_id==2;
+                            $group_id=2;
                         }
                         foreach ($authgrouplist as $key => $li)
                         {

@@ -59,4 +59,15 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         }
     }
 
+    public function addaction()
+    {
+        if (IS_POST)
+        {
+            
+        } else
+        {
+            $this->display();
+        }
+    }
+
 }
