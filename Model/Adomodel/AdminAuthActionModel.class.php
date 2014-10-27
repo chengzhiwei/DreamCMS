@@ -65,5 +65,6 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
             return false;
         }
     }
-
+    
+    
 }

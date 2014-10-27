@@ -1,5 +1,7 @@
 <?php 
  return array (
+  'ACT_AUTH_ADMIN_ADDROLE' => '添加角色',
+  'ACT_AUTH_ADMIN_ROLELIST' => '角色管理',
   'ACT_AUTH_PERMISSIONS_ACTIONS' => '权限列表',
   'GROUP_CONTENT' => '内容管理',
   'GROUP_SYSTEM' => '系统设置',

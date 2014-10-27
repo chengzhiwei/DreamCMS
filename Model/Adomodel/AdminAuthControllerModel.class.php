@@ -11,5 +11,10 @@ class AdminAuthControllerModel extends \Think\Model\AdvModel
         $condition['gid'] = $gid;
         return $this->where($condition)->select();
     }
+    
+    public function selall()
+    {
+        return $this->select();
+    }
 
 }
