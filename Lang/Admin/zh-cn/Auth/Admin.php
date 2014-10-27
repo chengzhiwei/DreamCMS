@@ -15,4 +15,5 @@ return array(
     'PWD_UPDATE_OK'=>'密码修改成功',
     'PWD_NOT_NULL'=>'密码不能为空',
     'PWD_NOT_SAME'=>'密码不一致',
+    
 );

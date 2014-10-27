@@ -102,6 +102,25 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
      */
     public function actions()
     {
+        $groupmod = DD('AdminAuthGroup');
+        $grouplist = $groupmod->selall();
+        $ctlmod = DD('AdminAuthController');
+        $ctllist = $ctlmod->selall();
+        $newctllist=array();
+        foreach ($ctllist as $cl)
+        {
+            $newctllist[$cl['gid']][] = $cl;
+        }
+        $actmod = DD('AdminAuthAction');
+        $actlist = $actmod->select();
+        $newactlist=array();
+        foreach ($actlist as $al)
+        {
+            $newactlist[$al['cid']][] = $al;
+        }
+        $this->assign('grouplist', $grouplist);
+        $this->assign('ctllist', $newctllist);
+        $this->assign('actlist', $newactlist);
         $this->display();
     }
 
