@@ -24,12 +24,24 @@
                     <div class="panel-body">
                         <fieldset class="control-label ">
                             <legend>推荐位管理</legend>
-                            <lable class="col-sm-2 checkbox">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
-                            <lable class="col-sm-2 checkbox">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
-                            <lable class="col-sm-2 checkbox">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
-                            <lable class="col-sm-2 checkbox">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
-                            <lable class="col-sm-2 checkbox">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
-                            <lable class="col-sm-2 checkbox">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <div>
+                            
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            </div>
+                              <div>
+                            
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            <lable class="col-sm-2 ">添加推荐位 <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
+                            </div>
                         </fieldset>
                         <br />
                         <fieldset class="control-label ">
