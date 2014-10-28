@@ -183,21 +183,21 @@
 
                     <div class="sidebar-shortcuts" id="sidebar-shortcuts">
                         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-                            <button class="btn btn-success">
-                                <i class="icon-signal"></i>
-                            </button>
+                            <a href="<?php echo __ROOT__;?>" target="_blank" class="btn btn-success">
+                                <i class="icon-home"></i>
+                            </a>
 
                             <button class="btn btn-info">
                                 <i class="icon-pencil"></i>
                             </button>
 
-                            <button class="btn btn-warning">
-                                <i class="icon-group"></i>
-                            </button>
+                            <a href="<?php echo U('System/Cache/clearall');?>" class="btn btn-warning">
+                                <i class="icon-th"></i>
+                            </a>
 
-                            <button class="btn btn-danger">
-                                <i class="icon-cogs"></i>
-                            </button>
+                             <a href="<?php echo U('System/Cache/clearall');?>" class="btn btn-danger">
+                                <i class="icon-trash"></i>
+                            </a>
                         </div>
 
                         <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">

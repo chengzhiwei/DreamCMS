@@ -40,7 +40,7 @@
     .modal-content{border-radius:5px;}
     .modal-body {
         max-height: 800px;
-    }
+    }fieldset{ padding-bottom: 20px;}
     .form-horizontal .control-label .chk_lbl{text-align:left}
 </style>
 
