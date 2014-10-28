@@ -1,5 +1,7 @@
 <?php 
  return array (
+  'ACT_CONTENT_MODEL_FIELDS' => '字段管理',
+  'ACT_CONTENT_MODEL_ADDMODEL' => '添加模型',
   'ACT_AUTH_ADMIN_ADDROLE' => '添加角色',
   'ACT_AUTH_ADMIN_ROLELIST' => '角色管理',
   'ACT_AUTH_PERMISSIONS_ACTIONS' => '权限列表',
@@ -17,7 +19,7 @@
   'CTL_GUSTBOOK' => '留言板',
   'CTL_CACHE' => '缓存管理',
   'CTL_AD' => '广告管理',
-  'CTL_MODEKMANAGE' => '模型管理',
+  'CTL_MODEL' => '模型管理',
   'CTL_PLUGIN' => '插件管理',
   'CTL_PERMISSIONS' => '权限管理',
   'ACT_CONTENT_CONTENT_INDEX' => '文章列表',
@@ -39,7 +41,7 @@
   'ACT_MODULES_GURSTBOOK_INDEX' => '留言列表',
   'ACT_MODULES_AD_TYPELIST' => '分类管理',
   'ACT_MODULES_AD_ADLIST' => '广告管理',
-  'ACT_MODELAMANAGE_MODEL_INDEX' => '模型列表',
+  'ACT_CONTENT_MODEL_INDEX' => '模型列表',
   'ACT_AUTH_AUTH_INDEX' => '权限管理',
   'ACT_PLUGIN_PLUGIN_PLUGINLIST' => '插件列表',
   'ACT_AUTH_PERMISSION_ADDGROUP' => '添加分组',

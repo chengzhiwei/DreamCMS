@@ -54,16 +54,16 @@ class FlChkLangBehavior extends Behavior
         {
             return;
         }
-        $langSet = C('DEFAULT_LANG'); 
+        $langSet = C('DEFAULT_LANG');
         // 启用了语言包功能
         // 根据是否启用自动侦测设置获取语言选择
         if (C('LANG_AUTO_DETECT'))
         {
-           
+
             if (isset($_GET[C('VAR_LANGUAGE')]))
             {
                 $langSet = $_GET[C('VAR_LANGUAGE')]; // url中设置了语言变量
-            } 
+            }
             if (false === stripos(C('LANG_LIST'), $langSet))
             { // 非法语言参数
                 $langSet = C('DEFAULT_LANG');
@@ -77,13 +77,19 @@ class FlChkLangBehavior extends Behavior
             L(include $file);
 
 
-        $file = getcwd(). '/Lang/' . APP_NAME . '/' . LANG_SET . '/' . MODULE_NAME . '/' . strtolower(CONTROLLER_NAME) . '.php';
+        $file = getcwd() . '/Lang/' . APP_NAME . '/' . LANG_SET . '/' . MODULE_NAME . '/' . strtolower(CONTROLLER_NAME) . '.php';
         if (is_file($file))
             L(include $file);
 
         $file = './Lang/' . APP_NAME . '/' . LANG_SET . '/Common/common.php';
         if (is_file($file))
             L(include $file);
+        if (MODULE_NAME == 'Content')
+        {
+            $file = getcwd() . '/Lang/' . APP_NAME . '/' . LANG_SET . '/Common/comm_content.php';
+            if (is_file($file))
+                L(include $file);
+        }
     }
 
 }

@@ -103,7 +103,35 @@ class AdminController extends AuthbaseController
     {
         if (IS_POST)
         {
-            
+            if (!isset($_POST['authlist']))
+            {
+                $this->error(L('SELECT_AUTH'));
+            }
+            $group_data = array();
+            $group_data['title'] = I('post.title');
+            $group_data['langconf'] = strtoupper(I('post.langconf'));
+            $groupmod = DD('AdminGroup');
+            $b = $groupmod->addgroup($group_data);
+            $gid = $groupmod->getLastInsID();
+            $rolelist = array();
+            if ($b)
+            {
+                $path = 'Lang/Admin/zh-cn/Auth/Admin.php';
+                $conf = array($group_data['langconf'] => $group_data['title']);
+                \writeconf($path, $conf);
+
+                foreach ($_POST['authlist'] as $key => $al)
+                {
+                    $rolelist[$key] = array('gid' => $gid, 'aid' => $al);
+                }
+                $rolemod = DD('AdminRole');
+                $rolemod->pladd($rolelist);
+                //添加权限列表
+                $this->error(L('OP_SUCCESS'));
+            } else
+            {
+                $this->error(L('OP_ERROR'));
+            }
         } else
         {
             $groupmod = DD('AdminAuthGroup');

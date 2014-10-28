@@ -4,12 +4,16 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                管理员列表
+                字段管理
             </small>
         </h1>
     </div><!-- /.page-header -->
-
     <div class="row">
+        <div class="col-xs-12 " style="padding-bottom: 10px;">
+            <a href="<?php echo U('Content/Model/addfield'); ?>" class="  pull-right btn btn-danger" >
+                添加字段
+            </a>
+        </div>
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
 
@@ -35,7 +39,7 @@
 
                             <tbody>
                                 <?php
-                                foreach ($list as $li)
+                                foreach ($grouplist as $gl)
                                 {
                                     ?>
                                     <tr>
@@ -49,8 +53,7 @@
                                         <td>
                                             <a href="#"><?php echo $li['username']; ?></a>
                                         </td>
-                                        
-                                        <td><?php echo L($admingroup[$li['group']]['langconf']);?></td>
+                                        <td>角色</td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
