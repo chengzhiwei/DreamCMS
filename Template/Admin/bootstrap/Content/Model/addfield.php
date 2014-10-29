@@ -1,3 +1,17 @@
+<script>
+$(function(){
+    $('#field_type').change(function(){
+        if($(this).val()=='radio' ||$(this).val()=='checkbox')
+        {
+            $('#field_val').show(400);
+        }
+        else
+        {
+            $('#field_val').hide();
+        }
+    });
+});
+</script>
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -35,20 +49,23 @@
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right">字段类型</label>
 
                     <div class="col-sm-9">
-                        <select>
+                        <select id="field_type">
                             <option>单行文本</option>
                             <option>多行文本</option>
                             <option>编辑器</option>
                             <option>缩略图</option>
                             <option>单文件上传</option>
+                            <option>多文件上传</option>
+                            <option value="radio">单选项</option>
+                            <option value="checkbox">复选项</option>
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
+                <div id="field_val" class="form-group" style="display: none">
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right">字段值</label>
 
                     <div class="col-sm-9">
-                        <input type="text" class="col-xs-10 col-sm-5" placeholder="Password">
+                        <textarea class="col-xs-10 col-sm-5"></textarea>
 
                     </div>
                 </div>
@@ -62,10 +79,23 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="form-field-2" class="col-sm-3 control-label no-padding-right">常用正则</label>
+                    <label for="form-field-2" class="col-sm-3 control-label no-padding-right">附加属性</label>
 
                     <div class="col-sm-9">
                         <input type="text" class="col-xs-10 col-sm-5" placeholder="">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-field-2" class="col-sm-3 control-label no-padding-right">常用正则</label>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-4" placeholder=""> 
+                        <select class="col-xs-10 col-sm-1  ">
+                            <option>数字</option>
+                            <option>邮件</option>
+                            <option>手机</option>
+                        </select>
 
                     </div>
                 </div>
