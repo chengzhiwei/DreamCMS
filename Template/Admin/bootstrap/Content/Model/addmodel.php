@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-
+            
             <form role="form" class="form-horizontal" method="post">
                 <div class="form-group">
                     <label  class="col-sm-3 control-label no-padding-right"> <?php echo L('MODEL_NAME'); ?> </label>

@@ -32,7 +32,7 @@ function hook($hookname)
  * @staticvar array $_adomodel
  * @param type $adomodel
  * @param type $ext
- * @return mixed
+ * @return Model
  */
 function DD($adomodel, $ext = 'Ado')
 {
@@ -46,6 +46,7 @@ function DD($adomodel, $ext = 'Ado')
     $_adomodel[$adomodel . '_' . $ext] = $newmodel_obj;
     return $newmodel_obj;
 }
+
 
 function BO($bo, $namespace = '')
 {
