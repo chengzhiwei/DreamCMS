@@ -47,7 +47,6 @@ function DD($adomodel, $ext = 'Ado')
     return $newmodel_obj;
 }
 
-
 function BO($bo, $namespace = '')
 {
     static $_bo;
@@ -266,4 +265,24 @@ function URL($url = '', $vars = '', $app = '', $suffix = true, $domain = false)
     }
 
     return $url;
+}
+
+function Elt($url,$vars)
+{
+    $info = pathinfo($url);
+    $action = $info['basename'];
+    $module = $info['dirname'];
+    $class = A($module, 'Element');
+    dump( $class);
+    if ($class)
+    {
+        if (is_string($vars))
+        {
+            parse_str($vars, $vars);
+        }
+        return call_user_func_array(array(&$class, $action . C('ACTION_SUFFIX')), $vars);
+    } else
+    {
+        return false;
+    }
 }

@@ -15,5 +15,6 @@ return array(
     'PWD_TOKEN' => 'RTG123',
     'AUTOLOAD_NAMESPACE' => array(
         'Model' => getcwd() . '\Model',
+        'Element' => getcwd() . '\Element',
     ),
 );
