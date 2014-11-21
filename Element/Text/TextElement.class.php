@@ -1,6 +1,6 @@
 <?php
 
-namespace Elememt\Text;
+namespace Element\Text;
 
 class TextElement extends \Think\Controller
 {

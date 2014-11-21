@@ -12,7 +12,7 @@
 
     </head>
 
-    <body style="height: 100%;"><?php echo Elt('Element/Text/normal');?>
+    <body style="height: 100%;"><?php echo Elt('Text/normal');?>
     <?php if(is_array($lang)): $i = 0; $__LIST__ = $lang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$l): $mod = ($i % 2 );++$i;?><a href="<?php echo ($l['href']); ?>" ><?php echo L($l['lang']);?></a> <span>|</span><?php endforeach; endif; else: echo "" ;endif; ?>
 <?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$m): $mod = ($i % 2 );++$i;?><li class="menu01" style="width:163px;">
 
