@@ -47,8 +47,8 @@ class ModelController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            //不同类型插入不通过字段
-            $type=I('post.type');
+            $field=  DD('ModelField');
+            $field->addField();
         } else
         {
             $this->display();

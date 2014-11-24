@@ -20,6 +20,7 @@ class ModelFieldModel extends \Think\Model\AdvModel
 
     public function addField($data = array())
     {
+        
         if (!$data)
         {
             $data = I('post.');

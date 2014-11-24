@@ -32,10 +32,11 @@ function hook($hookname)
  * @staticvar array $_adomodel
  * @param type $adomodel
  * @param type $ext
- * @return Model
+ * @return Think\Model
  */
 function DD($adomodel, $ext = 'Ado')
 {
+    
     static $_adomodel;
     if (isset($_adomodel[$adomodel . '_' . $ext]))
     {
