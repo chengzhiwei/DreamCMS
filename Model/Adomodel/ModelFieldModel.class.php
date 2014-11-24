@@ -6,6 +6,7 @@ namespace Model\Adomodel;
  * 模型子字段
  * 变更字段同时变更模型
  * 多图片 多文件 和内容放到附表里
+ * 字段管理 目前不支持修改
  */
 class ModelFieldModel extends \Think\Model\AdvModel
 {
@@ -33,7 +34,8 @@ class ModelFieldModel extends \Think\Model\AdvModel
         {
             if ($this->add())
             {
-                $this->execute($this->_addFieldSql($fieldname, $type));
+                $this->execute($this->_addFieldSql());
+                return true;
             } else
             {
                 return false;
@@ -44,31 +46,23 @@ class ModelFieldModel extends \Think\Model\AdvModel
         }
     }
 
-    public function updateField()
+    public function delField($id)
     {
-        $sql = $this->_updateFieldSql();
-    }
-
-    public function delField()
-    {
-
-        $sql = $this->_delFieldSql($fieldname);
-    }
-
-    private function _addFieldSql($fieldname, $type, $len = 0, $isnull = true)
-    {
-        $sql = 'alter ' . $this->_getModelname() . ' infos add ' . $fieldname . $this->_parseFieldType();
-        if ($isnull === false)
-        {
-            $sql.=' not null';
-        }
-        $sql.=' ;';
-        return $sql;
-    }
-
-    private function _updateFieldSql()
-    {
+        $condition = array();
+        $fieldinfo = $this->where($condition)->find();
         
+        $sql = $this->_delFieldSql($fieldinfo['fieldname']);
+    }
+
+    private function _addFieldSql()
+    {
+        $data = I('post.');
+        $sql = 'alter ' . $this->_getModelname() . '  add ' . $data['fieldname'] . $this->_parseFieldType($data['type'], $data['len']);
+        if (isset($_POST['isnull']))
+        {
+            $sql .= ' not null';
+        }
+        return $sql;
     }
 
     private function _delFieldSql($fieldname)
@@ -81,10 +75,9 @@ class ModelFieldModel extends \Think\Model\AdvModel
         return C('DB_PREFIX') . $this->modelName;
     }
 
-    private function _parseFieldType()
+    private function _parseFieldType($type, $len)
     {
-        $type = I('post.type');
-        $len = I('post.len');
+
         switch ($type)
         {
             case 'text';
@@ -94,7 +87,7 @@ class ModelFieldModel extends \Think\Model\AdvModel
                 return ' varchar(' . $len . ') ';
                 break;
             case 'editor';
-                 return ' text ';
+                return ' text ';
                 break;
         }
     }

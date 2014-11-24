@@ -7,8 +7,11 @@ class Element extends \Think\Controller
 
     public function haha()
     {
-        print_r(get_declared_classes());
+        // print_r(get_declared_classes());
+        $class = new \ReflectionClass($this);
+        print_r($class);
     }
+
     public function display()
     {
 

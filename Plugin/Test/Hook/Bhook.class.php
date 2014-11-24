@@ -2,7 +2,7 @@
 
 namespace Test\Hook;
 
-class Bhook
+class Bhook  
 {
     
 }

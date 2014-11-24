@@ -5,15 +5,37 @@
     <contact>Dream CMS@***.com</contact>
     <desc>插件描述</desc>
     <vhook>        
-        <name></name>
-        <hoolval></hoolval>
-        <method></method>
-        <desc></desc>
+        <list>
+            <name></name>
+            <hoolval></hoolval>
+            <method></method>
+            <desc></desc>
+        </list>
+        <list>
+            <name></name>
+            <hoolval></hoolval>
+            <method></method>
+            <desc></desc>
+        </list>
+        <list>
+            <name></name>
+            <hoolval></hoolval>
+            <method></method>
+            <desc></desc>
+        </list>
     </vhook>
-    <vhook>        
+    <bhook>      
+        <list>
+            <name></name>
+            <hoolval></hoolval>
+            <method></method>
+            <desc></desc>
+        </list>  
+    </bhook>
+    
+    <adminmenu>
         <name></name>
-        <hoolval></hoolval>
-        <method></method>
-        <desc></desc>
-    </vhook>
+        <controller></controller>
+        <action></action>
+    </adminmenu>
 </root>

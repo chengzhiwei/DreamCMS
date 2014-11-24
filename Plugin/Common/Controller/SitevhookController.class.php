@@ -25,14 +25,12 @@ class SitevhookController extends \Think\Controller
         return 'Template/Plugin/' . $path;
     }
 
-    public function vhookshow($path)
+    public function display($tpl)
     {
-        if (file_exists($path))
+        $P = $this->vhook_tpl . $tpl . '.php';
+        if (file_exists($P))
         {
-            $this->display($path);
-        } else
-        {
-            $this->display($this->vhook_tpl . $path . '.php');
+            $this->display($P);
         }
     }
 

@@ -9,7 +9,7 @@ class Vhook extends \Common\Controller\SitevhookController
 
     public function show()
     {
-        $this->vhookshow('test');
+        $this->display('test');
     }
 
 }

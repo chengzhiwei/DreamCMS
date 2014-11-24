@@ -16,12 +16,12 @@ class PluginController extends \Auth\Controller\AuthbaseController
     /**
      * 安装插件
      */
-    public function installplugin()
+    public function install()
     {
         /* 获取插件信息 */
         $plugin = I('get.plugin');
         $config_path = 'Plugin/' . $plugin . '/config.xml';
-        $pluginfo = simplexml_load_file($config_path);
+        $pluginfo = \simplexml_load_file($config_path);
         $name = $pluginfo->name;
         $desc = $pluginfo->desc;
         $plugin_data = array('name' => $name, 'desc' => $desc, 'filetitle' => $plugin);
@@ -35,6 +35,14 @@ class PluginController extends \Auth\Controller\AuthbaseController
             }
         }
         //获取插件SQL文件
+    }
+    
+    /**
+     * 卸载插件
+     */
+    public function uninstall()
+    {
+        
     }
 
 }

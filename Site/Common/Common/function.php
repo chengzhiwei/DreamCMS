@@ -26,7 +26,7 @@ function ROU($url, $arr) {
     $key_array = array_keys($arr);
     $org_url_group = $true_rul . '_' . implode('_', $key_array);
     $module = $url_parse[0];
-    $rou_file = getcwd() . '/Router/Site/' . $module . '.php';
+    $rou_file = getcwd() . '/Config/Router/Site/' . $module . '.php';
     if (is_file($rou_file)) {
         $router = include $rou_file;
         if (!S($module . '_router')) {
@@ -142,20 +142,6 @@ function langlist() {
     return $lang;
 }
 
-/**
- * 获取用户供应产品自定义分类
- */
-function getsupplycate() {
-    $data = array();
-    $data['cmsdomain'] = 'http://' . $_SERVER['HTTP_HOST'];
-    $res = curl_post($data, rtrim(C('API_PATH'), '/') . '/?s=User/Index/index&api=UserBos.selpuidbycmsdomain');
-    $arr = json_decode($res, TRUE);
-    $data_c = array();
-    $data_c['parentuid'] = $arr['api_result']['puid'];
-    $result = curl_post($data_c, rtrim(C('API_PATH'), '/') . '/?s=Supply/Index/index&api=UserProcateBos.getuserprocate');
-    $array = json_decode($result, TRUE);
-    return $array;
-}
 
 function curl_post($data, $url) {
     $ch = curl_init();
