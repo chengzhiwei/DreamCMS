@@ -20,18 +20,11 @@ class ModelFieldModel extends \Think\Model\AdvModel
 
     public function addField($data = array())
     {
-        
         if (!$data)
         {
             $data = I('post.');
         }
-        $fieldMethod = '_' . $data['type'] . 'field';
-        if (!method_exists($this, $fieldMethod))
-        {
-            return false;
-        }
-        $fielddata = $this->$fieldMethod();
-        if ($this->create($fielddata))
+        if ($this->create($data))
         {
             if ($this->add())
             {
@@ -51,7 +44,7 @@ class ModelFieldModel extends \Think\Model\AdvModel
     {
         $condition = array();
         $fieldinfo = $this->where($condition)->find();
-        
+
         $sql = $this->_delFieldSql($fieldinfo['fieldname']);
     }
 
@@ -71,57 +64,58 @@ class ModelFieldModel extends \Think\Model\AdvModel
         return 'alter table ' . $this->_getModelname() . ' drop column ' . $fieldname . ';';
     }
 
-    private function _getModelname()
+    private function _getModelname($data)
     {
+        $text_arr = array('editor', 'moreupload',);
+        if (in_array($data['type'], $text_arr))
+        {
+            return C('DB_PREFIX') . $this->modelName.'_data';
+        }
         return C('DB_PREFIX') . $this->modelName;
     }
 
+    /**
+     * 单行文本 多行文本 缩略图
+     * 编辑器 多文件上传 多图片上传 存放在副表多为TEXT 类型
+     * 单选按钮 多选按钮
+     */
     private function _parseFieldType($type, $len)
     {
-
-        switch ($type)
+        $varchar_arr = array('text', 'textarea',);
+        $text_arr = array('editor', 'moreupload',);
+        $select_arr = array('radio', 'checkbox',);
+        if (in_array($type, $varchar_arr))
         {
-            case 'text';
-                return ' varchar(' . $len . ') ';
-                break;
-            case 'textarea';
-                return ' varchar(' . $len . ') ';
-                break;
-            case 'editor';
-                return ' text ';
-                break;
+            return ' varchar(' . $len . ') ';
+        }
+
+        if (in_array($type, $text_arr))
+        {
+            return ' text ';
+        }
+
+        if (in_array($type, $select_arr))
+        {
+            $fieldvalue_arr = explode("\r\n", I('post.fieldvalue'));
+            $isnum = true;
+            foreach ($fieldvalue_arr as $k => $arr)
+            {
+                $val_arr = explode(',', $arr);
+                if (!is_numeric($val_arr[1]))
+                {
+                    $isnum = false;
+                    break;
+                }
+            }
+            if ($isnum === true)
+            {
+                return ' tinyint(4) ';
+            } else
+            {
+                return ' varchar(255)';
+            }
         }
     }
 
-    private function _textfield()
-    {
-        return $this->_fielddata();
-    }
-
-    private function _textareafield()
-    {
-        return $this->_fielddata();
-    }
-
-    private function _editorfield()
-    {
-        return $this->_fielddata();
-    }
-
-    private function _thumbfield()
-    {
-        return $this->_fielddata();
-    }
-
-    private function _fielddata()
-    {
-        $post = I('post.');
-        return $data = array(
-            'title' => $post['title'],
-            'langconf' => $post['langconf'],
-            'type' => $post['type'],
-            'reg' => $post['reg'],
-        );
-    }
 
 }
