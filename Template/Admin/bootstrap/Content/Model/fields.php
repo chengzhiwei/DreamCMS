@@ -10,7 +10,7 @@
     </div><!-- /.page-header -->
     <div class="row">
         <div class="col-xs-12 " style="padding-bottom: 10px;">
-            <a href="<?php echo U('Content/Model/addfield'); ?>" class="  pull-right btn btn-danger" >
+            <a href="<?php echo U('Content/Model/addfield',array('mid'=>I('mid'))); ?>" class="  pull-right btn btn-danger" >
                 添加字段
             </a>
         </div>
@@ -120,12 +120,6 @@
                     </div><!-- /.table-responsive -->
                 </div><!-- /span -->
             </div><!-- /row -->
-
-
-
-
-
-
 
 
         </div><!-- /.col -->

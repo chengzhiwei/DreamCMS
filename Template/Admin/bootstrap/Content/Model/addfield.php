@@ -34,10 +34,10 @@ $(function(){
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="form-field-1" name="fieldname" class="col-sm-3 control-label no-padding-right"> <?php echo L('FIELD');?> </label>
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('FIELD');?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" class="col-xs-10 col-sm-5" placeholder="<?php echo L('FIELD');?> ">
+                        <input type="text"  name="fieldname" class="col-xs-10 col-sm-5" placeholder="<?php echo L('FIELD');?> ">
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -105,6 +105,7 @@ $(function(){
 
                     </div>
                 </div>
+                <input type="hidden" value="<?php echo $mid?>" name="mid"/>
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">
                         <button type="submit" class="btn btn-info">

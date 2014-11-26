@@ -13,7 +13,7 @@ class ContentController extends \Auth\Controller\AuthbaseController
         $unlimitedclass = new \Unlimitedclass();
         $Category_arr = $unlimitedclass->cateresult($catelist);
         $this->assign('Category_arr', $Category_arr);
-        $Model = DD('Model');
+        $Model = DD('Model');       
         $Modellist = $Model->selectall();
         $newmodlist = array();
         foreach ($Modellist as $l)

@@ -31,4 +31,9 @@ class ModelModel extends \Think\Model\AdvModel
         }
     }
 
+    public function findByID($id)
+    {
+        return $this->where(array('id' => $id))->find();
+    }
+
 }

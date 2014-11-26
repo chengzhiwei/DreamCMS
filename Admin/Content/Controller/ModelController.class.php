@@ -49,8 +49,10 @@ class ModelController extends \Auth\Controller\AuthbaseController
         {
             $field=  DD('ModelField');
             $field->addField();
+            //echo $field->getDbError().$field->getError();
         } else
         {
+            $this->assign('mid',I('mid'));
             $this->display();
         }
     }

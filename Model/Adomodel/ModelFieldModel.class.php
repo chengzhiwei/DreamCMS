@@ -11,13 +11,6 @@ namespace Model\Adomodel;
 class ModelFieldModel extends \Think\Model\AdvModel
 {
 
-    public $modelName = '';
-
-    public function __construct($modname = '')
-    {
-        $this->modelName = $modname;
-    }
-
     public function addField($data = array())
     {
         if (!$data)
@@ -28,10 +21,12 @@ class ModelFieldModel extends \Think\Model\AdvModel
         {
             if ($this->add())
             {
-                $this->execute($this->_addFieldSql());
+
+                $this->execute($this->_addFieldSql($data));
                 return true;
             } else
             {
+                echo $this->getDbError();
                 return false;
             }
         } else
@@ -48,10 +43,9 @@ class ModelFieldModel extends \Think\Model\AdvModel
         $sql = $this->_delFieldSql($fieldinfo['fieldname']);
     }
 
-    private function _addFieldSql()
+    private function _addFieldSql($data)
     {
-        $data = I('post.');
-        $sql = 'alter ' . $this->_getModelname() . '  add ' . $data['fieldname'] . $this->_parseFieldType($data['type'], $data['len']);
+        $sql = 'alter ' . $this->_getModelname($data) . '  add ' . $data['fieldname'] . $this->_parseFieldType($data);
         if (isset($_POST['isnull']))
         {
             $sql .= ' not null';
@@ -59,19 +53,22 @@ class ModelFieldModel extends \Think\Model\AdvModel
         return $sql;
     }
 
-    private function _delFieldSql($fieldname)
+    private function _delFieldSql($data)
     {
-        return 'alter table ' . $this->_getModelname() . ' drop column ' . $fieldname . ';';
+        return 'alter table ' . $this->_getModelname($data) . ' drop column ' . $data['fieldname'] . ';';
     }
 
     private function _getModelname($data)
     {
+        dump($data);
+        $model = DD('Model');
+        $modelinfo = $model->findByID($data['mid']);
         $text_arr = array('editor', 'moreupload',);
         if (in_array($data['type'], $text_arr))
         {
-            return C('DB_PREFIX') . $this->modelName.'_data';
+            return C('DB_PREFIX') . $modelinfo['table'] . '_data';
         }
-        return C('DB_PREFIX') . $this->modelName;
+        return C('DB_PREFIX') . $modelinfo['table'];
     }
 
     /**
@@ -79,13 +76,17 @@ class ModelFieldModel extends \Think\Model\AdvModel
      * 编辑器 多文件上传 多图片上传 存放在副表多为TEXT 类型
      * 单选按钮 多选按钮
      */
-    private function _parseFieldType($type, $len)
+    private function _parseFieldType($data)
     {
         $varchar_arr = array('text', 'textarea',);
         $text_arr = array('editor', 'moreupload',);
         $select_arr = array('radio', 'checkbox',);
-        if (in_array($type, $varchar_arr))
+        if (in_array($data['type'], $varchar_arr))
         {
+            if (!$len)
+            {
+                $len = 255;
+            }
             return ' varchar(' . $len . ') ';
         }
 
@@ -116,6 +117,5 @@ class ModelFieldModel extends \Think\Model\AdvModel
             }
         }
     }
-
 
 }
