@@ -6,7 +6,24 @@
     }fieldset{ padding-bottom: 20px;}
     .form-horizontal .control-label .chk_lbl{text-align:left}
 </style>
+<script>
+    $(function () {
+        $("input[name='type']").change(function () {
+            val = $("input[name='type']:checked").val();
+            if (val == 0)
+            {
+                $('.out_link_div').hide();
+                $('.in_link_div').show();
+            }
+            else
+            {
+                $('.out_link_div').show();
+                $('.in_link_div').hide();
+            }
+        });
 
+    });
+</script>
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -24,23 +41,23 @@
 
             <form role="form" class="form-horizontal" method="post">
                 <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 栏目类型 </label>
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_TYPE'); ?> </label>
 
                     <div class="col-sm-9">
                         <label>
-                            <input type="radio" class="ace" name="form-field-radio" checked="checked">
-                            <span class="lbl"> 内部链接</span>
+                            <input type="radio" class="ace" value="0" name="type" checked="checked">
+                            <span class="lbl"> <?php echo L('IN_LINK'); ?></span>
                         </label>
 
                         <label>
-                            <input type="radio" class="ace" name="form-field-radio">
-                            <span class="lbl"> 外部连接链接</span>
+                            <input type="radio" class="ace" name="type" value="1">
+                            <span class="lbl"> <?php echo L('OUT_LINK'); ?></span>
                         </label>
 
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 栏目模型 </label>
+                <div class="form-group in_link_div" >
+                    <label  class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_MODEL'); ?> </label>
 
                     <div class="col-sm-9">
 
@@ -57,15 +74,15 @@
 
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 栏目名 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_NAME'); ?> </label>
 
                     <div class="col-sm-9">
                         <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
-                <div class="form-group hidden">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 链接地址 </label>
+                <div class="form-group out_link_div" style=" display: none">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LINK_URL'); ?> </label>
 
                     <div class="col-sm-9">
                         <input type="text" name="langconf" value="http://" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
@@ -73,12 +90,12 @@
                 </div>
 
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 父级栏目 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('PARENT_CATE'); ?> </label>
 
                     <div class="col-sm-9">
                         <select name="pid" id="" class="col-sm-5">
-                            <option value="0">顶级栏目</option>
+                            <option value="0"><?php echo L('FIRST_CATE'); ?></option>
                             <?php
                             foreach ($category as $ca)
                             {
@@ -101,8 +118,8 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 栏目模板 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_TMPL'); ?> </label>
 
                     <div class="col-sm-9">
 
@@ -121,8 +138,8 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 列表模板 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LIST_TMPL'); ?> </label>
 
                     <div class="col-sm-9">
                         <select name="listtmpl" id="" class="col-sm-5">
@@ -141,8 +158,8 @@
                 </div>
 
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 文章模板 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('VIEW_TMPL'); ?> </label>
 
                     <div class="col-sm-9">
                         <select name="newstmpl" id="" class="col-sm-5 ">
@@ -159,8 +176,8 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 单页面模板 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('PAGE_TMPL'); ?> </label>
 
                     <div class="col-sm-9">
                         <select name="pagetmpl" id=""  class="col-sm-5">
@@ -176,16 +193,16 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 关键字 </label>
+                <div class="form-group in_link_div ">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('KEYWORD'); ?> </label>
 
                     <div class="col-sm-9">
                         <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 描述 </label>
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('DESC'); ?> </label>
 
                     <div class="col-sm-9">
                         <textarea class="col-sm-5"></textarea>
@@ -200,13 +217,13 @@
                     <div class="col-md-offset-3 col-md-9">
                         <button type="submit" class="btn btn-info">
                             <i class="icon-ok bigger-110"></i>
-                            Submit
+                            <?php echo L('ADD');?>
                         </button>
 
                         &nbsp; &nbsp; &nbsp;
                         <button type="reset" class="btn">
                             <i class="icon-undo bigger-110"></i>
-                            Reset
+                            <?php echo L('RESET');?>
                         </button>
                     </div>
                 </div>

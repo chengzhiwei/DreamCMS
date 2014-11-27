@@ -7,6 +7,7 @@ class ContentController extends \Auth\Controller\AuthbaseController
 
     public function index()
     {
+        
         $Category = DD('Category');
         $catelist = $Category->selectall(cookie('langid'));
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');
