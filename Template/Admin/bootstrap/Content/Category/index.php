@@ -47,7 +47,7 @@
                                         </td>
 
                                         <td>
-                                            <a href="#"><?php echo $ct['title']; ?></a>
+                                            <a href="#" style="margin-left: <?php echo $ct['deep'] * 30; ?>px"><?php echo $ct['title']; ?></a>
                                         </td>
                                         
                                         

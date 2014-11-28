@@ -75,22 +75,6 @@
                     </div>
                 </div>
                 <div class="form-group in_link_div">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_NAME'); ?> </label>
-
-                    <div class="col-sm-9">
-                        <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
-                    </div>
-                </div>
-                <div class="form-group out_link_div" style=" display: none">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LINK_URL'); ?> </label>
-
-                    <div class="col-sm-9">
-                        <input type="text" name="langconf" value="http://" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
-                    </div>
-                </div>
-
-
-                <div class="form-group in_link_div">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('PARENT_CATE'); ?> </label>
 
                     <div class="col-sm-9">
@@ -100,13 +84,13 @@
                             foreach ($category as $ca)
                             {
                                 ?>
-                                <option value="<?php echo $ca['id']; ?>">
+                                <option  value="<?php echo $ca['id']; ?>">
                                     <?php
                                     if ($ca['deep'] != 0)
                                     {
                                         for ($i = 0; $i <= $ca['deep']; $i++)
                                         {
-                                            echo "——";
+                                            echo "　　";
                                         }
                                     }
                                     echo $ca['title'];
@@ -117,6 +101,26 @@
                         </select>
                     </div>
                 </div>
+                
+                <div class="form-group in_link_div">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_NAME'); ?> </label>
+
+                    <div class="col-sm-9">
+                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                    </div>
+                </div>
+                
+                
+                <div class="form-group out_link_div" style=" display: none">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LINK_URL'); ?> </label>
+
+                    <div class="col-sm-9">
+                        <input type="text" name="link" value="http://" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                    </div>
+                </div>
+
+
+                
 
                 <div class="form-group in_link_div">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_TMPL'); ?> </label>
@@ -125,7 +129,7 @@
 
                         <select name="catetmpl" id=""  class="col-sm-5">
                             <?php
-                            foreach ($catetmpl as $t)
+                            foreach ($tmpl['catetmpl'] as $t)
                             {
                                 ?>
                                 <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
@@ -144,7 +148,7 @@
                     <div class="col-sm-9">
                         <select name="listtmpl" id="" class="col-sm-5">
                             <?php
-                            foreach ($listtmpl as $t)
+                            foreach ($tmpl['listtmpl'] as $t)
                             {
                                 ?>
                                 <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
@@ -164,7 +168,7 @@
                     <div class="col-sm-9">
                         <select name="newstmpl" id="" class="col-sm-5 ">
                             <?php
-                            foreach ($newstmpl as $t)
+                            foreach ($tmpl['newstmpl'] as $t)
                             {
                                 ?>
                                 <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
@@ -182,7 +186,7 @@
                     <div class="col-sm-9">
                         <select name="pagetmpl" id=""  class="col-sm-5">
                             <?php
-                            foreach ($pagetmpl as $t)
+                            foreach ($tmpl['pagetmpl'] as $t)
                             {
                                 ?>
                                 <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
@@ -197,7 +201,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('KEYWORD'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" name="keyword" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
 
@@ -205,7 +209,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('DESC'); ?> </label>
 
                     <div class="col-sm-9">
-                        <textarea class="col-sm-5"></textarea>
+                        <textarea class="col-sm-5" name="desc"></textarea>
                     </div>
                 </div>
 

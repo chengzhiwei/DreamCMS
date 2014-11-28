@@ -48,7 +48,7 @@
     .tree li span {
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
-       // border:1px solid #999;
+        // border:1px solid #999;
         border-radius:5px;
         display:inline-block;
         padding:1px 3px;
@@ -86,73 +86,36 @@
         <div class="col-xs-12">
             <div class="tree well col-lg-3">
                 <ul>
-                    <li>
-                        <span><i class="icon-folder-open"></i> 新闻</span> 
-                        <ul>
-                            <li>
-                                <span><i class="icon-minus-sign"></i> 国际新闻</span> 
-                                <ul>
-                                    <li>
-                                        <a href=""> <span><i class="icon-leaf"></i> 欧洲新闻</span> </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span><i class="icon-minus-sign"></i> 国内新闻</span> 
-                                <ul>
-                                    <li>
-                                        <span><i class="icon-minus-sign"></i>江苏新闻</span> 
-                                        <ul>
-                                            <li>
-                                                <a href=""><span><i class="icon-leaf"></i> 镇江新闻</span>  </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span><i class="icon-leaf"></i> 上海新闻</span> 
 
-                                    </li>
-                                    <li>
-                                        <span><i class="icon-leaf"></i> 浙江新闻</span> <a href=""></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span><i class="icon-folder-open"></i> 关于我们</span>
-                        <ul>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 公司简介</span></a>
-                            </li>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 组织架构</span></a>
-                            </li>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 招贤纳士</span></a>
-                            </li>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 联系我们</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span><i class="icon-folder-open"></i> 关于我们</span>
-                        <ul>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 公司简介</span></a>
-                            </li>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 组织架构</span></a>
-                            </li>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 招贤纳士</span></a>
-                            </li>
-                            <li>
-                                <a href=""><span><i class="icon-leaf"></i> 联系我们</span></a>
-                            </li>
-                        </ul>
-                    </li>
+                <?php
+                
+                foreach ($Category_arr as $key => $cate)
+                {
+                    echo '<li><span><i class="icon-folder-open"></i> ' . $cate['title'] . '</span>';
+                    if (isset($Category_arr[$key + 1]))
+                    {
+                        if ($Category_arr[$key + 1]['deep'] > $cate['deep'])
+                        {
+                            echo'<ul>';
+                        }
+                        if ($Category_arr[$key + 1]['deep'] <= $cate['deep'])
+                        {
+                            for ($i = 0; $i < ($Category_arr[$key + 1]['deep'] - $cate['deep']); $i++)
+                            {
+                                echo'</li><ul>';
+                            }
+                        }
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+                ?>
+
+
+                
+                    
                 </ul>
             </div>
             <div class="col-xs-9">
