@@ -281,7 +281,7 @@ function Elt($url, $vars=array())
         {
             parse_str($vars, $vars);
         }
-        return call_user_func_array(array(&$class, 'normal' . C('ACTION_SUFFIX')), $vars);
+        return call_user_func_array(array(&$class, 'show' . C('ACTION_SUFFIX')), $vars);
     } else
     {
 

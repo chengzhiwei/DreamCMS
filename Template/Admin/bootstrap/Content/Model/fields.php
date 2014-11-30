@@ -29,8 +29,8 @@
                                             <span class="lbl"></span>
                                         </label>
                                     </th>
-                                    <th><?php echo L('USERNAME'); ?></th>
-                                    <th><?php echo L('ROLE'); ?></th>
+                                    <th class="center">排序</th>
+                                    <th>字段名</th>
 
 
                                     <th></th>
@@ -39,7 +39,7 @@
 
                             <tbody>
                                 <?php
-                                foreach ($grouplist as $gl)
+                                foreach ($fields as $f)
                                 {
                                     ?>
                                     <tr>
@@ -50,10 +50,10 @@
                                             </label>
                                         </td>
 
-                                        <td>
-                                            <a href="#"><?php echo $li['username']; ?></a>
+                                        <td class="center">
+                                            <input type="text" style=" width: 40px;" />
                                         </td>
-                                        <td>角色</td>
+                                        <td> <?php echo $f['title']; ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">

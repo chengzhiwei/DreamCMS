@@ -117,5 +117,12 @@ class ModelFieldModel extends \Think\Model\AdvModel
             }
         }
     }
+    
+    public function selFieldByMid($mid)
+    {
+        $condition=array();
+        $condition['mid']=$mid;
+        return $this->where($condition)->select();
+    }
 
 }

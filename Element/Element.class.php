@@ -5,32 +5,27 @@ namespace Element;
 class Element extends \Think\Controller
 {
 
-    public function haha()
+    public $tmpl = '';
+
+    public function __construct()
     {
-        // print_r(get_declared_classes());
         $class = new \ReflectionClass($this);
-        print_r($class);
+        $path = str_replace('\\', '/', $class->name);
+        $this->tmpl = __ROOT__ . '/' . $path . '.php';
+        $path_arr = explode('/', $path);
+        unset($path_arr[count($path_arr) - 1]);
+        $true_path = implode('/', $path_arr);
+        $this->assign('ELT_CSS', __ROOT__ . '/' . $true_path . '/View/css');
+        $this->assign('ELT_JS', __ROOT__ . '/' . $true_path . '/View/js');
+        $this->assign('ELT_IMG', __ROOT__ . '/' . $true_path . '/View/images');
+        parent::__construct();
     }
 
-    public function display()
+    public function display($path='')
     {
-
-        parent::display();
-    }
-
-    public function findPlugins()
-    {
-        $plugins = array();
-        foreach (get_declared_classes()as $class)
-        {
-            $reflectionClass = new ReflectionClass($class);
-            //判断一个类是否实现了IPlugin 接口  
-            if ($reflectionClass->implementsInterface('IPlugin'))
-            {
-                $plugins[] = $reflectionClass;
-            }
-        }
-        return $plugins;
+        $tpl='';
+        $path==''?$tpl=  $this->tmpl:$tpl=$path;
+        parent::display($tpl);
     }
 
 }

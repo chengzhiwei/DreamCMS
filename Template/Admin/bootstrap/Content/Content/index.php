@@ -87,35 +87,46 @@
             <div class="tree well col-lg-3">
                 <ul>
 
-                <?php
-                
-                foreach ($Category_arr as $key => $cate)
-                {
-                    echo '<li><span><i class="icon-folder-open"></i> ' . $cate['title'] . '</span>';
-                    if (isset($Category_arr[$key + 1]))
+                    <?php
+                    foreach ($Category_arr as $key => $cate)
                     {
-                        if ($Category_arr[$key + 1]['deep'] > $cate['deep'])
+                        $str = '<li>';
+                        if (count($Category_arr) - 1 != $key)
                         {
-                            echo'<ul>';
-                        }
-                        if ($Category_arr[$key + 1]['deep'] <= $cate['deep'])
-                        {
-                            for ($i = 0; $i < ($Category_arr[$key + 1]['deep'] - $cate['deep']); $i++)
+                            if ($Category_arr[$key + 1]['deep'] > $cate['deep'])
                             {
-                                echo'</li><ul>';
+                                $str.='<span><i class="icon-folder-open "></i> ' . $cate['title'] . '</span>';
+                                $str.='<ul>';
+                            }
+                            if ($Category_arr[$key + 1]['deep'] <= $cate['deep'])
+                            {
+                                $str.='<a href=""><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                                for ($i = 0; $i < $cate['deep'] - ($Category_arr[$key + 1]['deep']); $i++)
+                                {
+                                    $str.='</li></ul>';
+                                }
+                            }
+                        } else
+                        {
+                            $str.='<a href=""><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                            if ($cate['deep'] == 0)
+                            {
+                                $str.='</li>';
+                            } else
+                            {
+                                for ($i = 0; $i <= $cate['deep']; $i++)
+                                {
+                                    $str.='</li></ul>';
+                                }
                             }
                         }
+                        echo $str;
                     }
-                    else
-                    {
-                        
-                    }
-                }
-                ?>
+                    ?>
 
 
-                
-                    
+
+
                 </ul>
             </div>
             <div class="col-xs-9">

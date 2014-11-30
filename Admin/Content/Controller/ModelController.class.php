@@ -40,6 +40,10 @@ class ModelController extends \Auth\Controller\AuthbaseController
 
     public function fields()
     {
+        $mid = I('mid');
+        $ModelField = DD('ModelField');
+        $fields=$ModelField->selFieldByMid($mid);
+        $this->assign('fields', $fields);
         $this->display();
     }
 
@@ -47,12 +51,12 @@ class ModelController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            $field=  DD('ModelField');
+            $field = DD('ModelField');
             $field->addField();
             //echo $field->getDbError().$field->getError();
         } else
         {
-            $this->assign('mid',I('mid'));
+            $this->assign('mid', I('mid'));
             $this->display();
         }
     }
