@@ -68,22 +68,20 @@
         //border:1px solid #94a0b4;
         color:#000
     }
-    #map {
-        height: 100%;
-        min-height: 100%;
-        background: red;
-        display: block;
-    }
 
-    html, body,.main-container,.page-content,.main-content > .page-content, .heigth100,.breadcrumbs {
-        height: 100%;
-    }
-    
-
-    .main-container-inner{ display: block;  min-height: 100%; height: 100%}
 </style>
-
-<div class="page-content heigth100">
+<script type="text/javascript">
+    function autoHeight(){
+        var iframe = document.getElementById("iframeId");
+        if(iframe.Document){//ie自有属性
+            iframe.style.height = iframe.Document.documentElement.scrollHeight;
+        }else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
+            iframe.height = iframe.contentDocument.body.offsetHeight ;
+        }
+       
+    }
+</script>
+<div class="page-content " style=" height: 100%">
     <div class="page-header">
         <h1>
             <small>
@@ -93,9 +91,9 @@
         </h1>
     </div>
 
-    <div class="row heigth100" >
-        <div class="col-xs-12 heigth100" >
-            <div class="tree well col-lg-3 heigth100" >
+    <div class="row " style=" height: 100%" >
+        <div class="col-xs-12 " >
+            <div class="tree well col-lg-3 " >
                 <ul>
 
                     <?php
@@ -140,8 +138,9 @@
 
                 </ul>
             </div>
-            <div class="col-xs-9 heigth100" id='map'>
-                <iframe id='iframeId' height="100%" style="zoom: 0.6;" src="http://www.baidu.com" frameBorder="0"  width="100%" ></iframe> 
+
+            <div class="col-lg-9 "  >
+                <iframe id='iframeId' onload="autoHeight()"  style="zoom: 0.6; " src="http://127.0.0.1/DreamCMS/admin.php/Content/Content/contentlist.html" frameBorder="0"  width="100%" ></iframe> 
             </div>
         </div>
     </div>
