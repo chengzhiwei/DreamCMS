@@ -7,8 +7,11 @@ namespace Element\Editor;
  */
 class Ueditor extends \Element\Element
 {
-    public function show()
+
+    public function show($vars)
     {
-        
+        echo 'haha';
+        $this->display();
     }
+
 }

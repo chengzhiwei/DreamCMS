@@ -267,24 +267,3 @@ function URL($url = '', $vars = '', $app = '', $suffix = true, $domain = false)
 
     return $url;
 }
-
-function Elt($url, $vars=array())
-{
-    $info = pathinfo($url);
-    $action = $info['basename'];
-    $module = $info['dirname'];
-    $class = new \Element\Text\TextElement();
-    
-    if ($class)
-    {
-        if (is_string($vars))
-        {
-            parse_str($vars, $vars);
-        }
-        return call_user_func_array(array(&$class, 'show' . C('ACTION_SUFFIX')), $vars);
-    } else
-    {
-
-        return false;
-    }
-}

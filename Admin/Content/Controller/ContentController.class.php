@@ -7,14 +7,14 @@ class ContentController extends \Auth\Controller\AuthbaseController
 
     public function index()
     {
-        
+
         $Category = DD('Category');
         $catelist = $Category->selectall(cookie('langid'));
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');
         $unlimitedclass = new \Unlimitedclass();
         $Category_arr = $unlimitedclass->cateresult($catelist);
         $this->assign('Category_arr', $Category_arr);
-        $Model = DD('Model');       
+        $Model = DD('Model');
         $Modellist = $Model->selectall();
         $newmodlist = array();
         foreach ($Modellist as $l)
@@ -23,6 +23,33 @@ class ContentController extends \Auth\Controller\AuthbaseController
         }
         $this->assign('modlist', $newmodlist);
         $this->display();
+    }
+
+    public function contentlist()
+    {
+        
+    }
+
+    public function add()
+    {
+        if (IS_POST)
+        {
+            
+        } else
+        {
+            $this->display();
+        }
+    }
+
+    public function edit()
+    {
+        if (IS_POST)
+        {
+            
+        } else
+        {
+            $this->display();
+        }
     }
 
 }

@@ -12,7 +12,13 @@
 
     </head>
 
-    <body style="height: 100%;">{:Elt('Text/show')}
+    <body style="height: 100%;">
+        <?php $a=array(
+            'type'=>'Editor',
+             'element'=>'Ueditor',
+        );
+        \Element\EmtShow::show($a);
+        ?>
     <include file="@Layout:header" />
     <taglib name='Flcms' />
 

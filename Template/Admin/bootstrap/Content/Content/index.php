@@ -68,13 +68,24 @@
         //border:1px solid #94a0b4;
         color:#000
     }
+    #map {
+        height: 100%;
+        min-height: 100%;
+        background: red;
+        display: block;
+    }
 
+    html, body,.main-container,.page-content,.main-content > .page-content, .heigth100,.breadcrumbs {
+        height: 100%;
+    }
+    
+
+    .main-container-inner{ display: block;  min-height: 100%; height: 100%}
 </style>
 
-<div class="page-content">
+<div class="page-content heigth100">
     <div class="page-header">
         <h1>
-
             <small>
                 <i class="icon-double-angle-right"></i>
                 文章管理
@@ -82,9 +93,9 @@
         </h1>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="tree well col-lg-3">
+    <div class="row heigth100" >
+        <div class="col-xs-12 heigth100" >
+            <div class="tree well col-lg-3 heigth100" >
                 <ul>
 
                     <?php
@@ -129,8 +140,8 @@
 
                 </ul>
             </div>
-            <div class="col-xs-9">
-                <iframe style="zoom: 0.6;" height="250" src="http://www.baidu.com" frameBorder="0"  width="100%" ></iframe> 
+            <div class="col-xs-9 heigth100" id='map'>
+                <iframe id='iframeId' height="100%" style="zoom: 0.6;" src="http://www.baidu.com" frameBorder="0"  width="100%" ></iframe> 
             </div>
         </div>
     </div>

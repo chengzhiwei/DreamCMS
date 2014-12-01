@@ -5,35 +5,40 @@ namespace Element;
 class EmtShow
 {
 
-    static $elt_obj=array();
-    public static function show($fielddata)
+    static $elt_obj = array();
+
+    public static function show($fielddata, $vars = array())
     {
         if ($fielddata['element'] == '')
         {
             $method = '_' . $fielddata['type'];
             return self::$method($fielddata);
-        }
-        else
+        } else
         {
-            $cls="\\Element\\".ucfirst($fielddata['type']).'\\'.  ucfirst($fielddata['element']); 
-            if(!$elt_obj[$cls])
+            $cls = "\\Element\\" . ucfirst($fielddata['type']) . '\\' . ucfirst($fielddata['element']);
+            if (!self::$elt_obj[$cls])
             {
-                $class = new $cls;
-                $elt_obj[$cls]=$class;
+                $class = new $cls();
+                self::$elt_obj[$cls] = $class;
             }
-           return $elt_obj[$cls]->show();
+            $data = $fielddata;
+            if (!$vars)
+            {
+                $data = array_merge($fielddata, $vars);
+            }
+            return call_user_func_array(array(&self::$elt_obj[$cls], 'show'), $data);
         }
     }
 
     private static function _text($fielddata)
     {
-        return '<input type="text" '.$fielddata['tackattr'].' '
-                . 'name="'.$fielddata['fieldname'].'" id="'.$fielddata['fieldname'].'" value="" />' ;
+        echo '<input type="text" ' . $fielddata['tackattr'] . ' '
+                . 'name="' . $fielddata['fieldname'] . '" id="' . $fielddata['fieldname'] . '" value="" />';
     }
 
     private static function _textarea($fielddata)
     {
-        return '<textarea  '.$fielddata['tackattr'].' name="'.$fielddata['fieldname'].'" id="'.$fielddata['fieldname'].'"></textarea>';
+        echo '<textarea  ' . $fielddata['tackattr'] . ' name="' . $fielddata['fieldname'] . '" id="' . $fielddata['fieldname'] . '"></textarea>';
     }
 
 }
