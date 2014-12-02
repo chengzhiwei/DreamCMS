@@ -27,7 +27,8 @@ class ContentController extends \Auth\Controller\AuthbaseController
 
     public function contentlist()
     {
-        
+        C('IS_LAYOUT',false);
+        $this->display();
     }
 
     public function add()

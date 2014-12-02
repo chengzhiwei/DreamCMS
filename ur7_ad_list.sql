@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2014-11-24 21:27:29
+Date: 2014-12-01 22:01:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -302,12 +302,21 @@ CREATE TABLE `ur7_category` (
   `newstmpl` varchar(50) NOT NULL,
   `pagetmpl` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_category
 -- ----------------------------
 INSERT INTO `ur7_category` VALUES ('1', '图片文章', '', '', '0', '2', '1', 'list', '0', '', '0', '1', 'Category', 'news_photo', 'page');
+INSERT INTO `ur7_category` VALUES ('2', '国际新闻', '', '', '0', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('3', '美洲新闻', '', '', '2', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('4', '美国新闻', '', '', '3', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('5', '国内新闻', '', '', '0', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('6', '江苏新闻', '', '', '5', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('7', '上海新闻', '', '', '5', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('8', '镇江新闻', '', '', '6', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('9', '关于我们', '', '', '0', '3', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('10', '公司简介', '', '', '9', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
 
 -- ----------------------------
 -- Table structure for `ur7_friend_link`
@@ -440,12 +449,20 @@ CREATE TABLE `ur7_model_field` (
   `fieldvalue` varchar(255) NOT NULL,
   `isnull` tinyint(1) NOT NULL DEFAULT '0',
   `tackattr` varchar(255) NOT NULL,
+  `mid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_model_field
 -- ----------------------------
+INSERT INTO `ur7_model_field` VALUES ('1', '标题', 'title', 'TITLE', 'text', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('2', '栏目', 'cid', 'CATE', 'cate', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('3', '关键字', 'keyword', 'KEYWORD', 'textrea', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textrea', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_page`
