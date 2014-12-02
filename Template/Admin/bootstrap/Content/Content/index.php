@@ -75,10 +75,10 @@
         display: block;
     }
 
-    html, body,.main-container,.page-content,.main-content > .page-content, .heigth100,.breadcrumbs {
+    html, body,.main-container{
         height: 100%;
     }
-    
+    .row > div{ height: 100%;}
 
     .main-container-inner{ display: block;  min-height: 100%; height: 100%}
 </style>
