@@ -68,20 +68,7 @@
         //border:1px solid #94a0b4;
         color:#000
     }
-<<<<<<< HEAD
-    #map {
-        height: 100%;
-        min-height: 100%;
-        background: red;
-        display: block;
-    }
 
-    html, body,.main-container{
-        height: 100%;
-    }
-    .row > div{ height: 100%;}
-=======
->>>>>>> origin/master
 
 </style>
 <script type="text/javascript">
