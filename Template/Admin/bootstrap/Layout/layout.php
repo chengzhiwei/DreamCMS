@@ -326,7 +326,7 @@
         </script>
         <script src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
         <script src="<?php echo JS_PATH ?>typeahead-bs2.min.js"></script>
-
+        <script src="<?php echo JS_PATH ?>jquery.validate.min.js"></script>
         <!-- page specific plugin scripts -->
 
         <!--[if lte IE 8]>

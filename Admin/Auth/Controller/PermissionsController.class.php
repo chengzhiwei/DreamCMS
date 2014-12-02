@@ -11,6 +11,17 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
     }
 
     /**
+     * 分组列表
+     */
+    public function grouplist()
+    {
+        $groupmodel = DD('AdminAuthGroup');
+        $grouplist = $groupmodel->selall();
+        $this->assign('grouplist', $grouplist);
+        $this->display();
+    }
+
+    /**
      * 添加权限组
      */
     public function addgroup()
@@ -106,14 +117,14 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         $grouplist = $groupmod->selall();
         $ctlmod = DD('AdminAuthController');
         $ctllist = $ctlmod->selall();
-        $newctllist=array();
+        $newctllist = array();
         foreach ($ctllist as $cl)
         {
             $newctllist[$cl['gid']][] = $cl;
         }
         $actmod = DD('AdminAuthAction');
         $actlist = $actmod->select();
-        $newactlist=array();
+        $newactlist = array();
         foreach ($actlist as $al)
         {
             $newactlist[$al['cid']][] = $al;
@@ -122,6 +133,59 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         $this->assign('ctllist', $newctllist);
         $this->assign('actlist', $newactlist);
         $this->display();
+    }
+
+    public function delaction()
+    {
+        if (IS_AJAX)
+        {
+            $id = I('get.id');
+            $actmod = DD('AdminAuthAction');
+            $b = $actmod->delAction($id);
+            $info = array();
+            if ($b)
+            {
+                echo 1;
+            } else
+            {
+                echo -1;
+            }
+        }
+    }
+
+    public function editaction()
+    {
+        if (IS_POST)
+        {
+            $data = I('post.');
+            if (!isset($_POST['isshow']))
+            {
+                $data['isshow'] = 0;
+            }
+            $id = I('post.id');
+            $actmod = DD('AdminAuthAction');
+            $b = $actmod->edit($id, $data);
+            if ($b)
+            {
+                $this->success(L('OP_SUCCESS'), U('Auth/Permissions/actions'));
+            } else
+            {
+                $this->error(L('OP_ERROR'));
+            }
+        } else
+        {
+            $id = I('get.id');
+            $actmod = DD('AdminAuthAction');
+            $actioninfo = $actmod->findByID($id);
+            $groupmod = DD('AdminAuthGroup');
+            $grouplist = $groupmod->selall();
+            $ctlmod = DD('AdminAuthController');
+            $ctllist = $ctlmod->selall();
+            $this->assign('grouplist', $grouplist);
+            $this->assign('ctllist', $ctllist);
+            $this->assign('actioninfo', $actioninfo);
+            $this->display();
+        }
     }
 
 }

@@ -411,7 +411,7 @@ class Model {
         }
         if(is_array($options['where']) && isset($options['where'][$pk])){
             $pkValue    =   $options['where'][$pk];
-        }        
+        }
         if(false === $this->_before_update($data,$options)) {
             return false;
         }        

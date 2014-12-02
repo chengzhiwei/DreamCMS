@@ -9,5 +9,6 @@ return array(
     'IS_MENU_SHOW' => '是否在菜单栏显示',
     'ACTION_NAME' => '权限名',
     'ACTION_OP_NAME' => '权限操作名',
+    'SORT'=>'排序',
 );
 ?>

@@ -1,5 +1,7 @@
 <?php 
  return array (
+  'ACT_AUTH_PERMISSIONS_GROUPLIST' => '分组管理',
+  'ACT_AUTH_PERMISSIONS_EDITACTION' => '修改权限',
   'ACT_CONTENT_MODEL_FIELDS' => '字段管理',
   'ACT_CONTENT_MODEL_ADDMODEL' => '添加模型',
   'ACT_AUTH_ADMIN_ADDROLE' => '添加角色',

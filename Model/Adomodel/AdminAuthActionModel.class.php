@@ -65,6 +65,37 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
             return false;
         }
     }
-    
-    
+
+    public function delAction($id)
+    {
+        $condition = array();
+        $condition['id'] = $id;
+        return $this->where($condition)->delete();
+    }
+
+    public function findByID($id)
+    {
+        $condition = array();
+        $condition['id'] = $id;
+        return $this->where($condition)->find();
+    }
+
+    public function edit($id, $data = array())
+    {
+        if (!$data)
+        {
+            $data = I('post.');
+        }
+        if ($this->create($data))
+        {
+            $condition = array('id' => $id);
+            if ($this->where($condition)->save())
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+
 }

@@ -42,9 +42,11 @@
                                     foreach ($actlist[$ct['id']] as $al)
                                     {
                                         ?>
-                                        <lable class="col-sm-2 "><?php echo L($al['langconf']); ?> <a href="#" class="icon-remove"></a> <a href="#" class="icon-edit"></a></lable>
-                                        <?php }
-                                        ?>
+                                        <lable class="col-sm-2 "><?php echo L($al['langconf']); ?> <a href="#" class="icon-remove"></a>
+                                            <a href="<?php echo U('Auth/Permissions/editaction',array('id'=>$al['id'])); ?>" class="icon-edit"></a>
+                                        </lable>
+                                    <?php }
+                                    ?>
                                 </fieldset>
                                 <?php
                             }

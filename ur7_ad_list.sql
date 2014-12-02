@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 50620
+Source Server         : localhost
+Source Server Version : 50532
 Source Host           : localhost:3306
 Source Database       : 127001
 
 Target Server Type    : MYSQL
-Target Server Version : 50620
+Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-01 22:01:26
+Date: 2014-12-02 17:21:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -85,9 +85,9 @@ CREATE TABLE `ur7_admin_auth_action` (
   `controller` varchar(50) NOT NULL,
   `action` varchar(50) NOT NULL,
   `langconf` varchar(50) NOT NULL,
-  `isshow` varchar(50) NOT NULL,
+  `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -113,15 +113,17 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('21', '分类管理', 'admin.php', '
 INSERT INTO `ur7_admin_auth_action` VALUES ('22', '广告管理', 'admin.php', '5', '10', 'Modules', 'Ad', 'adlist', 'ACT_MODULES_AD_ADLIST', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('23', '模型列表', 'admin.php', '2', '14', 'Content', 'Model', 'index', 'ACT_CONTENT_MODEL_INDEX', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('24', '权限管理', 'admin.php', '4', '6', 'Auth', 'Auth', 'index', 'ACT_AUTH_AUTH_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('25', '插件列表', 'admin.php', '6', '12', 'Plugin', 'Plugin', 'pluginlist', 'ACT_PLUGIN_PLUGIN_PLUGINLIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('26', '添加分组', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addgroup', 'ACT_AUTH_PERMISSION_ADDGROUP', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('25', ' 插件列表', 'admin.php', '6', '12', 'Plugin', 'Plugin', 'pluginlist', 'ACT_PLUGIN_PLUGIN_PLUGINLIST', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('26', ' 添加分组', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addgroup', 'ACT_AUTH_PERMISSION_ADDGROUP', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('27', '添加模块', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addmodule', 'ACT_AUTH_PERMISSION_ADDMODULE', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('28', '添加权限', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addaction', 'ACT_AUTH_PERMISSION_ADDACTION', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('30', '权限列表', 'admin.php', '4', '13', 'Auth', 'Permissions', 'actions', 'ACT_AUTH_PERMISSIONS_ACTIONS', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('31', '角色管理', 'admin.php', '4', '6', 'Auth', 'Admin', 'rolelist', 'ACT_AUTH_ADMIN_ROLELIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('32', '添加角色', 'admin.php', '4', '6', 'Auth', 'Admin', 'addrole', 'ACT_AUTH_ADMIN_ADDROLE', '');
+INSERT INTO `ur7_admin_auth_action` VALUES ('32', '添加角色', 'admin.php', '4', '6', 'Auth', 'Admin', 'addrole', 'ACT_AUTH_ADMIN_ADDROLE', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('33', '添加模型', 'admin.php', '2', '14', 'Content', 'Model', 'addmodel', 'ACT_CONTENT_MODEL_ADDMODEL', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('34', '字段管理', 'admin.php', '2', '14', 'Content', 'Model', 'fields', 'ACT_CONTENT_MODEL_FIELDS', '');
+INSERT INTO `ur7_admin_auth_action` VALUES ('34', '字段管理', 'admin.php', '2', '14', 'Content', 'Model', 'fields', 'ACT_CONTENT_MODEL_FIELDS', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('35', ' 修改权限', 'admin.php', '4', '13', 'Auth', 'Permissions', 'editaction', 'ACT_AUTH_PERMISSIONS_EDITACTION', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('36', '分组管理', 'admin.php', '4', '13', 'Auth', 'Permissions', 'grouplist', 'ACT_AUTH_PERMISSIONS_GROUPLIST', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
