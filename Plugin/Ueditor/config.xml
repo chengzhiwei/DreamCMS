@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <name>百度编辑器</name>
+    <author>Dream CMS</author>
+    <contact>Dream CMS@***.com</contact>
+    <desc>百度编辑器</desc>
+    <vhook>        
+        <list>
+            <name>百度编辑器</name>
+            <class>Vhook</class>
+            <method>ueditor</method>
+            <desc>百度编辑器</desc>
+        </list>
+    </vhook>
+
+</root>

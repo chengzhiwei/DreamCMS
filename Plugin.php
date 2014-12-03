@@ -10,7 +10,7 @@ define('APP_PATH', './Plugin/');
 
 define('APP_NAME', 'Plugin');
 
-define("TMPL_PATH", "Template/Plugin/");
+define("PLUGIN_TMPL_PATH", "Template/Plugin/");
 
 define('RUNTIME_PATH', 'Runtime/Plugin/');
 

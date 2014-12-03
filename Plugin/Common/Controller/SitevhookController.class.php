@@ -7,8 +7,9 @@ class SitevhookController extends \Think\Controller
 
     public $vhook_tpl;
 
-    public function _initialize()
+    public function __construct()
     {
+        parent::__construct();
         C('LAYOUT_ON', false);
         $this->vhook_tpl = $this->vhooktplpath();
     }
@@ -25,12 +26,12 @@ class SitevhookController extends \Think\Controller
         return 'Template/Plugin/' . $path;
     }
 
-    public function display($tpl)
+    public function display($tpl = '')
     {
         $P = $this->vhook_tpl . $tpl . '.php';
         if (file_exists($P))
         {
-            $this->display($P);
+            parent::display($P);
         }
     }
 

@@ -8,7 +8,7 @@ class LoginController extends \Common\Controller\AdminbaseController
     public function logout()
     {
         session('admin', NULL);
-        $this->redirect('Auth/Login/Login');
+        redirect(URL('Auth/Login/Login', 'Admin'));
     }
 
     public function login()

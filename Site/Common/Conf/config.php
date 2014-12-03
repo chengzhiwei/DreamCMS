@@ -11,6 +11,6 @@ $site_config = array(
     'URL_ROUTER_ON' => true,
     'MODULE_ALLOW_LIST' => array('Content', 'Component','Spldem'),
     'APP_AUTOLOAD_PATH' => '@.TagLib',
-    'SITE_THEME' => 'Default',
+    'SITE_THEME' => 'BootStrap',
 );
 return array_merge($site_config, $mysql_config);

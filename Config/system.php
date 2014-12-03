@@ -13,6 +13,7 @@ return array(
     'SITE_DESC' => '中国飞龙网',
     'COOKIE_TOKEN' => 'RTG123',
     'PWD_TOKEN' => 'RTG123',
+    'ADMIN_THEME' => 'bootstrap',
     'AUTOLOAD_NAMESPACE' => array(
         'Model' => getcwd() . '\Model',
         'Element' => getcwd() . '\Element',

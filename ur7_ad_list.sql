@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-02 17:21:21
+Date: 2014-12-03 17:04:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -416,7 +416,7 @@ CREATE TABLE `ur7_language` (
 -- ----------------------------
 -- Records of ur7_language
 -- ----------------------------
-INSERT INTO `ur7_language` VALUES ('1', '中文', 'zh-cn', '1', 'Default', '', '', '');
+INSERT INTO `ur7_language` VALUES ('1', '中文', 'zh-cn', '1', 'BootStrap', '', '', '');
 
 -- ----------------------------
 -- Table structure for `ur7_model`

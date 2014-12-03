@@ -11,5 +11,5 @@ define('APP_NAME', 'Admin');
 define('APP_PATH', './Admin/');
 
 define('RUNTIME_PATH', 'Runtime/Admin/');
-
+define('ADMIN_OR_SITE', 'ADMIN');
 require './Core/Core.php';

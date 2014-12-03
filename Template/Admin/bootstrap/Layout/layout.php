@@ -259,8 +259,7 @@
                             </form>
                         </div><!-- #nav-search -->
                     </div>
-
-                    <?php include $view ?>
+                    <?php include $view;?>
 
                 </div>
 
@@ -366,7 +365,7 @@
                 $('#all_menu-text').text($('#grouplist' + gid).text());
                 $.ajax({
                     type: "post",
-                    url: "<?php echo U('Index/Index/getleftmenu') ?>",
+                    url: "<?php echo URL('Index/Index/getleftmenu','','Admin.php'); ?>",
                     data: {gid: $('#grouplist' + gid).find('a').attr('rel')},
                     dataType: 'json',
                     success: function (data) {

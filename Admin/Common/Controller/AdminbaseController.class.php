@@ -14,6 +14,7 @@ class AdminbaseController extends \Think\Controller
             define('CSS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/css/');
             define('JS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/js/');
             define('IMG_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/images/');
+            define('ADMIN_LAYOUT',  'Template/Admin/' . C('ADMIN_THEME') . '/');
         }
 
 

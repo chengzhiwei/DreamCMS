@@ -20,7 +20,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
 
         if (!session('Dream_admin'))
         {
-            $this->redirect('Auth/Login/login');
+            redirect(URL('Auth/Login/Login', '', 'Admin.php'));
         }
     }
 
@@ -37,6 +37,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
      */
     public function display($view = '')
     {
+
         if (C('IS_LAYOUT'))
         {
             if ($view == '')
@@ -44,7 +45,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
                 $view = TMPL_PATH . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . C('TMPL_TEMPLATE_SUFFIX');
             }
             $this->assign('view', $view);
-            parent::display(TMPL_PATH . 'Layout/layout.php');
+            parent::display(ADMIN_LAYOUT . 'Layout/layout.php');
         } else
         {
             parent::display();

@@ -9,7 +9,6 @@ $site_config = array(
     'LANG_SWITCH_ON' => true,
     'DEFAULT_LANG' => 'zh-cn',
     'LANG_LIST' => 'zh-cn',
-    'ADMIN_THEME' => 'bootstrap',
     'IS_LAYOUT' => true,
 );
 return array_merge($site_config, $mysql_config);

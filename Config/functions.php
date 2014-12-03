@@ -36,7 +36,7 @@ function hook($hookname)
  */
 function DD($adomodel, $ext = 'Ado')
 {
-    
+
     static $_adomodel;
     if (isset($_adomodel[$adomodel . '_' . $ext]))
     {
@@ -266,4 +266,26 @@ function URL($url = '', $vars = '', $app = '', $suffix = true, $domain = false)
     }
 
     return $url;
+}
+
+function Vhook($path = '', $vars = array())
+{
+    if (ADMIN_OR_SITE == 'ADMIN')
+    {
+        //判断后台语言
+    } else
+    {
+        //判断前台语言
+    }
+    //通过语言来加载不同的语言包
+    import('Ueditor\Hook\Vhook', 'Plugin');
+    static $elt_obj = array();
+    // $cls = "\\Element\\" . ucfirst($fielddata['type']) . '\\' . ucfirst($fielddata['element']);
+    $cls = '\\Ueditor\\Hook\\Vhook';
+    if (!$elt_obj[$cls])
+    {
+        $class = new $cls();
+        $elt_obj[$cls] = $class;
+    }
+    return call_user_func_array(array(&$elt_obj[$cls], 'ueditor'), $vars);
 }
