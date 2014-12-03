@@ -4,9 +4,10 @@ namespace Common\Controller;
 
 class SiteController extends \Think\Controller
 {
-
-    public function _initialize()
+    public $site_tmpl='';
+    public function __construct()
     {
+        parent::__construct();
         $this->settplpath();
         $this->SEO();
         $menu = $this->getmenu();
@@ -17,7 +18,7 @@ class SiteController extends \Think\Controller
 
     public function SEO()
     {
-        $langinfo = nowlang();
+        $langinfo = \nowlang();
         $seo = array(
             'title' => $langinfo['seotitle'],
             'keyword' => $langinfo['seokeyword'],
@@ -31,7 +32,7 @@ class SiteController extends \Think\Controller
      */
     public function getmenu()
     {
-        $nowlang = nowlang();
+        $nowlang = \nowlang();
         $lid = $nowlang['id'];
         if (!S('menu_' . $lid))
         {
@@ -46,15 +47,15 @@ class SiteController extends \Think\Controller
                 {
                     if ($v['mid'] == 3)//单页面模型
                     {
-                        $v['href'] = ROU('Content/Content/page', array('cid' => $v['id']));
+                        $v['href'] = \ROU('Content/Content/page', array('cid' => $v['id']));
                     } else
                     {
                         if ($v['isleaf'] == 1)//子级调用list
                         {
-                            $v['href'] = ROU('Content/Content/newslist', array('cid' => $v['id']));
+                            $v['href'] = \ROU('Content/Content/newslist', array('cid' => $v['id']));
                         } else //父级调用CATEGORY
                         {
-                            $v['href'] = ROU('Content/Content/category', array('cid' => $v['id']));
+                            $v['href'] = \ROU('Content/Content/category', array('cid' => $v['id']));
                         }
                     }
                 }
@@ -93,6 +94,7 @@ class SiteController extends \Think\Controller
         {
             $tmpl_path = 'Template/Site/Default/';
         }
+        $this->site_tmpl=$tmpl_path;
         define('TMPL_PATH', $tmpl_path);
         define('CSS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Css/');
         define('JS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Js/');

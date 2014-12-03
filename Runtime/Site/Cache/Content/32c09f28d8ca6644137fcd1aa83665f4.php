@@ -12,11 +12,11 @@
 
         <!-- CSS -->
 
-        <link rel="stylesheet" href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/prettyPhoto/css/prettyPhoto.css">
-        <link rel="stylesheet" href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/css/flexslider.css">
-        <link rel="stylesheet" href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/css/font-awesome.css">
-        <link rel="stylesheet" href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo ($CSS_PATH); ?>bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo ($CSS_PATH); ?>prettyPhoto.css">
+        <link rel="stylesheet" href="<?php echo ($CSS_PATH); ?>flexslider.css">
+        <link rel="stylesheet" href="<?php echo ($CSS_PATH); ?>font-awesome.css">
+        <link rel="stylesheet" href="<?php echo ($CSS_PATH); ?>style.css">
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -36,51 +36,49 @@
 
         <!-- Header -->
         <div class="container">
-            <div class="header row">
-                <div class="span12">
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <h1>
-                                <a class="brand" href="index.html">Andia - a super cool design agency...</a>
-                            </h1>
-                            <div class="nav-collapse collapse">
-                                <ul class="nav pull-right">
-                                    <li class="current-page">
-                                        <a href="index.html"><i class="icon-home"></i><br />首页</a>
-                                    </li>
-                                    <li>
-                                        <a href="portfolio.html"><i class="icon-camera"></i><br />Portfolio</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="icon-comments"></i><br />Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"><i class="icon-tasks"></i><br />Services</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html"><i class="icon-user"></i><br />About</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html"><i class="icon-envelope-alt"></i><br />论坛</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+    <div class="header row">
+        <div class="span12">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <h1>
+                        <a class="brand" href="index.html">Andia - a super cool design agency...</a>
+                    </h1>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li class="current-page">
+                                <a href="index.html"><i class="icon-home"></i><br />首页</a>
+                            </li>
+                            <li>
+                                <a href="portfolio.html"><i class="icon-camera"></i><br />下载</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-comments"></i><br />教程</a>
+                            </li>
+                            <li>
+                                <a href="services.html"><i class="icon-tasks"></i><br />模板</a>
+                            </li>
+                            <li>
+                                <a href="about.html"><i class="icon-user"></i><br />插件</a>
+                            </li>
+                            <li>
+                                <a href="contact.html"><i class="icon-envelope-alt"></i><br />论坛</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <!-- Slider -->
-        <!-- Site Description -->
         <div class="presentation container">
-            <h2> <span class="violet">DreamCMS</span>, 多语言.</h2>
-            <p>We design beautiful websites, logos and prints. Your project is safe with us.</p>
+            <h2> <span class="violet">DreamCMS</span>, PHP多语言CMS.</h2>
+            <p>安全高效 易二次开发 前后台多语言 多模板 完善的钩子系统. <a href="#">下载(最新版本V0.8)</a></p>
         </div>
 
         <!-- Services -->
@@ -131,16 +129,16 @@
             </div>
             <div class="row">
                 <div class="work span3">
-                    <img src="assets/img/portfolio/work1.jpg" alt="">
+                    <img src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/img/portfolio/work1.jpg" alt="">
                     <h4>Lorem Website</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
                     <div class="icon-awesome">
-                        <a href="assets/img/portfolio/work1.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
+                        <a href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/img/portfolio/work1.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
                         <a href="portfolio.html"><i class="icon-link"></i></a>
                     </div>
                 </div>
                 <div class="work span3">
-                    <img src="assets/img/portfolio/work2.jpg" alt="">
+                    <img src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/img/portfolio/work2.jpg" alt="">
                     <h4>Ipsum Logo</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
                     <div class="icon-awesome">
@@ -149,7 +147,7 @@
                     </div>
                 </div>
                 <div class="work span3">
-                    <img src="assets/img/portfolio/work3.jpg" alt="">
+                    <img src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/img/portfolio/work3.jpg" alt="">
                     <h4>Dolor Prints</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
                     <div class="icon-awesome">
@@ -158,11 +156,11 @@
                     </div>
                 </div>
                 <div class="work span3">
-                    <img src="assets/img/portfolio/work4.jpg" alt="">
+                    <img src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/img/portfolio/work4.jpg" alt="">
                     <h4>Sit Amet Website</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
                     <div class="icon-awesome">
-                        <a href="assets/img/portfolio/work4.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
+                        <a href="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/img/portfolio/work4.jpg" rel="prettyPhoto"><i class="icon-search"></i></a>
                         <a href="portfolio.html"><i class="icon-link"></i></a>
                     </div>
                 </div>
@@ -207,7 +205,8 @@
         </div>
 
         <!-- Footer -->
-        <footer>
+        
+<footer>
             <div class="container">
                 <div class="row">
                     <div class="widget span3">
@@ -245,19 +244,9 @@
                 </div>
             </div>
         </footer>
-
         <!-- Javascript -->
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/jquery-1.8.2.min.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/jquery.flexslider.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/jquery.tweet.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/jflickrfeed.js"></script>
-
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/jquery.ui.map.min.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/jquery.quicksand.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-        <script src="http://www.gbtags.com/gb/networks/uploads/ae52c4d4-2aee-41d9-8539-677f92cf0f7b/andia-agency/assets/js/scripts.js"></script>
-
+        <script src="<?php echo ($JS_PATH); ?>jquery-1.8.2.min.js"></script>
+        <script src="<?php echo ($JS_PATH); ?>bootstrap.min.js"></script>
     </body>
 
 </html>
