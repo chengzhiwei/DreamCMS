@@ -96,7 +96,6 @@
         <div class="col-xs-12 " >
             <div class="tree well col-lg-3 " >
                 <ul>
-
                     <?php
                     foreach ($Category_arr as $key => $cate)
                     {
@@ -110,7 +109,7 @@
                             }
                             if ($Category_arr[$key + 1]['deep'] <= $cate['deep'])
                             {
-                                $str.='<a href=""><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                                $str.='<a target="iframeId" href="'.U('Content/Content/contentlist',array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
                                 for ($i = 0; $i < $cate['deep'] - ($Category_arr[$key + 1]['deep']); $i++)
                                 {
                                     $str.='</li></ul>';
@@ -141,7 +140,7 @@
             </div>
 
             <div class="col-lg-9 "  >
-                <iframe id='iframeId' onload="autoHeight()"  style="zoom: 0.6; " src="http://127.0.0.1/DreamCMS/admin.php/Content/Content/contentlist.html" frameBorder="0"  width="100%" ></iframe> 
+                <iframe id='iframeId' name="iframeId" onload="autoHeight()"  style="zoom: 0.6; " src="http://127.0.0.1/DreamCMS/admin.php/Content/Content/contentlist.html" frameBorder="0"  width="100%" ></iframe> 
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@
         </h1>
     </div><!-- /.page-header -->
     <div class="row">
-        <div class="col-xs-12 " style="padding-bottom: 10px;"><a href="<?php echo U('Auth/Admin/addrole'); ?>" class="  pull-right btn btn-danger" ><?php echo L('ACT_AUTH_ADMIN_ADDROLE'); ?></a></div>
+        <div class="col-xs-12 " style="padding-bottom: 10px;"><a href="<?php echo U('Auth/Admin/addrole'); ?>" class="  pull-right btn btn-xs btn-info" ><?php echo L('ACT_AUTH_ADMIN_ADDROLE'); ?></a></div>
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
 
