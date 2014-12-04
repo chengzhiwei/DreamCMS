@@ -9,15 +9,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-
-    <include file="@Layout:head" />
+        <?php include (TMPL_PATH . 'Layout/head.php'); ?>
     </head>
 
     <body>
-
+        <?php echo   Vhook();?>
         <!-- Header -->
-        <include file="@Layout:header" />
-
+        <?php include (TMPL_PATH . 'Layout/header.php'); ?>
         <div class="presentation container">
             <h2> <span class="violet">DreamCMS</span>, PHP多语言CMS.</h2>
             <p>安全高效 易二次开发 前后台多语言 多模板 完善的钩子系统. <a href="#">下载(最新版本V0.8)</a></p>
@@ -26,7 +24,7 @@
         <!-- Services -->
         <div class="what-we-do container">
             <div class="row">
-                
+
                 <div class="service span3">
                     <div class="icon-awesome">
                         <i class="icon-magic"></i>
@@ -35,7 +33,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
                     <a href="services.html">Read more</a>
                 </div>
-                
+
                 <div class="service span3">
                     <div class="icon-awesome">
                         <i class="icon-eye-open"></i>
@@ -52,7 +50,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
                     <a href="services.html">Read more</a>
                 </div>
-                
+
                 <div class="service span3">
                     <div class="icon-awesome">
                         <i class="icon-print"></i>
@@ -135,23 +133,22 @@
                                 <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat..."<br /><span class="violet">Minim Veniam, nostrud.com</span></p>
                             </div>
                         </div>
-                       <ul class="nav nav-tabs">
-                           <li class="active"><a href="#A" data-toggle="tab"></a></li>
-                           <li class=""><a href="#B" data-toggle="tab"></a></li>
-                           <li class=""><a href="#C" data-toggle="tab"></a></li>
-                           <li class=""><a href="#D" data-toggle="tab"></a></li>
-                       </ul>
-                   </div>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#A" data-toggle="tab"></a></li>
+                            <li class=""><a href="#B" data-toggle="tab"></a></li>
+                            <li class=""><a href="#C" data-toggle="tab"></a></li>
+                            <li class=""><a href="#D" data-toggle="tab"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
-        
-<include file="@Layout:footer" />
+        <?php include (TMPL_PATH . 'Layout/footer.php'); ?>
         <!-- Javascript -->
-        <script src="{$JS_PATH}jquery-1.8.2.min.js"></script>
-        <script src="{$JS_PATH}bootstrap.min.js"></script>
+        <script src="<?php echo JS_PATH; ?>jquery-1.8.2.min.js"></script>
+        <script src="<?php echo JS_PATH; ?>bootstrap.min.js"></script>
     </body>
 
 </html>

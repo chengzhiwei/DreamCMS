@@ -12,7 +12,7 @@ class SiteController extends \Think\Controller
         $this->SEO();
         $menu = $this->getmenu();
         $this->assign('menu', $menu);
-        $lang = langlist();
+        $lang = \langlist();
         $this->assign('lang', $lang);
     }
 
@@ -96,9 +96,9 @@ class SiteController extends \Think\Controller
         }
         $this->site_tmpl=$tmpl_path;
         define('TMPL_PATH', $tmpl_path);
-        define('CSS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Css/');
-        define('JS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Js/');
-        define('IMG_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Image/');
+        define('CSS_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Css/');
+        define('JS_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Js/');
+        define('IMG_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Image/');
         $this->assign('CSS_PATH', CSS_PATH);
         $this->assign('JS_PATH', JS_PATH);
         $this->assign('IMG_PATH', IMG_PATH);

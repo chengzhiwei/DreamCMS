@@ -12,5 +12,13 @@
             <desc>百度编辑器</desc>
         </list>
     </vhook>
+    <res>
+        <js>
+            <name></name>
+        </js>
+        <css>
+            <name></name>
+        </css>
+    </res>
 
 </root>
