@@ -10,15 +10,20 @@
             <class>Vhook</class>
             <method>ueditor</method>
             <desc>百度编辑器</desc>
+            <res>
+                <js>ueditor.all.min.js,lang/zh-cn/zh-cn.js</js>
+                <css></css>
+            </res>
         </list>
     </vhook>
-    <res>
-        <js>
-            <name></name>
-        </js>
-        <css>
-            <name></name>
-        </css>
-    </res>
+    <site>
+        <list>
+            <name>百度编辑器</name>
+            <class>Vhook</class>
+            <method>ueditor</method>
+            <desc>百度编辑器</desc>
+        </list>
+    </site>
+    
 
 </root>

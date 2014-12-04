@@ -13,7 +13,6 @@
     </head>
 
     <body>
-        <?php echo   Vhook();?>
         <!-- Header -->
         <?php include (TMPL_PATH . 'Layout/header.php'); ?>
         <div class="presentation container">
