@@ -9,6 +9,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
     {
         $path = 'Plugin/';
         $files = \getfils($path, $path);
+        //dump($files);
         $this->assign('files', $files);
         $this->display();
     }
@@ -39,8 +40,18 @@ class PluginController extends \Auth\Controller\AuthbaseController
     
     /**
      * 卸载插件
+     * 从数据库移除
      */
     public function uninstall()
+    {
+        
+    }
+    
+    /**
+     * 删除插件
+     * 先从数据库移除 在删除
+     */
+    public function delete()
     {
         
     }

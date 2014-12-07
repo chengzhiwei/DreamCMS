@@ -3,7 +3,7 @@
     <name>百度编辑器</name>
     <author>Dream CMS</author>
     <contact>Dream CMS@***.com</contact>
-    <desc>百度编辑器</desc>
+    <desc>UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果</desc>
     <vhook>        
         <list>
             <name>百度编辑器</name>
@@ -24,6 +24,13 @@
             <desc>百度编辑器</desc>
         </list>
     </site>
+    <admin>
+        <menu>
+            <group></group>
+            <module></module>
+                   
+        </menu>
+    </admin>
     
 
 </root>
