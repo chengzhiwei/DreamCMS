@@ -1,4 +1,5 @@
 <?php
+
 /*
  * +----------------------------------------------------------------------
  * | DreamCMS [ WE CAN  ]
@@ -10,24 +11,14 @@
  * | Author: 孔雀翎 <284909375@qq.com>
  * +----------------------------------------------------------------------
  */
-namespace Modules\Controller;
 
-/**
- * 留言本
- */
-class GuestbookController extends \Auth\Controller\AuthbaseController {
+namespace Phoneapi\Controller;
 
-    public function index() {
-        $gb = DD('Guestbook');
-        $result = $gb->guestlist();
-        $this->assign('result', $result);
-        $this->display();
-    }
 
-    public function del() {
-        $data = I('get.');
-        $gb = DD('Guestbook');
-        $result = $gb->del($data['id']);
-        $this->redirect('index');
-    }
+class SiteController extends \Common\Controller\SitePluginController
+{
+     public function categorys()
+     {
+         
+     }
 }
