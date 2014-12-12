@@ -1,49 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <name>百度编辑器</name>
-    <language>zh-cn</language>
+    <name>UEDITOR_NAME</name>
     <author>Dream CMS</author>
     <contact>Dream CMS@***.com</contact>
     <desc>UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果</desc>
     <vhooks>        
         <vhook>
-            <name>百度编辑器</name>
+            <name>PLUGIN_UEDITOR_VHOOK_UEDITOR</name>
             <class>Vhook</class>
             <method>ueditor</method>
-            <desc>百度编辑器</desc>
             <res>
                 <js>ueditor.all.min.js,lang/zh-cn/zh-cn.js</js>
                 <css></css>
             </res>
         </vhook>
     </vhooks>
-    <site>
-        <operation>
-            <name>百度编辑器</name>
-            <class>Vhook</class>
-            <method>ueditor</method>
-            <desc>百度编辑器</desc>
-        </operation>
-    </site>
-    <admin>
-        <menus>
-            <menu>
-                <title>3</title>
-                <group>3</group>
-                <module>4</module>
-                <action>4</action>
-            </menu>
-            <menu>
-                <title>3</title>
-                <group>3</group>
-                <module>4</module>
-                <action>4</action>
-            </menu>
-        </menus>
-        <operation>
-            
-        </operation>
-    </admin>
     
-
 </root>

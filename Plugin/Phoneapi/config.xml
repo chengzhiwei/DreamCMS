@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <name>手机端接口</name>
-    <language>zh-cn</language>
+    <language>zh-cn|en-us</language>
     <author>Dream CMS</author>
     <contact>Dream CMS@***.com</contact>
-    <desc>UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果</desc>
+    <desc>提供手机端数据接口</desc>
     <vhooks>        
         <vhook>
             <name>百度编辑器</name>
@@ -18,6 +18,7 @@
         </vhook>
     </vhooks>
     <site>
+        <language></language>
         <operation>
             <name>百度编辑器</name>
             <class>Vhook</class>

@@ -21,4 +21,9 @@ class SiteController extends \Common\Controller\SitePluginController
      {
          
      }
+     
+     public function article()
+     {
+         
+     }
 }
