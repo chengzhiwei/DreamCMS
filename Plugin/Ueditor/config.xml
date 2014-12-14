@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <name>UEDITOR_NAME</name>
+    <name>PLG_UEDITOR_NAME</name>
     <author>Dream CMS</author>
     <contact>Dream CMS@***.com</contact>
-    <desc>UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果</desc>
+    <desc>PLG_UEDITOR_DESC</desc>
     <vhooks>        
         <vhook>
-            <name>PLUGIN_UEDITOR_VHOOK_UEDITOR</name>
+            <name>PLUGIN_VHOOK_UEDITOR</name>
             <class>Vhook</class>
             <method>ueditor</method>
             <res>

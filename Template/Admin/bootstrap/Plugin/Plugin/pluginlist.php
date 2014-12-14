@@ -10,7 +10,7 @@
 <script>
     $(function () {
         $('#install_plugin').on('click', function () {
-             $(this).html('loading');
+            $(this).html('loading');
         });
     });
 
@@ -33,7 +33,37 @@
 
             <div class="widget-body">
                 <div class="widget-main padding-8">
-                    <div  ><div class="profile-feed" id="profile-feed-1" >
+                    <div  >
+                        <div class="profile-feed" id="profile-feed-1" >
+
+                            <?php
+                            foreach ($plugin_arr as $k => $p)
+                            {
+                                ?>
+                                <div class="profile-activity clearfix">
+                                    <div>
+                                        <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
+                                        <a href="#" class="user"> <?php echo L((String)$p->name);?> </a>
+                                        作者：<?php echo $p_arr['author']?> EMAIL：<a href="mailto"><?php echo $p_arr['contact']?></a>
+
+
+                                        <div class="time">
+                                            <?php echo L((String)$p->desc);?>
+                                        </div>
+                                    </div>
+
+                                    <div class="tools action-buttons">
+                                        <a class="btn btn-xs btn-success" id="install_plugin" href="<?php echo U('Plugin/Plugin/install',array('plugin'=>(String)$p->plugin))?>" >
+                                            安装
+                                        </a>
+                                        <a class="btn btn-xs btn-danger" href="#">
+                                            删除
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <?php }
+                            ?>
 
                             <div class="profile-activity clearfix">
                                 <div>
