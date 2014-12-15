@@ -54,21 +54,106 @@ class PluginController extends \Auth\Controller\AuthbaseController
         $name = (string) $pluginfo->name;
         $desc = (string) $pluginfo->desc;
         $plugin_data = array('name' => $name, 'desc' => $desc, 'filetitle' => $plugin);
-        //插件信息插入数据库
-        //判断后台菜单  插入数据库
-        if (isset($pluginfo->admin->menus))
+        $pluginModel = DD('Plugin');
+        $b = $pluginModel->add($plugin_data);
+        if (!$b)
         {
-            foreach ($pluginfo->admin->menus->menu as $m)
+            $this->error(L('OP_ERROR'));
+        }
+        $pluginid = $pluginModel->getLastInsID();
+        $plugin_data_list = array();
+        //判断后台菜单  插入数据库
+        $k = 0;
+        if (isset($pluginfo->admin->operation))
+        {
+            foreach ($pluginfo->admin->operation as $op)
             {
-                $gid = 0;
-                $plugin_group = (string) $m->group;
-                if (ctype_digit($plugin_group))
+                $path = (string) $op->path;
+                $group = $plugin;
+                $path_arr = explode('/', $path);
+                list($control, $action) = $path_arr;
+                $menu_group = (string) $op->menu_group;
+                $menu_module = (string) $op->menu_module;
+                ctype_digit($menu_group) == true ? $menu_gid = ctype_digit($menu_group) : $menu_gid = 0;
+                ctype_digit($menu_module) == true ? $menu_mid = ctype_digit($menu_module) : $menu_mid = 0;
+
+                //添加新分组
+                if ($menu_gid == 0)
                 {
-                    $gid = intval($plugin_group);
+                    $AdminAuthGroup = DD('AdminAuthGroup');
+                    $groupdata = array(
+                        'title' => '', 'groupname' => $plugin, 'langconf' => $menu_group,
+                    );
+                    $b = $AdminAuthGroup->addgroup($groupdata);
+                    if ($b)
+                    {
+                        $menu_gid = $AdminAuthGroup->getLastInsID();
+                    }
+                }
+
+                //添加新Controller
+                if ($menu_mid == 0)
+                {
+                    $control_data = array(
+                        'title' => '', 'cname' => $control, 'gid' => $menu_gid, 'lanconf' => $menu_module, 'cls' => 'icon-resize-full',
+                    );
+                    $AdminAuthController = DD('AdminAuthController');
+                    $b = $AdminAuthController->add($control_data);
+                    if ($b)
+                    {
+                        $menu_mid = $AdminAuthController->getLastInsID();
+                    }
+                }
+
+                //添加Action
+                $action_data = array(
+                    'title' => '', 'app' => 'plugin.php', 'gid' => $menu_gid, 'cid' => $menu_mid,
+                    'group' => $plugin, 'controller' => $control, 'action' => $action,
+                    'langconf' => (string) $op->name,
+                );
+                if (isset($op->ismenu))
+                {
+                    if ((string) $op->ismenu == 1)
+                    {
+                        //是菜单
+                        $action_data['isshow'] = 1;
+                    }
+                }
+                $AdminAuthAction = DD('AdminAuthAction');
+                $AdminAuthAction->addAction($action_data);
+
+                if ((string) $op->js != '' || (string) $op->css != '')
+                {
+                    $plugin_data_list[$k] = array(
+                        'path' => $plugin . '/' . $path,
+                        'js' => $op->js, 'css' => $op->css,
+                        'acname' => (string) $op->name, 'pid' => $pluginid,
+                    );
+                    $k++;
                 }
             }
         }
+
+        //前台资源
+        if (isset($pluginfo->site->operation))
+        {
+            foreach ($pluginfo->site->operation as $op)
+            {
+                if ((string) $op->js != '' || (string) $op->css != '')
+                {
+                    $plugin_data_list[$k] = array(
+                        'path' => $plugin . '/' . $path,
+                        'js' => $op->js, 'css' => $op->css,
+                        'acname' => (string) $op->name, 'pid' => $pluginid,
+                    );
+                    $k++;
+                }
+            }
+        }
+
         //写入插件资源 
+        $PluginRes = DD('PluginRes');
+        $b = $PluginRes->addlist();
         //写入钩子
         if (isset($pluginfo->vhook))//视图钩子
         {

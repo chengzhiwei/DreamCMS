@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 50620
+Source Server         : localhost
+Source Server Version : 50532
 Source Host           : localhost:3306
 Source Database       : 127001
 
 Target Server Type    : MYSQL
-Target Server Version : 50620
+Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-14 21:45:01
+Date: 2014-12-15 17:21:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -87,7 +87,7 @@ CREATE TABLE `ur7_admin_auth_action` (
   `langconf` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -166,7 +166,7 @@ CREATE TABLE `ur7_admin_auth_group` (
   `langconf` varchar(50) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_group
@@ -534,10 +534,29 @@ CREATE TABLE `ur7_plugin` (
   `desc` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_plugin
+-- ----------------------------
+INSERT INTO `ur7_plugin` VALUES ('1', '?????', 'Phoneapi', '?????????', '1');
+
+-- ----------------------------
+-- Table structure for `ur7_plugin_res`
+-- ----------------------------
+DROP TABLE IF EXISTS `ur7_plugin_res`;
+CREATE TABLE `ur7_plugin_res` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `path` varchar(100) NOT NULL,
+  `js` varchar(200) NOT NULL,
+  `css` varchar(200) NOT NULL,
+  `acname` varchar(100) NOT NULL,
+  `pid` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of ur7_plugin_res
 -- ----------------------------
 
 -- ----------------------------

@@ -27,23 +27,26 @@
         </operation>
     </site>
     <admin>
-        <menus>
-            <menu>
-                <title>3</title>
-                <group>3.3</group>
-                <module>4</module>
-                <action>4</action>
-            </menu>
-            <menu>
-                <title>3</title>
-                <group>3</group>
-                <module>4</module>
-                <action>4</action>
-            </menu>
-        </menus>
         <operation>
+            <path>Controller/action</path>
+            <name></name>
+            <menu_group></menu_group>
+            <menu_module></menu_module>
+            <js></js>
+            <css></css>
             
+            <ismenu>1</ismenu>
+           
         </operation>
+        <operation>
+            <path>Controller/action</path>
+            <name></name>
+            <ismenu>1</ismenu>
+            <menu_group></menu_group>
+            <menu_module></menu_module>
+        </operation>
+        
+        
     </admin>
     
 
