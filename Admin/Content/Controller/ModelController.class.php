@@ -1,5 +1,17 @@
 <?php
 
+/*
+ * +----------------------------------------------------------------------
+ * | DreamCMS [ WE CAN  ]
+ * +----------------------------------------------------------------------
+ * | Copyright (c) 2006-2014 DreamCMS All rights reserved.
+ * +----------------------------------------------------------------------
+ * | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+ * +----------------------------------------------------------------------
+ * | Author: 孔雀翎 <284909375@qq.com>
+ * +----------------------------------------------------------------------
+ */
+
 namespace Content\Controller;
 
 class ModelController extends \Auth\Controller\AuthbaseController
@@ -42,7 +54,7 @@ class ModelController extends \Auth\Controller\AuthbaseController
     {
         $mid = I('mid');
         $ModelField = DD('ModelField');
-        $fields=$ModelField->selFieldByMid($mid);
+        $fields = $ModelField->selFieldByMid($mid);
         $this->assign('fields', $fields);
         $this->display();
     }
@@ -53,11 +65,45 @@ class ModelController extends \Auth\Controller\AuthbaseController
         {
             $field = DD('ModelField');
             $field->addField();
-            //echo $field->getDbError().$field->getError();
         } else
         {
+            $plugin = DD('Plugin');
+            $pluginlist = $plugin->select();
+            foreach ($pluginlist as $p)
+            {
+                $plugin_lang = 'Lang/Plugin/zh-cn/' . $p['filetitle'] . '/' . $p['filetitle'] . '.php';
+                if (is_file($plugin_lang))
+                {
+                    L(include($plugin_lang));
+                }
+            }
+            $this->assign('pluginlist', $pluginlist);
             $this->assign('mid', I('mid'));
             $this->display();
+        }
+    }
+
+    public function getvook()
+    {
+        if (IS_AJAX)
+        {
+            $pid = I('post.pid');
+            $pluginMod=DD('Plugin');
+            $plugininfo=$pluginMod->findbyid($pid);
+            $hooklist = DD('HookList');
+            $list = $hooklist->selbypid($pid);
+            $new_list = array();
+            foreach ($list as $l)
+            {
+                $lang = 'Lang/Plugin/zh-cn/' . $plugininfo['filetitle'] . '/vhook.php';
+                if (is_file($lang))
+                {
+                    L(include($lang));
+                }
+                $l['name'] = L($l['name']);
+                $new_list[] = $l;
+            }
+            echo json_encode($new_list);
         }
     }
 

@@ -23,5 +23,6 @@ return array(
     'EMAIL'=>'邮件',
     'MOBILE'=>'手机',
     'FIELD'=>'字段',
+    'CUSTOM_CONTROL'=>'自定义控件',
     
 );

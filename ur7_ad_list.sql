@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-15 17:21:50
+Date: 2014-12-16 17:19:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -124,6 +124,7 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('33', '添加模型', 'admin.php', '
 INSERT INTO `ur7_admin_auth_action` VALUES ('34', '字段管理', 'admin.php', '2', '14', 'Content', 'Model', 'fields', 'ACT_CONTENT_MODEL_FIELDS', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('35', ' 修改权限', 'admin.php', '4', '13', 'Auth', 'Permissions', 'editaction', 'ACT_AUTH_PERMISSIONS_EDITACTION', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('36', '分组管理', 'admin.php', '4', '13', 'Auth', 'Permissions', 'grouplist', 'ACT_AUTH_PERMISSIONS_GROUPLIST', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('38', '添加字段', 'admin.php', '2', '14', 'Content', 'Model', 'addfield', 'ACT_CONTENT_MODEL_ADDFIELD', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
@@ -166,7 +167,7 @@ CREATE TABLE `ur7_admin_auth_group` (
   `langconf` varchar(50) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_group
@@ -382,20 +383,22 @@ INSERT INTO `ur7_hook` VALUES ('1', '前台文章结尾', 'ARTICLE_AFTER', '0');
 DROP TABLE IF EXISTS `ur7_hook_list`;
 CREATE TABLE `ur7_hook_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `hid` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `pid` int(11) NOT NULL,
+  `hid` int(11) NOT NULL,
   `path` varchar(100) NOT NULL,
   `method` varchar(50) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   `type` tinyint(4) NOT NULL DEFAULT '1',
-  `position` tinyint(4) NOT NULL DEFAULT '1',
+  `js` varchar(200) DEFAULT NULL,
+  `css` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_hook_list
 -- ----------------------------
-INSERT INTO `ur7_hook_list` VALUES ('1', '1', '1', 'test/Hook/Vhook', ' show', '1', '1', '1');
+INSERT INTO `ur7_hook_list` VALUES ('3', 'PLUGIN_VHOOK_UEDITOR', '10', '0', 'Ueditor/Vhook', 'ueditor', '1', '1', 'ueditor.all.min.js,lang/zh-cn/zh-cn.js', '');
 
 -- ----------------------------
 -- Table structure for `ur7_language`
@@ -529,17 +532,17 @@ CREATE TABLE `ur7_photo_data` (
 DROP TABLE IF EXISTS `ur7_plugin`;
 CREATE TABLE `ur7_plugin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   `filetitle` varchar(50) NOT NULL,
   `desc` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_plugin
 -- ----------------------------
-INSERT INTO `ur7_plugin` VALUES ('1', '?????', 'Phoneapi', '?????????', '1');
+INSERT INTO `ur7_plugin` VALUES ('10', 'PLG_UEDITOR_NAME', 'Ueditor', 'PLG_UEDITOR_DESC', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin_res`

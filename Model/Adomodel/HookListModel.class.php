@@ -12,4 +12,15 @@ class HookListModel extends \Think\Model\AdvModel
         return $this->cache(TRUE)->where($condition)->select();
     }
 
+    public function addlist($datalist)
+    {
+        return $this->addAll($datalist);
+    }
+
+    public function selbypid($pid)
+    {
+        $condition = array('pid' => $pid);
+        return $this->where($condition)->select();
+    }
+
 }

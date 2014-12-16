@@ -9,10 +9,12 @@
             <name>PLUGIN_VHOOK_UEDITOR</name>
             <class>Vhook</class>
             <method>ueditor</method>
+            <hookpos></hookpos>
             <res>
                 <js>ueditor.all.min.js,lang/zh-cn/zh-cn.js</js>
                 <css></css>
             </res>
+            
         </vhook>
     </vhooks>
     

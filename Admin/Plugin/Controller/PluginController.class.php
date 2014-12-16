@@ -122,11 +122,11 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 $AdminAuthAction = DD('AdminAuthAction');
                 $AdminAuthAction->addAction($action_data);
 
-                if ((string) $op->js != '' || (string) $op->css != '')
+                if ((string) $op->res->js != '' || (string) $op->res->css != '')
                 {
                     $plugin_data_list[$k] = array(
                         'path' => $plugin . '/' . $path,
-                        'js' => $op->js, 'css' => $op->css,
+                        'js' => $op->res->js, 'css' => $op->res->css,
                         'acname' => (string) $op->name, 'pid' => $pluginid,
                     );
                     $k++;
@@ -155,14 +155,41 @@ class PluginController extends \Auth\Controller\AuthbaseController
         $PluginRes = DD('PluginRes');
         $b = $PluginRes->addlist();
         //写入钩子
-        if (isset($pluginfo->vhook))//视图钩子
+        $hooklistdata = array();
+        if (isset($pluginfo->vhooks->vhook))//视图钩子
         {
-            foreach ($pluginfo->vhook as $vhook)
+            foreach ($pluginfo->vhooks->vhook as $vhook)
             {
-                //钩子信息插入数据库
+                $data = array(
+                    'name' => '', 'path' => '', 'method' => '', 'type' => '1',
+                    'pid' => $pluginid, 'js' => (string) $vhook->res->js, 'css' => (string) $vhook->res->css,
+                );
+                if ((string) $vhook->hookpos)
+                {
+                    $data['hid'] = (int) $vhook->hookpos;
+                }
+                $hooklistdata[] = $data;
             }
         }
-        //获取插件SQL文件
+
+        if (isset($pluginfo->bhooks->bhook))//业务钩子
+        {
+            foreach ($pluginfo->bhooks->bhook as $bhook)
+            {
+                $data = array(
+                    'name' => '', 'path' => '', 'method' => '', 'type' => '2',
+                    'pid' => $pluginid, 'js' => (string) $vhook->res->js, 'css' => (string) $vhook->res->css,
+                );
+                if ((string) $bhook->hookpos)
+                {
+                    $data['hid'] = (int) $vhook->hookpos;
+                }
+                $hooklistdata[] = $data;
+            }
+        }
+        $Hooklist = DD('HookList');
+        $Hooklist->addlist($hooklistdata);
+        echo $Hooklist->getLastSql();
     }
 
     /**

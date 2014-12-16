@@ -37,5 +37,11 @@ class PluginModel extends \Think\Model\AdvModel
             return false;
         }
     }
-
+    
+    public function findbyid($id)
+    {
+        $condition=array();
+        $condition['id']=$id;
+        return $this->where($condition)->find();
+    }
 }

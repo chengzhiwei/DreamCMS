@@ -32,9 +32,10 @@
             <name></name>
             <menu_group></menu_group>
             <menu_module></menu_module>
-            <js></js>
-            <css></css>
-            
+            <res>
+                <js></js>
+                <css></css>
+            </res>
             <ismenu>1</ismenu>
            
         </operation>
