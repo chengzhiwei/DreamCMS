@@ -278,16 +278,16 @@ function Vhook($path = '', $vars = array())
         //判断前台语言
     }
     //通过语言来加载不同的语言包
-    import('Ueditor\Hook\Vhook', 'Plugin');
+    import('WebUpload\Hook\Vhook', 'Plugin');
     static $elt_obj = array();
     // $cls = "\\Element\\" . ucfirst($fielddata['type']) . '\\' . ucfirst($fielddata['element']);
-    $cls = '\\Ueditor\\Hook\\Vhook';
+    $cls = '\\WebUpload\\Hook\\Vhook';
     if (!$elt_obj[$cls])
     {
         $class = new $cls();
         $elt_obj[$cls] = $class;
     }
-    return call_user_func_array(array(&$elt_obj[$cls], 'ueditor'), $vars);
+    return call_user_func_array(array(&$elt_obj[$cls], 'multiimgupload'), $vars);
 }
 function defaultlang() {
     $defaultlang = S('defaultlang');
