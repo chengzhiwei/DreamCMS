@@ -22,14 +22,13 @@ class UploadController extends \Think\Controller
         $file = date('Y-m-d', time());
         $targetDir = 'Uploads/tmp';
         $uploadDir = 'Uploads/Content';
-         mkdir($uploadDir,0777,true);
         if (!is_dir($targetDir))
         {
-            mkdir($targetDir,0777,true);
+            \mkdir($targetDir, 0777, true);
         }
         if (!is_dir($uploadDir))
         {
-            mkdir($uploadDir,0777,true);
+            \mkdir($uploadDir, 0777, true);
         }
     }
 
