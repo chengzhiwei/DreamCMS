@@ -38,6 +38,13 @@ class ContentController extends \Auth\Controller\AuthbaseController
             
         } else
         {
+            C('IS_LAYOUT',false);
+            $cid=I('get.cid');
+            $catemod=DD('Category');
+            $cateinfo=$catemod->find($cid);
+            $ModelFieldMod=DD('ModelField');
+            $Fieldlist=$ModelFieldMod->selFieldByMid($cateinfo['mid']);
+            $this->assign('Fieldlist', $Fieldlist);
             $this->display();
         }
     }
