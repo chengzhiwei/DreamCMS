@@ -22,24 +22,46 @@ class CForm
     public static function create($fieldrow = array())
     {
         self::$_fieldrow = $fieldrow;
-        $methor = self::$_fieldrow['type'];
-        
-        $element = method_exists(self, $methor) === true ? self::$methor() : '';
+
+        //调用插件
+        if (self::$_fieldrow['plugin'])
+        {
+            //导入插件
+        } else
+        {
+            $methor = self::$_fieldrow['type'];
+            $element = method_exists(self, $methor) === true ? self::$methor() : '';
+        }
+
+
         self::$_fieldrow = array();
         return $element;
     }
 
+    /**
+     * 文本框
+     * @return string
+     */
     public static function text()
     {
-        
+        $fieldname = self::$_fieldrow['fieldname'];
+        return '<input type="hidden" name="' . $fieldname . '" id="' . $fieldname . '" ' . self::$_fieldrow['tackattr'] . '  />';
     }
 
+    /**
+     * 文本域
+     * @return string
+     */
     public static function textarea()
     {
-        
+        $fieldname = self::$_fieldrow['fieldname'];
+        return '<textarea name="' . $fieldname . '" id="' . $fieldname . '" ' . self::$_fieldrow['tackattr'] . '></textarea>';
     }
-    
-    public static function editor()
+
+    /**
+     * 推荐位
+     */
+    public static function position()
     {
         
     }
