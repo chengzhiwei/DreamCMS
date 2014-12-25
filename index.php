@@ -10,6 +10,5 @@ define('RUNTIME_PATH', 'Runtime/Site/');
 // 定义应用目录
 define('APP_PATH', './Site/');
 
-define('ADMIN_OR_SITE', 'SITE');
 define('DS', DIRECTORY_SEPARATOR);
 require './Core/Core.php';

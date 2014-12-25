@@ -95,14 +95,14 @@
 
                         <li class="light-blue">
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                当前语言：中文
+                                <?php echo L('NOW_OPTER');?>：中文网站
                                 <i class="icon-caret-down"></i>
                             </a>
                             <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                                 <li>
                                     <a href="#">
                                         <i class="icon-flag"></i>
-                                        中文
+                                        <?php echo L('CHINESE');?>网站
                                     </a>
                                 </li>
 
@@ -112,7 +112,7 @@
                                 <li>
                                     <a href="#">
                                         <i class="icon-flag"></i>
-                                        英文
+                                        <?php echo L('ENGLISH');?>网站
                                     </a>
                                 </li>
                             </ul>
@@ -120,9 +120,9 @@
 
                         <li class="light-blue">
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                <img class="nav-user-photo" src="<?php echo IMG_PATH; ?>user.jpg" alt="Jason's Photo" />
+                                <img class="nav-user-photo" src="<?php echo IMG_PATH; ?>user.jpg" alt="Admin" />
                                 <span class="user-info">
-                                    <small>欢迎光临,</small>
+                                    <small><?php echo L('WELCOME');?>,</small>
                                     Admin
                                 </span>
 

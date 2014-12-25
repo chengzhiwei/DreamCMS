@@ -22,6 +22,9 @@ class LanguageController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
             $data = I('post.');
+            $LangPath = 'Lang' . DS . APP_NAME . DS . $this->AdminLang . DS . 'System' . DS . 'language.php';
+            $conf = array($data['langconf'] => $data['title']);
+            \writeconf($path, $conf);
             if (I('post.default') == '1')
             {
                 //只能一个被默认，前默认改为0
@@ -56,7 +59,6 @@ class LanguageController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
             $data = I('post.');
-
             if (I('post.default') == '1')
             {
                 //只能一个被默认，前默认改为0

@@ -13,7 +13,7 @@ define('APP_NAME', 'Plugin');
 define("PLUGIN_TMPL_PATH", "Template/Plugin/");
 
 define('RUNTIME_PATH', 'Runtime/Plugin/');
-
+define('DS', DIRECTORY_SEPARATOR);
 
 require './Core/Core.php';
 

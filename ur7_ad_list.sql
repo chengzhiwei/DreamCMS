@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-17 17:23:20
+Date: 2014-12-25 17:27:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -413,13 +413,15 @@ CREATE TABLE `ur7_language` (
   `seotitle` varchar(100) DEFAULT NULL,
   `seokeyword` varchar(200) DEFAULT NULL,
   `seodesc` varchar(200) DEFAULT NULL,
+  `langconf` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_language
 -- ----------------------------
-INSERT INTO `ur7_language` VALUES ('1', '中文', 'zh-cn', '1', 'BootStrap', '', '', '');
+INSERT INTO `ur7_language` VALUES ('1', '中文', 'zh-cn', '1', 'BootStrap', '', '', '', 'CHINESE');
+INSERT INTO `ur7_language` VALUES ('2', '英文', 'en-us', '0', 'Default', null, null, null, 'ENGLISH');
 
 -- ----------------------------
 -- Table structure for `ur7_model`
@@ -569,15 +571,16 @@ DROP TABLE IF EXISTS `ur7_position`;
 CREATE TABLE `ur7_position` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
+  `mid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_position
 -- ----------------------------
-INSERT INTO `ur7_position` VALUES ('1', '首页推荐');
-INSERT INTO `ur7_position` VALUES ('2', '首页幻灯');
-INSERT INTO `ur7_position` VALUES ('4', '热点头条');
+INSERT INTO `ur7_position` VALUES ('1', '首页推荐', '1');
+INSERT INTO `ur7_position` VALUES ('2', '首页幻灯', '1');
+INSERT INTO `ur7_position` VALUES ('4', '热点头条', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_position_data`

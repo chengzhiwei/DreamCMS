@@ -8,6 +8,10 @@ class SiteController extends \Think\Controller
     public function __construct()
     {
         parent::__construct();
+        if(!defined('ADMIN_OR_SITE'))
+        {
+            define('ADMIN_OR_SITE', 'SITE');
+        }
         $this->settplpath();
         $this->SEO();
         $menu = $this->getmenu();
