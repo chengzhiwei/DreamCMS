@@ -29,13 +29,13 @@ class CForm
         //调用插件
         if (self::$_fieldrow['plugin'])
         {
-            //导入插件
+            import(self::$_fieldrow['plugin'], 'Plugin');//导入插件
+            
         } else
         {
             $methor = self::$_fieldrow['type'];
             $element = method_exists(self, $methor) === true ? self::$methor() : '';
         }
-
 
         self::$_fieldrow = array();
         return $element;
@@ -62,18 +62,56 @@ class CForm
     }
 
     /**
-     * 推荐位
+     * 推荐位 分不同的语言 
      */
     public static function position()
     {
         //获取当前操作网站的语言（前台）
         $PositionMod = DD('Position');
-        $plist = $PositionMod->positionlist();
+        $lang = \getlang();
+        $langmod = DD('Language');
+        $langinfo = $langmod->findbylang($lang);
+        $plist = $PositionMod->selbylid($langinfo['id']);
         $chk = '';
         foreach ($plist as $k => $p)
         {
-            $chk.='<input type="checkbox" autocomplete="off" class="chkall ace" name="isnull"><span class="lbl"></span>';
+            $chk.='<input type="checkbox" autocomplete="off" value="' . $p['id'] . '" class="chkall ace" name="position[]"><span class="lbl">' . $p['title'] . '</span>';
         }
+        return $chk;
+    }
+
+    public static function radio()
+    {
+        $fieldvalue = trim(self::$_fieldrow['fieldvalue']);
+        $fieldvalue_arr = explode("\r\n", $fieldvalue);
+        $radios = '';
+        foreach ($fieldvalue_arr as $k => $v)
+        {
+            $val_arr = explode(',', $v);
+            $is_chk = isset($val_arr[2]) && $val_arr[2] == 1 ? 'checked="checked"' : "";
+            $radios.='<label>
+                            <input class="ace" autocomplete="off"  type="radio" ' . $is_chk . ' name="'.self::$_fieldrow['fieldname'].'" value="' . $val_arr[1] . '">
+                            <span class="lbl"> ' . $val_arr[0] . '</span>
+                      </label>';
+        }
+        return $radios;
+    }
+
+    public static function checkbox()
+    {
+        $fieldvalue = trim(self::$_fieldrow['fieldvalue']);
+        $fieldvalue_arr = explode("\r\n", $fieldvalue);
+        $radios = '';
+        foreach ($fieldvalue_arr as $k => $v)
+        {
+            $val_arr = explode(',', $v);
+            $is_chk = isset($val_arr[2]) && $val_arr[2] == 1 ? 'checked="checked"' : "";
+            $checkboxs.='<label>
+                            <input class="ace" autocomplete="off"  type="checkbox" ' . $is_chk . ' name="'.self::$_fieldrow['fieldname'].'" value="' . $val_arr[1] . '">
+                            <span class="lbl"> ' . $val_arr[0] . '</span>
+                      </label>';
+        }
+        return $checkboxs;
     }
 
 }

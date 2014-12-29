@@ -75,9 +75,9 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
             $data = I('post.');
-            $path = 'Lang/Admin/zh-cn/Common/Comm_auth.php';
-            $conf = array($data['langconf'] => $data['title']);
-            \writeconf($path, $conf);
+            $path = 'Common/Comm_auth.php';
+            $setlang = new \Org\Helper\SetLang($path, true);
+            $setlang->setOneLang($data['langconf'], $data['title']);
             $actionmod = DD('AdminAuthAction');
             $b = $actionmod->addAction();
             if ($b)
