@@ -3,7 +3,7 @@
 <script src="<?php echo __ROOT__ ?>/Template/Plugin/WebUpload/js/thumbupload.js" ></script>
 <link rel="stylesheet" type="text/css" href="<?php echo __ROOT__ ?>/Template/Plugin/WebUpload/css/webuploader.css">
 <link rel="stylesheet" type="text/css" href="<?php echo __ROOT__ ?>/Template/Plugin/WebUpload/css/style.css">
-<div id="uploader-demo">
+<div id="uploader-demo" style=" width: 120px;">
     <!--用来存放item-->
     <div id="fileList" class="uploader-list"></div>
     <div id="filePicker">选择图片</div>

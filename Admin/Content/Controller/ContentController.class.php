@@ -9,7 +9,7 @@ class ContentController extends \Auth\Controller\AuthbaseController
     {
 
         $Category = DD('Category');
-        $catelist = $Category->selectall(cookie('langid'));
+        $catelist = $Category->selectall($this->OpSiteLangInfo['id']);
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');
         $unlimitedclass = new \Unlimitedclass();
         $Category_arr = $unlimitedclass->cateresult($catelist);
@@ -27,7 +27,7 @@ class ContentController extends \Auth\Controller\AuthbaseController
 
     public function contentlist()
     {
-        C('IS_LAYOUT',false);
+        C('IS_LAYOUT', false);
         $this->display();
     }
 
@@ -35,15 +35,23 @@ class ContentController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            
+           
+            $cid = I('post.cid');
+            $catemod = DD('Category');
+            $cateinfo = $catemod->find($cid);
+            $modelMod = DD('Model'); 
+            $modelinfo = $modelMod->findByID($cateinfo['mid']); 
+            $contentmod = DD('Content', array($modelinfo['table']));
+            $contentmod->add();
+            echo $contentmod->getLastSql();
         } else
         {
-            C('IS_LAYOUT',false);
-            $cid=I('get.cid');
-            $catemod=DD('Category');
-            $cateinfo=$catemod->find($cid);
-            $ModelFieldMod=DD('ModelField');
-            $Fieldlist=$ModelFieldMod->selFieldByMid($cateinfo['mid']);
+            C('IS_LAYOUT', false);
+            $cid = I('get.cid');
+            $catemod = DD('Category');
+            $cateinfo = $catemod->find($cid);
+            $ModelFieldMod = DD('ModelField');
+            $Fieldlist = $ModelFieldMod->selFieldByMid($cateinfo['mid']);
             $this->assign('Fieldlist', $Fieldlist);
             $this->display();
         }

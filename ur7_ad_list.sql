@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-29 17:21:31
+Date: 2014-12-30 17:19:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -87,7 +87,7 @@ CREATE TABLE `ur7_admin_auth_action` (
   `langconf` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -278,11 +278,15 @@ CREATE TABLE `ur7_article` (
   `addtime` int(11) DEFAULT NULL,
   `lid` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_article
 -- ----------------------------
+INSERT INTO `ur7_article` VALUES ('1', '4', '234', '', null, null, '324', null, null, '0', null, null, '1');
+INSERT INTO `ur7_article` VALUES ('2', '4', '234', '', null, null, '324', null, null, '0', null, null, '1');
+INSERT INTO `ur7_article` VALUES ('3', '4', '234', '', null, null, '324', null, null, '0', null, null, '1');
+INSERT INTO `ur7_article` VALUES ('4', '4', 'SDF', '', null, null, 'SDF', null, null, '0', null, null, '1');
 
 -- ----------------------------
 -- Table structure for `ur7_category`
@@ -457,19 +461,21 @@ CREATE TABLE `ur7_model_field` (
   `isnull` tinyint(1) NOT NULL DEFAULT '0',
   `tackattr` varchar(255) NOT NULL,
   `mid` int(11) NOT NULL,
+  `plugin` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_model_field
 -- ----------------------------
-INSERT INTO `ur7_model_field` VALUES ('1', '标题', 'title', 'TITLE', 'text', '', '', '0', '', '1');
-INSERT INTO `ur7_model_field` VALUES ('2', '栏目', 'cid', 'CATE', 'cate', '', '', '0', '', '1');
-INSERT INTO `ur7_model_field` VALUES ('3', '关键字', 'keyword', 'KEYWORD', 'textrea', '', '', '0', '', '1');
-INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textrea', '', '', '0', '', '1');
-INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1');
-INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1');
-INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1');
+INSERT INTO `ur7_model_field` VALUES ('1', '标题', 'title', 'TITLE', 'text', '', '', '0', 'style=\"width:100%\"', '1', null);
+INSERT INTO `ur7_model_field` VALUES ('2', '栏目', 'cid', 'CATE', 'cate', '', '', '0', '', '1', null);
+INSERT INTO `ur7_model_field` VALUES ('3', '关键字', 'keyword', 'KEYWORD', 'textarea', '', '', '0', '', '1', null);
+INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textarea', '', '', '0', '', '1', null);
+INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/thumbupload');
+INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1', 'Ueditor/Hook/Vhook/ueditor');
+INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1', null);
+INSERT INTO `ur7_model_field` VALUES ('8', '图片组', 'pics', 'PICGROUP', 'PICGROUP', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/multiimgupload');
 
 -- ----------------------------
 -- Table structure for `ur7_page`

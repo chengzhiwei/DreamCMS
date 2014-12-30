@@ -29,12 +29,13 @@ class CForm
         //调用插件
         if (self::$_fieldrow['plugin'])
         {
-            import(self::$_fieldrow['plugin'], 'Plugin');//导入插件
+            return Vhook(self::$_fieldrow['plugin']);
             
         } else
         {
+            
             $methor = self::$_fieldrow['type'];
-            $element = method_exists(self, $methor) === true ? self::$methor() : '';
+            $element = method_exists(__CLASS__, $methor) === true ? self::$methor() : '';
         }
 
         self::$_fieldrow = array();
@@ -48,7 +49,7 @@ class CForm
     public static function text()
     {
         $fieldname = self::$_fieldrow['fieldname'];
-        return '<input type="hidden" name="' . $fieldname . '" id="' . $fieldname . '" ' . self::$_fieldrow['tackattr'] . '  />';
+        return '<input type="text" name="' . $fieldname . '" id="' . $fieldname . '" ' . self::$_fieldrow['tackattr'] . '  />';
     }
 
     /**
@@ -58,7 +59,7 @@ class CForm
     public static function textarea()
     {
         $fieldname = self::$_fieldrow['fieldname'];
-        return '<textarea name="' . $fieldname . '" id="' . $fieldname . '" ' . self::$_fieldrow['tackattr'] . '></textarea>';
+        return '<textarea style="width:100%" name="' . $fieldname . '" id="' . $fieldname . '" ' . self::$_fieldrow['tackattr'] . '></textarea>';
     }
 
     /**
@@ -75,7 +76,7 @@ class CForm
         $chk = '';
         foreach ($plist as $k => $p)
         {
-            $chk.='<input type="checkbox" autocomplete="off" value="' . $p['id'] . '" class="chkall ace" name="position[]"><span class="lbl">' . $p['title'] . '</span>';
+            $chk.='<input type="checkbox" autocomplete="off" value="' . $p['id'] . '" class="chkall ace" name="position[]"><span class="lbl">' . $p['title'] . '</span> ';
         }
         return $chk;
     }
@@ -112,6 +113,17 @@ class CForm
                       </label>';
         }
         return $checkboxs;
+    }
+    
+    public static function cate()
+    {
+        if(I('get.cid'))
+        {
+            $category=DD('Category');
+            $cateinfo=$category->findbyid(I('get.cid'));
+            return $catefield='<lable>'.$cateinfo['title'].'</lable>'.
+                    "<input type=hidden name='".self::$_fieldrow['fieldname']."' id='".self::$_fieldrow['fieldname']."' value='".$cateinfo['id']."' />";
+        }
     }
 
 }

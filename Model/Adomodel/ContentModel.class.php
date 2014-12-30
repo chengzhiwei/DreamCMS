@@ -21,15 +21,14 @@ class ContentModel extends \Think\Model\AdvModel
         {
             $data = I('post');
         }
-        if($this->create($data))
+        if ($this->create($data))
         {
-            if($this->add())
+            if (parent::add())
             {
                 return true;
             }
             return false;
-        }
-        else
+        } else
         {
             return true;
         }
