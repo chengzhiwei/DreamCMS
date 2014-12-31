@@ -22,4 +22,13 @@ class PluginResModel extends \Think\Model\AdvModel
         return $this->addAll($dataList);
     }
 
+    public function selByTypePid($type, $pid)
+    {
+        $condition = array(
+            'type' => $type,
+            'pid' => $pid,
+        );
+        return $this->where($condition)->select();
+    }
+
 }

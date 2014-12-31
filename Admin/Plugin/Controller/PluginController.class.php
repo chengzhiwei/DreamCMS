@@ -210,4 +210,32 @@ class PluginController extends \Auth\Controller\AuthbaseController
         
     }
 
+    /**
+     * 配置插件
+     */
+    public function doconfigure()
+    {
+        
+    }
+
+    /**
+     * 获取插件配置
+     */
+    public function getconfigure()
+    {
+        if (IS_AJAX)
+        {
+            //插件编号
+            $pid = I('get.pid');
+            //获取前台插件
+            $PluginResMod = DD('PluginRes');
+            $siteplugin = $PluginResMod->selByTypePid(1, $pid);
+            //获取后台插件
+            $adminplugin = $PluginResMod->selByTypePid(2, $pid);
+            //获取视图钩子
+            
+            //获取业务钩子
+        }
+    }
+
 }

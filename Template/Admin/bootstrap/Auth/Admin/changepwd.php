@@ -4,7 +4,7 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                添加管理员
+                修改密码
             </small>
         </h1>
     </div><!-- /.page-header -->

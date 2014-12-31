@@ -4,7 +4,7 @@
     <author>Dream CMS</author>
     <contact>Dream CMS@***.com</contact>
     <desc>PLG_UEDITOR_DESC</desc>
-    <vhooks>        
+    <vhooks>
         <vhook>
             <name>PLUGIN_VHOOK_UEDITOR</name>
             <class>Vhook</class>

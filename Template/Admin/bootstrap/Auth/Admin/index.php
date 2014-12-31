@@ -14,6 +14,7 @@
             <!-- PAGE CONTENT BEGINS -->
 
             <div class="row">
+                <div class="col-xs-12 " style="padding-bottom: 10px;"><a href="<?php echo U('Auth/Admin/addadmin'); ?>" class="  pull-right btn btn-xs btn-info" ><?php echo L('ADD_ADMIN'); ?></a></div>
                 <div class="col-xs-12">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover" id="sample-table-1">
@@ -54,21 +55,15 @@
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <button class="btn btn-xs btn-success">
-                                                    <i class="icon-ok bigger-120"></i>
-                                                </button>
+                                         
 
-                                                <button class="btn btn-xs btn-info">
-                                                    <i class="icon-edit bigger-120"></i>
-                                                </button>
+                                               
 
-                                                <button class="btn btn-xs btn-danger">
+                                                <a class="btn btn-xs btn-danger">
                                                     <i class="icon-trash bigger-120"></i>
-                                                </button>
+                                                </a>
 
-                                                <button class="btn btn-xs btn-warning">
-                                                    <i class="icon-flag bigger-120"></i>
-                                                </button>
+                                               
                                             </div>
 
                                             <div class="visible-xs visible-sm hidden-md hidden-lg">

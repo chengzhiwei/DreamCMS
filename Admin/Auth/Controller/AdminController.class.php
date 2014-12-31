@@ -21,9 +21,16 @@ class AdminController extends AuthbaseController
             if (!$b)
             {
                 $this->error($adomodel->getError() . $adomodel->getDbError());
+            } else
+            {
+                $this->success('ok');
             }
         } else
         {
+            // 获取角色列表
+            $AdminGroupMod = DD('AdminGroup');
+            $AdminGroupList = $AdminGroupMod->select();
+            $this->assign('AdminGroupList', $AdminGroupList);
             $this->display();
         }
     }
