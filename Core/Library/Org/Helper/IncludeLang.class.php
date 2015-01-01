@@ -59,6 +59,7 @@ class IncludeLang
      */
     public static function IncFile($path)
     {
+       
         if (file_exists($path))
         {
             include (L($path));

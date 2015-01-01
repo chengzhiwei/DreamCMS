@@ -42,17 +42,16 @@ class AdminbaseController extends \Think\Controller
         if (I('get.opsitelang'))
         {
             $langinfo = $langmod->selectone(I('get.langid'));
-            $this->OpSiteLangInfo = $langinfo;
             cookie('OpSiteLangInfo', $langinfo);
         } else
         {
             if (!cookie('OpSiteLangInfo'))
             {
                 $langinfo = $langmod->findbydefault();
-                $this->OpSiteLangInfo = $langinfo;
                 cookie('OpSiteLangInfo', $langinfo);
             }
         }
+        $this->OpSiteLangInfo = cookie('OpSiteLangInfo');
     }
 
 }

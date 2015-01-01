@@ -34,17 +34,21 @@ function hook($hookname)
  * @param type $ext
  * @return Think\Model
  */
-function DD($adomodel, $ext = 'Ado')
+function DD($adomodel, $arg = array(), $ext = 'Ado')
 {
-
     static $_adomodel;
-    if (isset($_adomodel[$adomodel . '_' . $ext]))
+    $staticStr = $adomodel . '_' . implode('_', $arg) . '_' . $ext;
+    if (isset($_adomodel[$staticStr]))
     {
-        return $_adomodel[$adomodel . '_' . $ext];
+        return $_adomodel[$staticStr];
     }
+    //拼接类
     $newmodel = "\\Model\\" . $ext . "model\\" . $adomodel . 'Model';
-    $newmodel_obj = new $newmodel();
-    $_adomodel[$adomodel . '_' . $ext] = $newmodel_obj;
+    //反射
+    $RefCls = new ReflectionClass($newmodel);
+    //实例化 传参给构造函数
+    $newmodel_obj = $RefCls->newInstanceArgs($arg);
+    $_adomodel[$staticStr] = $newmodel_obj;
     return $newmodel_obj;
 }
 
@@ -268,7 +272,7 @@ function URL($url = '', $vars = '', $app = '', $suffix = true, $domain = false)
     return $url;
 }
 
-function Vhook($path = '', $vars = array())
+function Vhook($path, $vars = array())
 {
     if (ADMIN_OR_SITE == 'ADMIN')
     {
@@ -277,17 +281,19 @@ function Vhook($path = '', $vars = array())
     {
         //判断前台语言
     }
+    $path_arr = explode('/', trim($path, '/'));
+    $method = $path_arr[count($path_arr) - 1];
+    unset($path_arr[count($path_arr) - 1]);
+    $cls = implode('\\', $path_arr);
     //通过语言来加载不同的语言包
-    import('WebUpload\Hook\Vhook', 'Plugin');
+    import($cls, 'Plugin');
     static $elt_obj = array();
-    // $cls = "\\Element\\" . ucfirst($fielddata['type']) . '\\' . ucfirst($fielddata['element']);
-    $cls = '\\WebUpload\\Hook\\Vhook';
     if (!$elt_obj[$cls])
     {
         $class = new $cls();
         $elt_obj[$cls] = $class;
     }
-    return call_user_func_array(array(&$elt_obj[$cls], 'thumbupload'), $vars);
+    return call_user_func_array(array(&$elt_obj[$cls], $method), $vars);
 }
 
 function defaultlang()
@@ -462,9 +468,9 @@ function langlist()
  */
 function getlang()
 {
-    if (I('get.' . C('VAR_LANGUAGE')))
+    if (I('get.l'))
     {
-        return I('get.' . C('VAR_LANGUAGE'));
+        return I('get.l');
     }
     if (!defined('ADMIN_OR_SITE'))
     {
@@ -476,7 +482,8 @@ function getlang()
             return C('DEFAULT_LANG');
         } else
         {
-            $lang=  \defaultlang();
+
+            $lang = \defaultlang();
             return $lang['lang'];
         }
     }

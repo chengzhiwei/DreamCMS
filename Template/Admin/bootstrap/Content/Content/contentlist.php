@@ -40,13 +40,13 @@
         
         <div  style="padding-bottom: 10px;" class="col-xs-12 op_btn">
            
-            <a class=" pull-right btn btn-xs btn-info " href="<?php echo U('Content/Content/add');?>">
+            <a class=" pull-right btn btn-xs btn-info " href="<?php echo U('Content/Content/add',array('cid'=>I('get.cid')));?>">
                 <b>添加文章</b>
             </a>
             <a class=" pull-right btn btn-xs btn-warning"  href="/DreamCMS/admin.php/Content/Model/addfield/mid/1.html">
                 <b>批量移动</b>
             </a>
-            <a class=" pull-right btn btn-xs btn-danger" href="<?php echo U('Content/Content/add');?>">
+            <a class=" pull-right btn btn-xs btn-danger" href="<?php echo U('Content/Content/add',array('cid'=>I('get.cid')));?>">
                <b>批量删除</b>
             </a>
         </div>

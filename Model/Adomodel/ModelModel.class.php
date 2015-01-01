@@ -16,7 +16,7 @@ class ModelModel extends \Think\Model\AdvModel
         {
             $data = I('post.');
         }
-        if ($this->create())
+        if ($this->create($data))
         {
             if ($this->add($data))
             {

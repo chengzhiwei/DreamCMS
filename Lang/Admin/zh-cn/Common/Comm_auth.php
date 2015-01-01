@@ -1,5 +1,6 @@
 <?php 
  return array (
+  'ACT_AUTH_ADMIN_ADDADMIN' => '添加管理员',
   'ACT_CONTENT_MODEL_ADDFIELD' => '添加字段',
   'ACT_AUTH_PERMISSIONS_GROUPLIST' => '分组管理',
   'ACT_AUTH_PERMISSIONS_EDITACTION' => '修改权限',
