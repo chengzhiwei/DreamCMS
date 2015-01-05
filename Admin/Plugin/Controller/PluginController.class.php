@@ -233,9 +233,19 @@ class PluginController extends \Auth\Controller\AuthbaseController
             //获取后台插件
             $adminplugin = $PluginResMod->selByTypePid(2, $pid);
             //获取视图钩子
-            
+            $hooklistMod = DD('HookList');
+            $vhoodlist = $hooklistMod->selbyHidType($pid, 1);
             //获取业务钩子
+            $bhoodlist = $hooklistMod->selbyHidType($pid, 2);
+            $config = array(
+                'siteplugin' => $siteplugin,
+                'adminplugin' => $adminplugin,
+                'vhoodlist' => $vhoodlist,
+                'bhoodlist' => $bhoodlist,
+            );
+            echo json_encode($config);
         }
     }
 
 }
+

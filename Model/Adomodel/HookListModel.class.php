@@ -23,4 +23,14 @@ class HookListModel extends \Think\Model\AdvModel
         return $this->where($condition)->select();
     }
 
+    /**
+     * 根据类型查询钩子
+     * @param int $type
+     * @return array
+     */
+    public function selbyPidType($pid,$type)
+    {
+        return $this->where(array('pid'=>$pid,'type' => $type))->select();
+    }
+
 }
