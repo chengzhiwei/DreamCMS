@@ -95,14 +95,14 @@
 
                         <li class="light-blue">
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                <?php echo L('NOW_OPTER');?>：中文网站
+                                <?php echo L('NOW_OPTER'); ?>：中文网站
                                 <i class="icon-caret-down"></i>
                             </a>
                             <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                                 <li>
                                     <a href="#">
                                         <i class="icon-flag"></i>
-                                        <?php echo L('CHINESE');?>网站
+                                        <?php echo L('CHINESE'); ?>网站
                                     </a>
                                 </li>
 
@@ -112,7 +112,7 @@
                                 <li>
                                     <a href="#">
                                         <i class="icon-flag"></i>
-                                        <?php echo L('ENGLISH');?>网站
+                                        <?php echo L('ENGLISH'); ?>网站
                                     </a>
                                 </li>
                             </ul>
@@ -122,25 +122,19 @@
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                                 <img class="nav-user-photo" src="<?php echo IMG_PATH; ?>user.jpg" alt="Admin" />
                                 <span class="user-info">
-                                    <small><?php echo L('WELCOME');?>,</small>
-                                    Admin
+                                    <small><?php echo L('WELCOME'); ?>,</small>
+                                    <?php echo $LoginAdminInfo['username']; ?>
                                 </span>
 
                                 <i class="icon-caret-down"></i>
                             </a>
 
                             <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-cog"></i>
-                                        设置
-                                    </a>
-                                </li>
 
                                 <li>
                                     <a href="#">
                                         <i class="icon-user"></i>
-                                        个人资料
+                                        修改密码
                                     </a>
                                 </li>
 
@@ -183,19 +177,19 @@
 
                     <div class="sidebar-shortcuts" id="sidebar-shortcuts">
                         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-                            <a href="<?php echo __ROOT__;?>" target="_blank" class="btn btn-success">
+                            <a href="<?php echo __ROOT__; ?>" target="_blank" class="btn btn-success">
                                 <i class="icon-home"></i>
                             </a>
 
-                            <button class="btn btn-info">
+                            <a href="<?php echo U('Content/Content/index'); ?>" class="btn btn-info">
                                 <i class="icon-pencil"></i>
-                            </button>
+                            </a>
 
-                            <a href="<?php echo U('System/Cache/clearall');?>" class="btn btn-warning">
+                            <a href="<?php echo U('System/Cache/clearall'); ?>" class="btn btn-warning">
                                 <i class="icon-th"></i>
                             </a>
 
-                             <a href="<?php echo U('System/Cache/clearall');?>" class="btn btn-danger">
+                            <a href="<?php echo U('System/Cache/clearall'); ?>" class="btn btn-danger">
                                 <i class="icon-trash"></i>
                             </a>
                         </div>
@@ -259,7 +253,7 @@
                             </form>
                         </div><!-- #nav-search -->
                     </div>
-                    <?php include $view;?>
+                    <?php include $view; ?>
 
                 </div>
 
@@ -365,7 +359,7 @@
                 $('#all_menu-text').text($('#grouplist' + gid).text());
                 $.ajax({
                     type: "post",
-                    url: "<?php echo URL('Index/Index/getleftmenu','','Admin.php'); ?>",
+                    url: "<?php echo URL('Index/Index/getleftmenu', '', 'Admin.php'); ?>",
                     data: {gid: $('#grouplist' + gid).find('a').attr('rel')},
                     dataType: 'json',
                     success: function (data) {

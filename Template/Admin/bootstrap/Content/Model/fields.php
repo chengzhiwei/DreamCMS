@@ -9,8 +9,8 @@
         </h1>
     </div><!-- /.page-header -->
     <div class="row">
-        <div class="col-xs-12 " style="padding-bottom: 10px;">
-            <a href="<?php echo U('Content/Model/addfield',array('mid'=>I('mid'))); ?>" class="  pull-right btn btn-danger" >
+        <div class="col-xs-12 " style="padding-bottom: 10px;">  
+            <a href="<?php echo U('Content/Model/addfield',array('mid'=>I('mid'))); ?>" class="  pull-right btn btn-xs btn-info" >
                 添加字段
             </a>
         </div>

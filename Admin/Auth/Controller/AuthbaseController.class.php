@@ -25,6 +25,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
             redirect(URL('Auth/Login/Login', '', 'Admin.php'));
         }
         $this->LoginAdminInfo = session('Dream_admin');
+        $this->assign('LoginAdminInfo', $this->LoginAdminInfo);
     }
 
     private function _common()

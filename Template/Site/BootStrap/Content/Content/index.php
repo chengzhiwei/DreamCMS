@@ -1,4 +1,4 @@
-<?php echo Vhook('WebUpload/Hook/Vhook/multiimgupload');die();?>
+<?php //echo Vhook('WebUpload/Hook/Vhook/multiimgupload');die();?>
 <!DOCTYPE html>
 <html lang="en">
 
