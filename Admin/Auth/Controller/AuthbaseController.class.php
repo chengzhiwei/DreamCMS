@@ -7,6 +7,8 @@ import('Common\Controller\AdminbaseController', 'Admin');
 class AuthbaseController extends \Common\Controller\AdminbaseController
 {
 
+    public $LoginAdminInfo;
+
     public function __construct()
     {
         parent::__construct();
@@ -22,6 +24,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
         {
             redirect(URL('Auth/Login/Login', '', 'Admin.php'));
         }
+        $this->LoginAdminInfo = session('Dream_admin');
     }
 
     private function _common()

@@ -102,7 +102,7 @@
                                 </div>
 
                                 <div class="tools action-buttons" >
-                                    <a class="btn btn-xs btn-yellow" href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    <a class="btn btn-xs btn-yellow modal_btn" href="javascript:void(0)"  data-toggle="modal" >
                                         配置
                                     </a>
                                     <a class="btn btn-xs btn-danger" href="#">
@@ -260,7 +260,7 @@
     </div>
 </div>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" id="myModal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
@@ -318,7 +318,7 @@
                                                 </a>
                                             </li>
 
-                                            
+
                                         </ul>
 
                                         <div class="tab-content">
@@ -337,7 +337,7 @@
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
                                                     </lable>
-                                                    
+
                                                     <lable class="col-sm-4 chk_lbl">
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
@@ -350,7 +350,7 @@
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
                                                     </lable>
-                                                    
+
                                                     <lable class="col-sm-4 chk_lbl">
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
@@ -365,8 +365,8 @@
                                                     </lable>
                                                 </div>
 
-                                                
-                                                
+
+
                                                 <div><u>CSS</u></div>
                                                 <div>
                                                     <lable class="col-sm-4 chk_lbl">
@@ -381,7 +381,7 @@
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
                                                     </lable>
-                                                    
+
                                                     <lable class="col-sm-4 chk_lbl">
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
@@ -394,7 +394,7 @@
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
                                                     </lable>
-                                                    
+
                                                     <lable class="col-sm-4 chk_lbl">
                                                         <input type="checkbox" txtval="添加文章" class="ace authlist" value="13" name="authlist[]">
                                                         <span class="lbl">jquery.min.js </span>
@@ -408,9 +408,9 @@
                                                         <span class="lbl">jquery.min.js </span>
                                                     </lable>
                                                 </div>
-                                                
-                                                
-                                                
+
+
+
                                             </div>
 
                                             <div class="tab-pane" id="profile3">
@@ -418,7 +418,7 @@
                                                 <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
                                             </div>
 
-                                           
+
                                         </div>
                                     </div>
 
@@ -428,14 +428,14 @@
                                 </div>
 
                                 <div class="tab-pane" id="member-tab">
-                                    
+
                                 </div><!-- member-tab -->
 
                                 <div class="tab-pane" id="comment-tab">
-                                    
-                                    
-                                    
-                                   
+
+
+
+
                                 </div>
                             </div>
                         </div><!-- /widget-main -->
@@ -451,3 +451,22 @@
         </div><!-- /.modal-content -->
     </div>
 </div>
+<script>
+    $(function () {
+        $('.modal_btn').click(function () {
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo U('Plugin/Plugin/getconfigure'); ?>',
+                data: {pid:10},
+                dataType: 'json',
+                success:function(data){
+                    $('#myModal').modal('show');
+                }
+
+            });
+            
+        });
+
+    });
+
+</script>

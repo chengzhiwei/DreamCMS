@@ -8,7 +8,7 @@ class CategoryController extends \Auth\Controller\AuthbaseController
     public function index()
     {
         $Category = DD('Category');
-        $result = $Category->selectall($_COOKIE['langid']);
+        $result = $Category->selectall($this->OpSiteLangInfo['id']);
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');
         $unlimitedclass = new \Unlimitedclass();
         $Category_arr = $unlimitedclass->cateresult($result);

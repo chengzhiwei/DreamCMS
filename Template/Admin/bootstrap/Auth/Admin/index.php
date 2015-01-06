@@ -50,55 +50,16 @@
                                         <td>
                                             <a href="#"><?php echo $li['username']; ?></a>
                                         </td>
-                                        
-                                        <td><?php echo L($admingroup[$li['group']]['langconf']);?></td>
+
+                                        <td><?php echo L($admingroup[$li['group']]['langconf']); ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                         
-
-                                               
-
-                                                <a class="btn btn-xs btn-danger">
+                                                <a class="btn btn-xs btn-danger" href="javascript:deladmin(<?php echo$li['id']; ?>)">
                                                     <i class="icon-trash bigger-120"></i>
                                                 </a>
-
-                                               
                                             </div>
 
-                                            <div class="visible-xs visible-sm hidden-md hidden-lg">
-                                                <div class="inline position-relative">
-                                                    <button data-toggle="dropdown" class="btn btn-minier btn-primary dropdown-toggle">
-                                                        <i class="icon-cog icon-only bigger-110"></i>
-                                                    </button>
-
-                                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-                                                        <li>
-                                                            <a title="" data-rel="tooltip" class="tooltip-info" href="#" data-original-title="View">
-                                                                <span class="blue">
-                                                                    <i class="icon-zoom-in bigger-120"></i>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a title="" data-rel="tooltip" class="tooltip-success" href="#" data-original-title="Edit">
-                                                                <span class="green">
-                                                                    <i class="icon-edit bigger-120"></i>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a title="" data-rel="tooltip" class="tooltip-error" href="#" data-original-title="Delete">
-                                                                <span class="red">
-                                                                    <i class="icon-trash bigger-120"></i>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
                                         </td>
                                     </tr>
                                     <?php
@@ -109,17 +70,22 @@
 
                             </tbody>
                         </table>
-                    </div><!-- /.table-responsive -->
-                </div><!-- /span -->
-            </div><!-- /row -->
+                    </div>
+                </div>
+            </div>
 
 
 
 
-
-
-
-
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+        </div>
+    </div>
 </div>
+<script>
+    function deladmin(id)
+    {
+        if (confirm('<?php echo L('IS_TRUE_ADMIN'); ?>'))
+        {
+            window.location.href = '<?php echo __APP__; ?>?s=Auth/Admin/deladmin&id=' + id;
+        }
+    }
+</script>

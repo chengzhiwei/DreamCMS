@@ -74,7 +74,7 @@ class AdminController extends AuthbaseController
                 die();
             }
             $adminmod = DD('Admin');
-            $b = $adminmod->updatepwd($id, md5(C('COOKIE_TOKEN') . $newpwd));
+            $b = $adminmod->updatepwd($id, md5(C('PWD_TOKEN') . $newpwd));
             if ($b)
             {
                 $arr['status'] = 'success';
@@ -162,6 +162,25 @@ class AdminController extends AuthbaseController
             $this->assign('actlist', $newactlist);
             $this->display();
         }
+    }
+
+    /**
+     * 删除管理员
+     */
+    public function deladmin()
+    {
+        $id = I('get.id');
+        if ($this->LoginAdminInfo['id'] != $id)
+        {
+            $adminMod = DD('Admin');
+            $b = $adminMod->delById($id);
+            if (!b)
+            {
+                $this->error(L('OP_ERROR'));
+            }
+            $this->redirect('Auth/Admin/index');
+        }
+        $this->error(L('CANNOT_DEL_MY'));
     }
 
 }

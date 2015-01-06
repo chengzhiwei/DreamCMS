@@ -20,6 +20,8 @@ return array(
     'SELECT_AUTH' => '请选择权限',
     'PASSWORD' => '密码',
     'ROLE' => '角色',
-    'PLEASE_CHK_ROLE'=>'请选择角色',
+    'PLEASE_CHK_ROLE' => '请选择角色',
+    'CANNOT_DEL_MY' => '不能删除自己',
+    'IS_TRUE_ADMIN' => '确定要删除么?',
 );
 ?>

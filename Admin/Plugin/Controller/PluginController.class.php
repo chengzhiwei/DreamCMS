@@ -226,17 +226,29 @@ class PluginController extends \Auth\Controller\AuthbaseController
         if (IS_AJAX)
         {
             //插件编号
-            $pid = I('get.pid');
+            $pid = I('post.pid');
             //获取前台插件
             $PluginResMod = DD('PluginRes');
             $siteplugin = $PluginResMod->selByTypePid(1, $pid);
+            //前台资源
+            foreach ($siteplugin as $k => $sp)
+            {
+                $siteplugin[$k]['js'] = explode(',', $sp['js']);
+                $siteplugin[$k]['css'] = explode(',', $sp['css']);
+            }
             //获取后台插件
             $adminplugin = $PluginResMod->selByTypePid(2, $pid);
+            //后台资源
+            foreach ($adminplugin as $k => $ap)
+            {
+                $adminplugin[$k]['js'] = explode(',', $ap['js']);
+                $adminplugin[$k]['css'] = explode(',', $ap['css']);
+            }
             //获取视图钩子
             $hooklistMod = DD('HookList');
-            $vhoodlist = $hooklistMod->selbyHidType($pid, 1);
+            $vhoodlist = $hooklistMod->selbyPidType($pid, 1);
             //获取业务钩子
-            $bhoodlist = $hooklistMod->selbyHidType($pid, 2);
+            $bhoodlist = $hooklistMod->selbyPidType($pid, 2);
             $config = array(
                 'siteplugin' => $siteplugin,
                 'adminplugin' => $adminplugin,
@@ -248,4 +260,3 @@ class PluginController extends \Auth\Controller\AuthbaseController
     }
 
 }
-

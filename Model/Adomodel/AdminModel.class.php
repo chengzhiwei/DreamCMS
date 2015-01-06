@@ -13,8 +13,13 @@ class AdminModel extends \Think\Model\AdvModel
         'username' => array('htmlspecialchars'),
     );
     protected $_auto = array(
-            //array('name','getName',3,'callback')
+        array('pwd', 'setPwd', 1, 'callback')
     );
+
+    protected function setPwd()
+    {
+        return md5(C('PWD_TOKEN') . I('post.pwd'));
+    }
 
     public function findById($id)
     {
@@ -62,13 +67,19 @@ class AdminModel extends \Think\Model\AdvModel
     {
         return $this->select();
     }
-    
-    public function updatepwd($id,$pwd)
+
+    public function updatepwd($id, $pwd)
     {
-        $condition=array();
-        $condition['id']=$id;
-        $data=array();
-        $data['pwd']=$pwd;
+        $condition = array();
+        $condition['id'] = $id;
+        $data = array();
+        $data['pwd'] = $pwd;
         return $this->where($condition)->save($data);
     }
+
+    public function delById($id)
+    {
+        return $this->where(array('id' => $id))->delete();
+    }
+
 }

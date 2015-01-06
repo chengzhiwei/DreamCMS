@@ -140,7 +140,7 @@
             </div>
 
             <div class="col-lg-9 "  >
-                <iframe id='iframeId' scrolling="no" name="iframeId" onload="autoHeight()"  style="zoom: 0.6; " src="http://127.0.0.1/DreamCMS/admin.php/Content/Content/contentlist.html" frameBorder="0"  width="100%" ></iframe> 
+                <iframe id='iframeId' scrolling="no" name="iframeId" onload="autoHeight()"  style="zoom: 0.6; " src="" frameBorder="0"  width="100%" ></iframe> 
             </div>
         </div>
     </div>
