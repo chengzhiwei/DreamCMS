@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2014-12-31 17:15:51
+Date: 2015-01-06 17:24:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -64,13 +64,13 @@ CREATE TABLE `ur7_admin` (
   `pwd` varchar(50) NOT NULL,
   `group` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin
 -- ----------------------------
 INSERT INTO `ur7_admin` VALUES ('1', 'admin', 'b160b3469d42967abe6619d443f5d1fa', '12');
-INSERT INTO `ur7_admin` VALUES ('2', 'asdf', 'b160b3469d42967abe6619d443f5d1fa', '12');
+INSERT INTO `ur7_admin` VALUES ('4', '1234', 'c23adebf8b2e0dc67b87a41347277f0a', '12');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_action`
@@ -113,7 +113,6 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('20', '留言列表', 'admin.php', '
 INSERT INTO `ur7_admin_auth_action` VALUES ('21', '分类管理', 'admin.php', '5', '10', 'Modules', 'Ad', 'typelist', 'ACT_MODULES_AD_TYPELIST', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('22', '广告管理', 'admin.php', '5', '10', 'Modules', 'Ad', 'adlist', 'ACT_MODULES_AD_ADLIST', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('23', '模型列表', 'admin.php', '2', '14', 'Content', 'Model', 'index', 'ACT_CONTENT_MODEL_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('24', '权限管理', 'admin.php', '4', '6', 'Auth', 'Auth', 'index', 'ACT_AUTH_AUTH_INDEX', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('25', ' 插件列表', 'admin.php', '6', '12', 'Plugin', 'Plugin', 'pluginlist', 'ACT_PLUGIN_PLUGIN_PLUGINLIST', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('26', ' 添加分组', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addgroup', 'ACT_AUTH_PERMISSION_ADDGROUP', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('27', '添加模块', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addmodule', 'ACT_AUTH_PERMISSION_ADDMODULE', '1');
@@ -477,7 +476,6 @@ INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textarea',
 INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/thumbupload');
 INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1', 'Ueditor/Hook/Vhook/ueditor');
 INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1', null);
-INSERT INTO `ur7_model_field` VALUES ('8', '图片组', 'pics', 'PICGROUP', 'PICGROUP', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/multiimgupload');
 
 -- ----------------------------
 -- Table structure for `ur7_page`
