@@ -37,7 +37,15 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 $plugin_arr[] = $xml;
             }
         }
+        //获取已经安装的插件列表
+        $pluginmod = DD('Plugin');
+        $plugin_install = $pluginmod->select();
+        foreach ($plugin_install as $k => $ins)
+        {
+            $plugin_install[$ins['filetitle']] = $ins;
+        }
         $this->assign('plugin_arr', $plugin_arr);
+        $this->assign('plugin_install', $plugin_install);
         $this->display();
     }
 
@@ -161,7 +169,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
             foreach ($pluginfo->vhooks->vhook as $vhook)
             {
                 $data = array(
-                    'name' => '', 'path' => '', 'method' => '', 'type' => '1',
+                    'name' => (string)$vhook->name, 'path' => $plugin . '/' . (string) $vhook->class, 'method' => (string) $vhook->method, 'type' => '1',
                     'pid' => $pluginid, 'js' => (string) $vhook->res->js, 'css' => (string) $vhook->res->css,
                 );
                 if ((string) $vhook->hookpos)
@@ -177,8 +185,8 @@ class PluginController extends \Auth\Controller\AuthbaseController
             foreach ($pluginfo->bhooks->bhook as $bhook)
             {
                 $data = array(
-                    'name' => '', 'path' => '', 'method' => '', 'type' => '2',
-                    'pid' => $pluginid, 'js' => (string) $vhook->res->js, 'css' => (string) $vhook->res->css,
+                    'name' => (string)$bhook->name, 'path' => $plugin . '/' . (string) $bhook->class, 'method' => (string) $bhook->method, 'type' => '2',
+                    'pid' => $pluginid, 'js' => (string) $bhook->res->js, 'css' => (string) $bhook->res->css,
                 );
                 if ((string) $bhook->hookpos)
                 {
@@ -189,7 +197,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
         }
         $Hooklist = DD('HookList');
         $Hooklist->addlist($hooklistdata);
-        echo $Hooklist->getLastSql();
+        $this->redirect('Plugin/Plugin/pluginlist');
     }
 
     /**
@@ -198,7 +206,25 @@ class PluginController extends \Auth\Controller\AuthbaseController
      */
     public function uninstall()
     {
-        
+        $file = I('get.file');
+        $pluginmod = DD('Plugin');
+        $plugininfo = $pluginmod->findByPlginFile($file);
+        $pid = $plugininfo['id'];
+        $pluginmod->startTrans();
+        $delPlugin = $pluginmod->delbyid($pid);
+        $pluginresmod = DD('PluginRes');
+        $delPluginRes = $pluginresmod->delbypid($pid);
+        $hooklistmod = DD('HookList');
+        $delPluginHook = $hooklistmod->delbypid($pid);
+        if ($delPlugin !== false && $delPluginHook !== false && $delPluginRes !== false)
+        {
+            $pluginmod->commit();
+            $this->redirect('Plugin/Plugin/pluginlist');
+        } else
+        {
+            $pluginmod->rollback();
+            $this->error(L('OP_ERROR'));
+        }
     }
 
     /**

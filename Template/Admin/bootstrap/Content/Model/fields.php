@@ -51,16 +51,13 @@
                                         </td>
 
                                         <td class="center">
-                                            <input type="text" style=" width: 40px;" />
+                                            <input type="text" fid='<?php echo $f['id']; ?>' value='<?php echo $f['sort']; ?>' class='fieldsort' style=" width: 40px;" />
                                         </td>
                                         <td> <?php echo $f['title']; ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <button class="btn btn-xs btn-success">
-                                                    <i class="icon-ok bigger-120"></i>
-                                                </button>
-
+                                         
                                                 <button class="btn btn-xs btn-info">
                                                     <i class="icon-edit bigger-120"></i>
                                                 </button>
@@ -69,9 +66,7 @@
                                                     <i class="icon-trash bigger-120"></i>
                                                 </button>
 
-                                                <button class="btn btn-xs btn-warning">
-                                                    <i class="icon-flag bigger-120"></i>
-                                                </button>
+                                               
                                             </div>
 
                                             <div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -125,3 +120,13 @@
         </div><!-- /.col -->
     </div><!-- /.row -->
 </div>
+<script>
+    $(function(){
+        $('.fieldsort').blur(function(){
+            var fid=$(this).attr('fid');
+            var sort=$(this).val();
+            $(this).css('boder-color', '');
+            $(this).css('boder-color','blue');
+        });
+    })
+</script>

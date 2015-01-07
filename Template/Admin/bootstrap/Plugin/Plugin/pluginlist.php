@@ -29,8 +29,6 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-
-
             <div class="widget-body">
                 <div class="widget-main padding-8">
                     <div  >
@@ -42,7 +40,8 @@
                                 ?>
                                 <div class="profile-activity clearfix">
                                     <div>
-                                        <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
+
+                                        <img class="pull-left   no-hover" src="<?php echo __ROOT__ ?>/Template/Plugin/<?php echo (string) $p->plugin ?>/Res/thumb.png" />
                                         <a href="#" class="user"> <?php echo L((String) $p->name); ?> </a>
                                         作者：<?php echo $p_arr['author'] ?> EMAIL：<a href="mailto"><?php echo $p_arr['contact'] ?></a>
 
@@ -53,204 +52,38 @@
                                     </div>
 
                                     <div class="tools action-buttons">
-                                        <a class="btn btn-xs btn-success" id="install_plugin" href="<?php echo U('Plugin/Plugin/install', array('plugin' => (String) $p->plugin)) ?>" >
-                                            安装
-                                        </a>
-                                        <a class="btn btn-xs btn-danger" href="#">
-                                            删除
-                                        </a>
+                                        <?php
+                                        if (key_exists((string) $p->plugin, $plugin_install))
+                                        {
+                                            ?>
+                                            <a data-toggle="modal" class="btn btn-xs btn-warning" data-target="#myModal" href="#"  >
+                                                配置
+                                            </a>
+                                            <a class="btn btn-xs btn-danger" href="javascript:uninstall('<?php echo (string) $p->plugin ?>')">
+                                                卸载
+                                            </a>
+                                            <?php
+                                        } else
+                                        {
+                                            ?>
+                                            <a class="btn btn-xs btn-success" id="install_plugin" href="<?php echo U('Plugin/Plugin/install', array('plugin' => (String) $p->plugin)) ?>" >
+                                                安装
+                                            </a>
+                                            <a class="btn btn-xs btn-danger" href="#">
+                                                删除
+                                            </a>
+                                            <?php
+                                        }
+                                        ?>
+
+
 
                                     </div>
                                 </div>
                             <?php }
                             ?>
 
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
-                                    <a href="#" class="user"> 百度编辑器UEditor </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
 
-
-                                    <div class="time">
-                                        UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果
-
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons">
-                                    <a class="btn btn-xs btn-success" id="install_plugin" href="#" >
-                                        安装
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        删除
-                                    </a>
-
-                                </div>
-                            </div>
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-picture btn-info no-hover"></i>
-                                    <a href="#" class="user"> WebUploader 文件上传插件 </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-                                    <div class="time">
-
-                                        WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主,FLASH为辅的现代文件上传组件
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons" >
-                                    <a class="btn btn-xs btn-yellow modal_btn" href="javascript:void(0)"  data-toggle="modal" >
-                                        配置
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        卸载
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
-                                    <a href="#" class="user"> 百度编辑器UEditor </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-
-                                    <div class="time">
-                                        UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果
-
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons">
-                                    <a class="btn btn-xs btn-success" href="#">
-                                        安装
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        删除
-                                    </a>
-
-                                </div>
-                            </div>
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-picture btn-info no-hover"></i>
-                                    <a href="#" class="user"> WebUploader 文件上传插件 </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-                                    <div class="time">
-
-                                        WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主,FLASH为辅的现代文件上传组件
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons" >
-                                    <a class="btn btn-xs btn-yellow" href="#">
-                                        配置
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        卸载
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
-                                    <a href="#" class="user"> 百度编辑器UEditor </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-
-                                    <div class="time">
-                                        UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果
-
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons">
-                                    <a class="btn btn-xs btn-success" href="#">
-                                        安装
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        删除
-                                    </a>
-
-                                </div>
-                            </div>
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-picture btn-info no-hover"></i>
-                                    <a href="#" class="user"> WebUploader 文件上传插件 </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-                                    <div class="time">
-
-                                        WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主,FLASH为辅的现代文件上传组件
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons" >
-                                    <a class="btn btn-xs btn-yellow" href="#">
-                                        配置
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        卸载
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-ok btn-success no-hover"></i>
-                                    <a href="#" class="user"> 百度编辑器UEditor </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-
-                                    <div class="time">
-                                        UEditor 是一套开源的在线HTML编辑器,主要用于让用户在网站上获得所见即所得编辑效果
-
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons">
-                                    <a class="btn btn-xs btn-success" href="#">
-                                        安装
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        删除
-                                    </a>
-
-                                </div>
-                            </div>
-
-                            <div class="profile-activity clearfix">
-                                <div>
-                                    <i class="pull-left thumbicon icon-picture btn-info no-hover"></i>
-                                    <a href="#" class="user"> WebUploader 文件上传插件 </a>
-                                    作者：DreamCMS EMAIL：<a href="mailto">hot12121212@163.com</a>
-
-                                    <div class="time">
-
-                                        WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主,FLASH为辅的现代文件上传组件
-                                    </div>
-                                </div>
-
-                                <div class="tools action-buttons" >
-                                    <a class="btn btn-xs btn-yellow" href="#">
-                                        配置
-                                    </a>
-                                    <a class="btn btn-xs btn-danger" href="#">
-                                        卸载
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -457,16 +290,24 @@
             $.ajax({
                 type: 'POST',
                 url: '<?php echo U('Plugin/Plugin/getconfigure'); ?>',
-                data: {pid:10},
+                data: {pid: 10},
                 dataType: 'json',
-                success:function(data){
+                success: function (data) {
                     $('#myModal').modal('show');
                 }
 
             });
-            
+
         });
 
     });
+
+    function uninstall(file)
+    {
+        if (confirm('<?php echo L('IS_TRUE_UNINSTALL') ?>'))
+        {
+            window.location.href = '<?php echo __APP__ ?>?s=Plugin/Plugin/uninstall&file='+file;
+        }
+    }
 
 </script>

@@ -14,7 +14,7 @@
 
 namespace WebUpload\Controller;
 
-class UploadController extends \Think\Controller
+class UploadController extends \Common\Controller\AdminpluginController
 {
 
     public function multiimgupload()

@@ -24,19 +24,19 @@ class IncludeLang
      * 快速导入语言包文件
      * @param string  $path 格式：模块/控制器 或 是数组形式
      */
-    public static function QuickInc($path)
+    public static function QuickInc($path, $app = '')
     {
         if (is_array($path))
         {
             foreach ($path as $p)
             {
-                $realPath = self::parsePath($path);
+                $realPath = self::parsePath($path, $app );
                 self::IncFile($realPath);
             }
         }
         if (is_string($path))
         {
-            $realPath = self::parsePath($path);
+            $realPath = self::parsePath($path, $app);
             self::IncFile($realPath);
         }
     }
@@ -46,23 +46,23 @@ class IncludeLang
      * @param string $path 格式：模块/控制器
      * @return string
      */
-    public static function parsePath($path)
+    public static function parsePath($path, $app = '')
     {
-
-        return 'Lang' . DS . APP_NAME . DS . \getlang() . DS . $path.'.php';
+        $app_name = $app == '' ? APP_NAME : $app;
+         file_put_contents('2.txt', $app);
+        file_put_contents('1.txt', 'Lang' . DS . $app_name . DS . \getlang() . DS . $path . '.php');
+        return 'Lang' . DS . $app_name . DS . \getlang() . DS . $path . '.php';
     }
 
-    
     /**
      * 导入文件 [完整的路径]
      * @param type $path 完整的路径
      */
     public static function IncFile($path)
     {
-       
         if (file_exists($path))
         {
-            include (L($path));
+             L(include $path);
         }
     }
 

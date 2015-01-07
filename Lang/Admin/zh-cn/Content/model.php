@@ -24,5 +24,7 @@ return array(
     'MOBILE'=>'手机',
     'FIELD'=>'字段',
     'CUSTOM_CONTROL'=>'自定义控件',
+    'PLEASE_SELECT'=>'请选择',
+    
     
 );

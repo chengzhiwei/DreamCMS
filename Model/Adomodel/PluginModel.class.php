@@ -37,11 +37,33 @@ class PluginModel extends \Think\Model\AdvModel
             return false;
         }
     }
-    
+
     public function findbyid($id)
     {
-        $condition=array();
-        $condition['id']=$id;
+        $condition = array();
+        $condition['id'] = $id;
         return $this->where($condition)->find();
     }
+
+    /**
+     * 根据主键删除
+     * @param int $id
+     * @return boolean
+     */
+    public function delbyid($id)
+    {
+        return $this->where(array('id' => $id))->delete();
+    }
+    
+    
+    /**
+     * 根据插件文件名查找
+     * @param string $file
+     * @return boolean
+     */
+    public function findByPlginFile($file)
+    {
+        return $this->where(array('filetitle'=>$file))->find();
+    }
+
 }

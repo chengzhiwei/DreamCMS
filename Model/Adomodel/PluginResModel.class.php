@@ -31,4 +31,14 @@ class PluginResModel extends \Think\Model\AdvModel
         return $this->where($condition)->select();
     }
 
+    /**
+     * 根据插件ID 删除
+     * @param int $pid
+     * @return boolean
+     */
+    public function delbypid($pid)
+    {
+        return $this->where(array('pid'=>$pid))->delete();
+    }
+    
 }

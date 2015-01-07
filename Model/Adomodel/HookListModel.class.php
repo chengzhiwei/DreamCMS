@@ -32,5 +32,15 @@ class HookListModel extends \Think\Model\AdvModel
     {
         return $this->where(array('pid'=>$pid,'type' => $type))->select();
     }
+    
+    /**
+     * 根据插件ID 删除钩子
+     * @param int $pid
+     * @return boolean
+     */
+    public function delbypid($pid)
+    {
+        return  $this->where(array('pid'=>$pid))->delete();
+    }
 
 }

@@ -117,12 +117,29 @@ class ModelFieldModel extends \Think\Model\AdvModel
             }
         }
     }
-    
+
     public function selFieldByMid($mid)
     {
-        $condition=array();
-        $condition['mid']=$mid;
+        $condition = array();
+        $condition['mid'] = $mid;
         return $this->where($condition)->select();
+    }
+
+    /**
+     * 字段排序
+     * @param int $id
+     * @param int $sort
+     */
+    public function sort($id, $sort)
+    {
+        $b = $this->where(array('id' => $id))->save(array('sort' => $sort));
+        if ($b !== false)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
     }
 
 }

@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <name>文件上传插件</name>
+    <name>PLG_WEBUPLOAD_NAME</name>
     <author>Dream CMS</author>
     <contact>Dream CMS@***.com</contact>
-    <desc>WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主,FLASH为辅的现代文件上传组件</desc>
-    <vhook>        
-        <list>
-            <name>多图片上传</name>
+    <desc>PLG_WEBUPLOAD_DESC</desc>
+    <vhooks>
+        <vhook>
+            <name>PLUGIN_VHOOK_MULTIPICUPLOAD</name>
             <class>Vhook</class>
             <method>multiimgupload</method>
-            <desc>多图片上传</desc>
-        </list>
-        <list>
-            <name>多文件上传</name>
-            <class>multifileupload</class>
-            <method>Vhook</method>
-            <desc>多文件上传</desc>
-        </list>
-    </vhook>
-
+            <hookpos></hookpos>
+            <res>
+                <js>jquery.min.js,webuploader.min.js,upload.js</js>
+                <css>webuploader.css,style.css</css>
+            </res>
+        </vhook>
+        <vhook>
+            <name>PLUGIN_VHOOK_MULTIFILEUPLOAD</name>
+            <class>Vhook</class>
+            <method>multifileupload</method>
+            <hookpos></hookpos>
+            <res>
+                <js>jquery.min.js,webuploader.min.js,filesupload.js</js>
+                <css>webuploader.css,style.css,bootstrap.min.css</css>
+            </res>
+        </vhook>
+        <vhook>
+            <name>PLUGIN_VHOOK_THUMBUPLOAD</name>
+            <class>Vhook</class>
+            <method>thumbupload</method>
+            <hookpos></hookpos>
+            <res>
+                <js>jquery.min.js,webuploader.min.js,webuploader.min.js</js>
+                <css>webuploader.css,style.css</css>
+            </res>
+        </vhook>
+    </vhooks>
 </root>

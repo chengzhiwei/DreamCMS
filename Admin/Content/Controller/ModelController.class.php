@@ -88,23 +88,27 @@ class ModelController extends \Auth\Controller\AuthbaseController
         if (IS_AJAX)
         {
             $pid = I('post.pid');
-            $pluginMod=DD('Plugin');
-            $plugininfo=$pluginMod->findbyid($pid);
+            $pluginMod = DD('Plugin');
+            $plugininfo = $pluginMod->findbyid($pid);
             $hooklist = DD('HookList');
             $list = $hooklist->selbypid($pid);
             $new_list = array();
             foreach ($list as $l)
             {
-                $lang = 'Lang/Plugin/zh-cn/' . $plugininfo['filetitle'] . '/vhook.php';
-                if (is_file($lang))
-                {
-                    L(include($lang));
-                }
+                \Org\Helper\IncludeLang::QuickInc($plugininfo['filetitle'] . '/vhook', 'Plugin');
                 $l['name'] = L($l['name']);
                 $new_list[] = $l;
             }
             echo json_encode($new_list);
         }
+    }
+
+    public function fieldsort()
+    {
+        $id = I('post.id');
+        $sort = I('post.sort');
+        $ModelFieldMod = DD('ModelField');
+        $ModelFieldMod->sort($id,$sort);
     }
 
 }
