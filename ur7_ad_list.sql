@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-06 17:24:03
+Date: 2015-01-07 17:25:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -398,12 +398,15 @@ CREATE TABLE `ur7_hook_list` (
   `js` varchar(200) DEFAULT NULL,
   `css` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_hook_list
 -- ----------------------------
-INSERT INTO `ur7_hook_list` VALUES ('3', 'PLUGIN_VHOOK_UEDITOR', '10', '0', 'Ueditor/Vhook', 'ueditor', '1', '1', 'ueditor.all.min.js,lang/zh-cn/zh-cn.js', '');
+INSERT INTO `ur7_hook_list` VALUES ('12', 'PLUGIN_VHOOK_MULTIPICUPLOAD', '26', '0', 'WebUpload/Vhook', 'multiimgupload', '1', '1', 'jquery.min.js,webuploader.min.js,upload.js', 'webuploader.css,style.css');
+INSERT INTO `ur7_hook_list` VALUES ('13', 'PLUGIN_VHOOK_MULTIFILEUPLOAD', '26', '0', 'WebUpload/Vhook', 'multifileupload', '1', '1', 'jquery.min.js,webuploader.min.js,filesupload.js', 'webuploader.css,style.css,bootstrap.min.css');
+INSERT INTO `ur7_hook_list` VALUES ('14', 'PLUGIN_VHOOK_THUMBUPLOAD', '26', '0', 'WebUpload/Vhook', 'thumbupload', '1', '1', 'jquery.min.js,webuploader.min.js,webuploader.min.js', 'webuploader.css,style.css');
+INSERT INTO `ur7_hook_list` VALUES ('15', 'PLUGIN_VHOOK_UEDITOR', '27', '0', 'Ueditor/Vhook', 'ueditor', '1', '1', 'ueditor.all.min.js,lang/zh-cn/zh-cn.js', '');
 
 -- ----------------------------
 -- Table structure for `ur7_language`
@@ -463,19 +466,20 @@ CREATE TABLE `ur7_model_field` (
   `tackattr` varchar(255) NOT NULL,
   `mid` int(11) NOT NULL,
   `plugin` varchar(100) DEFAULT NULL,
+  `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_model_field
 -- ----------------------------
-INSERT INTO `ur7_model_field` VALUES ('1', '标题', 'title', 'TITLE', 'text', '', '', '0', 'style=\"width:100%\"', '1', null);
-INSERT INTO `ur7_model_field` VALUES ('2', '栏目', 'cid', 'CATE', 'cate', '', '', '0', '', '1', null);
-INSERT INTO `ur7_model_field` VALUES ('3', '关键字', 'keyword', 'KEYWORD', 'textarea', '', '', '0', '', '1', null);
-INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textarea', '', '', '0', '', '1', null);
-INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/thumbupload');
-INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1', 'Ueditor/Hook/Vhook/ueditor');
-INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1', null);
+INSERT INTO `ur7_model_field` VALUES ('1', '标题', 'title', 'TITLE', 'text', '', '', '0', 'style=\"width:100%\"', '1', null, '0');
+INSERT INTO `ur7_model_field` VALUES ('2', '栏目', 'cid', 'CATE', 'cate', '', '', '0', '', '1', null, '0');
+INSERT INTO `ur7_model_field` VALUES ('3', '关键字', 'keyword', 'KEYWORD', 'textarea', '', '', '0', '', '1', null, '0');
+INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textarea', '', '', '0', '', '1', null, '0');
+INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/thumbupload', '0');
+INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1', 'Ueditor/Hook/Vhook/ueditor', '0');
+INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1', null, '0');
 
 -- ----------------------------
 -- Table structure for `ur7_page`
@@ -545,12 +549,13 @@ CREATE TABLE `ur7_plugin` (
   `desc` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_plugin
 -- ----------------------------
-INSERT INTO `ur7_plugin` VALUES ('10', 'PLG_UEDITOR_NAME', 'Ueditor', 'PLG_UEDITOR_DESC', '1');
+INSERT INTO `ur7_plugin` VALUES ('26', 'PLG_WEBUPLOAD_NAME', 'WebUpload', 'PLG_WEBUPLOAD_DESC', '1');
+INSERT INTO `ur7_plugin` VALUES ('27', 'PLG_UEDITOR_NAME', 'Ueditor', 'PLG_UEDITOR_DESC', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin_res`
