@@ -28,11 +28,11 @@ class HookListModel extends \Think\Model\AdvModel
      * @param int $type
      * @return array
      */
-    public function selbyPidType($pid,$type)
+    public function selbyPidType($pid, $type)
     {
-        return $this->where(array('pid'=>$pid,'type' => $type))->select();
+        return $this->where(array('pid' => $pid, 'type' => $type))->select();
     }
-    
+
     /**
      * 根据插件ID 删除钩子
      * @param int $pid
@@ -40,7 +40,19 @@ class HookListModel extends \Think\Model\AdvModel
      */
     public function delbypid($pid)
     {
-        return  $this->where(array('pid'=>$pid))->delete();
+        return $this->where(array('pid' => $pid))->delete();
+    }
+
+    /**
+     * 根据路径和方法查询
+     * @param string $path
+     * @param string $method
+     * @return array
+     */
+    public function findByPathMethod($path, $method)
+    {
+        $condition = array('path' => $path, 'method' => $method);
+        return $this->where($condition)->find();
     }
 
 }

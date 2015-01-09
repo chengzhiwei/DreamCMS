@@ -8,6 +8,7 @@
         <!-- basic styles -->
         <link href="<?php echo CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome.min.css" />
+        <link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
         <!--[if IE 7]>
           <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome-ie7.min.css" />
         <![endif]-->
@@ -32,6 +33,8 @@
             .op_btn a{  margin-left: 5px;}
             .form-horizontal{ font-size: 13px;}
         </style>
+        <script src="<?php echo JS_PATH ?>jquery-1.10.2.min.js"></script>
+        <script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
     </head>
 
     <body>
@@ -46,18 +49,21 @@
 
                     <div class="row">
                         <div class="col-xs-12">
-                            <form role="form" class="form-horizontal" method="post">
+                            <form role="form" class="form-horizontal" method="post" onsubmit="return chkform()">
                                 <?php
-                                
+                                $validator = '';
                                 foreach ($Fieldlist as $k => $f)
                                 {
+                                    $validator.=$f['type'] . ',' . $f['fieldname'] . ',' . $f['isnull'] . ',' . $f['reg'] . '|';
                                     ?>
                                     <div class="form-group">
                                         <label for="form-field-1" class="col-sm-1 control-label no-padding-right"> <?php echo L($f['langconf']); ?> </label>
 
-                                        <div class="col-sm-11">
-                                            <?php echo Org\Helper\CForm::create($f); ?>
-                                        </div>
+                                        <div class="col-sm-11  pull-left" >
+                                            <?php echo Org\Helper\CForm::create($f); ?> 
+
+                                        </div> 
+
                                     </div>
                                     <?php
                                 }
@@ -82,21 +88,55 @@
                                 </div>
 
                                 <div class="hr hr-24"></div>
-
-
-
                             </form>
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
 
+        <input type="hidden" id="validator" value="<?php echo rtrim($validator, '|'); ?>" /> 
 
+        <script>
 
+            function chkform()
+            {
+                arr = $('#validator').val().split("|");
+                var v_str = '';
+                for (i = 0; i < arr.length; i++)
+                {
+                    obj_arr = arr[i].split(",");
+                    objstr = '#' + obj_arr[1];
+                    if (obj_arr[2] == 1 && $(objstr).val() == '')
+                    {
 
+                        regedittip(objstr, '不能为空');
+                        $(objstr).poshytip('show');
+                        $(objstr).poshytip('hideDelayed', 2000);
+                        return false;
+                    }
+                    if (obj_arr[2] == 1 && $(objstr).val() != '' &&obj_arr[3]!='' )
+                    {
+                        //验证正则
+                    }
 
-
-
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div>    </body>
+                }
+                alert('ok');
+                return false;
+            }
+            function regedittip(v_str, content)
+            {
+                $(v_str).poshytip({
+                    content: content,
+                    showOn: 'none',
+                    alignTo: 'target',
+                    alignX: 'inner-left',
+                    offsetX: 0,
+                    offsetY: 5
+                });
+            }
+        </script>
+       
+    </body>
 </html>

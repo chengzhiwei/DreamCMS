@@ -21,8 +21,6 @@ class ModelFieldModel extends \Think\Model\AdvModel
         {
             if ($this->add())
             {
-
-                $this->execute($this->_addFieldSql($data));
                 return true;
             } else
             {
@@ -35,22 +33,30 @@ class ModelFieldModel extends \Think\Model\AdvModel
         }
     }
 
-    public function delField($id)
+    public function addtablefield($data = array())
     {
-        $condition = array();
-        $fieldinfo = $this->where($condition)->find();
-
-        $sql = $this->_delFieldSql($fieldinfo['fieldname']);
+        if (!$data)
+        {
+            $data = I('post.');
+        }
+        $sql = $this->_addFieldSql($data);
+        return $this->execute($sql);
     }
 
     private function _addFieldSql($data)
     {
-        $sql = 'alter ' . $this->_getModelname($data) . '  add ' . $data['fieldname'] . $this->_parseFieldType($data);
+        $sql = 'alter table ' . $this->_getModelname($data) . '  add ' . $data['fieldname'] . $this->_parseFieldType($data);
         if (isset($_POST['isnull']))
         {
             $sql .= ' not null';
         }
         return $sql;
+    }
+
+    public function delTableField($table, $fields)
+    {
+        $sql = 'alter table ' . C('DB_PREFIX') . $table . ' drop column ' . $fields . ';';
+        return $this->execute($sql);
     }
 
     private function _delFieldSql($data)
@@ -60,7 +66,6 @@ class ModelFieldModel extends \Think\Model\AdvModel
 
     private function _getModelname($data)
     {
-        dump($data);
         $model = DD('Model');
         $modelinfo = $model->findByID($data['mid']);
         $text_arr = array('editor', 'moreupload',);
@@ -140,6 +145,56 @@ class ModelFieldModel extends \Think\Model\AdvModel
         {
             return false;
         }
+    }
+
+    /**
+     * 删除字段
+     * @param int $id
+     * @return boolean
+     */
+    public function delfield($id)
+    {
+        $b = $this->where(array('id' => $id))->delete();
+        if ($b !== false)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * 根据模型编号和字段查询
+     * @param int $mid
+     * @param string $fieldname
+     */
+    public function findByMidFiled($mid, $fieldname)
+    {
+        $condition = array(
+            'mid' => $mid,
+            'fieldname' => $fieldname,
+        );
+        return $this->where($condition)->find();
+    }
+
+    /**
+     * 
+     * @param int $id
+     * @param array $data
+     */
+    public function updatefield($id, $data = array())
+    {
+        if (!$data)
+        {
+            $data = I('post.');
+        }
+        $b = $this->where(array('id' => $id))->save($data);
+        if ($b !== false)
+        {
+            return true;
+        }
+        return true;
     }
 
 }

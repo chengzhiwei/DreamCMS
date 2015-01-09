@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-07 17:25:25
+Date: 2015-01-09 17:14:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -403,10 +403,10 @@ CREATE TABLE `ur7_hook_list` (
 -- ----------------------------
 -- Records of ur7_hook_list
 -- ----------------------------
-INSERT INTO `ur7_hook_list` VALUES ('12', 'PLUGIN_VHOOK_MULTIPICUPLOAD', '26', '0', 'WebUpload/Vhook', 'multiimgupload', '1', '1', 'jquery.min.js,webuploader.min.js,upload.js', 'webuploader.css,style.css');
-INSERT INTO `ur7_hook_list` VALUES ('13', 'PLUGIN_VHOOK_MULTIFILEUPLOAD', '26', '0', 'WebUpload/Vhook', 'multifileupload', '1', '1', 'jquery.min.js,webuploader.min.js,filesupload.js', 'webuploader.css,style.css,bootstrap.min.css');
-INSERT INTO `ur7_hook_list` VALUES ('14', 'PLUGIN_VHOOK_THUMBUPLOAD', '26', '0', 'WebUpload/Vhook', 'thumbupload', '1', '1', 'jquery.min.js,webuploader.min.js,webuploader.min.js', 'webuploader.css,style.css');
-INSERT INTO `ur7_hook_list` VALUES ('15', 'PLUGIN_VHOOK_UEDITOR', '27', '0', 'Ueditor/Vhook', 'ueditor', '1', '1', 'ueditor.all.min.js,lang/zh-cn/zh-cn.js', '');
+INSERT INTO `ur7_hook_list` VALUES ('12', 'PLUGIN_VHOOK_MULTIPICUPLOAD', '26', '0', 'WebUpload/Hook/Vhook', 'multiimgupload', '1', '1', 'jquery.min.js,webuploader.min.js,upload.js', 'webuploader.css,style.css');
+INSERT INTO `ur7_hook_list` VALUES ('13', 'PLUGIN_VHOOK_MULTIFILEUPLOAD', '26', '0', 'WebUpload/Hook/Vhook', 'multifileupload', '1', '1', 'jquery.min.js,webuploader.min.js,filesupload.js', 'webuploader.css,style.css,bootstrap.min.css');
+INSERT INTO `ur7_hook_list` VALUES ('14', 'PLUGIN_VHOOK_THUMBUPLOAD', '26', '0', 'WebUpload/Hook/Vhook', 'thumbupload', '1', '1', 'jquery.min.js,webuploader.min.js,webuploader.min.js', 'webuploader.css,style.css');
+INSERT INTO `ur7_hook_list` VALUES ('15', 'PLUGIN_VHOOK_UEDITOR', '27', '0', 'Ueditor/Hook/Vhook', 'ueditor', '1', '1', 'ueditor.all.min.js,lang/zh-cn/zh-cn.js', '');
 
 -- ----------------------------
 -- Table structure for `ur7_language`
@@ -468,18 +468,13 @@ CREATE TABLE `ur7_model_field` (
   `plugin` varchar(100) DEFAULT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_model_field
 -- ----------------------------
-INSERT INTO `ur7_model_field` VALUES ('1', '标题', 'title', 'TITLE', 'text', '', '', '0', 'style=\"width:100%\"', '1', null, '0');
-INSERT INTO `ur7_model_field` VALUES ('2', '栏目', 'cid', 'CATE', 'cate', '', '', '0', '', '1', null, '0');
-INSERT INTO `ur7_model_field` VALUES ('3', '关键字', 'keyword', 'KEYWORD', 'textarea', '', '', '0', '', '1', null, '0');
-INSERT INTO `ur7_model_field` VALUES ('4', '摘要', 'desc', 'DESC', 'textarea', '', '', '0', '', '1', null, '0');
-INSERT INTO `ur7_model_field` VALUES ('5', '缩略图', 'thumb', 'THUMB', 'thumb', '', '', '0', '', '1', 'WebUpload/Hook/Vhook/thumbupload', '0');
-INSERT INTO `ur7_model_field` VALUES ('6', '内容', 'content', 'CONTENT', 'editor', '', '', '0', '', '1', 'Ueditor/Hook/Vhook/ueditor', '0');
-INSERT INTO `ur7_model_field` VALUES ('7', '推荐位', 'position', 'POSITION', 'position', '', '', '0', '', '1', null, '0');
+INSERT INTO `ur7_model_field` VALUES ('19', '标题', 'title', 'PHOTO_TITLE', 'text', '/^[a-zA-Z]+$/', '', '1', 'style=\"width:100%\"', '2', '', '0');
+INSERT INTO `ur7_model_field` VALUES ('21', '内容', 'content', 'PHOTO_CONTENT', 'editor', '', '', '1', '', '2', 'Ueditor/Hook/Vhook/ueditor', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_page`
@@ -504,17 +499,6 @@ CREATE TABLE `ur7_page` (
 DROP TABLE IF EXISTS `ur7_photo`;
 CREATE TABLE `ur7_photo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cid` int(11) NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `content` text NOT NULL,
-  `tags` varchar(100) NOT NULL,
-  `thumb` varchar(100) NOT NULL,
-  `keyword` varchar(200) DEFAULT NULL,
-  `description` varchar(200) DEFAULT NULL,
-  `author` varchar(100) DEFAULT NULL,
-  `clicks` int(11) NOT NULL DEFAULT '0',
-  `addtime` int(11) NOT NULL,
-  `lid` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

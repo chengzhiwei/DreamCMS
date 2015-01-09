@@ -51,6 +51,7 @@ class ContentController extends \Auth\Controller\AuthbaseController
             $catemod = DD('Category');
             $cateinfo = $catemod->find($cid);
             $ModelFieldMod = DD('ModelField');
+            \Org\Helper\IncludeLang::QuickInc('Content/modelfield');
             $Fieldlist = $ModelFieldMod->selFieldByMid($cateinfo['mid']);
             $this->assign('Fieldlist', $Fieldlist);
             $this->display();

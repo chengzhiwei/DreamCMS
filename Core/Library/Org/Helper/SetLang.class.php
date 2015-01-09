@@ -25,7 +25,7 @@ class SetLang
     /**
      * 构造函数
      * @param string $langfilepath 语言文件地址
-     * @param boolean $short 是否是短地址（控制器/文件名.php）
+     * @param boolean $short 是否是短地址（模块/控制器）
      */
     public function __construct($langfilepath = '', $short = false)
     {
@@ -65,7 +65,7 @@ class SetLang
         } else
         {
             $PATH = 'Lang' . DIRECTORY_SEPARATOR . APP_NAME .
-                    DIRECTORY_SEPARATOR . $lang . DIRECTORY_SEPARATOR . $shortFile;
+                    DIRECTORY_SEPARATOR . $lang . DIRECTORY_SEPARATOR . $shortFile . '.php';
         }
         if (!is_file($PATH))
         {
@@ -141,6 +141,20 @@ class SetLang
         }
         $str = "<?php \r\n return " . var_export($new_conf, true) . "; \r\n?>";
 
+        return $this->writefile($path, $str);
+    }
+
+    /**
+     * 删除语言包
+     * @param string $key
+     * @return boolean
+     */
+    public function delOneLang($key)
+    {
+        $path = $this->getFilePath();
+        $arr = include $path;
+        unset($arr[$key]);
+        $str = "<?php \r\n return " . var_export($arr, true) . "; \r\n?>";
         return $this->writefile($path, $str);
     }
 

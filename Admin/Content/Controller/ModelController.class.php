@@ -55,6 +55,7 @@ class ModelController extends \Auth\Controller\AuthbaseController
         $mid = I('mid');
         $ModelField = DD('ModelField');
         $fields = $ModelField->selFieldByMid($mid);
+        \Org\Helper\IncludeLang::QuickInc('Content/modelfield'); //加载语言包
         $this->assign('fields', $fields);
         $this->display();
     }
@@ -63,20 +64,46 @@ class ModelController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            $field = DD('ModelField');
-            $field->addField();
+            //判断是否存在相同的字段
+            $fieldMod = DD('ModelField');
+            $fieldinfo = $fieldMod->findByMidFiled(I('post.mid'), I('post.fieldname'));
+            if ($fieldinfo)
+            {
+                $this->error(L('THE_SAME_FILED'));
+            }
+            //findByMidFiled
+            //插入语言包
+            $setLang = new \Org\Helper\SetLang('Content/modelfield', true);
+            $b = $setLang->setOneLang(I('post.langconf'), I('post.title'));
+            if (!$b)
+            {
+                $this->error(L('OP_ERROR'));
+            }
+            //添加模型字段
+            $fieldMod->startTrans();
+            //添加模型表字段
+            $addmodelfile = $fieldMod->addField();
+            $addtablefile = $fieldMod->addtablefield;
+            if ($addmodelfile !== false && $addtablefile !== false)
+            {
+                $fieldMod->commit();
+                $this->success(L('OP_SUCCESS'));
+            } else
+            {
+                $fieldMod->rollback();
+                $this->error(L('OP_ERROR'));
+            }
         } else
         {
             $plugin = DD('Plugin');
             $pluginlist = $plugin->select();
             foreach ($pluginlist as $p)
             {
-                $plugin_lang = 'Lang/Plugin/zh-cn/' . $p['filetitle'] . '/' . $p['filetitle'] . '.php';
-                if (is_file($plugin_lang))
-                {
-                    L(include($plugin_lang));
-                }
+                \Org\Helper\IncludeLang::QuickInc($p['filetitle'] . '/' . $p['filetitle'], 'Plugin');
             }
+            $Mod = DD('Model');
+            $modelinfo = $Mod->findByID(I('mid'));
+            $this->assign('modelinfo', $modelinfo);
             $this->assign('pluginlist', $pluginlist);
             $this->assign('mid', I('mid'));
             $this->display();
@@ -108,7 +135,87 @@ class ModelController extends \Auth\Controller\AuthbaseController
         $id = I('post.id');
         $sort = I('post.sort');
         $ModelFieldMod = DD('ModelField');
-        $ModelFieldMod->sort($id,$sort);
+        $b = $ModelFieldMod->sort($id, $sort);
+        if ($b)
+        {
+            echo '1';
+        } else
+        {
+            echo '-1';
+        }
+    }
+
+    public function delfield()
+    {
+        $id = I('get.id');
+        $fieldMod = DD('ModelField');
+        $fieldinfo = $fieldMod->find($id);
+        //删除语言
+        $setLang = new \Org\Helper\SetLang('Content/modelfield', true);
+        $b = $setLang->delOneLang($fieldinfo['langconf']);
+        $Model = DD('Model');
+        $modelinfo = $Model->findByID($fieldinfo['mid']);
+        //删除模型字段
+        $ModelFieldDel = $fieldMod->delfield($id);
+        //删除表字段
+        $TableFieldDel = $fieldMod->delTableField($modelinfo['table'], $fieldinfo['filename']);
+        if ($ModelFieldDel)
+        {
+            $this->redirect('Content/Model/fields', array('mid'=>$fieldinfo['mid']));
+        } else
+        {
+            $this->error(L('OP_ERROR'));
+        }
+    }
+
+    /**
+     * 修改字段
+     */
+    public function editfield()
+    {
+        if (IS_POST)
+        {
+            $fieldMod = DD('ModelField');
+            $b = $fieldMod->updatefield(I('post.id'));
+            if ($b)
+            {
+                $this->success(L('OP_SUCCESS'));
+            } else
+            {
+                $this->error(L('OP_ERROR'));
+            }
+        } else
+        {
+            $id = I('get.id');
+            $fieldMod = DD('ModelField');
+            $fieldinfo = $fieldMod->find($id);
+            \Org\Helper\IncludeLang::QuickInc('Content/modelfield');
+            //查询控件
+            $plugin = $fieldinfo['plugin'];
+            if ($plugin != '')
+            {
+                $plugin_arr = explode('/', $plugin);
+                $method = $plugin_arr[count($plugin_arr) - 1];
+                unset($plugin_arr[count($plugin_arr) - 1]);
+                $path = implode('/', $plugin_arr);
+                $hooklistmod = DD('HookList');
+                //加载插件语言库
+                $hookinfo = $hooklistmod->findByPathMethod($path, $method);
+                \Org\Helper\IncludeLang::QuickInc($plugin_arr[0] . '/' . $plugin_arr[count($plugin_arr) - 1], 'Plugin');
+                $this->assign('hookinfo', $hookinfo);
+            }
+
+            $pluginMod = DD('Plugin');
+            $pluginlist = $pluginMod->select();
+            foreach ($pluginlist as $p)
+            {
+                \Org\Helper\IncludeLang::QuickInc($p['filetitle'] . '/' . $p['filetitle'], 'Plugin');
+            }
+
+            $this->assign('pluginlist', $pluginlist);
+            $this->assign('fieldinfo', $fieldinfo);
+            $this->display();
+        }
     }
 
 }

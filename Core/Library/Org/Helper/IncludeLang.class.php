@@ -30,7 +30,7 @@ class IncludeLang
         {
             foreach ($path as $p)
             {
-                $realPath = self::parsePath($path, $app );
+                $realPath = self::parsePath($path, $app);
                 self::IncFile($realPath);
             }
         }
@@ -49,8 +49,6 @@ class IncludeLang
     public static function parsePath($path, $app = '')
     {
         $app_name = $app == '' ? APP_NAME : $app;
-         file_put_contents('2.txt', $app);
-        file_put_contents('1.txt', 'Lang' . DS . $app_name . DS . \getlang() . DS . $path . '.php');
         return 'Lang' . DS . $app_name . DS . \getlang() . DS . $path . '.php';
     }
 
@@ -62,7 +60,7 @@ class IncludeLang
     {
         if (file_exists($path))
         {
-             L(include $path);
+            L(include $path);
         }
     }
 
