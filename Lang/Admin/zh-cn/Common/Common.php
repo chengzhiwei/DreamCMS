@@ -9,6 +9,7 @@ $comm = array(
     'OP_ERROR' => '操作失败',
     'NOW_OPTER'=>'当前操作',
     'WELCOME'=>'欢迎光临',
+    'CMS'=>'后台管理系统',
 );
 return array_merge($auth, $comm);
 

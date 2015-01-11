@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>DreamCMS 后台管理系统</title>
+        <title>DreamCMS <?php echo L('后台管理系统');?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- basic styles -->
         <link href="<?php echo CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
@@ -68,7 +68,7 @@
                     <a href="#" class="navbar-brand">
                         <small>
                             <i class="icon-leaf"></i>
-                            Dream CMS后台管理系统
+                            DreamCMS <?php echo L('CMS')?>
                         </small>
                     </a><!-- /.brand -->
                 </div><!-- /.navbar-header -->
