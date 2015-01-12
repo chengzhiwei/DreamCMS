@@ -35,13 +35,14 @@ class ContentController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-           
             $cid = I('post.cid');
             $catemod = DD('Category');
             $cateinfo = $catemod->find($cid);
+            
             $modelMod = DD('Model'); 
             $modelinfo = $modelMod->findByID($cateinfo['mid']); 
             $contentmod = DD('Content', array($modelinfo['table']));
+            dump($contentmod);
             $contentmod->add();
             echo $contentmod->getLastSql();
         } else

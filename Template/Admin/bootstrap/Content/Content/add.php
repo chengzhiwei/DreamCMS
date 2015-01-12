@@ -61,8 +61,9 @@
 
                                         <div class="col-sm-11  pull-left" >
                                             <?php echo Org\Helper\CForm::create($f); ?> 
-
-                                        </div> 
+                                            <br />
+                                            <span  id="<?php echo $f['fieldname'] ?>_tip"></span>
+                                        </div>
 
                                     </div>
                                     <?php
@@ -100,6 +101,37 @@
 
         <script>
 
+            function settips(tips, content)
+            {
+                regedittip(tips, content);
+                tips.poshytip('show');
+                tips.poshytip('hideDelayed', 2000);
+            }
+
+            function chknull(isnull, val, tips)
+            {
+                if (isnull == 1 && val == '')
+                {
+                    settips(tips, '不能为空');
+                    return false;
+                }
+                return true;
+            }
+            function chkreg(reg, val, tips)
+            {
+                if (reg != '' && val != '')
+                {
+                    var regexp = new RegExp(reg);
+                    if (regexp.test(val)) {
+                        return true;
+                    } else {
+                        settips(tips, '格式错误');
+                        return false;
+                    }
+                }
+                return true;
+            }
+
             function chkform()
             {
                 arr = $('#validator').val().split("|");
@@ -108,35 +140,63 @@
                 {
                     obj_arr = arr[i].split(",");
                     objstr = '#' + obj_arr[1];
-                    if (obj_arr[2] == 1 && $(objstr).val() == '')
-                    {
+                    objstr_tip = '#' + obj_arr[1] + '_tip';
 
-                        regedittip(objstr, '不能为空');
-                        $(objstr).poshytip('show');
-                        $(objstr).poshytip('hideDelayed', 2000);
-                        return false;
-                    }
-                    if (obj_arr[2] == 1 && $(objstr).val() != '' &&obj_arr[3]!='' )
+                    var chknull_val = '';
+                    var chkreg_val = '';
+
+                    //判断类型 text textarea editor 
+                    if (obj_arr[0] == 'text' || obj_arr[0] == 'textarea' || obj_arr[0] == 'editor')
                     {
-                        //验证正则
+                        chknull_val = $(objstr).val();//验证必填
+                        chkreg_val = $(objstr).val(); //验证正则
+                    }
+                    //判断类型 check  
+                    if (obj_arr[0] == 'checkbox')
+                    {
+                        $("input[name='" + obj_arr[1] + "[]']").each(function () {
+                            if ($(this).attr('checked') == true)
+                            {
+                                chknull_val += $(this).val() + ',';
+                            }
+                        })
+                    }
+                    //判断类型  radio 
+                    if (obj_arr[0] == 'radio')
+                    {
+                        if ($('input:radio[name="' + obj_arr[1] + '"]').is(":checked"))
+                        {
+                            chknull_val = 1;
+                        }
+                    }
+                    //判断上传类型
+                    if (obj_arr[0] == 'thumb' || obj_arr[0] == 'singleupload' || obj_arr[0] == 'moreupload')
+                    {
+                        chknull_val = $(objstr).val();//验证必填 
+                    }
+                    var n = chknull(obj_arr[2], chknull_val, $(objstr_tip));//验证是否必填
+                    var r = chkreg(obj_arr[3], chkreg_val, $(objstr_tip));//验证正则
+                    if (n == false || r == false)
+                    {
+                        return false;
                     }
 
                 }
-                alert('ok');
-                return false;
+                return true;
             }
-            function regedittip(v_str, content)
+            function regedittip(obj, content)
             {
-                $(v_str).poshytip({
+                obj.poshytip({
                     content: content,
                     showOn: 'none',
                     alignTo: 'target',
                     alignX: 'inner-left',
+                    alignY: 'bottom',
                     offsetX: 0,
                     offsetY: 5
                 });
             }
         </script>
-       
+
     </body>
 </html>

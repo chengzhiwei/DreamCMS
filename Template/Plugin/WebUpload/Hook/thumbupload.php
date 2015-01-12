@@ -6,6 +6,7 @@
 <div id="uploader-demo" style=" width: 120px;">
     <!--用来存放item-->
     <div id="fileList" class="uploader-list"></div>
-    <div id="filePicker">选择图片</div>
+    <div id="filePicker" style=" float: left; width: 100px;display: block" >选择图片</div>
+    <div id="" style=" float: left;display: block;width: 100px;">裁剪图片</div>
 </div>
 <input type="hidden" value="<?php echo URL('WebUpload/Upload/multiimgupload', '', 'plugin.php'); ?>" id="server" />
