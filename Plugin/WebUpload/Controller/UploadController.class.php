@@ -40,8 +40,8 @@ class UploadController extends \Common\Controller\AdminpluginController
         {
             $fileName = uniqid("file_");
         }
-        $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
-        $uploadPath = $uploadDir . DIRECTORY_SEPARATOR . $fileName;
+        $filePath = $targetDir . '/' . $fileName;
+        $uploadPath = $uploadDir . '/' . $fileName;
 
 // Chunking might be enabled
         $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
@@ -152,8 +152,15 @@ class UploadController extends \Common\Controller\AdminpluginController
             @fclose($out);
         }
 
-// Return Success JSON-RPC response
-        die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');
+
+        // Return Success JSON-RPC response
+        $arr = array(
+            'jsonrpc' => '2.0',
+            'result' => array('imgpath' => $uploadPath),
+            'id' => 'idqq',
+        );
+        echo json_encode($arr);
+        die();
     }
 
 }

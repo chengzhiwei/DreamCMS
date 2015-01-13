@@ -33,8 +33,10 @@
             .op_btn a{  margin-left: 5px;}
             .form-horizontal{ font-size: 13px;}
         </style>
+        
         <script src="<?php echo JS_PATH ?>jquery-1.10.2.min.js"></script>
         <script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+        <script src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
     </head>
 
     <body>
