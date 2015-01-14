@@ -19,17 +19,11 @@
                         <table class="table table-striped table-bordered table-hover" id="sample-table-1">
                             <thead>
                                 <tr>
-                                    <th class="center">
-                                        <label>
-                                            <input type="checkbox" class="ace">
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </th>
-                                    <th><?php echo L('USERNAME'); ?></th>
-                                    <th><?php echo L('ROLE'); ?></th>
+
+                                    <th><?php echo L('MODEL_NAME'); ?></th>
 
 
-                                    <th></th>
+                                    <th class="center"></th>
                                 </tr>
                             </thead>
 
@@ -39,25 +33,13 @@
                                 {
                                     ?>
                                     <tr>
+
+                                        <td>
+                                            <a href="<?php echo U('Content/Model/fields', array('mid' => $li['id'])) ?>"><?php echo L($li['langconf']); ?></a>
+                                        </td>
+
                                         <td class="center">
-                                            <label>
-                                                <input type="checkbox" class="ace">
-                                                <span class="lbl"></span>
-                                            </label>
-                                        </td>
-
-                                        <td>
-                                            <a href="#"><?php echo L($li['langconf']); ?></a>
-                                        </td>
-
-                                        <td><?php echo L($admingroup[$li['group']]['langconf']); ?></td>
-
-                                        <td>
-                                            <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <a href="<?php echo U('Content/Model/fields', array('mid' => $li['id'])) ?>">字段管理</a>
-                                            </div>
-
-                                            
+                                            <a href="<?php echo U('Content/Model/fields', array('mid' => $li['id'])) ?>">字段管理</a>
                                         </td>
                                     </tr>
                                     <?php

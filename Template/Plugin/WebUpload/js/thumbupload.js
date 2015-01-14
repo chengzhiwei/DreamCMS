@@ -28,7 +28,6 @@ $(function () {
         var $li = $(
                 '<div id="' + file.id + '" class="file-item thumbnail">' +
                 '<img>' +
-                '<div class="info">' + filename + '</div>' +
                 '</div>'
                 ),
                 $img = $li.find('img');

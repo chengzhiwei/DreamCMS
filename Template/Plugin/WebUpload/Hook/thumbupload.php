@@ -33,9 +33,11 @@
                     <img   src="" />
                 </div>
 
-                <div style="float:left; margin-left: 30px">
-                    <span style='display: block; margin: 10px 0 0 0'>宽：<input type="text" style=" width: 100px;" value="100px"   />px</span>
-                    <span style='display: block;margin: 10px 0 10px 0'>高：<input type="text" style=" width: 100px;" value="100px" />px</span>
+                <div style="float:left; margin-left: 30px" >
+                    <span style='display: block; margin: 10px 0 0 0'>宽：<input id="imgwidth" type="text" style=" width: 100px;" value="100"   />px</span>
+                    <span style='display: block;margin: 10px 0 10px 0'>高：<input id="imgheigth" type="text" style=" width: 100px;" value="100" />px
+                        <a class="btn btn-info btn-xs" id="setsize">设置</a>
+                    </span>
                     <div ></div>
                     <div class='img-preview' ></div>
 
@@ -43,31 +45,41 @@
             </div>
             <div style="clear:both"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="crop" class="btn btn-primary">裁剪</button>
             </div>
         </div>
     </div>
 </div>
 <script>
+    function setperview()
+    {
+        $tw = parseInt($('#imgwidth').val());
+        $th = parseInt($('#imgheigth').val());
+        if (parseInt($('#imgwidth').val()) > 200)
+        {
+            $tw = 200;
+            $th = parseInt($('#imgheigth').val()) / (parseInt($('#imgwidth').val()) / 200);
+        }
+        $('.img-preview').css({'height': $th, 'width': $tw});
+    }
     $(function () {
 
         $image = $(".img-container").find('img');
         $('#cropa').click(function () {
-            
+
             $('#myModal').modal('show');
-
-
         });
-
         $('#myModal').on('shown.bs.modal', function () {
+
+            setperview();
             $image.cropper({
-                aspectRatio: 1,
+                aspectRatio: parseInt($('#imgwidth').val()) / parseInt($('#imgheigth').val()),
                 data: {
                     width: 200,
                     height: 200
                 },
-                zoom:0.5,
+                zoom: 0.5,
                 preview: ".img-preview",
                 done: function (data) {
 
@@ -77,6 +89,29 @@
         $('#myModal').on('hidden.bs.modal', function () {
             $image.cropper("destroy");
         });
-
+        $('#setsize').click(function () {
+            setperview();
+            $image.cropper("setAspectRatio", parseInt($('#imgwidth').val()) / parseInt($('#imgheigth').val()));
+        });
+        $('#crop').click(function () {
+            data = $image.cropper("getData");
+            img=$('#orgpic').val();
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo URL('WebUpload/Upload/cropimg','','Plugin.php'); ?>',
+                data: {x: data.x1, y: data.y1, w: data.width, h: data.height, tw: parseInt($('#imgwidth').val()), th: parseInt($('#imgheigth').val()),img:img},
+                success: function (data) {
+                    if(data=='')
+                    {
+                        alert('发错错误，请重试');
+                    }
+                    else
+                    {
+                        $('.thumbnail').find('img').attr('src',data);
+                        $('#myModal').modal('hide');
+                    }
+                }
+            });
+        });
     });
 </script>

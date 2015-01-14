@@ -293,7 +293,7 @@ function Vhook($path, $vars = array())
         $class = new $cls();
         $elt_obj[$cls] = $class;
     }
-    return call_user_func_array(array(&$elt_obj[$cls], $method), $vars);
+    return call_user_func_array(array($elt_obj[$cls], $method), array($vars));
 }
 
 function defaultlang()

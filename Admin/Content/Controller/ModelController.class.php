@@ -83,7 +83,7 @@ class ModelController extends \Auth\Controller\AuthbaseController
             $fieldMod->startTrans();
             //添加模型表字段
             $addmodelfile = $fieldMod->addField();
-            $addtablefile = $fieldMod->addtablefield;
+            $addtablefile = $fieldMod->addtablefield();
             if ($addmodelfile !== false && $addtablefile !== false)
             {
                 $fieldMod->commit();

@@ -109,7 +109,8 @@
                             }
                             if ($Category_arr[$key + 1]['deep'] <= $cate['deep'])
                             {
-                                $str.='<a target="iframeId" href="'.U('Content/Content/contentlist',array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                                $url =$cate['mid']==-1?"Content/Content/editpage":"Content/Content/contentlist";
+                                $str.='<a target="iframeId" href="'.U($url,array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
                                 for ($i = 0; $i < $cate['deep'] - ($Category_arr[$key + 1]['deep']); $i++)
                                 {
                                     $str.='</li></ul>';
@@ -117,7 +118,8 @@
                             }
                         } else
                         {
-                            $str.='<a href=""><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                            $cate['mid']==-1?"Content/Content/editpage":"Content/Content/contentlist";
+                            $str.='<a  target="iframeId" href="'.U($url,array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
                             if ($cate['deep'] == 0)
                             {
                                 $str.='</li>';

@@ -11,6 +11,10 @@ namespace Model\Adomodel;
 class ModelFieldModel extends \Think\Model\AdvModel
 {
 
+    public $text_arr = array('editor', 'moreupload',);
+    public $varchar_arr = array('text', 'textarea',);
+    public $select_arr = array('radio', 'checkbox',);
+
     public function addField($data = array())
     {
         if (!$data)
@@ -35,9 +39,20 @@ class ModelFieldModel extends \Think\Model\AdvModel
 
     public function addtablefield($data = array())
     {
+
         if (!$data)
         {
             $data = I('post.');
+        }
+        $b = true;
+        if (in_array($data['type'], $this->text_arr))
+        {
+
+            $b = $this->_createTable($data);
+        }
+        if (!$b)
+        {
+            return false;
         }
         $sql = $this->_addFieldSql($data);
         return $this->execute($sql);
@@ -68,8 +83,7 @@ class ModelFieldModel extends \Think\Model\AdvModel
     {
         $model = DD('Model');
         $modelinfo = $model->findByID($data['mid']);
-        $text_arr = array('editor', 'moreupload',);
-        if (in_array($data['type'], $text_arr))
+        if (in_array($data['type'], $this->text_arr))
         {
             return C('DB_PREFIX') . $modelinfo['table'] . '_data';
         }
@@ -83,10 +97,7 @@ class ModelFieldModel extends \Think\Model\AdvModel
      */
     private function _parseFieldType($data)
     {
-        $varchar_arr = array('text', 'textarea',);
-        $text_arr = array('editor', 'moreupload',);
-        $select_arr = array('radio', 'checkbox',);
-        if (in_array($data['type'], $varchar_arr))
+        if (in_array($data['type'], $this->varchar_arr))
         {
             if (!$len)
             {
@@ -95,12 +106,12 @@ class ModelFieldModel extends \Think\Model\AdvModel
             return ' varchar(' . $len . ') ';
         }
 
-        if (in_array($type, $text_arr))
+        if (in_array($data['type'], $this->text_arr))
         {
             return ' text ';
         }
 
-        if (in_array($type, $select_arr))
+        if (in_array($data['type'], $this->select_arr))
         {
             $fieldvalue_arr = explode("\r\n", I('post.fieldvalue'));
             $isnum = true;
@@ -121,6 +132,29 @@ class ModelFieldModel extends \Think\Model\AdvModel
                 return ' varchar(255)';
             }
         }
+    }
+
+    /**
+     * 建新表
+     * @param array $data
+     */
+    private function _createTable($data)
+    {
+        $ssql = "SELECT COUNT(*) as c FROM information_schema.tables WHERE table_schema = '" . C('DB_NAME') . "' AND table_name = '" . $this->_getModelname($data) . "'; ";
+        $info = $this->query($ssql);
+        if ($info[0]['c'] == 0)
+        {
+            $esql = 'CREATE TABLE `' . $this->_getModelname($data) . '` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `aid` int(11) NOT NULL,PRIMARY KEY (`id`)   ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;  ';
+            $b = $this->execute($esql);
+            if ($b !== false)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public function selFieldByMid($mid)

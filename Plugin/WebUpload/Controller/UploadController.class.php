@@ -163,4 +163,25 @@ class UploadController extends \Common\Controller\AdminpluginController
         die();
     }
 
+    public function cropimg()
+    {
+        if (IS_AJAX)
+        {
+            $img = I('post.img');
+            $img = str_replace(__ROOT__ . '/', '', $img);
+            $image = new \Think\Image();
+            $image->open($img);
+            $pathinfo = pathinfo($img);
+            $savepath = $pathinfo['dirname'] . '/' . $pathinfo['filename'] . '_' . I('post.tw') . '_' . I('post.th') . '.' . $pathinfo['extension'];
+            $b = $image->crop(I('post.w'), I('post.h'), I('post.x'), I('post.y'), I('post.tw'), I('post.th'))->save($savepath);
+            if ($b)
+            {
+                echo __ROOT__ . '/' . $savepath;
+            } else
+            {
+                echo '';
+            }
+        }
+    }
+
 }

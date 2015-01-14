@@ -29,7 +29,7 @@ class CForm
         //调用插件
         if (self::$_fieldrow['plugin'])
         {
-            return Vhook(self::$_fieldrow['plugin']);
+            return Vhook(self::$_fieldrow['plugin'],self::$_fieldrow);
             
         } else
         {

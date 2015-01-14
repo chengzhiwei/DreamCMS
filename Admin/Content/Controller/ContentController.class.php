@@ -38,9 +38,9 @@ class ContentController extends \Auth\Controller\AuthbaseController
             $cid = I('post.cid');
             $catemod = DD('Category');
             $cateinfo = $catemod->find($cid);
-            
-            $modelMod = DD('Model'); 
-            $modelinfo = $modelMod->findByID($cateinfo['mid']); 
+
+            $modelMod = DD('Model');
+            $modelinfo = $modelMod->findByID($cateinfo['mid']);
             $contentmod = DD('Content', array($modelinfo['table']));
             dump($contentmod);
             $contentmod->add();
@@ -66,6 +66,39 @@ class ContentController extends \Auth\Controller\AuthbaseController
             
         } else
         {
+            $this->display();
+        }
+    }
+
+    /**
+     * 编辑单页面
+     */
+    public function editpage()
+    {
+        $page = DD('Page');
+        $pageinfo = $page->findbycid(I('cid'));
+        if (IS_POST)
+        {
+            if (!$pageinfo)
+            {
+                //新增
+                $b = $page->addpage();
+            } else
+            {
+                //修改
+                $b = $page->editpage(I('cid'));
+            }
+            if ($b)
+            {
+                $this->success(L('OP_SUCCESS'));
+            } else
+            {
+                $this->success(L('OP_ERROR'));
+            }
+        } else
+        {
+            C('IS_LAYOUT', false);
+            $this->assign('pageinfo', $pageinfo);
             $this->display();
         }
     }

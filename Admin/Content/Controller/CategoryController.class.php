@@ -133,18 +133,17 @@ class CategoryController extends \Auth\Controller\AuthbaseController
     {
         /*模型*/
         $Model = DD('Model');
-        $Modellist = $Model->selectall(cookie('langid'));
+        $Modellist = $Model->selectall($this->OpSiteLangInfo['id']);
         $this->assign('Modellist', $Modellist);
         /*分类*/
         $Category = DD('Category');
-        $result = $Category->selectall(cookie('langid'));
+        $result = $Category->selectall($this->OpSiteLangInfo['id']);
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');
         $unlimitedclass = new \Unlimitedclass();
         $Category_arr = $unlimitedclass->cateresult($result);
         $this->assign('category', $Category_arr);
         /*模板*/
-        $nowlang = cookie('langinfo');
-        $dir = 'Template/Site/' . $nowlang['tmpl'] . '/Content/Content';
+        $dir = 'Template/Site/'  .$this->OpSiteLangInfo['tmpl']. '/Content/Content';
         $listtmpl = array();
         $catetmpl = array();
         $newstmpl = array();

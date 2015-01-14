@@ -70,6 +70,7 @@
                                 <?php
                             }
                             ?>
+                                <option value="-1"><?php echo L('MDL_PAGE'); ?></option>
                         </select>
 
                     </div>
