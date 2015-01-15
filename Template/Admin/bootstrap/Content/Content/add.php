@@ -33,7 +33,7 @@
             .op_btn a{  margin-left: 5px;}
             .form-horizontal{ font-size: 13px;}
         </style>
-        
+
         <script src="<?php echo JS_PATH ?>jquery-1.10.2.min.js"></script>
         <script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
         <script src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
@@ -73,7 +73,7 @@
                                 ?>
 
 
-
+                                <input type="hidden" value="<?php echo I('get.cid') ?>" name="cid"/>
                                 <input type="hidden" value="<?php echo $mid ?>" name="mid"/>
                                 <div class="clearfix form-actions">
                                     <div class="col-md-offset-3 col-md-9">

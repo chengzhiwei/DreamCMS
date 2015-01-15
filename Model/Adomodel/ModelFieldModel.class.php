@@ -231,4 +231,14 @@ class ModelFieldModel extends \Think\Model\AdvModel
         return true;
     }
 
+    /**
+     * 添加默认字段
+     */
+    public function addDefaultField()
+    {
+        $fields = array(
+            array(),
+        );
+    }
+
 }

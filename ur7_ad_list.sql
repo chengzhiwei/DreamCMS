@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-09 17:14:50
+Date: 2015-01-15 17:24:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -267,27 +267,32 @@ DROP TABLE IF EXISTS `ur7_article`;
 CREATE TABLE `ur7_article` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` varchar(11) DEFAULT NULL COMMENT '栏目ID',
-  `title` varchar(50) NOT NULL,
-  `content` text NOT NULL,
-  `tags` varchar(255) DEFAULT NULL,
-  `picname` varchar(255) DEFAULT NULL,
-  `keyword` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `author` varchar(255) DEFAULT NULL COMMENT '作者',
-  `clicks` int(11) DEFAULT '0' COMMENT '点击次数',
-  `state` varchar(255) DEFAULT NULL COMMENT '状态',
-  `addtime` int(11) DEFAULT NULL,
-  `lid` int(11) NOT NULL DEFAULT '1',
+  `title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_article
 -- ----------------------------
-INSERT INTO `ur7_article` VALUES ('1', '4', '234', '', null, null, '324', null, null, '0', null, null, '1');
-INSERT INTO `ur7_article` VALUES ('2', '4', '234', '', null, null, '324', null, null, '0', null, null, '1');
-INSERT INTO `ur7_article` VALUES ('3', '4', '234', '', null, null, '324', null, null, '0', null, null, '1');
-INSERT INTO `ur7_article` VALUES ('4', '4', 'SDF', '', null, null, 'SDF', null, null, '0', null, null, '1');
+INSERT INTO `ur7_article` VALUES ('1', '4', null);
+INSERT INTO `ur7_article` VALUES ('2', '4', null);
+INSERT INTO `ur7_article` VALUES ('3', '4', null);
+INSERT INTO `ur7_article` VALUES ('4', '4', null);
+
+-- ----------------------------
+-- Table structure for `ur7_article_data`
+-- ----------------------------
+DROP TABLE IF EXISTS `ur7_article_data`;
+CREATE TABLE `ur7_article_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `aid` int(11) NOT NULL,
+  `content` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ur7_article_data
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `ur7_category`
@@ -310,7 +315,7 @@ CREATE TABLE `ur7_category` (
   `newstmpl` varchar(50) NOT NULL,
   `pagetmpl` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_category
@@ -323,8 +328,40 @@ INSERT INTO `ur7_category` VALUES ('5', '国内新闻', '', '', '0', '1', '1', '
 INSERT INTO `ur7_category` VALUES ('6', '江苏新闻', '', '', '5', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
 INSERT INTO `ur7_category` VALUES ('7', '上海新闻', '', '', '5', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
 INSERT INTO `ur7_category` VALUES ('8', '镇江新闻', '', '', '6', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
-INSERT INTO `ur7_category` VALUES ('9', '关于我们', '', '', '0', '3', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
-INSERT INTO `ur7_category` VALUES ('10', '公司简介', '', '', '9', '1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('9', '关于我们', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('10', '公司简介', '', '', '9', '-1', '1', 'list', '0', 'http://', '0', '1', 'Category', 'news', 'page');
+INSERT INTO `ur7_category` VALUES ('11', '组织架构', '', '', '9', '-1', '1', null, '0', 'http://', '0', '1', '', '', '');
+
+-- ----------------------------
+-- Table structure for `ur7_down`
+-- ----------------------------
+DROP TABLE IF EXISTS `ur7_down`;
+CREATE TABLE `ur7_down` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `thumb` varchar(255) DEFAULT NULL,
+  `position` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ur7_down
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `ur7_down_data`
+-- ----------------------------
+DROP TABLE IF EXISTS `ur7_down_data`;
+CREATE TABLE `ur7_down_data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `aid` int(11) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ur7_down_data
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `ur7_friend_link`
@@ -441,14 +478,14 @@ CREATE TABLE `ur7_model` (
   `table` varchar(50) NOT NULL,
   `langconf` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_model
 -- ----------------------------
 INSERT INTO `ur7_model` VALUES ('1', '文章', 'article', 'MDL_ARTICLE');
 INSERT INTO `ur7_model` VALUES ('2', '图片', 'photo', 'MDL_PHOTO');
-INSERT INTO `ur7_model` VALUES ('3', '单页面', 'page', 'MDL_PAGE');
+INSERT INTO `ur7_model` VALUES ('10', '下载', 'down', 'MDL_DOWN');
 
 -- ----------------------------
 -- Table structure for `ur7_model_field`
@@ -468,13 +505,15 @@ CREATE TABLE `ur7_model_field` (
   `plugin` varchar(100) DEFAULT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_model_field
 -- ----------------------------
-INSERT INTO `ur7_model_field` VALUES ('19', '标题', 'title', 'PHOTO_TITLE', 'text', '/^[a-zA-Z]+$/', '', '1', 'style=\"width:100%\"', '2', '', '0');
-INSERT INTO `ur7_model_field` VALUES ('21', '内容', 'content', 'PHOTO_CONTENT', 'editor', '', '', '1', '', '2', 'Ueditor/Hook/Vhook/ueditor', '0');
+INSERT INTO `ur7_model_field` VALUES ('29', '标题', 'title', 'ARTICLE_TITLE', 'text', '', '', '1', '', '1', '', '0');
+INSERT INTO `ur7_model_field` VALUES ('51', '内容', 'content', 'ARTICLE_CONTENT', 'editor', '', '', '0', '', '1', 'Ueditor/Hook/Vhook/ueditor', '0');
+INSERT INTO `ur7_model_field` VALUES ('52', '标题', 'title', 'PHOTO_TITLE', 'text', '', '', '0', '', '2', '', '0');
+INSERT INTO `ur7_model_field` VALUES ('53', '内容', 'content', 'PHOTO_CONTENT', 'editor', '', '', '0', '', '2', 'Ueditor/Hook/Vhook/ueditor', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_page`
@@ -486,12 +525,15 @@ CREATE TABLE `ur7_page` (
   `title` varchar(100) NOT NULL,
   `content` text NOT NULL,
   `addtime` int(11) NOT NULL,
+  `keyword` varchar(200) NOT NULL,
+  `desc` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_page
 -- ----------------------------
+INSERT INTO `ur7_page` VALUES ('1', '10', '公司简介', '&lt;p&gt;公司简介&lt;/p&gt;', '1421284506', '公司简介', '公司简介');
 
 -- ----------------------------
 -- Table structure for `ur7_photo`
@@ -499,8 +541,10 @@ CREATE TABLE `ur7_page` (
 DROP TABLE IF EXISTS `ur7_photo`;
 CREATE TABLE `ur7_photo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cid` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_photo
@@ -512,11 +556,10 @@ CREATE TABLE `ur7_photo` (
 DROP TABLE IF EXISTS `ur7_photo_data`;
 CREATE TABLE `ur7_photo_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `pic` text NOT NULL,
-  `title` text NOT NULL,
-  `pid` int(11) NOT NULL,
+  `aid` int(11) NOT NULL,
+  `content` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_photo_data
