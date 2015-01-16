@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50532
+Source Server         : 127.0.0.1
+Source Server Version : 50620
 Source Host           : localhost:3306
 Source Database       : 127001
 
 Target Server Type    : MYSQL
-Target Server Version : 50532
+Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2015-01-16 17:22:54
+Date: 2015-01-16 23:37:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -323,7 +323,7 @@ CREATE TABLE `ur7_category` (
 INSERT INTO `ur7_category` VALUES ('1', '程序下载', 'DreamCMS下载, php多语言版CMS下载 ', 'DreamCMS下载, php多语言版CMS下载 ', '0', '-1', '1', null, '0', 'http://', '0', '1', '', '', 'page');
 INSERT INTO `ur7_category` VALUES ('2', '二次开发', 'DreamCMS二次开发教程, php多语言版二次开发教程', 'DreamCMS二次开发教程, php多语言版二次开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
 INSERT INTO `ur7_category` VALUES ('3', '模板开发', 'DreamCMS模板开发教程, php多语言版模板开发教程', 'DreamCMS模板开发教程, php多语言版模板开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
-INSERT INTO `ur7_category` VALUES ('4', '帮助中心', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
+INSERT INTO `ur7_category` VALUES ('4', '常见问题', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
 INSERT INTO `ur7_category` VALUES ('5', '论坛', '', '', '0', '30', '1', 'list', '1', 'bbs/', '0', '1', '', '', 'page');
 
 -- ----------------------------

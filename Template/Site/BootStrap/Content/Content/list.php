@@ -19,7 +19,7 @@
                     <div class="span12">
                         <i class="icon-user page-title-icon"></i>
                         <h2>二次开发/</h2>
-                        <p>Below you can find more information about our company</p>
+                        <p>DreamCMS二次开发教程</p>
                     </div>
                 </div>
             </div>
@@ -27,18 +27,32 @@
 
         <div class="about-us container">
             <div class="row">
-                <div class="about-us-text span12">
+                <div class="about-us-text span4">
                     <h4>入门基础</h4>
                     <ul style="padding-left: 50px;">
                         <li>服务器要求</li>
                         <li>模型-视图-控制器 (MVC)</li>
                     </ul>
+                </div>
+                <div class="about-us-text span4">
                     <h4>结构设计</h4>
                     <ul style="padding-left: 50px;">
                         <li>系统类库与函数库调用</li>
                         <li>模型-视图-控制器 (MVC)</li>
+                        
+                       
                     </ul>
-                    <h4>Why Choose Us</h4>
+                </div>
+                <div class="about-us-text span4">
+                    <h4>相关配置</h4>
+                    <ul style="padding-left: 50px;">
+                        <li>服务器要求</li>
+                        <li>模型-视图-控制器 (MVC)</li>
+                        
+                    </ul>
+                </div>
+                <div class="about-us-text span4">
+                    <h4>钩子插件</h4>
                     <ul style="padding-left: 50px;">
                         <li>服务器要求</li>
                         <li>模型-视图-控制器 (MVC)</li>
@@ -46,7 +60,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Footer -->
         <?php include (TMPL_PATH . 'Layout/footer.php'); ?>
     </body>
