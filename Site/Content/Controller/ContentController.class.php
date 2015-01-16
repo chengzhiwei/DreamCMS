@@ -21,14 +21,16 @@ class ContentController extends \Common\Controller\SiteController
 
     public function newslist()
     {
+        
         $cateinfo = $this->_getcate();
-        $boname = \Common\Cls\ContentCls::getmoduletablebycid();
+        /*$boname = \Common\Cls\ContentCls::getmoduletablebycid();
         $bomod = BO(ucfirst($boname));
         $crumbs = \Common\Cls\ContentCls::breadcrumbs();
         $this->assign('crumbs', $crumbs);
         $method = $boname . 'list';
         $listinfo = $bomod->$method();
-        $this->_assign($listinfo);
+        $this->_assign($listinfo);*/
+        
         $this->display($cateinfo['listtmpl']);
     }
 

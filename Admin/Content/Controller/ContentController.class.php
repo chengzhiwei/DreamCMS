@@ -65,6 +65,7 @@ class ContentController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
 
+            $data = I('post.');
             $cid = I('post.cid');
             //栏目
             $catemod = DD('Category');
@@ -75,19 +76,28 @@ class ContentController extends \Auth\Controller\AuthbaseController
             //模型字段
             $ModelFieldMod = DD('ModelField');
             $Fieldlist = $ModelFieldMod->selFieldByMid($cateinfo['mid']);
-            //主表
+
             $contentmod = DD('Content', array($modelinfo['table']));
+            //检查过滤数据
+            $data = $contentmod->ChkAndFilter($data, $Fieldlist);
+            if ($data === false)
+            {
+                return false;
+            }
+            //主表
             $contentmod->startTrans();
-            $addcontent = $contentmod->add(I('post.'), $Fieldlist);
+            $addcontent = $contentmod->add($data);
             $aid = $contentmod->getLastInsID();
             //副表
             $contentDatamod = DD('ContentData', array($modelinfo['table'] . '_data'));
-            $data=I('post.');
             $data['aid'] = $aid;
-            $addcontentdata = $contentDatamod->adddata($data, $Fieldlist);
+            $addcontentdata = $contentDatamod->adddata($data);
 
+            //推荐位
+            $posdataMod = DD('PositionData');
+            $addpostion = $posdataMod->addallposition(I('post.position'), $aid, $cateinfo['mid'], $cid);
             //事务回滚
-            if ($addcontent && $addcontentdata)
+            if ($addcontent && $addcontentdata && $addpostion)
             {
                 $contentmod->commit();
                 $this->redirect('Content/Content/contentlist', array('mid' => $cateinfo['mid'], 'cid' => $cid));

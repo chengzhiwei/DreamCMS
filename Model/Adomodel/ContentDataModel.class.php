@@ -31,7 +31,7 @@ class ContentDataModel extends ContentBaseModel
      * @param array $modelfield
      * @return boolean
      */
-    public function adddata($data = array(), $modelfield = array())
+    public function adddata($data = array())
     {
         if (!$this->isexitTable())
         {
@@ -40,11 +40,6 @@ class ContentDataModel extends ContentBaseModel
         if (!$data)
         {
             $data = I('post.');
-        }
-        $data = $this->ChkAndFilter($data, $modelfield);
-        if ($data === false)
-        {
-            return false;
         }
         if ($this->create($data))
         {

@@ -29,6 +29,16 @@ class SetLang
      */
     public function __construct($langfilepath = '', $short = false)
     {
+        $this->setLangFilePath($langfilepath, $short);
+    }
+
+    /**
+     * 设置路径
+     * @param string $langfilepath 语言文件地址
+     * @param boolean $short 是否是短地址（模块/控制器）
+     */
+    public function setLangFilePath($langfilepath = '', $short = false)
+    {
         if ($short === true)
         {
             $this->LangFilePath = $this->parseLangFilePath($langfilepath);
@@ -50,7 +60,7 @@ class SetLang
     }
 
     /**
-     * 解析路径 
+     * 解析默认路径 
      * 默认：项目/语言/模块/控制器.php
      * 
      */
@@ -154,6 +164,23 @@ class SetLang
         $path = $this->getFilePath();
         $arr = include $path;
         unset($arr[$key]);
+        $str = "<?php \r\n return " . var_export($arr, true) . "; \r\n?>";
+        return $this->writefile($path, $str);
+    }
+
+    /**
+     * 批量删除语言包
+     * @param array $arrkey
+     * @example array('TITLE','CONTENT')
+     */
+    public function delAllLang($arrkey)
+    {
+        $path = $this->getFilePath();
+        $arr = include $path;
+        foreach ($arrkey as $v)
+        {
+            unset($arr[$v]);
+        }
         $str = "<?php \r\n return " . var_export($arr, true) . "; \r\n?>";
         return $this->writefile($path, $str);
     }

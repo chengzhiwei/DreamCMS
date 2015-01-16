@@ -15,17 +15,13 @@ class ContentModel extends ContentBaseModel
         parent::__construct($name, $tablePrefix, $connection);
     }
 
-    public function add($data = array(), $modelfield = array())
+    public function add($data = array())
     {
         if (!$data)
         {
             $data = I('post');
         }
-        $data = $this->ChkAndFilter($data, $modelfield);
-        if ($data === false)
-        {
-            return false;
-        }
+
         if ($this->create($data))
         {
             if (parent::add())

@@ -118,7 +118,7 @@
                             }
                         } else
                         {
-                            $cate['mid']==-1?"Content/Content/editpage":"Content/Content/contentlist";
+                            $url=$cate['mid']==-1?"Content/Content/editpage":"Content/Content/contentlist";
                             $str.='<a  target="iframeId" href="'.U($url,array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
                             if ($cate['deep'] == 0)
                             {

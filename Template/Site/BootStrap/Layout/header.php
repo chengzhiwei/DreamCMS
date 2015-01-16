@@ -14,23 +14,19 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="current-page">
-                                <a href="index.html"><i class="icon-home"></i><br />首页</a>
+                                <a href="<?php echo __ROOT__; ?>"><i class="icon-home"></i><br />首页</a>
                             </li>
-                            <li>
-                                <a href="portfolio.html"><i class="icon-camera"></i><br />下载</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon-comments"></i><br />教程</a>
-                            </li>
-                            <li>
-                                <a href="services.html"><i class="icon-tasks"></i><br />模板</a>
-                            </li>
-                            <li>
-                                <a href="about.html"><i class="icon-user"></i><br />插件</a>
-                            </li>
-                            <li>
-                                <a href="contact.html"><i class="icon-envelope-alt"></i><br />论坛</a>
-                            </li>
+                            <?php
+                            foreach ($menu as $k => $m)
+                            {
+                                ?>
+                                <li>
+                                    <a href="<?php echo $m['href']; ?>"><i class="icon-camera"></i><br /><?php echo $m['title']; ?></a>
+                                </li> 
+                                <?php
+                            }
+                            ?>
+
                         </ul>
                     </div>
                 </div>

@@ -66,7 +66,7 @@ class ContentBaseModel extends \Think\Model\AdvModel
     }
 
     /**
-     * 过滤数据 
+     * 过滤数据 重组
      * @param array $data
      * @param array $modelfield
      */
@@ -80,11 +80,18 @@ class ContentBaseModel extends \Think\Model\AdvModel
             {
                 switch ($newmodelfield[$k]['type'])
                 {
-                    case 'editor':
+                    case 'editor'://编辑器过滤XSS
                         Vendor('Htmlpurifier.library.HTMLPurifier#auto');
                         $config = \HTMLPurifier_Config::createDefault();
                         $purifier = new \HTMLPurifier($config);
                         $newdata[$k] = $purifier->purify(htmlspecialchars_decode($d));
+                        break;
+
+                    case 'position': //推荐位
+                        $newdata[$k] = implode(',', $d);
+                        break;
+                    case 'checkbox':
+                        $newdata[$k] = implode(',', $d);
                         break;
                 }
             }
@@ -104,7 +111,7 @@ class ContentBaseModel extends \Think\Model\AdvModel
         if ($data)
         {
             $b = $this->checkData($data, $modelfield);
-            if ($b == true)
+            if ($b)
             {
                 return $data;
             }

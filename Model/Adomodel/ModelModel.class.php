@@ -20,7 +20,6 @@ class ModelModel extends \Think\Model\AdvModel
         {
             if ($this->add($data))
             {
-                $this->createTbl($data['table']);
                 return true;
             } else
             {
@@ -46,12 +45,40 @@ class ModelModel extends \Think\Model\AdvModel
     public function createTbl($tablename)
     {
         $sql = "CREATE TABLE `" . C('DB_PREFIX') . $tablename . "` "
-                . "(`id` int(11) NOT NULL AUTO_INCREMENT,`title` varchar(255) NOT NULL,`thumb` varchar(255),`position` varchar(100), PRIMARY KEY (`id`)) "
+                . "(`id` int(11) NOT NULL AUTO_INCREMENT,`cid` int(11) NOT NULL,`title` varchar(255) NOT NULL,`keyword` varchar(255),`desc` varchar(255),`thumb` varchar(255),`position` varchar(100), PRIMARY KEY (`id`)) "
                 . "ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;";
         $datasql = "CREATE TABLE `" . C('DB_PREFIX') . $tablename . "_data` "
                 . "(`id` int(11) NOT NULL AUTO_INCREMENT,`aid` int(11) NOT NULL ,`content` text NOT NULL, PRIMARY KEY (`id`)) "
                 . "ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;";
+        $this->execute($sql);
+        $this->execute($datasql);
+        return true;
+    }
 
+    /**
+     * 删除模型
+     * @param int $id
+     * @return boolean
+     */
+    public function delByID($id)
+    {
+        $condition = array('id' => $id);
+        if ($this->where($condition)->delete() !== false)
+        {
+            return ture;
+        }
+        return false;
+    }
+
+    /**
+     * 删除模型表
+     * @param string $tablename
+     * @return boolean
+     */
+    public function dropTbl($tablename)
+    {
+        $sql = "DROP TABLE IF EXISTS `" . C('DB_PREFIX') . $tablename . "`;";
+        $datasql = "DROP TABLE IF EXISTS `" . C('DB_PREFIX') . $tablename . "_data`;";
         $this->execute($sql);
         $this->execute($datasql);
         return true;
