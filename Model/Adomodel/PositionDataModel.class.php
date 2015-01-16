@@ -5,9 +5,24 @@ namespace Model\Adomodel;
 class PositionDataModel extends \Think\Model\AdvModel
 {
 
-    public function addallposition($datalist = array())
+    public function addallposition($posdata = array(), $aid, $mid, $cid)
     {
-        return $this->addAll($datalist);
+        $pd = array();
+        foreach ($posdata as $k => $v)
+        {
+            $pd[$k] = array(
+                'posid' => $v,
+                'aid' => $aid,
+                'mid' => $mid,
+                'cid' => $cid,
+            );
+        }
+        $b= $this->addAll($pd);
+        if($b!==false)
+        {
+            return true;
+        }
+        return false;
     }
 
     public function deldatabyaid($aid)

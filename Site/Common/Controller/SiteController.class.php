@@ -14,7 +14,7 @@ class SiteController extends \Think\Controller
         }
         $this->settplpath();
         $this->SEO();
-        $menu = $this->getmenu();
+        $menu = \getmenu();
         $this->assign('menu', $menu);
         $lang = \langlist();
         $this->assign('lang', $lang);
@@ -29,65 +29,6 @@ class SiteController extends \Think\Controller
             'desc' => $langinfo['seodesc'],
         );
         $this->assign('seo', $seo);
-    }
-
-    /**
-     * 获取菜单
-     */
-    public function getmenu()
-    {
-        $nowlang = \nowlang();
-        $lid = $nowlang['id'];
-        if (!S('menu_' . $lid))
-        {
-            $Category = DD('Category');
-            $result = $Category->selectbylang($lid);
-            foreach ($result as $key => $v)
-            {
-                if ($v['type'] == 1)
-                {
-                    $v['href'] = $v['link'];
-                } else
-                {
-                    if ($v['mid'] == 3)//单页面模型
-                    {
-                        $v['href'] = \ROU('Content/Content/page', array('cid' => $v['id']));
-                    } else
-                    {
-                        if ($v['isleaf'] == 1)//子级调用list
-                        {
-                            $v['href'] = \ROU('Content/Content/newslist', array('cid' => $v['id']));
-                        } else //父级调用CATEGORY
-                        {
-                            $v['href'] = \ROU('Content/Content/category', array('cid' => $v['id']));
-                        }
-                    }
-                }
-                $result[$key] = $v;
-            }
-            $menu = $this->_menuarray($result, 0, $pid_arr);
-            S('menu_' . $lid, $menu);
-        } else
-        {
-            $menu = S('menu_' . $lid);
-        }
-        return $menu;
-    }
-
-    private function _menuarray(&$list, $pid = 0, $pid_arr)
-    {
-        static $tree = array();
-        foreach ($list as $v)
-        {
-
-            if ($v['pid'] == $pid)
-            {
-                $c = $this->_menuarray($list, $v['id'], $pid_arr);
-                $v['child'] = $c;
-                $tree[$v['id']] = $v;
-            }
-        }
-        return $tree;
     }
 
     private function settplpath()

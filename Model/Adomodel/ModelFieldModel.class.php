@@ -234,11 +234,40 @@ class ModelFieldModel extends \Think\Model\AdvModel
     /**
      * 添加默认字段
      */
-    public function addDefaultField()
+    public function addDefaultField($mid = 0)
     {
+
+        if ($mid <= 0)
+        {
+            return false;
+        }
         $fields = array(
-            array(),
+            array('fieldname' => 'title', 'langconf' => 'TITLE', 'type' => 'text', 'reg' => '', 'fieldvalue' => '', 'isnull' => 1, 'tackattr' => 'style="width:100%"', 'mid' => $mid, 'plugin' => '', 'issys' => 1),
+            array('fieldname' => 'keyword', 'langconf' => 'KEYWORD', 'type' => 'text', 'reg' => '', 'fieldvalue' => '', 'isnull' => 0, 'tackattr' => 'style="width:100%"', 'mid' => $mid, 'plugin' => '', 'issys' => 1),
+            array('fieldname' => 'desc', 'langconf' => 'DESC', 'type' => 'textarea', 'reg' => '', 'fieldvalue' => '', 'isnull' => 0, 'tackattr' => '', 'mid' => $mid, 'plugin' => '', 'issys' => 1),
+            array('fieldname' => 'cid', 'langconf' => 'CATEGORY', 'type' => 'cate', 'reg' => '', 'fieldvalue' => '', 'isnull' => 0, 'tackattr' => '', 'mid' => $mid, 'plugin' => '', 'issys' => 1),
+            array('fieldname' => 'thumb', 'langconf' => 'THUMB', 'type' => '', 'reg' => '', 'fieldvalue' => '', 'isnull' => 0, 'tackattr' => '', 'mid' => $mid, 'plugin' => 'Webupload/Hook/Vhook/thumbupload', 'issys' => 1),
+            array('fieldname' => 'content', 'langconf' => 'CONTENT', 'type' => 'editor', 'reg' => '', 'fieldvalue' => '', 'isnull' => 0, 'tackattr' => '', 'mid' => $mid, 'plugin' => 'Ueditor/Hook/Vhook/ueditor', 'issys' => 1),
+            array('fieldname' => 'position', 'langconf' => 'POSITION', 'type' => 'position', 'reg' => '', 'fieldvalue' => '', 'isnull' => 0, 'tackattr' => '', 'mid' => $mid, 'plugin' => '', 'issys' => 1),
         );
+        $b = $this->addAll($fields);
+        if ($b !== false)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    public function delByMid($mid)
+    {
+        $condition = array('mid' => $mid);
+        if ($this->where($condition)->delete() !== false)
+        {
+            return TRUE;
+        }
+        return false;
     }
 
 }

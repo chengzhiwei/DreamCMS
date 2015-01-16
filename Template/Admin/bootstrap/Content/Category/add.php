@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 
-                <div class="form-group in_link_div">
+                <div class="form-group ">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_NAME'); ?> </label>
 
                     <div class="col-sm-9">

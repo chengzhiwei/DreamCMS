@@ -36,11 +36,22 @@ class ModelController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
             $mod = DD('Model');
-            if ($mod->addmodel())
+            $mod->startTrans();
+            $ModelField = DD('ModelField');
+            $addmodel = $mod->addmodel();
+            $mid = $mod->getLastInsID();
+            $addtable = $mod->createTbl(I('post.table'));
+            $addfield = $ModelField->addDefaultField($mid);
+            if ($addmodel && $addtable && $addfield)
             {
+                //添加语言包
+                $setlang = new \Org\Helper\SetLang('Content/model', true);
+                $setlang->setOneLang('MDL_' . strtoupper(I('post.table')), I('post.title'));
+                $mod->commit();
                 $this->success(L('OP_SUCCESS'));
             } else
             {
+                $mod->rollback();
                 $this->error(L('OP_ERROR'));
             }
         } else
@@ -161,7 +172,7 @@ class ModelController extends \Auth\Controller\AuthbaseController
         $TableFieldDel = $fieldMod->delTableField($modelinfo['table'], $fieldinfo['filename']);
         if ($ModelFieldDel)
         {
-            $this->redirect('Content/Model/fields', array('mid'=>$fieldinfo['mid']));
+            $this->redirect('Content/Model/fields', array('mid' => $fieldinfo['mid']));
         } else
         {
             $this->error(L('OP_ERROR'));
@@ -215,6 +226,49 @@ class ModelController extends \Auth\Controller\AuthbaseController
             $this->assign('pluginlist', $pluginlist);
             $this->assign('fieldinfo', $fieldinfo);
             $this->display();
+        }
+    }
+
+    /**
+     * 删除模型
+     */
+    public function delmodel()
+    {
+        $id = I('get.id');
+        $mod = DD('Model');
+        $fieldmod = DD('ModelField');
+        $modinfo = $mod->findByID($id);
+        $fields = $fieldmod->selFieldByMid($id);
+        if ($modinfo['issys'] != 1)
+        {
+            $mod->startTrans();
+            //删除字段 
+            $delfield = $fieldmod->delByMid($id);
+            //删除模型数据
+            $delmod = $mod->delByID($id);
+            //删除表
+            $deltable = $mod->dropTbl($modinfo['table']);
+            if ($delfield && $delmod && $deltable)
+            {
+                //删除语言
+                $setLang = new \Org\Helper\SetLang('Content/modelfield', true);
+                $lang = array();
+                foreach ($fields as $v)
+                {
+                    if ($v['issys'] == 1)
+                        continue;
+                    $lang[] = $v['langconf'];
+                }
+                $setLang->delAllLang($lang);
+                $setLang->setLangFilePath('Content/model', true);
+                $setLang->delOneLang('MDL_' . strtoupper($modinfo['table']));
+                $mod->commit(); //事务提交
+                $this->redirect('Content/Model/index');
+            } else
+            {
+                $mod->rollback();
+                $this->error('OP_ERROR');
+            }
         }
     }
 

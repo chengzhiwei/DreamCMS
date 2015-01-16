@@ -40,6 +40,8 @@
 
                                         <td class="center">
                                             <a href="<?php echo U('Content/Model/fields', array('mid' => $li['id'])) ?>">字段管理</a>
+                                            
+                                            <a onclick="return confirm('确定要删除么？')" href="<?php echo U('Content/Model/delmodel', array('id' => $li['id'])) ?>">删除</a>
                                         </td>
                                     </tr>
                                     <?php

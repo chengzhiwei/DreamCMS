@@ -62,7 +62,7 @@ strong { font-weight: bold; }
     width: 280px;
     height: 63px;
     padding: 30px 0;
-    background: url(../img/logo.png) 20px center no-repeat;
+    background: url(../images/logo.png) 20px center no-repeat;
 }
 
 .header ul.nav {

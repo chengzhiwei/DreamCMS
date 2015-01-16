@@ -1,8 +1,11 @@
 <?php 
  return array (
-  'PHOTO_CONTENT' => '内容',
-  'PHOTO_TITLE' => '标题',
-  'ARTICLE_CONTENT' => '内容',
-  'ARTICLE_TITLE' => '标题',
+  'TITLE' => '标题',
+  'CATEGORY' => '栏目',
+  'CONTENT' => '内容',
+  'POSITION' => '推荐位',
+  'THUNB' => '缩略图',
+  'KEYWORD' => '关键字',
+  'DESC' => '描述',
 ); 
 ?>
