@@ -78,7 +78,7 @@
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right"><?php echo L('ALLOW_NULL') ?></label>
 
                     <div class="col-sm-9">
-                        <input type="checkbox" value="1" name="isnull" class="chkall ace" autocomplete="off">
+                        <input type="checkbox" value="1" name="isnull" class="chkall ace  ace-checkbox-2" autocomplete="off">
                         <span class="lbl"></span>
 
                     </div>

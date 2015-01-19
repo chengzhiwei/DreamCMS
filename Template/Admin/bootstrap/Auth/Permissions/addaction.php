@@ -105,7 +105,7 @@
 
                     <div class="col-sm-9">
                         <label>
-                            <input type="checkbox" name='isshow' value='1' class="ace" name="form-field-checkbox">
+                            <input type="checkbox" name='isshow' value='1' class="ace ace-checkbox-2" name="form-field-checkbox">
                             <span class="lbl"></span>
                         </label>
                     </div>

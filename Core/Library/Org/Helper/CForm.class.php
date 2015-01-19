@@ -91,7 +91,7 @@ class CForm
             $val_arr = explode(',', $v);
             $is_chk = isset($val_arr[2]) && $val_arr[2] == 1 ? 'checked="checked"' : "";
             $radios.='<label>
-                            <input class="ace" autocomplete="off"  type="radio" ' . $is_chk . ' name="'.self::$_fieldrow['fieldname'].'" value="' . $val_arr[1] . '">
+                            <input  autocomplete="off"  type="radio" ' . $is_chk . ' name="'.self::$_fieldrow['fieldname'].'" value="' . $val_arr[1] . '">
                             <span class="lbl"> ' . $val_arr[0] . '</span>
                       </label>';
         }
@@ -102,13 +102,13 @@ class CForm
     {
         $fieldvalue = trim(self::$_fieldrow['fieldvalue']);
         $fieldvalue_arr = explode("\r\n", $fieldvalue);
-        $radios = '';
+        $checkboxs = '';
         foreach ($fieldvalue_arr as $k => $v)
         {
             $val_arr = explode(',', $v);
             $is_chk = isset($val_arr[2]) && $val_arr[2] == 1 ? 'checked="checked"' : "";
             $checkboxs.='<label>
-                            <input class="ace" autocomplete="off"  type="checkbox" ' . $is_chk . ' name="'.self::$_fieldrow['fieldname'].'" value="' . $val_arr[1] . '">
+                            <input autocomplete="off"  type="checkbox" ' . $is_chk . ' name="'.self::$_fieldrow['fieldname'].'" value="' . $val_arr[1] . '">
                             <span class="lbl"> ' . $val_arr[0] . '</span>
                       </label>';
         }
