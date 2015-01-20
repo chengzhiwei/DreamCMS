@@ -89,23 +89,23 @@ function ROU($url, $arr)
 
         $rou_handle_key = array_keys($rou_handle);
 
-       
-        $index1=-1;
-        if(in_array($org_url_group, $rou_handle_key))
+
+        $index1 = -1;
+        if (in_array($org_url_group, $rou_handle_key))
         {
             $index1 = array_search($org_url_group, $rou_handle_key);
         }
-        $index2=-1;
-        if(in_array($C_org_url_group, $rou_handle_key))
+        $index2 = -1;
+        if (in_array($C_org_url_group, $rou_handle_key))
         {
             $index2 = array_search($C_org_url_group, $rou_handle_key);
         }
-         if(($index1==-1 && $index2!=-1) ||($index1>$index2 &&$index1!=-1 &&$index2!=-1 ))
-         {
-            
-             $org_url_group=$C_org_url_group;
-         }
-        
+        if (($index1 == -1 && $index2 != -1) || ($index1 > $index2 && $index1 != -1 && $index2 != -1 ))
+        {
+
+            $org_url_group = $C_org_url_group;
+        }
+
         if (key_exists($org_url_group, $rou_handle))
         {
             $reg_rule = $rou_handle[$org_url_group];
@@ -149,45 +149,6 @@ function ROU($url, $arr)
     return U($url, $arr);
 }
 
-/**
- * 默认语言
- * @return type
- */
-function defaultlang()
-{
-    $defaultlang = S('defaultlang');
-    if (!$defaultlang)
-    {
-        $lang = DD('Language');
-        $defaultlang = $lang->findbydefault();
-        S('defaultlang', $defaultlang);
-    }
-    return $defaultlang;
-}
-
-/**
- * 当前语言
- * 返回一唯数组格式
- */
-function nowlang()
-{
-    $lang = I('get.l', '');
-    if ($lang == '')
-    {
-        return defaultlang();
-    }
-
-    $langlist = langlist();
-    foreach ($langlist as $key => $l)
-    {
-        if ($l['lang'] == $lang)
-        {
-            return $l;
-        }
-    }
-    return defaultlang();
-}
-
 /* 语言列表带连接 */
 
 function langlist()
@@ -208,8 +169,6 @@ function langlist()
     }
     return $lang;
 }
-
-
 
 function curl_post($data, $url)
 {
@@ -302,14 +261,14 @@ function nowcate($id, $class)
     echo "class='" . $class . "'";
 }
 
-//所有栏目
+//所有菜单 只含有显示部分
 function allmenu($lid)
 {
 
     if (!S('menu_' . $lid))
     {
         $Category = DD('Category');
-        $result = $Category->selectbylang($lid);
+        $result = $Category->selectbylang($lid,1);
         foreach ($result as $key => $v)
         {
             if ($v['type'] == 1)
@@ -377,7 +336,7 @@ function findChild(&$arr, $id)
 //获取栏目
 function getmenu($pid = 0)
 {
-    $nowlang = nowlang();
+    $nowlang = SiteNowLang();
     $lid = $nowlang['id'];
     if (!S('menu_' . $lid . '_' . $pid))
     {

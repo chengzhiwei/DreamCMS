@@ -269,6 +269,37 @@ function Vhook($path, $vars = array())
     return call_user_func_array(array($elt_obj[$cls], $method), array($vars));
 }
 
+/**
+ * 默认语言
+ * @return type
+ */
+function SiteDftLang()
+{
+    $defaultlang = S('defaultlang');
+    if (!$defaultlang)
+    {
+        $lang = DD('Language');
+        $defaultlang = $lang->findbydefault();
+        S('defaultlang', $defaultlang);
+    }
+    return $defaultlang;
+}
+
+function SiteNowLang()
+{
+    $lang = DD('Language');
+    if (I('get.l'))
+    {
+        $nowlang=S('NOWLANG_' . I('get.l'));
+        if (!$nowlang)
+        {
+            $nowlang = $lang->findbylang(I('get.l'));
+        }
+        return $nowlang;
+            
+    }
+    return \SiteDftLang();
+}
 
 /**
  * 获取语言 自动判断前后台
@@ -290,7 +321,7 @@ function getlang()
         } else
         {
 
-            $lang = \defaultlang();
+            $lang = \SiteDftLang();
             return $lang['lang'];
         }
     }

@@ -54,7 +54,7 @@
 
     </head>
 
-    <body>
+    <body> 
         <div class="navbar navbar-default" id="navbar">
             <script type="text/javascript">
                 try {
@@ -253,6 +253,7 @@
                             </form>
                         </div><!-- #nav-search -->
                     </div>
+                    
                     <?php include $view; ?>
 
                 </div>

@@ -93,11 +93,21 @@ class ContentDataModel extends ContentBaseModel
     public function delcontent($aid)
     {
         $condition = array('aid' => $aid);
-        $b= $this->where($condition)->delete();
-        if($b!==false)
+        $b = $this->where($condition)->delete();
+        if ($b !== false)
         {
             return true;
         }
+    }
+
+    /**
+     * 根据一组文章编号查询
+     * @param type $ids
+     */
+    public function selByIds($ids)
+    {
+        $condition = array('in', $ids);
+        return $this->where($condition)->select();
     }
 
 }

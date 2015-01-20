@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 50620
+Source Server         : localhost
+Source Server Version : 50532
 Source Host           : localhost:3306
 Source Database       : 127001
 
 Target Server Type    : MYSQL
-Target Server Version : 50620
+Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-16 23:37:29
+Date: 2015-01-20 17:21:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -273,11 +273,17 @@ CREATE TABLE `ur7_article` (
   `thumb` varchar(255) DEFAULT NULL,
   `position` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_article
 -- ----------------------------
+INSERT INTO `ur7_article` VALUES ('5', '6', 'DreamCMS服务器环境要求', 'DreamCMS,DreamCMS服务器环境', 'DreamCMS服务器环境要求', null, null);
+INSERT INTO `ur7_article` VALUES ('6', '6', '模型-视图-控制器 (MVC)', '模型,视图,控制器 ,MVC', '什么是MVC', null, null);
+INSERT INTO `ur7_article` VALUES ('7', '7', '文件目录结构', 'DreamCMS程序目录结构', 'DreamCMS文件目录介绍', null, null);
+INSERT INTO `ur7_article` VALUES ('8', '7', '命名规范', 'DreamCMS,命名规范', 'DreamCMS命名规范', null, null);
+INSERT INTO `ur7_article` VALUES ('9', '8', '路由配置', '路由配置', '路由配置', null, null);
+INSERT INTO `ur7_article` VALUES ('10', '8', '数据库配置', '数据库配置', '数据库配置', null, null);
 
 -- ----------------------------
 -- Table structure for `ur7_article_data`
@@ -288,11 +294,17 @@ CREATE TABLE `ur7_article_data` (
   `aid` int(11) NOT NULL,
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_article_data
 -- ----------------------------
+INSERT INTO `ur7_article_data` VALUES ('5', '5', '<p>\r\n	PHP 版本 5.2 或更新的版本。</p><p>\r\n	MySQL版本推荐5.0或者更新版本。</p><p><br /></p>');
+INSERT INTO `ur7_article_data` VALUES ('6', '6', '<p>MVC是一个设计模式，它强制性的使应用程序的输入、处理和输出分开。使用MVC应用程序被分成三个核心部件：模型（M）、视图（V）、控制器（C），它们各自处理自己的任务。<br /> <br />视图 ：<br />　　视图是用户看到并与之交互的界面。对老式的Web应用程序来说，视图就是由HTML元素组成的界面，在新式的Web应用程序中，HTML依旧在视图中扮演着重要的角色，但一些新的技术已层出不穷，它们包括Adobe Flash和象XHTML，XML/XSL，WML等一些标识语言和Web services。如何处理应用程序的界面变得越来越有挑战性。MVC一个大的好处是它能为你的应用程序处理很多不同的视图。在视图中其实没有真正的处理发生，不管这些数据是联机存储的还是一个雇员列表，作为视图来讲，它只是作为一种输出数据并允许用户操纵的方式。<br /> <br />模型 ：<br />　　模型表示企业数据和业务规则。在MVC的三个部件中，模型拥有最多的处理任务。例如它可能用象EJBs和ColdFusion Components这样的构件对象来处理数据库。被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据。由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。<br /> <br />控制器 ：<br />　　控制器接受用户的输入并调用模型和视图去完成用户的需求。所以当单击Web页面中的超链接和发送HTML表单时，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后确定用哪个视图来显示模型处理返回的数据。<br /> <br />　　现在我们总结MVC的处理过程，首先控制器接收用户的请求，并决定应该调用哪个模型来进行处理，然后模型用业务逻辑来处理用户的请求并返回数据，最后控制器用相应的视图格式化模型返回的数据，并通过表示层呈现给用户。</p>');
+INSERT INTO `ur7_article_data` VALUES ('7', '7', '<p>\r\n	<strong>根目录</strong></p><p>\r\n	</p><p>\r\n		<strong>|  –  api  接口文件目录</strong></p><p>\r\n	</p><p>\r\n		<strong>|  –  caches 缓存文件目录</strong></p><p>\r\n	</p><p>\r\n		       |  – configs 系统配置文件目录</p><p>\r\n	</p><p>\r\n		       |  – caches_* 系统缓存目录</p><p>\r\n	</p><p>\r\n		<strong>|  –  phpcms  phpcms框架主目录</strong></p><p>\r\n	</p><p>\r\n		       |  – languages 框架语言包目录</p><p>\r\n	</p><p>\r\n		       |  – libs 框架主类库、主函数库目录</p><p>\r\n	</p><p>\r\n		       |  – model 框架数据库模型目录</p><p>\r\n	</p><p>\r\n		       |  – modules 框架模块目录</p><p>\r\n	</p><p>\r\n		       |  – templates 框架系统模板目录</p><p>\r\n	</p><p>\r\n		<strong>|  –  phpsso_server  phpsso主目录</strong></p><p>\r\n	</p><p>\r\n		<strong>|  –  statics  系统附件包</strong></p><p>\r\n	</p><p>\r\n		       |  – css 系统css包</p><p>\r\n	</p><p>\r\n		       |  – images 系统图片包</p><p>\r\n	</p><p>\r\n		       |  – js 系统js包</p><p>\r\n	</p><p>\r\n		<strong>|  –  uploadfile  网站附件目录</strong></p><p>\r\n	</p><p>\r\n		|  –  admin.php  后台管理入口</p><p>\r\n	</p><p>\r\n		|  –  index.php  程序主入口</p><p>\r\n	</p><p>\r\n		|  –  crossdomain.xml  FLASH跨域传输文件</p><p>\r\n	</p><p>\r\n		|  –  robots.txt 搜索引擎蜘蛛限制配置文件</p><p>\r\n	</p><p>\r\n		|  –  favicon.ico  系统icon图标</p><p><br /></p>');
+INSERT INTO `ur7_article_data` VALUES ('8', '8', '<p><span class=\"pln\"></span><span class=\"pun\">类文件需要以.</span><span class=\"kwd\">class</span><span class=\"pun\">.</span><span class=\"pln\">php</span><span class=\"pun\">为后缀（这里是指的</span><span class=\"pln\">phpcms</span><span class=\"pun\">的系统类库文件和模块中的类库文件，第三方引入的不做要求），例如</span><span class=\"pln\">http</span><span class=\"pun\">.</span><span class=\"kwd\">class</span><span class=\"pun\">.</span><span class=\"pln\">php</span><span class=\"pun\">。</span><span class=\"pln\"> </span></p><p><span class=\"pun\">函数文件需要以.</span><span class=\"pln\">func</span><span class=\"pun\">.</span><span class=\"pln\">php</span><span class=\"pun\">为后缀（第三方引入的不做要求），例如</span><span class=\"pln\">mail</span><span class=\"pun\">.</span><span class=\"pln\">func</span><span class=\"pun\">.</span><span class=\"pln\">php</span><span class=\"pun\">。</span></p><p><span class=\"pln\"> </span></p><p><span class=\"pun\">类名和文件名一致，例如</span><span class=\"pln\"> phpcmsapp</span><span class=\"pun\">类的文件命名是</span><span class=\"pln\">phpcmsapp</span><span class=\"pun\">.</span><span class=\"kwd\">class</span><span class=\"pun\">.</span><span class=\"pln\">php</span><span class=\"pun\">。</span></p><p><span class=\"pln\"> </span></p><p><span class=\"pun\">数据模型需要以“数据表名称</span><span class=\"pln\">_model</span><span class=\"pun\">.</span><span class=\"kwd\">class</span><span class=\"pun\">.</span><span class=\"pln\">php</span><span class=\"pun\">”为形式，类名称与文件名必须相同。</span></p><p><br /></p>');
+INSERT INTO `ur7_article_data` VALUES ('9', '9', '<p>路由配置</p>');
+INSERT INTO `ur7_article_data` VALUES ('10', '10', '<p>数据库配置</p>');
 
 -- ----------------------------
 -- Table structure for `ur7_category`
@@ -314,17 +326,25 @@ CREATE TABLE `ur7_category` (
   `catetmpl` varchar(50) NOT NULL,
   `newstmpl` varchar(50) NOT NULL,
   `pagetmpl` varchar(50) NOT NULL,
+  `menushow` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_category
 -- ----------------------------
-INSERT INTO `ur7_category` VALUES ('1', '程序下载', 'DreamCMS下载, php多语言版CMS下载 ', 'DreamCMS下载, php多语言版CMS下载 ', '0', '-1', '1', null, '0', 'http://', '0', '1', '', '', 'page');
-INSERT INTO `ur7_category` VALUES ('2', '二次开发', 'DreamCMS二次开发教程, php多语言版二次开发教程', 'DreamCMS二次开发教程, php多语言版二次开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
-INSERT INTO `ur7_category` VALUES ('3', '模板开发', 'DreamCMS模板开发教程, php多语言版模板开发教程', 'DreamCMS模板开发教程, php多语言版模板开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
-INSERT INTO `ur7_category` VALUES ('4', '常见问题', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page');
-INSERT INTO `ur7_category` VALUES ('5', '论坛', '', '', '0', '30', '1', 'list', '1', 'bbs/', '0', '1', '', '', 'page');
+INSERT INTO `ur7_category` VALUES ('1', '程序下载', 'DreamCMS下载, php多语言版CMS下载 ', 'DreamCMS下载, php多语言版CMS下载 ', '0', '-1', '1', null, '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('2', '二次开发', 'DreamCMS二次开发教程, php多语言版二次开发教程', 'DreamCMS二次开发教程, php多语言版二次开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '0', 'category', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('3', '模板开发', 'DreamCMS模板开发教程, php多语言版模板开发教程', 'DreamCMS模板开发教程, php多语言版模板开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('4', '帮助中心', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('5', '论坛', '', '', '0', '30', '1', 'list', '1', 'bbs/', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('6', '入门基础', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('7', '结构设计', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('8', '相关配置', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('9', '钩子插件', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('10', '关于我们', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'category', '', 'page', '0');
+INSERT INTO `ur7_category` VALUES ('11', '版权申明', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'category', '', 'page', '0');
+INSERT INTO `ur7_category` VALUES ('12', '商务合作', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'category', '', 'page', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_friend_link`
@@ -502,11 +522,15 @@ CREATE TABLE `ur7_page` (
   `keyword` varchar(200) NOT NULL,
   `desc` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_page
 -- ----------------------------
+INSERT INTO `ur7_page` VALUES ('1', '10', '关于DreamCMS', '<p>DreamCMS网站内容管理系统是国内主流多语言CMS系统之一，曾多次被新浪、网易、电脑报等IT媒体报道。</p><p><br /></p><p>DreamCMS目前已有数万网站的应用规模，拥有政府、企业、科研教育和媒体等各个行业领域近千名商业用户。 公司以“为客户创造效益”为核心理念，致力为用户提供最优秀的网站建设和电子商务解决方案及相关咨询、培训和实施服务，帮助客户摆脱技术捆扰全心投入网站运营。公司视服务为企业生命，视客户为企业之本，以服务客户为企业宗旨，努力提升服务水平，以优秀服务为客户节约成本、创造价值，赢得了广大用户的信赖与支持。 在当今瞬机万变的市场环境中，快速高效的IT解决方案是您业务成功的关键。</p><p><br />我们DreamCMS因为能为您量身打造完全符合需求的解决方案而自豪，使用我们的系统，我们可以让您的企业更高效，从而在市场中获得更大的利润。</p><p><br />我们在CMS领域的长期成功经验，使得我们成为国内CMS领域的领跑者。我们能为您提供的服务包括：PHPCMS商业授权、程序定制、数据转换、视频存 储服务。携手PHPCMS，我们共同迈向您事业的新高点。</p>', '1421715973', '关于DreamCMS,DreamCMS介绍', '关于DreamCMS,DreamCMS介绍');
+INSERT INTO `ur7_page` VALUES ('2', '11', '版权申明', '<h3 class=\"title-about\">	DreamCMS 全称为 DreamCMS网站管理系统</h3><pre class=\"lh26 f14\">PHPCMS网站管理系统的官方网站为 http://www.phpcms.cn，是 PHPCMS 产品的开发商，依法独立拥有 PHPCMS 产品著作权。\r\nPHPCMS 著作权受到法律和国际公约保护。使用者：无论个人或组织、盈利与否、用途如何（包括以学习和研究为目的），均需仔细阅读本协议，在理解、同意、并遵守本协议的全部条款后，方可开始使用 PHPCMS 软件。\r\n本授权协议适用于 PHPCMS V9 、PHPCMS 2008版本，酷溜网（北京）科技有限公司有对本授权协议的最终解释权。</pre><h3 class=\"title-about\">\r\n	协议许可的权利</h3><pre class=\"lh26 f14\">您可以在协议规定的约束和限制范围内修改 PHPCMS 源代码(如果被提供的话)或界面风格以适应您的网站要求。 \r\n您拥有使用本软件构建的网站中全部会员资料、文章及相关信息的所有权，并独立承担与文章内容的相关法律义务。 \r\n获得商业授权之后，您可以将本软件应用于商业用途，同时依据所购买的授权类型中确定的技术支持期限、技术支持方式和技术支持内容，自购买时刻起，在技术支持期限内拥有通过指定的方式获得指定范围内的技术支持服务。商业授权用户享有反映和提出意见的权力，相关意见将被作为首要考虑，但没有一定被采纳的承诺或保证。</pre><h3 class=\"title-about\">\r\n	协议规定的约束和限制</h3><pre class=\"lh26 f14\">未获商业授权之前，不得将本软件用于商业用途（包括但不限于企业网站、经营性网站、以营利为目或实现盈利的网站）。购买商业授权请登陆http://www.phpcms.cn参考相关说明。\r\n不得对本软件或与之关联的商业授权进行出租、出售、抵押或发放子许可证。 \r\n无论如何，即无论用途如何、是否经过修改或美化、修改程度如何，只要使用 PHPCMS 的整体或任何部分，未经书面许可，网站页面页脚处的 PHPCMS 名称和 http://www.phpcms.cn 的链接都必须保留，而不能清除或修改，除非您获得上海盛大计算机有限公司授权许可。 \r\n禁止在 PHPCMS 的整体或任何部分基础上以发展任何派生版本、修改版本或第三方版本用于重新分发。 \r\n如果您未能遵守本协议的条款，您的授权将被终止，所被许可的权利将被收回，并承担相应法律责任。</pre><h3 class=\"title-about\">\r\n	有限担保和免责声明</h3><pre class=\"lh26 f14\">本软件及所附带的文件是作为不提供任何明确的或隐含的赔偿或担保的形式提供的。         \r\n用户出于自愿而使用本软件，您必须了解使用本软件的风险，在尚未购买产品技术服务之前，我们不承诺提供任何形式的技术支持、使用担保，也不承担任何因使用本软件而产生问题的相关责任。 \r\n上海盛大计算机有限公司不对使用本软件构建的网站中的文章或信息承担责任。 \r\n有关 PHPCMS 最终用户授权协议、商业授权与技术服务的详细内容，均由 PHPCMS 官方网站独家提供。上海盛大计算机有限公司拥有在不事先通知的情况下，修改授权协议和服务价目表的权力，修改后的协议或价目表对自改变之日起的新授权用户生效。\r\n\r\n电子文本形式的授权协议如同双方书面签署的协议一样，具有完全的和等同的法律效力。您一旦开始安装 PHPCMS，即被视为完全理解并接受本协议的各项条款，在享有上述条款授予的权力的同时，受到相关的约束和限制。协议许可范围以外的行为，将直接违反本授权协议并构成侵权，我们有权随时终止授权，责令停止损害，并保留追究相关责任的权力。</pre><p><br /></p>', '1421740798', '版权申明', '版权申明');
+INSERT INTO `ur7_page` VALUES ('3', '12', '商务合作', '<p>DreamCMS愿与国内外优秀开发商建立各种深层次合作关系，希望和国内外开发者一起，推广优秀的正版软件和限时免费的游戏应用。</p><h4>合作模式：</h4><ul class=\"list-paddingleft-2\"><li><p>特约限免</p></li><li><p>新浪微博合作发码</p></li><li><p>硬广告投放</p></li><li><p>促销活动推广</p></li><li><p>提交新闻线索</p></li><li><p>其它合作意向</p></li></ul><h4>合作需知：</h4><p>爱应用以 iOS 平台的作品推荐为主，其中主要推荐的是开发商限时免费促销的产品，我们真诚希望与广大开发者一起，为用户提供更多更优质的 App，若您有意与我们合作，请通过我们在联系我们内标注的各种联系方式直接联系我们！</p><h4>商务合作联系方式：</h4><p>商务合作邮箱：media@iapps.im</p><p>爱应用商务联络：电话 025-58842238  QQ 2355520270 / 2355520276</p><p>爱应用商务合作1群：204683553</p><p>爱应用商务合作2群：168647346</p><p>爱应用产品发码群：1932874506（主） / 2408064348</p><p><br /></p>', '1421718455', '商务合作', '商务合作');
+INSERT INTO `ur7_page` VALUES ('4', '1', 'DreamCMS程序下载', '<hr /><h3>   \r\n		DreamCMS V0.8 正式版<img alt=\"\" src=\"/ueditor/php/upload/image/20150120/1421719636105324.gif\" height=\"15\" width=\"17\" /></h3><p>    <strong>程序下载： </strong><a href=\"http://updatenew.dedecms.com/base-v57/package/update-57tosp1.zip\">DreamCMS V0.8</a><br /></p><p>   <strong>相关文档：</strong><a href=\"http://help.dedecms.com/install-use/\">详细功能说明</a> <a class=\"mL5\" href=\"http://help.dedecms.com/index_old.htm\">帮助手册</a> <a class=\"mL5\" href=\"http://bbs.dedecms.com/331304.html\">二次开发说明</a></p><p><a class=\"mL5\" href=\"http://bbs.dedecms.com/331304.html\"><br /></a></p><h3>   \r\n		XAMPP-PHP环境整合套件</h3><p>   \r\n		XAMPP（Apache+MySQL+PHP+PERL）是一个功能强大的建 XAMPP 软件站集成软件包。</p><p>这个软件包原来的名字是 LAMPP，但是为了避免误解，最新的几个版本就改名为 XAMPP 了。</p><p>它可以在Windows、Linux、Solaris、Mac OS X 等多种操作系统下安装使用，支持多语言：英文、简体中文、繁体中文、韩文、俄文、日文等。<br />许多人通过他们自己的经验认识到安装 Apache 服务器是件不容易的事儿。</p><p>如果您想添加 MySQL、PHP 和 Perl，那就更难了。</p><p>XAMPP 是一个易于安装且包含 MySQL、PHP 和 Perl 的 Apache 发行版。</p><p>XAMPP 的确非常容易安装和使用：只需下载，解压缩，启动即可。</p><p><strong>程序下载：</strong><a href=\"http://www.dedecms.com/html/chanpinxiazai/20080905/39481.html\">XAMPP-PHP环境整合套件 </a></p><hr /><h3>    历史版本下载</h3><ul class=\"list-paddingleft-2\"><li><p><a href=\"http://www.dedecms.com/html/chanpinxiazai/20090804/39486.html\">DreamCMS V0.1正式版正式发布(Build-0912) </a>发布日期：2015-03-12</p></li></ul><p><br /></p><p> <br /></p><p><br /></p>', '1421719862', 'DreamCMS，DreamCMS程序下载', 'DreamCMS程序源码下载');
 
 -- ----------------------------
 -- Table structure for `ur7_photo`

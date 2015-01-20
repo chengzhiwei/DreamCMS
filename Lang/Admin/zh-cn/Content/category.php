@@ -16,4 +16,5 @@ return array(
     'PAGE_TMPL'=>'单页面模板',
     'KEYWORD'=>'关键字',
     'DESC'=>'描述',
+    'MENUSHOW'=>'菜单栏显示'
 );

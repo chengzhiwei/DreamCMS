@@ -9,7 +9,6 @@ class ContentController extends \Common\Controller\SiteController
 
     public function index()
     {
-        $this->assign('cid', 3);
         $this->display();
     }
 
@@ -21,22 +20,30 @@ class ContentController extends \Common\Controller\SiteController
 
     public function newslist()
     {
-        
+
         $cateinfo = $this->_getcate();
-        /*$boname = \Common\Cls\ContentCls::getmoduletablebycid();
-        $bomod = BO(ucfirst($boname));
-        $crumbs = \Common\Cls\ContentCls::breadcrumbs();
-        $this->assign('crumbs', $crumbs);
-        $method = $boname . 'list';
-        $listinfo = $bomod->$method();
-        $this->_assign($listinfo);*/
-        
+        /* $boname = \Common\Cls\ContentCls::getmoduletablebycid();
+          $bomod = BO(ucfirst($boname));
+          $crumbs = \Common\Cls\ContentCls::breadcrumbs();
+          $this->assign('crumbs', $crumbs);
+          $method = $boname . 'list';
+          $listinfo = $bomod->$method();
+          $this->_assign($listinfo); */
+
         $this->display($cateinfo['listtmpl']);
     }
 
     public function news()
     {
         $cateinfo = $this->_getcate();
+        $model = DD('Model');
+        $modelinfo = $model->findByID($cateinfo['mid']);
+        $Content = DD('Content', array($modelinfo['table']));
+        $contentinfo = $Content->findbyId(I('get.id'));
+        $ContentData = DD('ContentData', array($modelinfo['table'] . '_data'));
+        $ContentDatainfo = $ContentData->findbyAid(I('get.id'));
+        $news = array_merge($ContentDatainfo, $contentinfo);
+        $this->_assign($news);
         $this->display($cateinfo['newstmpl']);
     }
 

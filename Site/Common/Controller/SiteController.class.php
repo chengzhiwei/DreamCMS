@@ -22,7 +22,7 @@ class SiteController extends \Think\Controller
 
     public function SEO()
     {
-        $langinfo = \nowlang();
+        $langinfo = \SiteNowLang();
         $seo = array(
             'title' => $langinfo['seotitle'],
             'keyword' => $langinfo['seokeyword'],
@@ -33,7 +33,7 @@ class SiteController extends \Think\Controller
 
     private function settplpath()
     {
-        $nowlang = \nowlang();
+        $nowlang = \SiteNowLang();
         $tmpl_path = 'Template/Site/' . $nowlang['tmpl'] . '/';
         if (!is_dir($tmpl_path))
         {

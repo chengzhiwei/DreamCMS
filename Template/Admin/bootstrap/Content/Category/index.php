@@ -21,7 +21,7 @@
                                 <tr>
                                     <th class="center">
                                         <label>
-                                            <input type="checkbox" class="ace">
+                                            <input type="checkbox" class="ace ace-checkbox-2">
                                             <span class="lbl"></span>
                                         </label>
                                     </th>
@@ -41,7 +41,7 @@
                                     <tr>
                                         <td class="center">
                                             <label>
-                                                <input type="checkbox" class="ace">
+                                                <input type="checkbox" class="ace ace-checkbox-2">
                                                 <span class="lbl"></span>
                                             </label>
                                         </td>
@@ -53,56 +53,18 @@
                                         
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <button class="btn btn-xs btn-success">
-                                                    <i class="icon-ok bigger-120"></i>
-                                                </button>
-
-                                                <button class="btn btn-xs btn-info">
+                                                <a class="btn btn-xs btn-info" href="<?php echo U('Content/Category/update',array('id'=>$ct['id']))?>">
                                                     <i class="icon-edit bigger-120"></i>
-                                                </button>
+                                                </a>
 
-                                                <button class="btn btn-xs btn-danger">
+                                                <a class="btn btn-xs btn-danger">
                                                     <i class="icon-trash bigger-120"></i>
-                                                </button>
+                                                </a>
 
-                                                <button class="btn btn-xs btn-warning">
-                                                    <i class="icon-flag bigger-120"></i>
-                                                </button>
+                                               
                                             </div>
 
-                                            <div class="visible-xs visible-sm hidden-md hidden-lg">
-                                                <div class="inline position-relative">
-                                                    <button data-toggle="dropdown" class="btn btn-minier btn-primary dropdown-toggle">
-                                                        <i class="icon-cog icon-only bigger-110"></i>
-                                                    </button>
-
-                                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-                                                        <li>
-                                                            <a title="" data-rel="tooltip" class="tooltip-info" href="#" data-original-title="View">
-                                                                <span class="blue">
-                                                                    <i class="icon-zoom-in bigger-120"></i>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a title="" data-rel="tooltip" class="tooltip-success" href="#" data-original-title="Edit">
-                                                                <span class="green">
-                                                                    <i class="icon-edit bigger-120"></i>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li>
-                                                            <a title="" data-rel="tooltip" class="tooltip-error" href="#" data-original-title="Delete">
-                                                                <span class="red">
-                                                                    <i class="icon-trash bigger-120"></i>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                       
                                         </td>
                                     </tr>
                                     <?php

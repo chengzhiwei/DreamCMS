@@ -32,34 +32,18 @@ class CategoryController extends \Auth\Controller\AuthbaseController
     public function update()
     {
         $data = I('get.');
-        $this->canshu();
+        $this->_catecommon();
         $Category = DD('Category');
-        $result = $Category->selectF($data['id']);
-        if ($data['type'] == 'add')
+        $cateinfo = $Category->findbyid($data['id']);
+        if (IS_POST)
         {
-            if (IS_POST)
-            {
-                $this->add_data();
-            } else
-            {
-                $array = array();
-                $array['id'] = $result['id'];
-                $this->assign('result', $array);
-            }
-        }
-
-        if ($data['type'] == 'update')
+            $data = I('post.');
+            $this->update_data($data);
+        } else
         {
-            if (IS_POST)
-            {
-                $data = I('post.');
-                $this->update_data($data);
-            } else
-            {
-                $this->assign('result', $result);
-            }
+            $this->assign('cateinfo', $cateinfo);
+            $this->display();
         }
-        $this->display();
     }
 
     public function delete()
@@ -131,19 +115,19 @@ class CategoryController extends \Auth\Controller\AuthbaseController
 
     private function _catecommon()
     {
-        /*模型*/
+        /* 模型 */
         $Model = DD('Model');
         $Modellist = $Model->selectall($this->OpSiteLangInfo['id']);
         $this->assign('Modellist', $Modellist);
-        /*分类*/
+        /* 分类 */
         $Category = DD('Category');
         $result = $Category->selectall($this->OpSiteLangInfo['id']);
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');
         $unlimitedclass = new \Unlimitedclass();
         $Category_arr = $unlimitedclass->cateresult($result);
         $this->assign('category', $Category_arr);
-        /*模板*/
-        $dir = 'Template/Site/'  .$this->OpSiteLangInfo['tmpl']. '/Content/Content';
+        /* 模板 */
+        $dir = 'Template/Site/' . $this->OpSiteLangInfo['tmpl'] . '/Content/Content';
         $listtmpl = array();
         $catetmpl = array();
         $newstmpl = array();
@@ -176,11 +160,11 @@ class CategoryController extends \Auth\Controller\AuthbaseController
                 continue;
             }
         }
-        $this->assign('tmpl',array(
-            'catetmpl'=>$catetmpl,
-            'listtmpl'=>$listtmpl,
-            'newstmpl'=>$newstmpl,
-            'pagetmpl'=>$pagetmpl,
+        $this->assign('tmpl', array(
+            'catetmpl' => $catetmpl,
+            'listtmpl' => $listtmpl,
+            'newstmpl' => $newstmpl,
+            'pagetmpl' => $pagetmpl,
         ));
     }
 

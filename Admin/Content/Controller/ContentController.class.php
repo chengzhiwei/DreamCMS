@@ -94,8 +94,12 @@ class ContentController extends \Auth\Controller\AuthbaseController
             $addcontentdata = $contentDatamod->adddata($data);
 
             //推荐位
-            $posdataMod = DD('PositionData');
-            $addpostion = $posdataMod->addallposition(I('post.position'), $aid, $cateinfo['mid'], $cid);
+            $addpostion = true;
+            if (I('post.position'))
+            {
+                $posdataMod = DD('PositionData');
+                $addpostion = $posdataMod->addallposition(I('post.position'), $aid, $cateinfo['mid'], $cid);
+            }
             //事务回滚
             if ($addcontent && $addcontentdata && $addpostion)
             {
@@ -164,14 +168,19 @@ class ContentController extends \Auth\Controller\AuthbaseController
         $pageinfo = $page->findbycid(I('cid'));
         if (IS_POST)
         {
+            $data = I('post.');
+            Vendor('Htmlpurifier.library.HTMLPurifier#auto');
+            $config = \HTMLPurifier_Config::createDefault();
+            $purifier = new \HTMLPurifier($config);
+            $data['content'] = $purifier->purify(htmlspecialchars_decode(I('post.content')));
             if (!$pageinfo)
             {
                 //新增
-                $b = $page->addpage();
+                $b = $page->addpage($data);
             } else
             {
                 //修改
-                $b = $page->editpage(I('cid'));
+                $b = $page->editpage(I('cid'), $data);
             }
             if ($b)
             {

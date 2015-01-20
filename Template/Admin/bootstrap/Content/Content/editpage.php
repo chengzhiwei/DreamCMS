@@ -82,7 +82,7 @@
                                         $f = array(
                                             'plugin' => 'Ueditor/Hook/Vhook/ueditor',
                                             'fieldname' => 'content',
-                                            'content' => $pageinfo['desc'],
+                                            'content' => $pageinfo['content'],
                                         );
                                         echo Org\Helper\CForm::create($f);
                                         ?> 
