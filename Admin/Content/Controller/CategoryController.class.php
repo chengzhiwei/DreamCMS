@@ -20,8 +20,15 @@ class CategoryController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            $data = I('post.');
-            $this->add_data($data);
+            $Category = DD('Category');
+            $b = $Category->addcate();
+            if ($b!==false)
+            {
+                $this->redirect('Content/Category/index');
+            } else
+            {
+                $this->error(L('OP_ERROR'));
+            }
         } else
         {
             $this->_catecommon();
@@ -31,16 +38,26 @@ class CategoryController extends \Auth\Controller\AuthbaseController
 
     public function update()
     {
-        $data = I('get.');
-        $this->_catecommon();
         $Category = DD('Category');
-        $cateinfo = $Category->findbyid($data['id']);
         if (IS_POST)
         {
             $data = I('post.');
-            $this->update_data($data);
+            if (!isset($data['menushow']))
+            {
+                $data['menushow'] = 0;
+            }
+            $b = $Category->update($data['id'], $data);
+            if ($b)
+            {
+                $this->redirect('Content/Category/index');
+            } else
+            {
+                echo $Category->getDbError();
+            }
         } else
         {
+            $this->_catecommon();
+            $cateinfo = $Category->findbyid(I('get.id'));
             $this->assign('cateinfo', $cateinfo);
             $this->display();
         }
@@ -48,57 +65,35 @@ class CategoryController extends \Auth\Controller\AuthbaseController
 
     public function delete()
     {
-        $data = I('get.');
+        $id = I('get.id');
         $Category = DD('Category');
-        $result = $Category->count1($data['id']);
-        if ($result == 0)
+        //判断有没有子栏目 
+        $childcate = $Category->selByPid($id);
+        if (count($childcate) > 0)
         {
-            $re = $Category->deletebyid($data['id']);
-            $this->redirect('index');
+            $this->error(L('PLS_DEL_CHILD'));
+        }
+        //判断 有没有文章
+        $cateinfo = $Category->findbyid($id);
+        $model = DD('Model');
+        $modelinfo = $model->findByID($cateinfo['mid']);
+        $Content = DD('Content', array($modelinfo['table']));
+        $Contentlist = $Content->SimpleLimit($id, 1);
+        if (count($Contentlist) > 0)
+        {
+            $this->error(L('PLS_DEL_CONTENT'));
+        }
+        $b = $Category->deletebyid($id);
+        if ($b !== false)
+        {
+            $this->redirect('Content/Category/index');
         } else
         {
-            $this->error('存在子栏目，请清空子栏目');
+            $this->error(L('OP_ERROR'));
         }
     }
 
-    private function add_data($data)
-    {
-        $module = DD('Category');
-        $res = $module->selectbyname($data['title']);
-        if (empty($res))
-        {
-            $data = I('post.');
-            $result = $module->addcate($data);
-            $this->redirect('index');
-        } else
-        {
-            $this->error("栏目名称重复");
-        }
-    }
-
-    private function update_data($data)
-    {
-        $module = DD('Category');
-        $arr = array();
-        $arr['title'] = $data['title'];
-        $arr['keyword'] = $data['keyword'];
-        $arr['desc'] = $data['desc'];
-        $arr['pid'] = $data['pid'];
-        $arr['mid'] = $data['mid'];
-        $arr['langid'] = $data['langid'];
-        $arr['listtmpl'] = $data['listtmpl'];
-        $arr['type'] = $data['type'];
-        $arr['link'] = $data['link'];
-        $arr['sort'] = $data['sort'];
-        $arr['isleaf'] = $data['isleaf'];
-        $arr['catetmpl'] = $data['catetmpl'];
-        $arr['newstmpl'] = $data['newstmpl'];
-        $arr['pagetmpl'] = $data['pagetmpl'];
-        $result = $module->update($data['id'], $arr);
-        $this->redirect('index');
-    }
-
-    public function updatesort()
+    public function sort()
     {
         $sort = I('post.sort');
         $id = I('post.id');

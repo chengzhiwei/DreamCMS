@@ -21,12 +21,12 @@
                                 <tr>
                                     <th class="center">
                                         <label>
-                                            <input type="checkbox" class="ace ace-checkbox-2">
+                                            排序
                                             <span class="lbl"></span>
                                         </label>
                                     </th>
                                     <th>栏目名称</th>
-                                  
+                                    <th>菜单栏显示</th>
 
 
                                     <th></th>
@@ -41,7 +41,7 @@
                                     <tr>
                                         <td class="center">
                                             <label>
-                                                <input type="checkbox" class="ace ace-checkbox-2">
+                                                <input type="text" value="<?php echo $ct['sort'] ;?>" class="sort" rel="<?php echo $ct['id'] ;?>" style=" width: 40px;">
                                                 <span class="lbl"></span>
                                             </label>
                                         </td>
@@ -49,43 +49,57 @@
                                         <td>
                                             <a href="#" style="margin-left: <?php echo $ct['deep'] * 30; ?>px"><?php echo $ct['title']; ?></a>
                                         </td>
-                                        
-                                        
                                         <td>
-                                            <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <a class="btn btn-xs btn-info" href="<?php echo U('Content/Category/update',array('id'=>$ct['id']))?>">
-                                                    <i class="icon-edit bigger-120"></i>
+                                            <?php echo $ct['menushow'] == 1 ? "是" : "否"; ?>
+                                        </td>
+
+                                        <td>
+                                            <div class = "visible-md visible-lg hidden-sm hidden-xs btn-group">
+                                                <a class = "btn btn-xs btn-info" href = "<?php echo U('Content/Category/update', array('id' => $ct['id'])) ?>">
+                                                    <i class = "icon-edit bigger-120"></i>
                                                 </a>
 
-                                                <a class="btn btn-xs btn-danger">
-                                                    <i class="icon-trash bigger-120"></i>
+                                                <a onclick="return confirm('确定要删除么？')" href = "<?php echo U('Content/Category/delete', array('id' => $ct['id'])) ?>" class = "btn btn-xs btn-danger">
+                                                    <i class = "icon-trash bigger-120"></i>
                                                 </a>
-
-                                               
                                             </div>
-
-                                       
                                         </td>
                                     </tr>
                                     <?php
                                 }
                                 ?>
-
-
-
                             </tbody>
                         </table>
-                    </div><!-- /.table-responsive -->
-                </div><!-- /span -->
-            </div><!-- /row -->
-
-
-
-
-
-
-
-
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    $(function () {
+        $('.sort').blur(function () {
+            var id = $(this).attr('rel');
+            var sort = $(this).val();
+            $obj = $(this);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo U('Content/Category/sort'); ?>',
+                data: {id: id, sort: sort},
+                dataType: 'text',
+                success: function (data) {
+                    if (data == '1')
+                    {
+                        $obj.css('border', 'solid 1px green');
+                    }
+                    else
+                    {
+                        $obj.css('border', 'solid 1px red');
+                    }
+                }
+
+            });
+        });
+    })
+</script>

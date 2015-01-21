@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-20 17:21:32
+Date: 2015-01-21 17:24:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -328,23 +328,23 @@ CREATE TABLE `ur7_category` (
   `pagetmpl` varchar(50) NOT NULL,
   `menushow` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_category
 -- ----------------------------
 INSERT INTO `ur7_category` VALUES ('1', '程序下载', 'DreamCMS下载, php多语言版CMS下载 ', 'DreamCMS下载, php多语言版CMS下载 ', '0', '-1', '1', null, '0', 'http://', '0', '1', '', '', 'page', '1');
-INSERT INTO `ur7_category` VALUES ('2', '二次开发', 'DreamCMS二次开发教程, php多语言版二次开发教程', 'DreamCMS二次开发教程, php多语言版二次开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '0', 'category', '', 'page', '1');
-INSERT INTO `ur7_category` VALUES ('3', '模板开发', 'DreamCMS模板开发教程, php多语言版模板开发教程', 'DreamCMS模板开发教程, php多语言版模板开发教程', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
-INSERT INTO `ur7_category` VALUES ('4', '帮助中心', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', '0', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
-INSERT INTO `ur7_category` VALUES ('5', '论坛', '', '', '0', '30', '1', 'list', '1', 'bbs/', '0', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('2', '二次开发', 'DreamCMS二次开发教程, php多语言版二次开发教程', 'DreamCMS二次开发教程, php多语言版二次开发教程', '0', '30', '1', 'list', '0', 'http://', '1', '0', 'category', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('3', '模板开发', 'DreamCMS模板开发教程, php多语言版模板开发教程', 'DreamCMS模板开发教程, php多语言版模板开发教程', '0', '30', '1', 'list', '0', 'http://', '2', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('4', '帮助中心', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', 'DreamCMS帮助中心,DreamCMS帮助手册, php多语言版模板帮助手册', '0', '30', '1', 'list', '0', 'http://', '3', '1', '', '', 'page', '1');
+INSERT INTO `ur7_category` VALUES ('5', '论坛', '', '', '0', '30', '1', 'list', '1', 'bbs/', '4', '1', '', '', 'page', '1');
 INSERT INTO `ur7_category` VALUES ('6', '入门基础', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
 INSERT INTO `ur7_category` VALUES ('7', '结构设计', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
 INSERT INTO `ur7_category` VALUES ('8', '相关配置', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
 INSERT INTO `ur7_category` VALUES ('9', '钩子插件', '', '', '2', '30', '1', 'list', '0', 'http://', '0', '1', '', '', 'page', '1');
-INSERT INTO `ur7_category` VALUES ('10', '关于我们', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'category', '', 'page', '0');
-INSERT INTO `ur7_category` VALUES ('11', '版权申明', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'category', '', 'page', '0');
-INSERT INTO `ur7_category` VALUES ('12', '商务合作', '', '', '0', '-1', '1', 'list', '0', 'http://', '0', '1', 'category', '', 'page', '0');
+INSERT INTO `ur7_category` VALUES ('10', '关于我们', '', '', '0', '-1', '1', 'list', '0', 'http://', '10', '1', 'category', '', 'page', '0');
+INSERT INTO `ur7_category` VALUES ('11', '版权申明', '', '', '0', '-1', '1', 'list', '0', 'http://', '11', '1', 'category', '', 'page', '0');
+INSERT INTO `ur7_category` VALUES ('12', '商务合作', '', '', '0', '-1', '1', 'list', '0', 'http://', '12', '1', 'category', 'news', 'page', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_friend_link`

@@ -72,15 +72,19 @@
 
 </style>
 <script type="text/javascript">
-    function autoHeight(){
+    var iframe;
+    function autoHeight() {
         var iframe = document.getElementById("iframeId");
-        if(iframe.Document){//ie自有属性
+        if (iframe.Document) {//ie自有属性
             iframe.style.height = iframe.Document.documentElement.scrollHeight;
-        }else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
-            iframe.height = iframe.contentDocument.body.offsetHeight ;
+        } else if (iframe.contentDocument) {//ie,firefox,chrome,opera,safari
+            iframe.height = iframe.contentDocument.body.offsetHeight;
         }
-       
+
     }
+
+
+
 </script>
 <div class="page-content " style=" height: 100%">
     <div class="page-header">
@@ -109,8 +113,8 @@
                             }
                             if ($Category_arr[$key + 1]['deep'] <= $cate['deep'])
                             {
-                                $url =$cate['mid']==-1?"Content/Content/editpage":"Content/Content/contentlist";
-                                $str.='<a target="iframeId" href="'.U($url,array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                                $url = $cate['mid'] == -1 ? "Content/Content/editpage" : "Content/Content/contentlist";
+                                $str.='<a target="iframeId" href="' . U($url, array('mid' => $cate['mid'], 'cid' => $cate['id'])) . '"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
                                 for ($i = 0; $i < $cate['deep'] - ($Category_arr[$key + 1]['deep']); $i++)
                                 {
                                     $str.='</li></ul>';
@@ -118,8 +122,8 @@
                             }
                         } else
                         {
-                            $url=$cate['mid']==-1?"Content/Content/editpage":"Content/Content/contentlist";
-                            $str.='<a  target="iframeId" href="'.U($url,array('mid'=>$cate['mid'],'cid'=>$cate['id'])).'"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
+                            $url = $cate['mid'] == -1 ? "Content/Content/editpage" : "Content/Content/contentlist";
+                            $str.='<a  target="iframeId" href="' . U($url, array('mid' => $cate['mid'], 'cid' => $cate['id'])) . '"><span><i class="icon-leaf "></i> ' . $cate['title'] . '</span></a>';
                             if ($cate['deep'] == 0)
                             {
                                 $str.='</li>';
@@ -141,7 +145,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-9 "  >
+            <div id="contentiframe" class="col-lg-9 "  >
                 <iframe id='iframeId' scrolling="no" name="iframeId" onload="autoHeight()"  style="zoom: 0.6; " src="" frameBorder="0"  width="100%" ></iframe> 
             </div>
         </div>
@@ -161,5 +165,6 @@
             }
             e.stopPropagation();
         });
+       
     });
 </script>

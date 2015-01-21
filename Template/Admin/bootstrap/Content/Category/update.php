@@ -30,7 +30,7 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                添加栏目
+                修改栏目
             </small>
         </h1>
     </div><!-- /.page-header -->
@@ -40,17 +40,18 @@
             <!-- PAGE CONTENT BEGINS -->
 
             <form role="form" class="form-horizontal" method="post">
+                <input type="hidden" value="<?php echo $cateinfo['id'];?>" name="id" />
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_TYPE'); ?> </label>
 
                     <div class="col-sm-9">
                         <label>
-                            <input type="radio" class="ace" value="0" name="type" checked="checked">
+                            <input type="radio" disabled="disabled" <?php echo $cateinfo['type']==0?"checked='checked'":""?> class="ace disabled" value="0" name="type">
                             <span class="lbl"> <?php echo L('IN_LINK'); ?></span>
                         </label>
 
                         <label>
-                            <input type="radio" class="ace" name="type" value="1">
+                            <input type="radio" <?php echo $cateinfo['type']==1?"checked='checked'":""?> disabled="disabled" class="ace disabled" name="type" value="1">
                             <span class="lbl"> <?php echo L('OUT_LINK'); ?></span>
                         </label>
 
@@ -61,16 +62,16 @@
 
                     <div class="col-sm-9">
 
-                        <select name="mid" id="modsel" class="col-sm-5">
+                        <select disabled="disabled"  name="mid" id="modsel" class="col-sm-5 disabled">
                             <?php
                             foreach ($Modellist as $mli)
                             {
                                 ?>
-                                <option value="<?php echo $mli['id'] ?>"><?php echo $mli['title'] ?></option>
+                            <option <?php echo $cateinfo['mid']==$mli['id']?"selected='selected'":""?> value="<?php echo $mli['id'] ?>"><?php echo $mli['title'] ?></option>
                                 <?php
                             }
                             ?>
-                                <option value="-1"><?php echo L('MDL_PAGE'); ?></option>
+                                <option value="-1" <?php echo $cateinfo['mid']==-1?"selected='selected'":""?>><?php echo L('MDL_PAGE'); ?></option>
                         </select>
 
                     </div>
@@ -85,7 +86,7 @@
                             foreach ($category as $ca)
                             {
                                 ?>
-                                <option  value="<?php echo $ca['id']; ?>">
+                                <option <?php echo $cateinfo['pid']==$ca['id']?"selected='selected'":""?>  value="<?php echo $ca['id']; ?>">
                                     <?php
                                     if ($ca['deep'] != 0)
                                     {
@@ -107,7 +108,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5"  id="form-field-1">
+                        <input type="text" value="<?php echo $cateinfo['title']?>" name="title" class="col-xs-10 col-sm-5"  id="form-field-1">
                     </div>
                 </div>
                 
@@ -133,7 +134,7 @@
                             foreach ($tmpl['catetmpl'] as $t)
                             {
                                 ?>
-                                <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
+                                <option <?php echo $cateinfo['catetmpl']==$t?"selected='selected'":""?> value="<?php echo $t; ?>"><?php echo $t; ?></option>
                                 <?php
                             }
                             ?>
@@ -152,7 +153,7 @@
                             foreach ($tmpl['listtmpl'] as $t)
                             {
                                 ?>
-                                <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
+                                <option <?php echo $cateinfo['listtmpl']==$t?"selected='selected'":""?> value="<?php echo $t; ?>"><?php echo $t; ?></option>
                                 <?php
                             }
                             ?>
@@ -172,7 +173,7 @@
                             foreach ($tmpl['newstmpl'] as $t)
                             {
                                 ?>
-                                <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
+                                <option  <?php echo $cateinfo['newstmpl']==$t?"selected='selected'":""?> value="<?php echo $t; ?>"><?php echo $t; ?></option>
                                 <?php
                             }
                             ?>
@@ -190,7 +191,7 @@
                             foreach ($tmpl['pagetmpl'] as $t)
                             {
                                 ?>
-                                <option value="<?php echo $t; ?>"><?php echo $t; ?></option>
+                                <option <?php echo $cateinfo['pagetmpl']==$t?"selected='selected'":""?> value="<?php echo $t; ?>"><?php echo $t; ?></option>
                                 <?php
                             }
                             ?>
@@ -202,7 +203,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('MENUSHOW'); ?> </label>
 
                     <div class="col-sm-9">
-                         <input type="checkbox" name="menushow"  class="chkall ace  ace-checkbox-2"  />
+                        <input type="checkbox" <?php echo $cateinfo['menushow']==1?"checked='checked'":""?> value="1" name="menushow"  class="chkall ace  ace-checkbox-2"  />
                             <label class="lbl" for="ace-settings-breadcrumbs"></label>
                     </div>
                 </div>

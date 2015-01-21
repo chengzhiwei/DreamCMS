@@ -202,7 +202,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('MENUSHOW'); ?> </label>
 
                     <div class="col-sm-9">
-                         <input type="checkbox" name="menushow"  class="chkall ace  ace-checkbox-2"  />
+                        <input type="checkbox" name="menushow" value="1"  class="chkall ace  ace-checkbox-2"  />
                             <label class="lbl" for="ace-settings-breadcrumbs"></label>
                     </div>
                 </div>

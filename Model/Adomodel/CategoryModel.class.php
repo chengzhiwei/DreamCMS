@@ -19,7 +19,7 @@ class CategoryModel extends \Think\Model\AdvModel
         {
             if ($this->add())
             {
-                
+                return true;
             } else
             {
                 return false;
@@ -37,26 +37,12 @@ class CategoryModel extends \Think\Model\AdvModel
         return $this->where($condition)->order('sort')->select();
     }
 
-    public function count1($id)
+    public function selByPid($id)
     {
         $condition = array();
         $condition['pid'] = $id;
-        $result = $this->where($condition)->count();
+        $result = $this->where($condition)->select();
         return $result;
-    }
-
-    public function selectF($id)
-    {
-        $condition = array();
-        $condition['id'] = $id;
-        return $this->where($condition)->find();
-    }
-
-    public function selectS($id)
-    {
-        $condition = array();
-        $condition['pid'] = $id;
-        return $this->where($condition)->field('id,title,pid')->select();
     }
 
     public function update($id, $data)
@@ -64,14 +50,23 @@ class CategoryModel extends \Think\Model\AdvModel
         $conition = array();
         $conition['id'] = $id;
         $result = $this->where($conition)->save($data);
-        return $result;
+        if ($result !== false)
+        {
+            return true;
+        }
+        return false;
     }
 
     public function deletebyid($id)
     {
         $conition = array();
         $conition['id'] = $id;
-        return $this->where($conition)->delete();
+        $b = $this->where($conition)->delete();
+        if ($b !== false)
+        {
+            return true;
+        }
+        return false;
     }
 
     public function selectbyname($title)
@@ -81,11 +76,11 @@ class CategoryModel extends \Think\Model\AdvModel
         return $this->where($condition)->find();
     }
 
-    public function selectbylang($lid,$menushow=-1)
+    public function selectbylang($lid, $menushow = -1)
     {
         $condition = array();
         $condition['langid'] = $lid;
-        if($menushow!=-1)
+        if ($menushow != -1)
         {
             $condition['menushow'] = $menushow;
         }

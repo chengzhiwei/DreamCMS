@@ -198,6 +198,10 @@
                     offsetY: 5
                 });
             }
+            $(document).bind("resize", function () {
+                alert("dsds");
+            });
+            //window.parent.autoHeight();
         </script>
 
     </body>
