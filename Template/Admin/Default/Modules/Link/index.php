@@ -24,12 +24,12 @@
             </thead>
             <tbody>
                 <?php
-                foreach ($result as $r)
+                foreach ($links as $l)
                 {
                     ?>
                     <tr>
-                        <td><?php echo $r['id']; ?></td>
-                        <td><?php echo $r['name']; ?></td>
+                        <td><?php echo $l['title']; ?></td>
+                        <td><?php echo $r['title']; ?></td>
                         <td><a href="<?php echo $r['url']; ?>" target="_blank"><?php echo $r['url']; ?></a></td>
                         <td>
                             <?php

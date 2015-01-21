@@ -18,8 +18,8 @@ class LinkController extends \Auth\Controller\AuthbaseController
     public function index()
     {
         $FriendLink = DD('FriendLink');
-        $result = $FriendLink->selectAll();
-        $this->assign('result', $result);
+        $links = $FriendLink->selectAll();
+        $this->assign('links', $links);
         $this->display();
     }
 
