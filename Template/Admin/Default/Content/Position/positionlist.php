@@ -22,15 +22,14 @@
         <tbody>
            <?php 
            foreach($list as $v){
-               $id=$v['id'];
            ?>
             <tr align="center">
                 <td><?php echo $v['id'];?></td>
                 <td><?php echo $v['title'];?></td>
                 <td>
-                    <a href="<?php echo U("del",array("id"=>"$id"));?>" onclick="return confirm('确定删除吗？')">删除</a>
+                    <a href="<?php echo U("Content/Position/del",array("id"=>$v['id']));?>" onclick="return confirm('确定删除吗？')">删除</a>
                     |
-                    <a href="<?php echo U("edit",array("id"=>"$id"));?>">编辑</a>
+                    <a href="<?php echo U("Content/Position/edit",array("id"=>$v['id']));?>">编辑</a>
                 </td>
             </tr>
            <?php }?>

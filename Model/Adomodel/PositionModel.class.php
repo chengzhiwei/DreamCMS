@@ -57,15 +57,5 @@ class PositionModel extends \Think\Model\AdvModel
         return $this->where($condition)->delete();
     }
 
-    /**
-     * 根据语言查询推荐位
-     * 每个语言模板可能不同 所以推荐位不同
-     * @param int $lid
-     * @return array
-     */
-    public function selbylid($lid)
-    {
-        return $this->where(array('lid' => $lid))->select();
-    }
 
 }

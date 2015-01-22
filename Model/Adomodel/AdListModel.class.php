@@ -16,9 +16,8 @@ namespace Model\Adomodel;
  */
 class AdListModel extends \Think\Model\AdvModel {
 
-    public function adlist($langid) {
+    public function adlist() {
         $condition = array();
-        $condition['langid'] = $langid;
         return $this->where($condition)->order('id desc')->select();
     }
 
@@ -37,7 +36,7 @@ class AdListModel extends \Think\Model\AdvModel {
     public function selbytid($tid) {
         $condition = array();
         $condition['tid'] = $tid;
-        return $this->where($condition)->count();
+        return $this->where($condition)->select();
     }
 
     public function selbyid($id) {

@@ -17,12 +17,10 @@ class PositionController extends \Auth\Controller\AuthbaseController
         $p = DD('Position');
         if (IS_POST)
         {
-            $condition = array();
-            $condition['title'] = I('post.title');
-            $res = $p->addposition($condition);
+            $res = $p->addposition(I('post.'));
             if ($res)
             {
-                $this->success('添加成功', U('positionlist'));
+                $this->redirect('Content/Position/positionlist');
             } else
             {
                 $this->error('添加失败');
@@ -36,22 +34,20 @@ class PositionController extends \Auth\Controller\AuthbaseController
     public function edit()
     {
         $p = DD('Position');
-        $id = $_GET['id'];
         if (IS_POST)
         {
-            $condition = array();
-            $condition['title'] = I('post.title');
-            $res = $p->edit($id, $condition);
+           
+            $res = $p->edit(I('post.id'), I('post.'));
             if ($res)
             {
-                $this->success('编辑成功', U('positionlist'));
+                $this->success('编辑成功', U('Content/Position/positionlist'));
             } else
             {
                 $this->error('编辑失败');
             }
         } else
         {
-            $info = $p->selectone($id);
+            $info = $p->selectone(I('get.id'));
             $this->assign('info', $info);
             $this->display();
         }

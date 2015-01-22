@@ -51,7 +51,12 @@ class FriendLinkModel extends \Think\Model\AdvModel
     {
         $condition = array();
         $condition['id'] = $id;
-        return $this->where($condition)->save($data);
+        $b= $this->where($condition)->save($data);
+        if($b!==FALSE)
+        {
+            return true;
+        }
+        return false; 
     }
 
 }

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-21 17:24:26
+Date: 2015-01-22 17:20:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,9 +25,8 @@ CREATE TABLE `ur7_ad_list` (
   `href` varchar(100) NOT NULL,
   `img` varchar(100) NOT NULL,
   `tid` int(11) NOT NULL,
-  `langid` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_ad_list
@@ -40,19 +39,13 @@ DROP TABLE IF EXISTS `ur7_ad_type`;
 CREATE TABLE `ur7_ad_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
-  `langid` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_ad_type
 -- ----------------------------
-INSERT INTO `ur7_ad_type` VALUES ('3', '333333', '1');
-INSERT INTO `ur7_ad_type` VALUES ('4', '44444', '1');
-INSERT INTO `ur7_ad_type` VALUES ('5', '55555', '1');
-INSERT INTO `ur7_ad_type` VALUES ('6', '566666', '1');
-INSERT INTO `ur7_ad_type` VALUES ('7', '7777711111', '1');
-INSERT INTO `ur7_ad_type` VALUES ('9', 'xxxxxx', '1');
+INSERT INTO `ur7_ad_type` VALUES ('10', '右下方广告4');
 
 -- ----------------------------
 -- Table structure for `ur7_admin`
@@ -88,7 +81,7 @@ CREATE TABLE `ur7_admin_auth_action` (
   `langconf` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -103,7 +96,7 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('8', '编辑语言', 'admin.php', '3
 INSERT INTO `ur7_admin_auth_action` VALUES ('9', '添加栏目', 'admin.php', '2', '5', 'Content', 'Category', 'add', 'ACT_CONTENT_CATEGORY_ADD', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('11', '编辑推荐位', 'admin.php', '2', '3', 'Content', 'Position', 'edit', 'ACT_CONTENT_POSITION_EDIT', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('12', '删除推荐位', 'admin.php', '2', '3', 'Content', 'Position', 'del', 'ACT_CONTENT_POSITION_DEL', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('13', '添加文章', 'admin.php', '2', '1', 'Content', 'Content', 'add', 'ACT_CONTENT_CONTENT_ADD', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('13', ' 添加文章', 'admin.php', '2', '1', 'Content', 'Content', 'add', 'ACT_CONTENT_CONTENT_ADD', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('14', '管理员列表', 'admin.php', '4', '6', 'Auth', 'Admin', 'Index', 'ACT_AUTH_ADMIN_INDEX', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('15', '管理栏目', 'admin.php', '2', '5', 'Content', 'Category', 'index', 'ACT_CONTENT_CATEGORY_INDEX', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('16', '友情连接管理', 'admin.php', '5', '7', 'Modules', 'Link', 'index', 'ACT_MODULES_LINK_INDEX', '1');
@@ -126,6 +119,7 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('35', ' 修改权限', 'admin.php', 
 INSERT INTO `ur7_admin_auth_action` VALUES ('36', '分组管理', 'admin.php', '4', '13', 'Auth', 'Permissions', 'grouplist', 'ACT_AUTH_PERMISSIONS_GROUPLIST', '1');
 INSERT INTO `ur7_admin_auth_action` VALUES ('38', '添加字段', 'admin.php', '2', '14', 'Content', 'Model', 'addfield', 'ACT_CONTENT_MODEL_ADDFIELD', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('39', '添加管理员', 'admin.php', '4', '6', 'Auth', 'Admin', 'addadmin', 'ACT_AUTH_ADMIN_ADDADMIN', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('40', '添加分类', 'admin.php', '5', '10', 'Component', 'Ad', 'addtype', 'ACT_COMPONENT_AD_ADDTYPE', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
@@ -328,7 +322,7 @@ CREATE TABLE `ur7_category` (
   `pagetmpl` varchar(50) NOT NULL,
   `menushow` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_category
@@ -356,13 +350,13 @@ CREATE TABLE `ur7_friend_link` (
   `url` varchar(200) DEFAULT NULL COMMENT '友情连接地址',
   `image_url` varchar(200) DEFAULT NULL COMMENT '友情连接图片地址',
   `show_order` varchar(255) DEFAULT NULL COMMENT '排序',
-  `lid` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_friend_link
 -- ----------------------------
+INSERT INTO `ur7_friend_link` VALUES ('2', '百度1', 'http://www.baidu.com', 'Uploads/link/2015-01-22/54c0692ad5f45.png', null);
 
 -- ----------------------------
 -- Table structure for `ur7_guestbook`
@@ -611,16 +605,16 @@ DROP TABLE IF EXISTS `ur7_position`;
 CREATE TABLE `ur7_position` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
-  `lid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_position
 -- ----------------------------
-INSERT INTO `ur7_position` VALUES ('1', '首页推荐', '1');
-INSERT INTO `ur7_position` VALUES ('2', '首页幻灯', '1');
-INSERT INTO `ur7_position` VALUES ('4', '热点头条', '1');
+INSERT INTO `ur7_position` VALUES ('1', '首页推荐');
+INSERT INTO `ur7_position` VALUES ('2', '首页幻灯');
+INSERT INTO `ur7_position` VALUES ('4', '热点头条');
+INSERT INTO `ur7_position` VALUES ('6', '今天头条');
 
 -- ----------------------------
 -- Table structure for `ur7_position_data`

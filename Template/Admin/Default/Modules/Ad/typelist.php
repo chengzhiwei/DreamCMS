@@ -10,7 +10,7 @@
         <table class="top_btn t_table" >
             <tr>
                 <td align="center" height="30">
-                    <a href="<?php echo U('addtype') ?>" class="np coolbg">添加分类</a>                   
+                    <a href="<?php echo U('Modules/Ad/addtype') ?>" class="np coolbg">添加分类</a>                   
                 </td>
             </tr>
         </table>

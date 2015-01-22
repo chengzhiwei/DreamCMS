@@ -4,7 +4,7 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                添加友情链接
+                添加广告分类
             </small>
         </h1>
     </div><!-- /.page-header -->
@@ -13,31 +13,14 @@
         <div class="col-xs-12">
             <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LINKNAME'); ?> </label>
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('TYPENAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="name" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LINKNAME'); ?>" id="form-field-1">
+                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('TYPENAME'); ?>" id="form-field-1">
                     </div>
                 </div>
 
                 <div class="space-4"></div>
-
-                <div class="form-group">
-                    <label for="form-field-2" class="col-sm-3 control-label no-padding-right"><?php echo L('LINKURL'); ?></label>
-
-                    <div class="col-sm-9">
-                        <input type="text" name="url" class="col-xs-10 col-sm-5" placeholder="" id="form-field-2">
-
-                    </div>
-                </div>
-                <div class="space-4"></div>
-                <div class="form-group">
-                    <label for="form-field-tags" class="col-sm-3 control-label no-padding-right">LOGO</label>
-
-                    <div class="col-sm-9">
-                        <input type="file" name="image"/>
-                    </div>
-                </div>
 
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">

@@ -16,10 +16,8 @@ namespace Model\Adomodel;
  */
 class AdTypeModel extends \Think\Model\AdvModel {
 
-    public function typelist($langid) {
-        $condition=array();
-        $condition['langid']=$langid;
-        return $this->where($condition)->select();
+    public function typelist() {
+        return $this->select();
     }
 
     public function addtype($data = array()) {
@@ -55,7 +53,15 @@ class AdTypeModel extends \Think\Model\AdvModel {
     public function updatetype($id, $data) {
         $condition = array();
         $condition['id'] = $id;
-        return $this->where($condition)->save($data);
+        $b= $this->where($condition)->save($data);
+        if($b!==false)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }

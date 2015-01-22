@@ -63,16 +63,12 @@ class CForm
     }
 
     /**
-     * 推荐位 分不同的语言 
+     * 推荐位
      */
     public static function position()
     {
-        //获取当前操作网站的语言（前台）
         $PositionMod = DD('Position');
-        $lang = \getlang();
-        $langmod = DD('Language');
-        $langinfo = $langmod->findbylang($lang);
-        $plist = $PositionMod->selbylid($langinfo['id']);
+        $plist = $PositionMod->select();
         $chk = '';
         foreach ($plist as $k => $p)
         {

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * +----------------------------------------------------------------------
  * | DreamCMS [ WE CAN  ]
@@ -10,6 +11,7 @@
  * | Author: 孔雀翎 <284909375@qq.com>
  * +----------------------------------------------------------------------
  */
+
 namespace Modules\Controller;
 
 class LinkController extends \Auth\Controller\AuthbaseController
@@ -29,21 +31,24 @@ class LinkController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
             $data = I('post.');
-            $data['lid'] = cookie('langid');
-            if ($_FILES['image']['error'] == 0)
+            unset($data['image']);
+            if ($_FILES)
             {
-                $upload = new \Think\Upload();
-                $upload->maxSize = 3292200;
-                $upload->allowExts = explode(',', 'jpg,gif,png,jpeg');
-                $upload->savePath = 'link/';
-                $info = $upload->upload();
-                if (!$info)
+                if ($_FILES['image']['error'] == 0)
                 {
-                    $this->error($upload->getError());
-                } else
-                {
-                    $up_root = str_replace('./', '', $upload->rootPath);
-                    $data['image_url'] = $up_root . $info['image']['savepath'] . $info['image']['savename'];
+                    $upload = new \Think\Upload();
+                    $upload->maxSize = 3292200;
+                    $upload->allowExts = explode(',', 'jpg,gif,png,jpeg');
+                    $upload->savePath = 'link/';
+                    $info = $upload->upload();
+                    if (!$info)
+                    {
+                        $this->error($upload->getError());
+                    } else
+                    {
+                        $up_root = str_replace('./', '', $upload->rootPath);
+                        $data['image_url'] = $up_root . $info['image']['savepath'] . $info['image']['savename'];
+                    }
                 }
             }
             $FriendLink = DD('FriendLink');
@@ -53,6 +58,8 @@ class LinkController extends \Auth\Controller\AuthbaseController
                 $this->success('添加成功');
             } else
             {
+                echo $FriendLink->getError() . $FriendLink->getDbError();
+                die();
                 $this->error('发生错误，请重试');
             }
         } else
@@ -75,41 +82,43 @@ class LinkController extends \Auth\Controller\AuthbaseController
     {
         $id = I('get.id');
         $FriendLink = DD('FriendLink');
-        $result = $FriendLink->selectbyid($id);
+        $link = $FriendLink->selectbyid($id);
         if (IS_POST)
         {
             $data = I('post.');
-            if ($_FILES['image']['error'] == 0)
+            if ($_FILES)
             {
-                $upload = new \Think\Upload();
-                $upload->maxSize = 3292200;
-                $upload->allowExts = explode(',', 'jpg,gif,png,jpeg');
-                $upload->savePath = 'link/';
-                $info = $upload->upload();
-                if (!$info)
+                if ($_FILES['image']['error'] == 0)
                 {
-                    $this->error($upload->getError());
-                } else
-                {
-                    $up_root = str_replace('./', '', $upload->rootPath);
-                    $data['image_url'] = $up_root . $info['image']['savepath'] . $info['image']['savename'];
+                    $upload = new \Think\Upload();
+                    $upload->maxSize = 3292200;
+                    $upload->allowExts = explode(',', 'jpg,gif,png,jpeg');
+                    $upload->savePath = 'link/';
+                    $info = $upload->upload();
+                    if (!$info)
+                    {
+                        $this->error($upload->getError());
+                    } else
+                    {
+                        $up_root = str_replace('./', '', $upload->rootPath);
+                        $data['image_url'] = $up_root . $info['image']['savepath'] . $info['image']['savename'];
+                        @unlink($result['image_url']);
+                    }
                 }
-                @unlink($result['image_url']);
-                $FriendLink = DD('FriendLink');
-                $result = $FriendLink->update($id, $data);
-                if ($result)
-                {
-                    $this->success('修改成功');
-                } else
-                {
+            }
+            $result = $FriendLink->update($id, $data);
+            if ($result)
+            {
+                $this->success('修改成功');
+            } else
+            {
 
-                    $this->error('发生错误，请重试');
-                }
+                $this->error('发生错误，请重试');
             }
         } else
         {
 
-            $this->assign('result', $result);
+            $this->assign('link', $link);
             $this->display();
         }
     }

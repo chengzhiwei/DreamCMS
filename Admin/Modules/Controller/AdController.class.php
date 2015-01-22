@@ -1,4 +1,5 @@
 <?php
+
 /*
  * +----------------------------------------------------------------------
  * | DreamCMS [ WE CAN  ]
@@ -10,6 +11,7 @@
  * | Author: 孔雀翎 <284909375@qq.com>
  * +----------------------------------------------------------------------
  */
+
 namespace Modules\Controller;
 
 class AdController extends \Auth\Controller\AuthbaseController
@@ -18,7 +20,7 @@ class AdController extends \Auth\Controller\AuthbaseController
     public function typelist()
     {
         $Type = DD('AdType');
-        $result = $Type->typelist(cookie('langid'));
+        $result = $Type->typelist();
         $this->assign('result', $result);
         $this->display();
     }
@@ -29,22 +31,13 @@ class AdController extends \Auth\Controller\AuthbaseController
         {
             $Type = DD('AdType');
             $data = I('post.');
-            $data['langid'] = cookie('langid');
-
-            $res = $Type->selbytitle($data['title']);
-            if (!empty($res))
+            $result = $Type->addtype($data);
+            if (!empty($result))
             {
-                $this->error('分类名称重复');
+                $this->redirect('typelist');
             } else
             {
-                $result = $Type->addtype($data);
-                if (!empty($result))
-                {
-                    $this->redirect('typelist');
-                } else
-                {
-                    $this->error('添加失败');
-                }
+                $this->error(L('OP_ERROR'));
             }
         } else
         {
@@ -57,27 +50,19 @@ class AdController extends \Auth\Controller\AuthbaseController
         $Type = DD('AdType');
         if (IS_POST)
         {
-            $res = $Type->selbytitle(I('post.title'));
-            if (!empty($res))
+
+            $b = $Type->updatetype(I('post.id'), I('post.'));
+            if ($b)
             {
-                $this->error('分类名称重复');
+                $this->redirect('typelist');
             } else
             {
-                $arr = array();
-                $arr['title'] = I('post.title');
-                $result = $Type->updatetype(I('post.id'), $arr);
-                if (!empty($result))
-                {
-                    $this->redirect('typelist');
-                } else
-                {
-                    $this->error('修改失败');
-                }
+                $this->error(L('OP_ERROR'));
             }
         } else
         {
-            $result = $Type->selbyid(I('get.id'));
-            $this->assign('result', $result);
+            $info = $Type->selbyid(I('get.id'));
+            $this->assign('info', $info);
             $this->display();
         }
     }
@@ -86,13 +71,13 @@ class AdController extends \Auth\Controller\AuthbaseController
     {
         $AdList = DD('AdList');
         $res = $AdList->selbytid(I('get.id'));
-        if ($res != '0')
+        if (count($res) != 0)
         {
             $this->error('该分类下存在广告，请先删除广告');
         } else
         {
             $Type = DD('AdType');
-            $result = $Type->deltype(I('get.id'));
+            $b = $Type->deltype(I('get.id'));
             $this->redirect('typelist');
         }
     }
@@ -100,12 +85,12 @@ class AdController extends \Auth\Controller\AuthbaseController
     public function adlist()
     {
         $AdList = DD('AdList');
-        $result = $AdList->adlist(cookie('langid'));
+        $result = $AdList->adlist();
         $Type = DD('AdType');
         foreach ($result as $key => $r)
         {
             $res = $Type->selbyid($r['tid']);
-            $result[$key]['fenlei'] = $res['title'];
+            $result[$key]['type'] = $res['title'];
         }
         $this->assign('result', $result);
         $this->display();
@@ -121,14 +106,19 @@ class AdController extends \Auth\Controller\AuthbaseController
             {
                 $arr['img'] = $imgpath;
             }
-            $arr['langid'] = cookie('langid');
-            $result = $AdList->addad($arr);
-            $this->redirect('adlist');
+            $b = $AdList->addad($arr);
+            if ($b)
+            {
+                $this->redirect('Modules/Ad/adlist');
+            } else
+            {
+                $this->error(L('OP_ERROR'));
+            }
         } else
         {
             $Type = DD('AdType');
-            $result = $Type->typelist(cookie('langid'));
-            $this->assign('result', $result);
+            $types = $Type->typelist(cookie('langid'));
+            $this->assign('types', $types);
             $this->display();
         }
     }
@@ -136,7 +126,7 @@ class AdController extends \Auth\Controller\AuthbaseController
     public function editad()
     {
         $AdList = DD('AdList');
-        $result = $AdList->selbyid(I('get.id'));
+        $adinfo = $AdList->selbyid(I('get.id'));
         if (IS_POST)
         {
             $arr = I('post.');
@@ -144,27 +134,30 @@ class AdController extends \Auth\Controller\AuthbaseController
             {
                 $imgpath = $this->upload();
                 $arr['img'] = $imgpath;
-                if ($result['img'])
+                if ($adinfo['img'])
                 {
-                    @unlink($result['img']);
+                    @unlink($adinfo['img']);
                 }
-
-                $arr['langid'] = cookie('langid');
-                $result = $AdList->updatetype(I('get.id'), $arr);
+            }
+            $b = $AdList->updatetype($arr['id'], $arr);
+            if ($b)
+            {
                 $this->redirect('adlist');
+            } else
+            {
+                echo $AdList->getDbError() . $AdList->getError();
             }
         } else
         {
             $Type = DD('AdType');
-            $res = $Type->typelist(cookie('langid'));
-            $this->assign('res', $res);
-            $this->assign('result', $result);
+            $adtype = $Type->typelist();
+            $this->assign('adtype', $adtype);
+            $this->assign('adinfo', $adinfo);
             $this->display();
         }
     }
 
-    public
-            function delad()
+    public function delad()
     {
         $AdList = DD('AdList');
         $res = $AdList->selbyid(I('get.id'));
@@ -184,8 +177,7 @@ class AdController extends \Auth\Controller\AuthbaseController
         }
     }
 
-    private
-            function upload()
+    private function upload()
     {
         if ($_FILES['img']['error'] == 0)
         {

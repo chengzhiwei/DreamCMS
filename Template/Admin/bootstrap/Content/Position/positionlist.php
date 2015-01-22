@@ -4,22 +4,20 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                友情链接
+                推荐位列表
             </small>
         </h1>
     </div><!-- /.page-header -->
 
     <div class="row">
         <div class="col-xs-12">
-            
-            
-            <div  style="padding-bottom: 10px;" class="col-xs-12 op_btn">
 
-                   
-                    <a class=" pull-right btn btn-xs btn-info" href="<?php echo U('Modules/Link/add', array('cid' => I('get.cid'))); ?>">
-                        <b>添加连接</b>
-                    </a>
-                </div>
+
+            <div  style="padding-bottom: 10px;" class="col-xs-12 op_btn">
+                <a class=" pull-right btn btn-xs btn-info" href="<?php echo U('Content/Position/add') ?>">
+                    <b>添加推荐位</b>
+                </a>
+            </div>
             <!-- PAGE CONTENT BEGINS -->
 
             <div class="row">
@@ -29,52 +27,35 @@
                             <thead>
                                 <tr>
                                     <th class="center">
-                                        名称
+                                        ID
                                     </th>
-                                    <th>地址</th>
-                                    <th>图片</th>
-
-
+                                    <th>推荐位名称</th>
                                     <th></th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <?php
-                                foreach ($links as $l)
+                                foreach ($list as $v)
                                 {
+                                    $id = $v['id'];
                                     ?>
-                                    <tr>
-                                        <td class="center">
-                                            <?php echo $l['name'];?>
-                                        </td>
-
-                                        <td>
-                                             <?php echo $l['url'];?>
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if($l['image_url']!='')
-                                            {
-                                                echo "<img src='". __ROOT__."/".$l['image_url']."' width='120px' height='60px;'/>";
-                                            }?>
-                                        </td>
-
+                                    <tr align="center">
+                                        <td><?php echo $v['id']; ?></td>
+                                        <td><?php echo $v['title']; ?></td>
                                         <td>
                                             <div class = "visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <a class = "btn btn-xs btn-info" href = "<?php echo U('Modules/Link/update', array('id' => $l['id'])) ?>">
+                                                <a class = "btn btn-xs btn-info" href = "<?php echo U('Content/Position/edit', array('id' => $v['id'])) ?>">
                                                     <i class = "icon-edit bigger-120"></i>
                                                 </a>
 
-                                                <a onclick="return confirm('确定要删除么？')" href = "<?php echo U('Modules/Link/delete', array('id' => $l['id'])) ?>" class = "btn btn-xs btn-danger">
+                                                <a onclick="return confirm('确定要删除么？')" href = "<?php echo U('Content/Position/del', array('id' => $v['id'])) ?>" class = "btn btn-xs btn-danger">
                                                     <i class = "icon-trash bigger-120"></i>
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
-                                    <?php
-                                }
-                                ?>
+<?php } ?>
                             </tbody>
                         </table>
                     </div>

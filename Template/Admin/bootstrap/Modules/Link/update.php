@@ -4,7 +4,7 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                添加友情链接
+                修改友情链接
             </small>
         </h1>
     </div><!-- /.page-header -->
@@ -16,7 +16,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LINKNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="name" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LINKNAME'); ?>" id="form-field-1">
+                        <input type="text" name="name" class="col-xs-10 col-sm-5" value="<?php echo $link['name']; ?>" placeholder="<?php echo L('LINKNAME'); ?>" id="form-field-1">
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right"><?php echo L('LINKURL'); ?></label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="url" class="col-xs-10 col-sm-5" placeholder="" id="form-field-2">
+                        <input type="text" name="url" value="<?php echo $link['url']; ?>" class="col-xs-10 col-sm-5" placeholder="" id="form-field-2">
 
                     </div>
                 </div>
@@ -36,6 +36,12 @@
 
                     <div class="col-sm-9">
                         <input type="file" name="image"/>
+                        <?php
+                        if ($link['image_url'] != '')
+                        {
+                            echo "<img src='" . __ROOT__ . "/" . $link['image_url'] . "' width='120px' height='60px;'/>";
+                        }
+                        ?>
                     </div>
                 </div>
 
