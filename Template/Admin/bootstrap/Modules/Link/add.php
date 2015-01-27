@@ -1,3 +1,6 @@
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -11,12 +14,12 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data">
+            <form role="form" class="verifyForm form-horizontal" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LINKNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="name" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LINKNAME'); ?>" id="form-field-1">
+                        <input type="text" verify='[["require","<?php echo L('LINKNAME').L('NOTNULL'); ?>"]]' name="name" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LINKNAME'); ?>" id="form-field-1">
                     </div>
                 </div>
 
@@ -26,7 +29,7 @@
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right"><?php echo L('LINKURL'); ?></label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="url" class="col-xs-10 col-sm-5" placeholder="" id="form-field-2">
+                        <input type="text" name="url" verify='[["require","<?php echo L('LINKURL').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" id="form-field-2">
 
                     </div>
                 </div>

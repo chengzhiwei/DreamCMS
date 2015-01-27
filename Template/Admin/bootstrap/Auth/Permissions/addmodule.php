@@ -1,3 +1,6 @@
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -10,12 +13,12 @@
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
 
-            <form role="form" id="groupform" class="form-horizontal" method="post">
+            <form role="form" id="groupform" class="verifyForm form-horizontal" method="post">
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('GROUPNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text"  verify='[["require","<?php echo L('GROUPNAME').L('NOTNULL'); ?>"]]'  name="title" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
 
@@ -25,7 +28,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('FLODERNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="groupname" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" name="groupname" verify='[["require","<?php echo L('FLODERNAME').L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -33,7 +36,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" name="langconf" verify='[["require","<?php echo L('LANGCONF').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
                 <div class="space-4"></div>

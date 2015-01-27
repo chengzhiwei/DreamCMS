@@ -1,4 +1,6 @@
-
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <style>
     .modal-content{border-radius:5px;}
     .modal-body {
@@ -39,7 +41,7 @@
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
 
-            <form role="form" class="form-horizontal" method="post">
+            <form role="form" class="verifyForm form-horizontal" method="post">
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_TYPE'); ?> </label>
 
@@ -107,7 +109,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('CATE_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5"  id="form-field-1">
+                        <input type="text" verify='[["require","<?php echo L('CATE_NAME').L('NOTNULL'); ?>"]]' name="title" class="col-xs-10 col-sm-5"  id="form-field-1">
                     </div>
                 </div>
                 

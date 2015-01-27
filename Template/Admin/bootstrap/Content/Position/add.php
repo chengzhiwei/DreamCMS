@@ -1,3 +1,6 @@
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -10,13 +13,13 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data">
+            <form role="form" class="verifyForm form-horizontal" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('POSITIONNAME'); ?> </label>
                      
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('POSITIONNAME'); ?>" id="form-field-1">
+                        <input type="text" verify='[["require","<?php echo L('POSITIONNAME').L('NOTNULL'); ?>"]]' name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('POSITIONNAME'); ?>" id="form-field-1">
                     </div>
                 </div>
 

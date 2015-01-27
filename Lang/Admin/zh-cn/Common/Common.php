@@ -10,6 +10,7 @@ $comm = array(
     'NOW_OPTER'=>'当前操作',
     'WELCOME'=>'欢迎光临',
     'CMS'=>'后台管理系统',
+    'NOTNULL'=>'不能为空',
 );
 return array_merge($auth, $comm);
 

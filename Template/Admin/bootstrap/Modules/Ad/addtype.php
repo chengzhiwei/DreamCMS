@@ -1,3 +1,6 @@
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -11,12 +14,12 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <form role="form" id="verifyForm" class="form-horizontal" method="post" onsubmit="return verifyForm()">
+            <form role="form" class="verifyForm form-horizontal" method="post"  >
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('TYPENAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" verify='[["require","不能为空"]]' name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('TYPENAME'); ?>" id="form-field-1">
+                        <input type="text" verify='[["require","<?php echo L('TYPENAME').L('NOTNULL'); ?>"]]' name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('TYPENAME'); ?>" id="form-field-1">
                     </div>
                 </div>
 

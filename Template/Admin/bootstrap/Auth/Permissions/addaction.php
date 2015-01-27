@@ -1,3 +1,6 @@
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <script>
     function getmodule(gid)
     {
@@ -51,7 +54,7 @@
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
 
-            <form role="form" class="form-horizontal" method="post" onsubmit="return bef_formsubmit();">
+            <form role="form" class="verifyForm form-horizontal" method="post" onsubmit="return bef_formsubmit();">
                 <input type='hidden' value="" name="group" id='hid_group' />
                 <input type='hidden' value="" name="controller"  id='hid_controller' />
                 <div class="form-group">
@@ -87,7 +90,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('ACTION_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="" >
+                        <input type="text" name="title"  verify='[["require","<?php echo L('ACTION_NAME').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" >
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -95,7 +98,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('ACTION_OP_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="action" class="col-xs-10 col-sm-5" placeholder="" id="actionopname">
+                        <input type="text" name="action" verify='[["require","<?php echo L('ACTION_OP_NAME').L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="actionopname">
                     </div>
                 </div>
 
@@ -114,7 +117,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="langconf">
+                        <input type="text" verify='[["require","<?php echo L('LANGCONF').L('NOTNULL'); ?>"]]' name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="langconf">
                     </div>
                 </div>
                 <div class="space-4"></div>

@@ -6,4 +6,5 @@ return array(
     'LINK'=>'连接地址',
     'IMAGE'=>'图片',
     'ADTYPE'=>'广告分类',
+    
 );

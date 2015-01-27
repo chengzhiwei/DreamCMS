@@ -1,3 +1,6 @@
+<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -11,12 +14,12 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <form role="form" class="form-horizontal" method="post">
+            <form role="form" class=" verifyForm form-horizontal" method="post">
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('USERNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="username" class="col-xs-10 col-sm-5" placeholder="<?php echo L('USERNAME'); ?>" id="form-field-1">
+                        <input type="text" name="username" verify='[["require","<?php echo L('USERNAME').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="<?php echo L('USERNAME'); ?>" id="form-field-1">
                     </div>
                 </div>
 
@@ -26,7 +29,7 @@
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right"><?php echo L('PASSWORD'); ?></label>
 
                     <div class="col-sm-9">
-                        <input type="password" name="pwd" class="col-xs-10 col-sm-5" placeholder="Password" id="form-field-2">
+                        <input type="password" name="pwd" verify='[["require","<?php echo L('PASSWORD').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="Password" id="form-field-2">
 
                     </div>
                 </div>
