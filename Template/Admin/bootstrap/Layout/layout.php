@@ -85,7 +85,7 @@
                             ?>
                             <li class="<?php echo $group_id == $li['id'] ? "green" : "light-blue" ?> grouplist" id="grouplist<?php echo $li['id']; ?>">
                                 <a rel="<?php echo $li['id']; ?>" data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                    <?php echo L($li['langconf']); ?>
+                                    <?php echo L($li['title']); ?>
                                 </a>
                             </li>
                         <?php }

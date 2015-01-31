@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-27 17:19:37
+Date: 2015-01-31 17:17:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `ur7_ad_list` (
   `img` varchar(100) NOT NULL,
   `tid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_ad_list
@@ -40,7 +40,7 @@ CREATE TABLE `ur7_ad_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_ad_type
@@ -78,7 +78,6 @@ CREATE TABLE `ur7_admin_auth_action` (
   `group` varchar(50) NOT NULL,
   `controller` varchar(50) NOT NULL,
   `action` varchar(50) NOT NULL,
-  `langconf` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
@@ -86,40 +85,40 @@ CREATE TABLE `ur7_admin_auth_action` (
 -- ----------------------------
 -- Records of ur7_admin_auth_action
 -- ----------------------------
-INSERT INTO `ur7_admin_auth_action` VALUES ('1', '文章列表', 'admin.php', '2', '1', 'Content', 'Content', 'index', 'ACT_CONTENT_CONTENT_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('2', '添加语言', 'admin.php', '3', '2', 'System', 'Language', 'add', 'ACT_SYSTEM_LANGUAGE_ADD', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('3', '语言列表', 'admin.php', '3', '2', 'System', 'Language', 'langlist', 'ACT_SYSTEM_LANGUAGE_LANGLIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('4', '推荐位列表', 'admin.php', '2', '3', 'Content', 'Position', 'positionlist', 'ACT_CONTENT_POSITION_POSITIONLIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('5', '添加推荐位', 'admin.php', '2', '3', 'Content', 'Position', 'add', 'ACT_CONTENT_POSITION_ADD', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('7', '删除语言', 'admin.php', '3', '2', 'System', 'Language', 'del', 'ACT_SYSTEM_LANGUAGE_DEL', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('8', '编辑语言', 'admin.php', '3', '2', 'System', 'Language', 'edit', 'ACT_SYSTEM_LANGUAGE_EDIT', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('9', '添加栏目', 'admin.php', '2', '5', 'Content', 'Category', 'add', 'ACT_CONTENT_CATEGORY_ADD', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('11', '编辑推荐位', 'admin.php', '2', '3', 'Content', 'Position', 'edit', 'ACT_CONTENT_POSITION_EDIT', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('12', '删除推荐位', 'admin.php', '2', '3', 'Content', 'Position', 'del', 'ACT_CONTENT_POSITION_DEL', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('13', ' 添加文章', 'admin.php', '2', '1', 'Content', 'Content', 'add', 'ACT_CONTENT_CONTENT_ADD', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('14', '管理员列表', 'admin.php', '4', '6', 'Auth', 'Admin', 'Index', 'ACT_AUTH_ADMIN_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('15', '管理栏目', 'admin.php', '2', '5', 'Content', 'Category', 'index', 'ACT_CONTENT_CATEGORY_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('16', '友情连接管理', 'admin.php', '5', '7', 'Modules', 'Link', 'index', 'ACT_MODULES_LINK_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('17', '添加友情连接', 'admin.php', '5', '7', 'Modules', 'Link', 'add', 'ACT_MODULES_LINK_ADD', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('19', '更新全站缓存', 'admin.php', '3', '9', 'System', 'Cache', 'clearall', 'ACT_SYSTEM_CACHE_CLEARALL', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('20', '留言列表', 'admin.php', '5', '8', 'Modules', 'Guestbook', 'index', 'ACT_MODULES_GURSTBOOK_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('21', '分类管理', 'admin.php', '5', '10', 'Modules', 'Ad', 'typelist', 'ACT_MODULES_AD_TYPELIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('22', '广告管理', 'admin.php', '5', '10', 'Modules', 'Ad', 'adlist', 'ACT_MODULES_AD_ADLIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('23', '模型列表', 'admin.php', '2', '14', 'Content', 'Model', 'index', 'ACT_CONTENT_MODEL_INDEX', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('25', ' 插件列表', 'admin.php', '6', '12', 'Plugin', 'Plugin', 'pluginlist', 'ACT_PLUGIN_PLUGIN_PLUGINLIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('26', ' 添加分组', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addgroup', 'ACT_AUTH_PERMISSION_ADDGROUP', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('27', '添加模块', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addmodule', 'ACT_AUTH_PERMISSION_ADDMODULE', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('28', '添加权限', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addaction', 'ACT_AUTH_PERMISSION_ADDACTION', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('30', '权限列表', 'admin.php', '4', '13', 'Auth', 'Permissions', 'actions', 'ACT_AUTH_PERMISSIONS_ACTIONS', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('31', '角色管理', 'admin.php', '4', '6', 'Auth', 'Admin', 'rolelist', 'ACT_AUTH_ADMIN_ROLELIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('32', '添加角色', 'admin.php', '4', '6', 'Auth', 'Admin', 'addrole', 'ACT_AUTH_ADMIN_ADDROLE', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('33', '添加模型', 'admin.php', '2', '14', 'Content', 'Model', 'addmodel', 'ACT_CONTENT_MODEL_ADDMODEL', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('34', '字段管理', 'admin.php', '2', '14', 'Content', 'Model', 'fields', 'ACT_CONTENT_MODEL_FIELDS', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('35', ' 修改权限', 'admin.php', '4', '13', 'Auth', 'Permissions', 'editaction', 'ACT_AUTH_PERMISSIONS_EDITACTION', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('36', '分组管理', 'admin.php', '4', '13', 'Auth', 'Permissions', 'grouplist', 'ACT_AUTH_PERMISSIONS_GROUPLIST', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('38', '添加字段', 'admin.php', '2', '14', 'Content', 'Model', 'addfield', 'ACT_CONTENT_MODEL_ADDFIELD', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('39', '添加管理员', 'admin.php', '4', '6', 'Auth', 'Admin', 'addadmin', 'ACT_AUTH_ADMIN_ADDADMIN', '0');
-INSERT INTO `ur7_admin_auth_action` VALUES ('40', '添加分类', 'admin.php', '5', '10', 'Component', 'Ad', 'addtype', 'ACT_COMPONENT_AD_ADDTYPE', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('1', 'ACT_CONTENT_CONTENT_INDEX', 'admin.php', '2', '1', 'Content', 'Content', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('2', 'ACT_SYSTEM_LANGUAGE_ADD', 'admin.php', '3', '2', 'System', 'Language', 'add', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('3', 'ACT_SYSTEM_LANGUAGE_LANGLIST', 'admin.php', '3', '2', 'System', 'Language', 'langlist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('4', 'ACT_CONTENT_POSITION_POSITIONLIST', 'admin.php', '2', '3', 'Content', 'Position', 'positionlist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('5', 'ACT_CONTENT_POSITION_ADD', 'admin.php', '2', '3', 'Content', 'Position', 'add', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('7', 'ACT_SYSTEM_LANGUAGE_DEL', 'admin.php', '3', '2', 'System', 'Language', 'del', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('8', 'ACT_SYSTEM_LANGUAGE_EDIT', 'admin.php', '3', '2', 'System', 'Language', 'edit', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('9', 'ACT_CONTENT_CATEGORY_ADD', 'admin.php', '2', '5', 'Content', 'Category', 'add', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('11', 'ACT_CONTENT_POSITION_EDIT', 'admin.php', '2', '3', 'Content', 'Position', 'edit', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('12', 'ACT_CONTENT_POSITION_DEL', 'admin.php', '2', '3', 'Content', 'Position', 'del', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('13', 'ACT_CONTENT_CONTENT_ADD', 'admin.php', '2', '1', 'Content', 'Content', 'add', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('14', 'ACT_AUTH_ADMIN_INDEX', 'admin.php', '4', '6', 'Auth', 'Admin', 'Index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('15', 'ACT_CONTENT_CATEGORY_INDEX', 'admin.php', '2', '5', 'Content', 'Category', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('16', 'ACT_MODULES_LINK_INDEX', 'admin.php', '5', '7', 'Modules', 'Link', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('17', 'ACT_MODULES_LINK_ADD', 'admin.php', '5', '7', 'Modules', 'Link', 'add', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('19', 'ACT_SYSTEM_CACHE_CLEARALL', 'admin.php', '3', '9', 'System', 'Cache', 'clearall', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('20', 'ACT_MODULES_GURSTBOOK_INDEX', 'admin.php', '5', '8', 'Modules', 'Guestbook', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('21', 'ACT_MODULES_AD_TYPELIST', 'admin.php', '5', '10', 'Modules', 'Ad', 'typelist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('22', 'ACT_MODULES_AD_ADLIST', 'admin.php', '5', '10', 'Modules', 'Ad', 'adlist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('23', 'ACT_CONTENT_MODEL_INDEX', 'admin.php', '2', '14', 'Content', 'Model', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('25', 'ACT_PLUGIN_PLUGIN_PLUGINLIST', 'admin.php', '6', '12', 'Plugin', 'Plugin', 'pluginlist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('26', 'ACT_AUTH_PERMISSION_ADDGROUP', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addgroup', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('27', 'ACT_AUTH_PERMISSION_ADDMODULE', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addmodule', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('28', 'ACT_AUTH_PERMISSION_ADDACTION', 'admin.php', '4', '13', 'Auth', 'Permissions', 'addaction', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('30', 'ACT_AUTH_PERMISSIONS_ACTIONS', 'admin.php', '4', '13', 'Auth', 'Permissions', 'actions', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('31', 'ACT_AUTH_ADMIN_ROLELIST', 'admin.php', '4', '6', 'Auth', 'Admin', 'rolelist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('32', 'ACT_AUTH_ADMIN_ADDROLE', 'admin.php', '4', '6', 'Auth', 'Admin', 'addrole', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('33', 'ACT_CONTENT_MODEL_ADDMODEL', 'admin.php', '2', '14', 'Content', 'Model', 'addmodel', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('34', 'ACT_CONTENT_MODEL_FIELDS', 'admin.php', '2', '14', 'Content', 'Model', 'fields', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('35', 'ACT_AUTH_PERMISSIONS_EDITACTION', 'admin.php', '4', '13', 'Auth', 'Permissions', 'editaction', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('36', 'ACT_AUTH_PERMISSIONS_GROUPLIST', 'admin.php', '4', '13', 'Auth', 'Permissions', 'grouplist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('38', 'ACT_CONTENT_MODEL_ADDFIELD', 'admin.php', '2', '14', 'Content', 'Model', 'addfield', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('39', 'ACT_AUTH_ADMIN_ADDADMIN', 'admin.php', '4', '6', 'Auth', 'Admin', 'addadmin', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('40', 'ACT_COMPONENT_AD_ADDTYPE', 'admin.php', '5', '10', 'Component', 'Ad', 'addtype', '0');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
@@ -130,7 +129,6 @@ CREATE TABLE `ur7_admin_auth_controller` (
   `title` varchar(50) NOT NULL,
   `cname` varchar(50) NOT NULL,
   `gid` int(11) NOT NULL,
-  `langconf` varchar(50) NOT NULL,
   `cls` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
@@ -138,18 +136,18 @@ CREATE TABLE `ur7_admin_auth_controller` (
 -- ----------------------------
 -- Records of ur7_admin_auth_controller
 -- ----------------------------
-INSERT INTO `ur7_admin_auth_controller` VALUES ('1', '内容管理', 'Content', '2', 'CTL_CONTENT', 'icon-pencil');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('2', '语言管理', 'Language', '3', 'CTL_LANGUAGE', 'icon-flag');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('3', '推荐位管理', 'Position', '2', 'CTL_POSITION', 'icon-tag');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('5', '栏目管理', 'Category', '2', 'CTL_CATEGORY', 'icon-align-justify');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('6', '管理员管理', 'Admin', '4', 'CTL_ADMIN', ' icon-user');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('7', '友情链接', 'Link', '5', 'CTL_LINK', 'icon-link');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('8', '留言板', 'Gustbook', '5', 'CTL_GUSTBOOK', 'icon-comment');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('9', '缓存管理', 'Cache', '3', 'CTL_CACHE', 'icon-trash');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('10', '广告管理', 'Ad', '5', 'CTL_AD', 'icon-bullhorn');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('12', '插件管理', 'Plugin', '6', 'CTL_PLUGIN', 'icon-resize-full');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('13', '权限管理', 'Permissions', '4', 'CTL_PERMISSIONS', 'icon-eye-close');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('14', '模型管理', 'Model', '2', 'CTL_MODEL', 'icon-hdd');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('1', 'CTL_CONTENT', 'Content', '2', 'icon-pencil');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('2', 'CTL_LANGUAGE', 'Language', '3', 'icon-flag');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('3', 'CTL_POSITION', 'Position', '2', 'icon-tag');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('5', 'CTL_CATEGORY', 'Category', '2', 'icon-align-justify');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('6', 'CTL_ADMIN', 'Admin', '4', 'icon-user');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('7', 'CTL_LINK', 'Link', '5', 'icon-link');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('8', 'CTL_GUSTBOOK', 'Gustbook', '5', 'icon-comment');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('9', 'CTL_CACHE', 'Cache', '3', 'icon-trash');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('10', 'CTL_AD', 'Ad', '5', 'icon-bullhorn');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('12', 'CTL_PLUGIN', 'Plugin', '6', 'icon-resize-full');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('13', 'CTL_PERMISSIONS', 'Permissions', '4', 'icon-eye-close');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('14', 'CTL_MODEL', 'Model', '2', 'icon-hdd');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_group`
@@ -159,7 +157,6 @@ CREATE TABLE `ur7_admin_auth_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
   `groupname` varchar(50) NOT NULL,
-  `langconf` varchar(50) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
@@ -167,11 +164,11 @@ CREATE TABLE `ur7_admin_auth_group` (
 -- ----------------------------
 -- Records of ur7_admin_auth_group
 -- ----------------------------
-INSERT INTO `ur7_admin_auth_group` VALUES ('2', '内容管理', 'Content', 'GROUP_CONTENT', '0');
-INSERT INTO `ur7_admin_auth_group` VALUES ('3', '系统设置', 'System', 'GROUP_SYSTEM', '2');
-INSERT INTO `ur7_admin_auth_group` VALUES ('4', '权限分配', 'Auth', 'GROUP_AUTH', '1');
-INSERT INTO `ur7_admin_auth_group` VALUES ('5', '模块组件', 'Component', 'GROUP_COMPONENT', '3');
-INSERT INTO `ur7_admin_auth_group` VALUES ('6', '插件钩子', 'Plugin', 'GROUP_PLUGIN', '4');
+INSERT INTO `ur7_admin_auth_group` VALUES ('2', '内容管理', 'Content', '0');
+INSERT INTO `ur7_admin_auth_group` VALUES ('3', '系统设置', 'System', '2');
+INSERT INTO `ur7_admin_auth_group` VALUES ('4', '权限分配', 'Auth', '1');
+INSERT INTO `ur7_admin_auth_group` VALUES ('5', '模块组件', 'Component', '3');
+INSERT INTO `ur7_admin_auth_group` VALUES ('6', '插件钩子', 'Plugin', '4');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_group`
@@ -322,7 +319,7 @@ CREATE TABLE `ur7_category` (
   `pagetmpl` varchar(50) NOT NULL,
   `menushow` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_category
@@ -571,13 +568,14 @@ CREATE TABLE `ur7_plugin` (
   `desc` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_plugin
 -- ----------------------------
 INSERT INTO `ur7_plugin` VALUES ('26', 'PLG_WEBUPLOAD_NAME', 'WebUpload', 'PLG_WEBUPLOAD_DESC', '1');
 INSERT INTO `ur7_plugin` VALUES ('27', 'PLG_UEDITOR_NAME', 'Ueditor', 'PLG_UEDITOR_DESC', '1');
+INSERT INTO `ur7_plugin` VALUES ('33', 'PLG_COLLECTION_NAME', 'Collection', 'PLG_COLLECTION_DESC', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin_res`

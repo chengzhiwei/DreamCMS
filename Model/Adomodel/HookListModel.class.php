@@ -55,4 +55,15 @@ class HookListModel extends \Think\Model\AdvModel
         return $this->where($condition)->find();
     }
 
+    /**
+     * 根据一组编号修改状态
+     * @param int $status
+     * @param array $ids
+     */
+    public function updateStatusByIds($status, $ids = array())
+    {
+        $condition = array('id' => array('in', $ids));
+        return $this->where($condition)->save(array('status' => $status));
+    }
+
 }

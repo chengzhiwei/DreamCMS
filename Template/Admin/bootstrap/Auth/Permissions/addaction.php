@@ -66,7 +66,7 @@
                             foreach ($grouplist as $key => $li)
                             {
                                 ?>
-                                <option value="<?php echo $li['id']; ?>" groupname="<?php echo $li['groupname'] ?>"><?php echo L($li['langconf']) ?></option>
+                                <option value="<?php echo $li['id']; ?>" groupname="<?php echo $li['groupname'] ?>"><?php echo L($li['title']) ?></option>
                                 <?php
                             }
                             ?>

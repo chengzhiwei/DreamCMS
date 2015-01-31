@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <name>PLG_COLLECTION_NAME</name>
+    <author>Dream CMS</author>
+    <contact>Dream CMS@***.com</contact>
+    <desc>PLG_COLLECTION_DESC</desc>
+    <admin>
+        <operation>
+            <path>Admin/index</path>
+            <name>PLG_COLLECTION_LIST</name>
+            <menu_group>5</menu_group>
+            <menu_module>PLG_COLLECTION_MODULE</menu_module>
+            <res>
+                <js></js>
+                <css></css>
+            </res>
+            <ismenu>1</ismenu>
+        </operation>
+        
+        <operation>
+            <path>Admin/index</path>
+            <name>PLG_COLLECTION_ADD</name>
+            <menu_group>5</menu_group>
+            <menu_module>PLG_COLLECTION_MODULE</menu_module>
+            <res>
+                <js></js>
+                <css></css>
+            </res>
+            <ismenu>1</ismenu>
+        </operation>
+        
+    </admin>
+</root>

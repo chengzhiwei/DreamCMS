@@ -64,4 +64,24 @@ class IncludeLang
         }
     }
 
+    /**
+     * 
+     * @param string $Floder
+     * @param string $app
+     */
+    public static function IncFloder($Floder, $app = '')
+    {
+        $app_name = $app == '' ? APP_NAME : $app;
+        $Floderpath = 'Lang' . DS . $app_name . DS . \getlang() . DS . $Floder;
+        $it = new \DirectoryIterator($Floderpath);
+        foreach ($it as $file)
+        {
+            if (!$it->isDot())
+            {
+                $langfile = $Floderpath . DS . $file;
+                self::IncFile($langfile);
+            }
+        }
+    }
+
 }

@@ -82,13 +82,14 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 list($control, $action) = $path_arr;
                 $menu_group = (string) $op->menu_group;
                 $menu_module = (string) $op->menu_module;
-                ctype_digit($menu_group) == true ? $menu_gid = ctype_digit($menu_group) : $menu_gid = 0;
-                ctype_digit($menu_module) == true ? $menu_mid = ctype_digit($menu_module) : $menu_mid = 0;
-
+                ctype_digit($menu_group) == true ? $menu_gid = intval($menu_group) : $menu_gid = 0;
+                ctype_digit($menu_module) == true ? $menu_mid = intval($menu_module) : $menu_mid = 0;
+                
                 //添加新分组
                 if ($menu_gid == 0)
                 {
                     $AdminAuthGroup = DD('AdminAuthGroup');
+                    //根据langconf 查询 
                     $groupdata = array(
                         'title' => '', 'groupname' => $plugin, 'langconf' => $menu_group,
                     );
@@ -103,7 +104,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 if ($menu_mid == 0)
                 {
                     $control_data = array(
-                        'title' => '', 'cname' => $control, 'gid' => $menu_gid, 'lanconf' => $menu_module, 'cls' => 'icon-resize-full',
+                        'title' => '', 'cname' => $control, 'gid' => $menu_gid, 'langconf' => $menu_module, 'cls' => 'icon-resize-full',
                     );
                     $AdminAuthController = DD('AdminAuthController');
                     $b = $AdminAuthController->add($control_data);
@@ -169,7 +170,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
             foreach ($pluginfo->vhooks->vhook as $vhook)
             {
                 $data = array(
-                    'name' => (string)$vhook->name, 'path' => $plugin . '/' . (string) $vhook->class, 'method' => (string) $vhook->method, 'type' => '1',
+                    'name' => (string) $vhook->name, 'path' => $plugin . '/' . (string) $vhook->class, 'method' => (string) $vhook->method, 'type' => '1',
                     'pid' => $pluginid, 'js' => (string) $vhook->res->js, 'css' => (string) $vhook->res->css,
                 );
                 if ((string) $vhook->hookpos)
@@ -185,7 +186,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
             foreach ($pluginfo->bhooks->bhook as $bhook)
             {
                 $data = array(
-                    'name' => (string)$bhook->name, 'path' => $plugin . '/' . (string) $bhook->class, 'method' => (string) $bhook->method, 'type' => '2',
+                    'name' => (string) $bhook->name, 'path' => $plugin . '/' . (string) $bhook->class, 'method' => (string) $bhook->method, 'type' => '2',
                     'pid' => $pluginid, 'js' => (string) $bhook->res->js, 'css' => (string) $bhook->res->css,
                 );
                 if ((string) $bhook->hookpos)
@@ -238,9 +239,31 @@ class PluginController extends \Auth\Controller\AuthbaseController
 
     /**
      * 配置插件
+     * 
      */
     public function doconfigure()
     {
+        //处理视图钩子
+        $pid = I('post.pid');
+        $postvhookids = I('post.vhookids');
+        $hooklistMod = DD('HookList');
+        $vhooklist = $hooklistMod->selbypid($pid);
+        $vhookids = array();
+        foreach ($vhooklist as $k => $v)
+        {
+            $vhookids[] = $v['id'];
+        }
+        $intersectvhook = array_intersect($postvhookids, $vhookids); //交集
+        $diffvhook = array_diff($vhookids, $postvhookids); //差集
+        $hooklistMod->updateStatusByIds(1, $intersectvhook); //交集启用
+        $hooklistMod->updateStatusByIds(0, $diffvhook); //差集停用
+        //处理业务钩子
+        $postbhookids = I('post.bhookids');
+        $intersectbhook = array_intersect($postbhookids, $vhookids); //交集
+        $diffbhook = array_diff($vhookids, $postbhookids); //差集
+        $hooklistMod->updateStatusByIds(1, $intersectbhook); //交集启用
+        $hooklistMod->updateStatusByIds(0, $diffbhook); //差集停用
+        
         
     }
 
@@ -253,6 +276,13 @@ class PluginController extends \Auth\Controller\AuthbaseController
         {
             //插件编号
             $pid = I('post.pid');
+
+            //插件基本信息
+            $pluginMod = DD('Plugin');
+            $plugininfo = $pluginMod->findbyid($pid);
+            //加载语言包
+            \Org\Helper\IncludeLang::IncFloder($plugininfo['filetitle'], 'Plugin');
+
             //获取前台插件
             $PluginResMod = DD('PluginRes');
             $siteplugin = $PluginResMod->selByTypePid(1, $pid);
@@ -272,14 +302,18 @@ class PluginController extends \Auth\Controller\AuthbaseController
             }
             //获取视图钩子
             $hooklistMod = DD('HookList');
-            $vhoodlist = $hooklistMod->selbyPidType($pid, 1);
+            $vhooklist = $hooklistMod->selbyPidType($pid, 1);
+            foreach ($vhooklist as $k => $vh)
+            {
+                $vhooklist[$k]['name'] = L($vh['name']);
+            }
             //获取业务钩子
-            $bhoodlist = $hooklistMod->selbyPidType($pid, 2);
+            $bhooklist = $hooklistMod->selbyPidType($pid, 2);
             $config = array(
                 'siteplugin' => $siteplugin,
                 'adminplugin' => $adminplugin,
-                'vhoodlist' => $vhoodlist,
-                'bhoodlist' => $bhoodlist,
+                'vhooklist' => $vhooklist,
+                'bhooklist' => $bhooklist,
             );
             echo json_encode($config);
         }

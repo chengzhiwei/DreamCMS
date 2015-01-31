@@ -30,4 +30,5 @@ class AdminAuthGroupModel extends \Think\Model\AdvModel
     {
         return $this->order($order)->select();
     }
+    
 }

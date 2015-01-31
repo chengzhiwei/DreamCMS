@@ -30,6 +30,7 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
 
     private function _common()
     {
+        \Org\Helper\IncludeLang::QuickInc('Auth/Permissions');//加载语言包
         $authgroupmodel = DD('AdminAuthGroup');
         $authgrouplist = $authgroupmodel->selall();
         $this->assign('authgrouplist', $authgrouplist);

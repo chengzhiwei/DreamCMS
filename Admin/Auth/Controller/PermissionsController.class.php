@@ -28,14 +28,9 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-
-            /* 获取多语言参数
-              '多言语参数'=>分组名写到语言包
-             *              */
             $data = I('post.');
-            $path = 'Lang/Admin/zh-cn/Common/Comm_auth.php';
-            $conf = array($data['langconf'] => $data['title']);
-            \writeconf($path, $conf);
+            $setlang = new \Org\Helper\SetLang();
+            $setlang->setOneLang($data['langconf'], $data['title']); //设置语言
             $arr = array();
             $groupmodel = DD('AdminAuthGroup');
             $b = $groupmodel->addgroup();
@@ -102,7 +97,7 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
             $list = $ctlmod->selbygid(I('post.gid'));
             foreach ($list as $key => $val)
             {
-                $list[$key]['title'] = L($val['langconf']);
+                $list[$key]['title'] = L($val['title']);
             }
             echo json_encode($list);
         }

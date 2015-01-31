@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse<?php echo $key; ?>">
-                                <?php echo L($g['langconf']); ?>
+                                <?php echo L($g['title']); ?>
                             </a>
                         </h4>
                     </div>
@@ -37,12 +37,12 @@
                             {
                                 ?>
                                 <fieldset class="control-label">
-                                    <legend><?php echo L($ct['langconf']); ?></legend>
+                                    <legend><?php echo L($ct['title']); ?></legend>
                                     <?php
                                     foreach ($actlist[$ct['id']] as $al)
                                     {
                                         ?>
-                                        <lable class="col-sm-2 "><?php echo L($al['langconf']); ?> <a href="#" class="icon-remove"></a>
+                                        <lable class="col-sm-2 "><?php echo L($al['title']); ?> <a href="#" class="icon-remove"></a>
                                             <a href="<?php echo U('Auth/Permissions/editaction',array('id'=>$al['id'])); ?>" class="icon-edit"></a>
                                         </lable>
                                     <?php }

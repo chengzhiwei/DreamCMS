@@ -14,6 +14,16 @@
             <!-- PAGE CONTENT BEGINS -->
 
             <div class="row">
+                
+                <div class="col-xs-12 op_btn" style="padding-bottom: 10px;">
+
+                    <a href="<?php echo U('Auth/Permissions/addgroup');?>" class=" pull-right btn btn-xs btn-info ">
+                        <b>添加分组</b>
+                    </a>
+                    
+                </div>
+                
+                
                 <div class="col-xs-12">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover" id="sample-table-1">
@@ -50,7 +60,7 @@
                                             <input type="text" value="" style=" width: 40px;" />
                                         </td>
                                         
-                                        <td><?php echo L($li['langconf']); ?></td>
+                                        <td><?php echo L($li['title']); ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">

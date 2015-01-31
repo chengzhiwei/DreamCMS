@@ -1,7 +1,6 @@
 <?php
 
-$auth = include 'Comm_auth.php';
-$comm = array(
+return $comm = array(
     'ADD' => '添加',
     'RESET' => '重置',
     'CANCEL' => '取消',
@@ -12,5 +11,4 @@ $comm = array(
     'CMS'=>'后台管理系统',
     'NOTNULL'=>'不能为空',
 );
-return array_merge($auth, $comm);
 
