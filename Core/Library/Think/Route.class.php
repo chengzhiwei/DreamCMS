@@ -18,7 +18,6 @@ class Route {
     public static function check(){
         $depr   =   C('URL_PATHINFO_DEPR');
         $regx   =   preg_replace('/\.'.__EXT__.'$/i','',trim($_SERVER['PATH_INFO'],$depr));
-        
         // 分隔符替换 确保路由定义使用统一的分隔符
         if('/' != $depr){
             $regx = str_replace($depr,'/',$regx);
@@ -45,7 +44,7 @@ class Route {
                         // URL后缀检测
                         continue;
                     }
-                    if(isset($options['method']) && REQUEST_METHOD != $options['method']){
+                    if(isset($options['method']) && REQUEST_METHOD != strtoupper($options['method'])){
                         // 请求类型检测
                         continue;
                     }

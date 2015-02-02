@@ -120,15 +120,17 @@ class Dispatcher {
             // URL后缀
             define('__EXT__', strtolower(pathinfo($_SERVER['PATH_INFO'],PATHINFO_EXTENSION)));
             $_SERVER['PATH_INFO'] = __INFO__;     
-            if (__INFO__ && !defined('BIND_MODULE') && C('MULTI_MODULE')){ // 获取模块名
-                $paths      =   explode($depr,__INFO__,2);
-                $allowList  =   C('MODULE_ALLOW_LIST'); // 允许的模块列表
-                $module     =   preg_replace('/\.' . __EXT__ . '$/i', '',$paths[0]);
-                if( empty($allowList) || (is_array($allowList) && in_array_case($module, $allowList))){
-                    $_GET[$varModule]       =   $module;
-                    $_SERVER['PATH_INFO']   =   isset($paths[1])?$paths[1]:'';
+            if(!defined('BIND_MODULE') && (!C('URL_ROUTER_ON') || !Route::check())){
+                if (__INFO__ && C('MULTI_MODULE')){ // 获取模块名
+                    $paths      =   explode($depr,__INFO__,2);
+                    $allowList  =   C('MODULE_ALLOW_LIST'); // 允许的模块列表
+                    $module     =   preg_replace('/\.' . __EXT__ . '$/i', '',$paths[0]);
+                    if( empty($allowList) || (is_array($allowList) && in_array_case($module, $allowList))){
+                        $_GET[$varModule]       =   $module;
+                        $_SERVER['PATH_INFO']   =   isset($paths[1])?$paths[1]:'';
+                    }
                 }
-            }                   
+            }             
         }
 
         // URL常量
@@ -136,13 +138,15 @@ class Dispatcher {
 
         // 获取模块名称
         define('MODULE_NAME', defined('BIND_MODULE')? BIND_MODULE : self::getModule($varModule));
-
+        
         // 检测模块是否存在
         if( MODULE_NAME && (defined('BIND_MODULE') || !in_array_case(MODULE_NAME,C('MODULE_DENY_LIST')) ) && is_dir(APP_PATH.MODULE_NAME)){
             // 定义当前模块路径
             define('MODULE_PATH', APP_PATH.MODULE_NAME.'/');
             // 定义当前模块的模版缓存路径
             C('CACHE_PATH',CACHE_PATH.MODULE_NAME.'/');
+            // 定义当前模块的日志目录
+	        C('LOG_PATH',  realpath(LOG_PATH).'/'.MODULE_NAME.'/');
 
             // 模块检测
             Hook::listen('module_check');
@@ -248,7 +252,7 @@ class Dispatcher {
      * 获得控制器的命名空间路径 便于插件机制访问
      */
     static private function getSpace($var,$urlCase) {
-        $space  =   !empty($_GET[$var])?ucfirst($var).'\\'.strip_tags($_GET[$var]):'';
+        $space  =   !empty($_GET[$var])?strip_tags($_GET[$var]):'';
         unset($_GET[$var]);
         return $space;
     }

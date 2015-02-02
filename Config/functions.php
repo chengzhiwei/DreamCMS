@@ -20,6 +20,10 @@ function DD($adomodel, $arg = array(), $ext = 'Ado')
     //反射
     $RefCls = new ReflectionClass($newmodel);
     //实例化 传参给构造函数
+    if(!$arg)
+    {
+        $arg=array($adomodel);
+    }
     $newmodel_obj = $RefCls->newInstanceArgs($arg);
     $_adomodel[$staticStr] = $newmodel_obj;
     return $newmodel_obj;

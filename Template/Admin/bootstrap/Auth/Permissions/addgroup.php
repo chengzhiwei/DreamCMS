@@ -15,7 +15,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('GROUPNAME');?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" name="titlename" class="col-xs-10 col-sm-5" placeholder="" id="titlename">
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF');?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="" id="title">
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -60,4 +60,11 @@
     </div>
 </div>
 
-<script></script>
+<script>
+    $(function(){
+        $('#groupname').blur(function(){
+            title=$(this).val().toUpperCase();
+                $('#title').val('GROUP_'+title);
+        });
+    });
+</script>

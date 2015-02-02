@@ -19,7 +19,6 @@ class ContentController extends \Auth\Controller\AuthbaseController
 
     public function index()
     {
-
         $Category = DD('Category');
         $catelist = $Category->selectall($this->OpSiteLangInfo['id']);
         Vendor('Unlimitedclass.Unlimitedclass', '', '.class.php');

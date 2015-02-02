@@ -18,7 +18,7 @@ class ModelModel extends \Think\Model\AdvModel
         }
         if ($this->create($data))
         {
-            if ($this->add($data))
+            if ($this->add())
             {
                 return true;
             } else

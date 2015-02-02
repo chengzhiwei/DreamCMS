@@ -30,7 +30,7 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         {
             $data = I('post.');
             $setlang = new \Org\Helper\SetLang();
-            $setlang->setOneLang($data['langconf'], $data['title']); //设置语言
+            $setlang->setOneLang($data['title'], $data['titlename']); //设置语言
             $arr = array();
             $groupmodel = DD('AdminAuthGroup');
             $b = $groupmodel->addgroup();
@@ -183,4 +183,22 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         }
     }
 
+    public function sortgroup()
+    {
+        $id = I('post.id');
+        $sort = I('post.sort');
+        $authgroup = DD('AdminAuthGroup');
+        $b = $authgroup->updateSort($sort, $id);
+        $result = 0;
+        $b == true ? $result = 1 : $result = 0;
+        echo $result;
+    }
+    
+    /**
+     * 删除分组
+     */
+    public function delgroup()
+    {
+        
+    }
 }

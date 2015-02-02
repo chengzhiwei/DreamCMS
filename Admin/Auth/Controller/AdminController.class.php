@@ -14,6 +14,7 @@ class AdminController extends AuthbaseController
 
     public function addadmin()
     {
+      
         if (IS_POST)
         {
             $adomodel = DD('Admin');

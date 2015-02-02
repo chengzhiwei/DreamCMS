@@ -14,31 +14,23 @@
             <!-- PAGE CONTENT BEGINS -->
 
             <div class="row">
-                
+
                 <div class="col-xs-12 op_btn" style="padding-bottom: 10px;">
 
-                    <a href="<?php echo U('Auth/Permissions/addgroup');?>" class=" pull-right btn btn-xs btn-info ">
+                    <a href="<?php echo U('Auth/Permissions/addgroup'); ?>" class=" pull-right btn btn-xs btn-info ">
                         <b>添加分组</b>
                     </a>
-                    
+
                 </div>
-                
-                
+
+
                 <div class="col-xs-12">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover" id="sample-table-1">
                             <thead>
                                 <tr>
-                                    <th class="center">
-                                        <label>
-                                            <input type="checkbox" class="ace">
-                                            <span class="lbl"></span>
-                                        </label>
-                                    </th>
                                     <th><?php echo L('SORT'); ?></th>
                                     <th><?php echo L('GROUPNAME'); ?></th>
-
-
                                     <th></th>
                                 </tr>
                             </thead>
@@ -49,25 +41,14 @@
                                 {
                                     ?>
                                     <tr>
-                                        <td class="center">
-                                            <label>
-                                                <input type="checkbox" class="ace">
-                                                <span class="lbl"></span>
-                                            </label>
+                                        <td>
+                                            <input type="text" rel="<?php echo $li['id']; ?>" value="<?php echo $li['sort']; ?>" class="sort" style=" width: 40px;" />
                                         </td>
 
-                                        <td>
-                                            <input type="text" value="" style=" width: 40px;" />
-                                        </td>
-                                        
                                         <td><?php echo L($li['title']); ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <button class="btn btn-xs btn-success">
-                                                    <i class="icon-ok bigger-120"></i>
-                                                </button>
-
                                                 <button class="btn btn-xs btn-info">
                                                     <i class="icon-edit bigger-120"></i>
                                                 </button>
@@ -76,9 +57,7 @@
                                                     <i class="icon-trash bigger-120"></i>
                                                 </button>
 
-                                                <button class="btn btn-xs btn-warning">
-                                                    <i class="icon-flag bigger-120"></i>
-                                                </button>
+
                                             </div>
 
                                             <div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -124,10 +103,36 @@
 
                             </tbody>
                         </table>
-                    </div><!-- /.table-responsive -->
-                </div><!-- /span -->
-            </div><!-- /row -->
-
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script>
+    $(function () {
+        $('.sort').blur(function () {
+            var id = $(this).attr('rel');
+            var sort = $(this).val();
+            $obj = $(this);
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo U('Auth/Permissions/sortgroup'); ?>',
+                data: {id: id, sort: sort},
+                dataType: 'text',
+                success: function (data) {
+                    if (data == '1')
+                    {
+                        $obj.css('border', 'solid 1px green');
+                    }
+                    else
+                    {
+                        $obj.css('border', 'solid 1px red');
+                    }
+                }
+
+            });
+
+        });
+    })
+</script>
