@@ -27,7 +27,7 @@
 
         $('#actionopname').blur(function () {
             langconf = 'ACT_' + rtnselattr($('.sel_group'), 'groupname').toUpperCase() + '_' + rtnselattr($('.sel_module'), 'cname').toUpperCase() + '_' + $(this).val().toUpperCase();
-            $('#langconf').val(langconf);
+            $('#title').val(langconf);
 
         });
     });
@@ -90,7 +90,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('ACTION_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title"  verify='[["require","<?php echo L('ACTION_NAME').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" >
+                        <input type="text" name="titlename" id="titlename" verify='[["require","<?php echo L('ACTION_NAME').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" >
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -117,7 +117,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" verify='[["require","<?php echo L('LANGCONF').L('NOTNULL'); ?>"]]' name="langconf" class="col-xs-10 col-sm-5" placeholder="" id="langconf">
+                        <input type="text" verify='[["require","<?php echo L('LANGCONF').L('NOTNULL'); ?>"]]' name="title" class="col-xs-10 col-sm-5" placeholder="" id="title">
                     </div>
                 </div>
                 <div class="space-4"></div>

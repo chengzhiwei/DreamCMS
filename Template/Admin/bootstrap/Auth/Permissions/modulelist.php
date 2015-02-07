@@ -4,7 +4,7 @@
 
             <small>
                 <i class="icon-double-angle-right"></i>
-                分组管理
+                模块管理
             </small>
         </h1>
     </div><!-- /.page-header -->
@@ -17,8 +17,8 @@
 
                 <div class="col-xs-12 op_btn" style="padding-bottom: 10px;">
 
-                    <a href="<?php echo U('Auth/Permissions/addgroup'); ?>" class=" pull-right btn btn-xs btn-info ">
-                        <b>添加分组</b>
+                    <a href="<?php echo U('Auth/Permissions/addmodule'); ?>" class=" pull-right btn btn-xs btn-info ">
+                        <b>添加模块</b>
                     </a>
 
                 </div>
@@ -29,7 +29,7 @@
                         <table class="table table-striped table-bordered table-hover" id="sample-table-1">
                             <thead>
                                 <tr>
-                                    <th><?php echo L('SORT'); ?></th>
+                                    <th><?php echo L('MODULENAME'); ?></th>
                                     <th><?php echo L('GROUPNAME'); ?></th>
                                     <th></th>
                                 </tr>
@@ -37,15 +37,15 @@
 
                             <tbody>
                                 <?php
-                                foreach ($grouplist as $li)
+                                foreach ($modulelist as $ml)
                                 {
                                     ?>
                                     <tr>
                                         <td>
-                                            <input type="text" rel="<?php echo $li['id']; ?>" value="<?php echo $li['sort']; ?>" class="sort" style=" width: 40px;" />
+                                            <?php echo L($ml['title']); ?>
                                         </td>
 
-                                        <td><?php echo L($li['title']); ?></td>
+                                        <td><?php echo L($grouplist[$ml['gid']]['title']); ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">

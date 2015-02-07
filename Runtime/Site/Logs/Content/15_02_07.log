@@ -1,0 +1,65 @@
+[ 2015-02-07T09:37:57+08:00 ] 127.0.0.1 /Dreamcms/Template/Admin/bootstrap/Layout/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:Template
+
+[ 2015-02-07T14:09:20+08:00 ] 127.0.0.1 /Dreamcms/Template/Admin/bootstrap/Layout/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Template
+
+[ 2015-02-07T14:09:20+08:00 ] 127.0.0.1 /Dreamcms/Template/Admin/bootstrap/Layout/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Template
+
+[ 2015-02-07T14:09:24+08:00 ] 127.0.0.1 /Dreamcms/Template/Admin/bootstrap/Layout/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:Template
+
+[ 2015-02-07T14:09:36+08:00 ] 127.0.0.1 /Dreamcms/Template/Admin/bootstrap/Layout/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:Template
+

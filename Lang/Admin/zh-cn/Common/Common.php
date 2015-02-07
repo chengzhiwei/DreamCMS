@@ -10,5 +10,6 @@ return $comm = array(
     'WELCOME'=>'欢迎光临',
     'CMS'=>'后台管理系统',
     'NOTNULL'=>'不能为空',
+    'SUREDELETE'=>'确定要删除么？',
 );
 

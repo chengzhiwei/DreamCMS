@@ -18,7 +18,28 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('GROUPNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text"  verify='[["require","<?php echo L('GROUPNAME').L('NOTNULL'); ?>"]]'  name="title" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+
+                        <select name="gid">
+                            <?php
+                            foreach ($grouplist as $gl)
+                            {
+                                ?>
+                                <option value="<?php echo $gl['id']; ?>"><?php echo L($gl['title']); ?></option>
+                                <?php
+                            }
+                            ?>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('MODULENAME'); ?> </label>
+
+                    <div class="col-sm-9">
+                        <input type="text" name="titlename" id="titlename" verify='[["require","<?php echo L('MODULENAME') . L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
 
@@ -28,15 +49,17 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('FLODERNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="groupname" verify='[["require","<?php echo L('FLODERNAME').L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" id="groupname" name="groupname" verify='[["require","<?php echo L('FLODERNAME') . L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
+
+
                 <div class="space-4"></div>
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" verify='[["require","<?php echo L('LANGCONF').L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" id="title" name="title" verify='[["require","<?php echo L('LANGCONF') . L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -63,7 +86,12 @@
     </div><!-- /.row -->
 </div>
 <script>
-    $(function(){
+    $(function () {
         $("#groupform").validate();
+         $('#groupname').blur(function () {
+            title = $(this).val().toUpperCase();
+            $('#title').val('CTL_' + title);
+        });
     });
+
 </script>

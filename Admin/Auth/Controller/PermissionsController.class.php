@@ -58,9 +58,14 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
     {
         if (IS_POST)
         {
-            
+            //写入语言包
+            $setlang = new \Org\Helper\SetLang();
+            $setlang->setOneLang(I('post.title'), I('post.titlename')); //设置语言
         } else
         {
+            $groupmod = DD('AdminAuthGroup');
+            $grouplist = $groupmod->select();
+            $this->assign('grouplist', $grouplist);
             $this->display();
         }
     }
@@ -70,9 +75,8 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         if (IS_POST)
         {
             $data = I('post.');
-            $path = 'Common/Comm_auth.php';
-            $setlang = new \Org\Helper\SetLang($path, true);
-            $setlang->setOneLang($data['langconf'], $data['title']);
+            $setlang = new \Org\Helper\SetLang();
+            $setlang->setOneLang($data['title'], $data['titlename']);
             $actionmod = DD('AdminAuthAction');
             $b = $actionmod->addAction();
             if ($b)
@@ -193,12 +197,68 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         $b == true ? $result = 1 : $result = 0;
         echo $result;
     }
-    
+
     /**
      * 删除分组
      */
     public function delgroup()
     {
-        
+        $id = I('get.id');
+        $AdminAuthGroup = DD('AdminAuthGroup');
+        $groupinfo = $AdminAuthGroup->findById($id);
+        $setlang = new \Org\Helper\SetLang();
+        $setlang->delOneLang($groupinfo['title']); //删除语言
+        $b = $AdminAuthGroup->delById($id);
+        if ($b)
+        {
+            $this->success(L('OP_SUCCESS'), U('Auth/Permissions/grouplist'));
+        }
+        $this->error(L('OP_ERROR'));
     }
+
+    /**
+     * 编辑分组
+     */
+    public function editgroup()
+    {
+        $id = I('id');
+        $AdminAuthGroup = DD('AdminAuthGroup');
+        $groupinfo = $AdminAuthGroup->findById($id);
+        if (IS_POST)
+        {
+            if (I('post.title') != $groupinfo['title'])
+            {
+                $setlang = new \Org\Helper\SetLang();
+                $setlang->delOneLang($groupinfo['title']); //删除语言
+                $setlang->setOneLang(I('post.title'), I('post.titlename')); //设置语言
+            }
+            $b = $AdminAuthGroup->update(I('post.id'));
+            if ($b)
+            {
+                $this->success(L('OP_SUCCESS'), U('Auth/Permissions/grouplist'));
+            }
+            $this->error(L('OP_ERROR'));
+        } else
+        {
+            $this->assign('groupinfo', $groupinfo);
+            $this->display();
+        }
+    }
+
+    public function modulelist()
+    {
+        $modulemod = DD('AdminAuthController');
+        $modulelist = $modulemod->select();
+        $groupmod = DD('AdminAuthGroup');
+        $grouplist = $groupmod->select();
+        $newgrouplist = array();
+        foreach ($grouplist as $gl)
+        {
+            $newgrouplist[$gl['id']] = $gl;
+        }
+        $this->assign('modulelist', $modulelist);
+        $this->assign('grouplist', $newgrouplist);
+        $this->display();
+    }
+
 }

@@ -23,7 +23,7 @@ class AdvModel extends Model {
     protected $_filter          =   array();
     protected $partition        =   array();
 
-    public function __construct($name='',$tablePrefix='',$connection='') {echo $name.'123';
+    public function __construct($name='',$tablePrefix='',$connection='') {
         if('' !== $name || is_subclass_of($this,'\Think\Model\AdvModel') ){
             // 如果是AdvModel子类或者有传入模型名称则获取字段缓存
         }else{

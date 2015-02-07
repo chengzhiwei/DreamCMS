@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-01-31 17:17:26
+Date: 2015-02-07 17:20:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,7 +80,7 @@ CREATE TABLE `ur7_admin_auth_action` (
   `action` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -119,6 +119,7 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('36', 'ACT_AUTH_PERMISSIONS_GROUPLIS
 INSERT INTO `ur7_admin_auth_action` VALUES ('38', 'ACT_CONTENT_MODEL_ADDFIELD', 'admin.php', '2', '14', 'Content', 'Model', 'addfield', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('39', 'ACT_AUTH_ADMIN_ADDADMIN', 'admin.php', '4', '6', 'Auth', 'Admin', 'addadmin', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('40', 'ACT_COMPONENT_AD_ADDTYPE', 'admin.php', '5', '10', 'Component', 'Ad', 'addtype', '0');
+INSERT INTO `ur7_admin_auth_action` VALUES ('41', 'ACT_AUTH_PERMISSIONS_MODULELIST', 'admin.php', '4', '13', 'Auth', 'Permissions', 'modulelist', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
@@ -159,16 +160,16 @@ CREATE TABLE `ur7_admin_auth_group` (
   `groupname` varchar(50) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_group
 -- ----------------------------
-INSERT INTO `ur7_admin_auth_group` VALUES ('2', '内容管理', 'Content', '0');
-INSERT INTO `ur7_admin_auth_group` VALUES ('3', '系统设置', 'System', '2');
-INSERT INTO `ur7_admin_auth_group` VALUES ('4', '权限分配', 'Auth', '1');
-INSERT INTO `ur7_admin_auth_group` VALUES ('5', '模块组件', 'Component', '3');
-INSERT INTO `ur7_admin_auth_group` VALUES ('6', '插件钩子', 'Plugin', '4');
+INSERT INTO `ur7_admin_auth_group` VALUES ('2', 'GROUP_CONTENT', 'Content', '0');
+INSERT INTO `ur7_admin_auth_group` VALUES ('3', 'GROUP_SYSTEM', 'System', '2');
+INSERT INTO `ur7_admin_auth_group` VALUES ('4', 'GROUP_AUTH', 'Auth', '1');
+INSERT INTO `ur7_admin_auth_group` VALUES ('5', 'GROUP_COMPONENT', 'Component', '3');
+INSERT INTO `ur7_admin_auth_group` VALUES ('6', 'GROUP_PLUGIN', 'Plugin', '4');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_group`

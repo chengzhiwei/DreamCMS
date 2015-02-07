@@ -9,6 +9,7 @@ class AdminAuthGroupModel extends \Think\Model\AdvModel
     {
         parent::__construct($name, $tablePrefix, $connection);
     }
+
     public function addgroup($data = array())
     {
         if (!$data)
@@ -48,6 +49,42 @@ class AdminAuthGroupModel extends \Think\Model\AdvModel
             return false;
         }
         return true;
+    }
+
+    /**
+     * 根据ID 查询 
+     * @param int $id
+     */
+    public function findById($id)
+    {
+        return $this->where(array('id' => $id))->find();
+    }
+
+    /**
+     * 修改
+     * @param int $id
+     * @param array $data
+     */
+    public function update($id, $data = array())
+    {
+        if (!$data)
+        {
+            $data = I('post.');
+        }
+        if ($this->create($data))
+        {
+            $b = $this->where(array('id' => $id))->save();
+            if ($b !== false)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function delById($id)
+    {
+        return $this->where(array('id' => $id))->delete();
     }
 
 }
