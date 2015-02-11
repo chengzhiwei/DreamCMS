@@ -61,6 +61,15 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
             //写入语言包
             $setlang = new \Org\Helper\SetLang();
             $setlang->setOneLang(I('post.title'), I('post.titlename')); //设置语言
+            $ctrMod = DD('AdminAuthController');
+            $b = $ctrMod->add();
+            if ($b)
+            {
+                $this->success(L('OP_SUCCESS'));
+            } else
+            {
+                $this->success(L('OP_ERROR'));
+            }
         } else
         {
             $groupmod = DD('AdminAuthGroup');
@@ -138,10 +147,12 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
     {
         if (IS_AJAX)
         {
-            $id = I('get.id');
+            $id = I('post.id');
             $actmod = DD('AdminAuthAction');
+            $actioninfo = $actmod->findByID($id);
+            $setlang = new \Org\Helper\SetLang();
+            $setlang->delOneLang($actioninfo['title']); //删除语言
             $b = $actmod->delAction($id);
-            $info = array();
             if ($b)
             {
                 echo 1;
@@ -154,6 +165,9 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
 
     public function editaction()
     {
+        $id = I('id');
+        $actmod = DD('AdminAuthAction');
+        $actioninfo = $actmod->findByID($id);
         if (IS_POST)
         {
             $data = I('post.');
@@ -161,7 +175,12 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
             {
                 $data['isshow'] = 0;
             }
-            $id = I('post.id');
+            if (I('post.title') != $actioninfo['title'])
+            {
+                $setlang = new \Org\Helper\SetLang();
+                $setlang->delOneLang($actioninfo['title']); //删除语言
+                $setlang->setOneLang(I('post.title'), I('post.titlename')); //设置语言
+            }
             $actmod = DD('AdminAuthAction');
             $b = $actmod->edit($id, $data);
             if ($b)
@@ -173,9 +192,7 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
             }
         } else
         {
-            $id = I('get.id');
-            $actmod = DD('AdminAuthAction');
-            $actioninfo = $actmod->findByID($id);
+
             $groupmod = DD('AdminAuthGroup');
             $grouplist = $groupmod->selall();
             $ctlmod = DD('AdminAuthController');
@@ -259,6 +276,57 @@ class PermissionsController extends \Auth\Controller\AuthbaseController
         $this->assign('modulelist', $modulelist);
         $this->assign('grouplist', $newgrouplist);
         $this->display();
+    }
+
+    public function delmodule()
+    {
+        $id = I('get.id');
+        $ctrMod = DD('AdminAuthController');
+        $moduleinfo = $ctrMod->find($id);
+        $setlang = new \Org\Helper\SetLang();
+        $setlang->delOneLang($moduleinfo['title']); //删除语言
+        $b = $ctrMod->delByID($id);
+        if ($b)
+        {
+            $this->success(L('OP_SUCCESS'));
+        } else
+        {
+            $this->error(L('OP_ERROR'));
+        }
+    }
+
+    /**
+     * 编辑模块
+     */
+    public function editmodule()
+    {
+        $id = I('id');
+        $ctrMod = DD('AdminAuthController');
+        $moduleinfo = $ctrMod->find($id);
+        if (IS_POST)
+        {
+            if (I('post.title') != $moduleinfo['title'])
+            {
+                $setlang = new \Org\Helper\SetLang();
+                $setlang->delOneLang($moduleinfo['title']); //删除语言
+                $setlang->setOneLang(I('post.title'), I('post.titlename')); //设置语言
+            }
+            $b = $ctrMod->editModule($id);
+            if ($b)
+            {
+                $this->success(L('OP_SUCCESS'));
+            } else
+            {
+                $this->error(L('OP_ERROR'));
+            }
+        } else
+        {
+            $groupmod = DD('AdminAuthGroup');
+            $grouplist = $groupmod->select();
+            $this->assign('grouplist', $grouplist);
+            $this->assign('moduleinfo', $moduleinfo);
+            $this->display();
+        }
     }
 
 }

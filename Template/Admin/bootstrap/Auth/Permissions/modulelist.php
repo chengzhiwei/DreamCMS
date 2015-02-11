@@ -49,11 +49,11 @@
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-                                                <a onclick="return confirm('<?php echo L('SUREDELETE')?>')" href="<?php echo U('Auth/Permissions/delgroup',array('id'=>$li['id']))?>" class="btn btn-xs btn-info">
+                                                <a href="<?php echo U('Auth/Permissions/editmodule',array('id'=>$ml['id']))?>" class="btn btn-xs btn-info">
                                                     <i class="icon-edit bigger-120"></i>
                                                 </a>
 
-                                                <a  href="<?php echo U('Auth/Permissions/editgroup',array('id'=>$li['id']))?>" class="btn btn-xs btn-danger">
+                                                <a  onclick="return confirm('<?php echo L('SUREDELETE')?>')"  href="<?php echo U('Auth/Permissions/delmodule',array('id'=>$ml['id']))?>" class="btn btn-xs btn-danger">
                                                     <i class="icon-trash bigger-120"></i>
                                                 </a>
 

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-02-07 17:20:39
+Date: 2015-02-11 17:26:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,7 +80,7 @@ CREATE TABLE `ur7_admin_auth_action` (
   `action` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -120,6 +120,8 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('38', 'ACT_CONTENT_MODEL_ADDFIELD', 
 INSERT INTO `ur7_admin_auth_action` VALUES ('39', 'ACT_AUTH_ADMIN_ADDADMIN', 'admin.php', '4', '6', 'Auth', 'Admin', 'addadmin', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('40', 'ACT_COMPONENT_AD_ADDTYPE', 'admin.php', '5', '10', 'Component', 'Ad', 'addtype', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('41', 'ACT_AUTH_PERMISSIONS_MODULELIST', 'admin.php', '4', '13', 'Auth', 'Permissions', 'modulelist', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('52', 'PLG_COLLECTION_LIST', 'plugin.php', '5', '21', 'Collection', 'Admin', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('53', 'PLG_COLLECTION_ADD', 'plugin.php', '5', '21', 'Collection', 'Admin', 'add', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
@@ -130,25 +132,28 @@ CREATE TABLE `ur7_admin_auth_controller` (
   `title` varchar(50) NOT NULL,
   `cname` varchar(50) NOT NULL,
   `gid` int(11) NOT NULL,
-  `cls` varchar(50) DEFAULT NULL,
+  `cls` varchar(50) DEFAULT 'icon-align-justify',
+  `app` varchar(50) DEFAULT NULL,
+  `appname` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_controller
 -- ----------------------------
-INSERT INTO `ur7_admin_auth_controller` VALUES ('1', 'CTL_CONTENT', 'Content', '2', 'icon-pencil');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('2', 'CTL_LANGUAGE', 'Language', '3', 'icon-flag');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('3', 'CTL_POSITION', 'Position', '2', 'icon-tag');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('5', 'CTL_CATEGORY', 'Category', '2', 'icon-align-justify');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('6', 'CTL_ADMIN', 'Admin', '4', 'icon-user');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('7', 'CTL_LINK', 'Link', '5', 'icon-link');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('8', 'CTL_GUSTBOOK', 'Gustbook', '5', 'icon-comment');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('9', 'CTL_CACHE', 'Cache', '3', 'icon-trash');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('10', 'CTL_AD', 'Ad', '5', 'icon-bullhorn');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('12', 'CTL_PLUGIN', 'Plugin', '6', 'icon-resize-full');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('13', 'CTL_PERMISSIONS', 'Permissions', '4', 'icon-eye-close');
-INSERT INTO `ur7_admin_auth_controller` VALUES ('14', 'CTL_MODEL', 'Model', '2', 'icon-hdd');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('1', 'CTL_CONTENT', 'Content', '2', 'icon-pencil', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('2', 'CTL_LANGUAGE', 'Language', '3', 'icon-flag', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('3', 'CTL_POSITION', 'Position', '2', 'icon-tag', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('5', 'CTL_CATEGORY', 'Category', '2', 'icon-align-justify', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('6', 'CTL_ADMIN', 'Admin', '4', 'icon-user', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('7', 'CTL_LINK', 'Link', '5', 'icon-link', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('8', 'CTL_GUSTBOOK', 'Gustbook', '5', 'icon-comment', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('9', 'CTL_CACHE', 'Cache', '3', 'icon-trash', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('10', 'CTL_AD', 'Ad', '5', 'icon-bullhorn', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('12', 'CTL_PLUGIN', 'Plugin', '6', 'icon-resize-full', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('13', 'CTL_PERMISSIONS', 'Permissions', '4', 'icon-eye-close', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('14', 'CTL_MODEL', 'Model', '2', 'icon-hdd', null, null);
+INSERT INTO `ur7_admin_auth_controller` VALUES ('21', 'PLG_COLLECTION_MODULE', 'Admin', '5', 'icon-resize-full', 'plugin.php', 'Collection');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_group`
@@ -159,17 +164,18 @@ CREATE TABLE `ur7_admin_auth_group` (
   `title` varchar(50) NOT NULL,
   `groupname` varchar(50) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
+  `app` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_group
 -- ----------------------------
-INSERT INTO `ur7_admin_auth_group` VALUES ('2', 'GROUP_CONTENT', 'Content', '0');
-INSERT INTO `ur7_admin_auth_group` VALUES ('3', 'GROUP_SYSTEM', 'System', '2');
-INSERT INTO `ur7_admin_auth_group` VALUES ('4', 'GROUP_AUTH', 'Auth', '1');
-INSERT INTO `ur7_admin_auth_group` VALUES ('5', 'GROUP_COMPONENT', 'Component', '3');
-INSERT INTO `ur7_admin_auth_group` VALUES ('6', 'GROUP_PLUGIN', 'Plugin', '4');
+INSERT INTO `ur7_admin_auth_group` VALUES ('2', 'GROUP_CONTENT', 'Content', '0', '');
+INSERT INTO `ur7_admin_auth_group` VALUES ('3', 'GROUP_SYSTEM', 'System', '2', '');
+INSERT INTO `ur7_admin_auth_group` VALUES ('4', 'GROUP_AUTH', 'Auth', '1', '');
+INSERT INTO `ur7_admin_auth_group` VALUES ('5', 'GROUP_COMPONENT', 'Component', '3', '');
+INSERT INTO `ur7_admin_auth_group` VALUES ('6', 'GROUP_PLUGIN', 'Plugin', '4', '');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_group`
@@ -569,14 +575,14 @@ CREATE TABLE `ur7_plugin` (
   `desc` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_plugin
 -- ----------------------------
 INSERT INTO `ur7_plugin` VALUES ('26', 'PLG_WEBUPLOAD_NAME', 'WebUpload', 'PLG_WEBUPLOAD_DESC', '1');
 INSERT INTO `ur7_plugin` VALUES ('27', 'PLG_UEDITOR_NAME', 'Ueditor', 'PLG_UEDITOR_DESC', '1');
-INSERT INTO `ur7_plugin` VALUES ('33', 'PLG_COLLECTION_NAME', 'Collection', 'PLG_COLLECTION_DESC', '1');
+INSERT INTO `ur7_plugin` VALUES ('37', 'PLG_COLLECTION_NAME', 'Collection', 'PLG_COLLECTION_DESC', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin_res`

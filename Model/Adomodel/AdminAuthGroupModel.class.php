@@ -87,4 +87,9 @@ class AdminAuthGroupModel extends \Think\Model\AdvModel
         return $this->where(array('id' => $id))->delete();
     }
 
+    public function findByTitle($title)
+    {
+        return $this->where(array('title' => $title))->find();
+    }
+
 }

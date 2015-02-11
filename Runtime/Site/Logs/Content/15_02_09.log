@@ -1,0 +1,125 @@
+[ 2015-02-09T10:25:36+08:00 ] 127.0.0.1 /Dreamcms/Template/Admin/bootstrap/Layout/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+ERR: 无法加载控制器:Template
+
+[ 2015-02-09T13:59:44+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T14:43:47+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T14:52:50+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T14:53:14+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:04:53+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:05:04+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:09:07+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:09:49+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:28:17+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:36:08+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:36:08+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:39:27+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:41:23+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+
+[ 2015-02-09T15:41:23+08:00 ] 127.0.0.1 /Dreamcms/Template/Plugin/Test/Res/thumb.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] include_once(D:\xampp\htdocs\DreamCMS/Router/Site/Content.php): failed to open stream: No such file or directory D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] include_once(): Failed opening 'D:\xampp\htdocs\DreamCMS/Router/Site/Content.php' for inclusion (include_path='.;\xampp\php\PEAR') D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 3 行.
+NOTIC: [2] array_merge(): Argument #1 is not an array D:\xampp\htdocs\DreamCMS\Site\Content\Conf\config.php 第 7 行.
+

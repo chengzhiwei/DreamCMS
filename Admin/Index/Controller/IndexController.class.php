@@ -9,13 +9,6 @@ class IndexController extends \Auth\Controller\AuthbaseController
 
     public function index()
     {
-        /*$menu = \Common\Cls\AuthCls:: menu();
-        $langmodel = DD('Language');
-        $langlist = $langmodel->selectall();
-        $admin = session('admin');
-        $this->assign('langlist', $langlist);
-        $this->assign('menu', $menu);
-        $this->assign('admin', $admin);*/
         $this->display();
     }
 
@@ -29,6 +22,10 @@ class IndexController extends \Auth\Controller\AuthbaseController
             $ctl_arr = array();
             foreach ($controllerlist as $key => $li)
             {
+                if($li['app']=='plugin.php')
+                {
+                    \Org\Helper\IncludeLang::QuickInc($li['appname'].'/'. strtolower($li['appname']),'plugin');//加载插件语言包
+                }
                 $li['title'] = L($li['title']);
                 $ctl_arr[$li['id']] = $li;
             }
@@ -38,6 +35,7 @@ class IndexController extends \Auth\Controller\AuthbaseController
             $ac_arr = array();
             foreach ($actionlist as $key => $ac)
             {
+               
                 $ac['title']=L($ac['title']);
                 $ac['url'] = URL($ac['group'] . '/' . $ac['controller'] . '/' . $ac['action'], '', $ac['app']);
                 $ac_arr[$ac['cid']][] = $ac;

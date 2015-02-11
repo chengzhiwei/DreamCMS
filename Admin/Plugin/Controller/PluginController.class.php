@@ -84,41 +84,56 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 $menu_module = (string) $op->menu_module;
                 ctype_digit($menu_group) == true ? $menu_gid = intval($menu_group) : $menu_gid = 0;
                 ctype_digit($menu_module) == true ? $menu_mid = intval($menu_module) : $menu_mid = 0;
-                
+
                 //添加新分组
                 if ($menu_gid == 0)
                 {
                     $AdminAuthGroup = DD('AdminAuthGroup');
-                    //根据langconf 查询 
-                    $groupdata = array(
-                        'title' => '', 'groupname' => $plugin, 'langconf' => $menu_group,
-                    );
-                    $b = $AdminAuthGroup->addgroup($groupdata);
-                    if ($b)
+                    $groupinfo = $AdminAuthGroup->findByTitle($menu_group);
+                    if ($groupinfo)
                     {
-                        $menu_gid = $AdminAuthGroup->getLastInsID();
+                        $menu_gid = $groupinfo['id'];
+                    } else
+                    {
+                        //根据langconf 查询 
+                        $groupdata = array(
+                            'title' => $menu_group, 'groupname' => $plugin, 'app' => 'plugin.php',
+                        );
+                        $b = $AdminAuthGroup->addgroup($groupdata);
+                        if ($b)
+                        {
+                            $menu_gid = $AdminAuthGroup->getLastInsID();
+                        }
                     }
                 }
 
                 //添加新Controller
                 if ($menu_mid == 0)
                 {
-                    $control_data = array(
-                        'title' => '', 'cname' => $control, 'gid' => $menu_gid, 'langconf' => $menu_module, 'cls' => 'icon-resize-full',
-                    );
                     $AdminAuthController = DD('AdminAuthController');
-                    $b = $AdminAuthController->add($control_data);
-                    if ($b)
+                    $ctrinfo = $AdminAuthController->findByTitle($menu_module);
+                    if ($ctrinfo)
                     {
-                        $menu_mid = $AdminAuthController->getLastInsID();
+                        $menu_mid = $ctrinfo['id'];
+                    } else
+                    {
+                        $control_data = array(
+                            'title' => $menu_module, 'cname' => $control,
+                            'gid' => $menu_gid, 'cls' => 'icon-resize-full',
+                            'app' => 'plugin.php', 'appname' => $plugin,
+                        );
+                        $b = $AdminAuthController->add($control_data);
+                        if ($b)
+                        {
+                            $menu_mid = $AdminAuthController->getLastInsID();
+                        }
                     }
                 }
 
                 //添加Action
                 $action_data = array(
-                    'title' => '', 'app' => 'plugin.php', 'gid' => $menu_gid, 'cid' => $menu_mid,
+                    'title' => (string) $op->name, 'app' => 'plugin.php', 'gid' => $menu_gid, 'cid' => $menu_mid,
                     'group' => $plugin, 'controller' => $control, 'action' => $action,
-                    'langconf' => (string) $op->name,
                 );
                 if (isset($op->ismenu))
                 {
@@ -263,8 +278,6 @@ class PluginController extends \Auth\Controller\AuthbaseController
         $diffbhook = array_diff($vhookids, $postbhookids); //差集
         $hooklistMod->updateStatusByIds(1, $intersectbhook); //交集启用
         $hooklistMod->updateStatusByIds(0, $diffbhook); //差集停用
-        
-        
     }
 
     /**

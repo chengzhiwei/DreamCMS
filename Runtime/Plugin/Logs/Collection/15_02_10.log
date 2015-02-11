@@ -1,0 +1,1840 @@
+[ 2015-02-10T08:46:17+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:48:15+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-02-10T08:50:46+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:52:36+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:54:14+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:55:05+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-02-10T08:55:15+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:55:58+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:56:18+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:56:24+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-02-10T08:56:39+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:56:51+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:57:01+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:57:22+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:57:33+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:57:39+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:57:45+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:57:53+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:58:20+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:58:47+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:58:57+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:59:02+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T08:59:43+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T08:59:54+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-02-10T08:59:59+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:00:05+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:01:12+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T09:01:44+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:02:14+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T09:03:39+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:03:51+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:04:08+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:04:14+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:04:15+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T09:04:32+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:04:40+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:50:36+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.018002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027003s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-02-10T09:53:49+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:53:57+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:54:03+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T09:59:02+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T10:00:41+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T10:38:45+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T10:40:12+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T11:03:27+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.024000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-02-10T11:18:06+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T11:18:34+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T11:18:37+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T11:19:42+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T11:19:54+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T11:20:30+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T11:22:10+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T11:23:26+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T11:24:04+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T11:42:51+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T11:42:52+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:19:47+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.3710s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-02-10T14:19:57+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T14:20:38+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T14:21:54+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:22:14+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:22:39+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T14:30:51+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:36:27+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:37:25+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:51:38+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T14:52:59+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T14:53:50+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-02-10T14:55:58+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:56:11+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:56:53+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:58:10+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T14:58:54+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015002s ]
+
+[ 2015-02-10T14:59:35+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-02-10T15:00:22+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T15:33:40+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.252454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.084151s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.207373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.291524s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+ERR: SQLSTATE[HY000] [2002] ����Ŀ�����������ܾ����޷����ӡ�
+
+
+[ 2015-02-10T16:06:06+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.023000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0960s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-02-10T17:25:10+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T17:25:22+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T17:28:49+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T17:28:51+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T17:29:11+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T17:29:12+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-10T17:29:13+08:00 ] 127.0.0.1 /Dreamcms/plugin.php/Collection/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [2048] Declaration of Common\Controller\AdminpluginController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\AdminpluginController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

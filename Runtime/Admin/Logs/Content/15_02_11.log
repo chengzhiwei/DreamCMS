@@ -1,0 +1,55 @@
+[ 2015-02-11T13:44:08+08:00 ] 127.0.0.1 /Dreamcms/admin.php/Content/Content/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.022002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023002s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_category` [ RunTime:0.1350s ]
+SQL: SELECT * FROM `ur7_category` WHERE `langid` = 1 ORDER BY sort  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_model` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `ur7_model`  [ RunTime:0.0000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-02-11T13:44:14+08:00 ] 127.0.0.1 /Dreamcms/admin.php/Content/Content/editpage/mid/-1/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Content' AND `controller` = 'Content' AND `action` = 'editpage' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_page` [ RunTime:0.1260s ]
+SQL: SELECT * FROM `ur7_page` WHERE `cid` = 1 LIMIT 1   [ RunTime:0.0150s ]
+NOTIC: [2048] Declaration of Common\Controller\SitevhookController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Plugin\Common\Controller\SitevhookController.class.php 第 38 行.
+NOTIC: [8] Undefined index: Ueditor\Hook\Vhook D:\xampp\htdocs\DreamCMS\Config\functions.php 第 268 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: validator D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Content\Content\editpage.php 第 117 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+

@@ -11,6 +11,7 @@ class AdminpluginController extends \Auth\Controller\AuthbaseController
     {
         C('IS_LAYOUT', true);
         C('TMPL_ENGINE_TYPE', 'PHP');
+        \Org\Helper\IncludeLang::QuickInc('Common/Common', 'Admin'); //加载语言包
         parent::__construct();
     }
 

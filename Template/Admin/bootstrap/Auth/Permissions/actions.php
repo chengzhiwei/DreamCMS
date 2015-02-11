@@ -42,8 +42,8 @@
                                     foreach ($actlist[$ct['id']] as $al)
                                     {
                                         ?>
-                                        <lable class="col-sm-2 "><?php echo L($al['title']); ?> <a href="#" class="icon-remove"></a>
-                                            <a href="<?php echo U('Auth/Permissions/editaction',array('id'=>$al['id'])); ?>" class="icon-edit"></a>
+                                        <lable class="col-sm-2 "><?php echo L($al['title']); ?> <a id="delid_<?php echo $al['id']; ?>" onclick="return confirm('<?php echo L('SUREDELETE') ?>')" href="javascript:delaction(<?php echo $al['id']; ?>)" class="icon-remove"></a>
+                                            <a href="<?php echo U('Auth/Permissions/editaction', array('id' => $al['id'])); ?>" class="icon-edit"></a>
                                         </lable>
                                     <?php }
                                     ?>
@@ -65,3 +65,20 @@
 
 </div>
 
+<script>
+    function delaction(id)
+    {
+        $.ajax({
+            type: "post",
+            url: "<?php echo U('Auth/Permissions/delaction') ?>",
+            data: {id: id},
+            dataType: 'text',
+            success: function (data) {
+                if (data == 1)
+                {
+                    $('#delid_' + id).parent().remove();
+                }
+            }
+        });
+    }
+</script>

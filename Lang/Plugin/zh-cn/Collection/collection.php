@@ -6,5 +6,6 @@ return array(
     'PLG_COLLECTION_LIST'=>'采集列表',
     'PLG_COLLECTION_MODULE'=>'采集管理',
     'PLG_COLLECTION_ADD'=>'添加采集',
+    'PLG_COLLECTION_MODULE'=>'采集模块',
 );
 

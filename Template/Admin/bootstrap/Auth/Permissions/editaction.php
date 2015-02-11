@@ -30,7 +30,7 @@
 
         $('#actionopname').blur(function () {
             langconf = 'ACT_' + rtnselattr($('.sel_group'), 'groupname').toUpperCase() + '_' + rtnselattr($('.sel_module'), 'cname').toUpperCase() + '_' + $(this).val().toUpperCase();
-            $('#langconf').val(langconf);
+            $('#title').val(langconf);
 
         });
     });
@@ -70,7 +70,7 @@
                             foreach ($grouplist as $key => $li)
                             {
                                 ?>
-                                <option value="<?php echo $li['id']; ?>" <?php echo $actioninfo['gid'] == $li['id'] ? "selected=selected" : "" ?> groupname="<?php echo $li['groupname'] ?>"><?php echo L($li['langconf']) ?></option>
+                                <option value="<?php echo $li['id']; ?>" <?php echo $actioninfo['gid'] == $li['id'] ? "selected=selected" : "" ?> groupname="<?php echo $li['groupname'] ?>"><?php echo L($li['title']) ?></option>
                                 <?php
                             }
                             ?>
@@ -94,7 +94,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('ACTION_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" value=" <?php echo L($actioninfo['langconf']); ?>"  class="col-xs-10 col-sm-5" placeholder="" >
+                        <input type="text" name="titlename" id="titlename" value=" <?php echo L($actioninfo['title']); ?>"  class="col-xs-10 col-sm-5" placeholder="" >
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -121,7 +121,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" value="<?php echo $actioninfo['langconf']; ?>" class="col-xs-10 col-sm-5" placeholder="" id="langconf">
+                        <input type="text" name="title" value="<?php echo $actioninfo['title']; ?>" class="col-xs-10 col-sm-5" placeholder="" id="title">
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -143,12 +143,7 @@
                 </div>
 
                 <div class="hr hr-24"></div>
-
-
-
             </form>
-
-
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+        </div>
+    </div>
 </div>

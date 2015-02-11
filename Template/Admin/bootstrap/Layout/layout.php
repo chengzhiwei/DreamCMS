@@ -24,9 +24,6 @@
         <!-- inline styles related to this page -->
 
         <!-- ace settings handler -->
-
-
-
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
         <!--[if lt IE 9]>
@@ -51,7 +48,7 @@
         </script>
         <![endif]-->
 
-
+        <script src="<?php echo JS_PATH ?>ace-extra.min.js"></script>
     </head>
 
     <body> 

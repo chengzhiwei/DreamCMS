@@ -4,7 +4,7 @@
 <div class="page-content">
     <div class="page-header">
         <h1>
-            添加模块
+            编辑模块
 
         </h1>
     </div><!-- /.page-header -->
@@ -14,9 +14,9 @@
             <!-- PAGE CONTENT BEGINS -->
 
             <form role="form" id="groupform" class="verifyForm form-horizontal" method="post">
+                <input type="hidden" name="id" value="<?php echo $moduleinfo['id']?>" />
                 <div class="form-group">
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('GROUPNAME'); ?> </label>
-
                     <div class="col-sm-9">
 
                         <select name="gid">
@@ -24,7 +24,7 @@
                             foreach ($grouplist as $gl)
                             {
                                 ?>
-                                <option value="<?php echo $gl['id']; ?>"><?php echo L($gl['title']); ?></option>
+                            <option  <?php echo $gl['id']==$moduleinfo['gid']?'selected="selected"':""?> value="<?php echo $gl['id']; ?>"><?php echo L($gl['title']); ?></option>
                                 <?php
                             }
                             ?>
@@ -39,7 +39,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('MODULENAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="titlename" id="titlename" verify='[["require","<?php echo L('MODULENAME') . L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" name="titlename" value="<?php echo L($moduleinfo['title']);?>" id="titlename" verify='[["require","<?php echo L('MODULENAME') . L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('FLODERNAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" id="cname" name="cname" verify='[["require","<?php echo L('FLODERNAME') . L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text" id="cname" value="<?php echo $moduleinfo['cname'];?>" name="cname" verify='[["require","<?php echo L('FLODERNAME') . L('NOTNULL'); ?>"]]'  class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" id="title" name="title" verify='[["require","<?php echo L('LANGCONF') . L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+                        <input type="text"  value="<?php echo $moduleinfo['title'];?>" id="title" name="title" verify='[["require","<?php echo L('LANGCONF') . L('NOTNULL'); ?>"]]' class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
                     </div>
                 </div>
                 <div class="space-4"></div>
