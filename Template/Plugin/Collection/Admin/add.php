@@ -54,13 +54,13 @@
 
                                                 <div class="col-xs-12 col-sm-5">
                                                     <span class="block input-icon input-icon-right">
-                                                        <select>
+                                                        <select id="mid">
                                                             <?php
                                                             foreach ($modellist as $li)
                                                             {
                                                                 ?>
-                                                                <option><?php echo L($li['title']);?></option>
-                                                                <?php }
+                                                            <option value="<?php echo $li['id'];?>"><?php echo L($li['title']); ?></option>
+                                                            <?php }
                                                             ?>
 
                                                         </select>
@@ -127,14 +127,8 @@
                                     <div id="step2" class="step-pane">
                                         <form id="sample-form" class="form-horizontal ">
                                             <div class="pull-left  col-xs-12 col-sm-3 ">
-                                                <ul class="list-unstyled spaced2 col-xs-12 col-sm-12 control-label no-padding-right">
-                                                    <a href="javascript:void(0)" rel="title"  class="fieldlist"><li>标题 </li></a>
-                                                    <li>内容</li>
-                                                    <li>缩略图</li>
-                                                    <li>标题</li>
-                                                    <li>标题</li>
-                                                    <li>标题</li>
-                                                    <li>标题</li>
+                                                <ul id="fieldlist" class="list-unstyled spaced2 col-xs-12 col-sm-12 control-label no-padding-right">
+                                                   
                                                 </ul>
                                             </div>
                                             <div class="pull-left  col-xs-9  has-warning">
@@ -143,7 +137,7 @@
                                                     <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"  id="setwho">设置规则</label>
                                                     <div class="col-xs-12 col-sm-8">
                                                         <span class="block input-icon-right">
-                                                            <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">对象</label>
+                                                            <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">类型</label>
                                                             <span class="block input-icon pull-left col-sm-4">
                                                                 <select class="datatype" autocomplete="off">
                                                                     <option value="0">单条数据</option>
@@ -264,7 +258,27 @@
     <script src="http://www.daimajiayuan.com/download/201312/yulan/ace/assets/js/ace-elements.min.js"></script>
     <script type="text/javascript">
         jQuery(function ($) {
-            $('#fuelux-wizard').ace_wizard();
+            $('#fuelux-wizard').ace_wizard().on('change', function (e, info) {
+                if (info.step == 1)
+                {
+                    $.ajax({
+                        type: "post",
+                        url: "<?php echo URL('Collection/Admin/getfields','','Plugin.php'); ?>",
+                        data: {mid: $('#mid').val()},
+                        dataType: "json",
+                        success: function (data) {
+                            var html = '';
+                            $.each(data, function (i, item) {
+                                html += '<li><a href="javascript:void(0)"   class="fieldlist">';
+                                html += item.title;
+                                html += '</a></li>';
+                            });
+                            $('#fieldlist').html(html);
+                        }
+
+                    });
+                }
+            });
         })
         $(function () {
             $('.muiltdiv').hide();
@@ -284,9 +298,9 @@
 
         });
         $(function () {
-            $('.fieldlist').click(function () {
+            $(document).on('click', '.fieldlist', function() {
+              
                 $('#setwho').html('设置' + $(this).text());
-
             });
             $('#setrulebtn').click(function () {
                 nowsetfield = $('#nowsetfield').val();
