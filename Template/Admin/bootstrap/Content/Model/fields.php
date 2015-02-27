@@ -53,7 +53,7 @@
                                         <td class="center">
                                             <input type="text" fid='<?php echo $f['id']; ?>' value='<?php echo $f['sort']; ?>' class='fieldsort' style=" width: 40px;" />
                                         </td>
-                                        <td> <?php echo l($f['langconf']); ?></td>
+                                        <td> <?php echo L($f['title']); ?></td>
 
                                         <td>
                                             <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">

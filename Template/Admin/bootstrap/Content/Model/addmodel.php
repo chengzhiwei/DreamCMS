@@ -1,6 +1,6 @@
 <script>
     $(function () {
-        $('#langconf').focus(function () {
+        $('#title').focus(function () {
             $(this).val('MDL_' + $('#table').val().toUpperCase());
         });
     });
@@ -25,7 +25,7 @@
                     <label  class="col-sm-3 control-label no-padding-right"> <?php echo L('MODEL_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('MODEL_NAME'); ?>" >
+                        <input type="text" id="titlename" name="titlename" class="col-xs-10 col-sm-5" placeholder="<?php echo L('MODEL_NAME'); ?>" >
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                     <label  class="col-sm-3 control-label no-padding-right"><?php echo L('LANGCONF'); ?></label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="langconf" id="langconf" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LANGCONF'); ?>" >
+                        <input type="text" name="title" id="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LANGCONF'); ?>" >
                     </div>
                 </div>
 

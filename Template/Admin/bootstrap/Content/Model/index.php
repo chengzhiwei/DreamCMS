@@ -35,7 +35,7 @@
                                     <tr>
 
                                         <td>
-                                            <a href="<?php echo U('Content/Model/fields', array('mid' => $li['id'])) ?>"><?php echo L($li['langconf']); ?></a>
+                                            <a href="<?php echo U('Content/Model/fields', array('mid' => $li['id'])) ?>"><?php echo L($li['title']); ?></a>
                                         </td>
 
                                         <td class="center">

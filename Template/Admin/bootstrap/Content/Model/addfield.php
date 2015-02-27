@@ -29,7 +29,7 @@
                     <label for="form-field-1" class="col-sm-3 control-label no-padding-right"> <?php echo L('FIELD_NAME'); ?> </label>
 
                     <div class="col-sm-9">
-                        <input type="text" name="title" class="col-xs-10 col-sm-5" placeholder="<?php echo L('FIELD_NAME'); ?> ">
+                        <input type="text" name="titlename" id="titlename" class="col-xs-10 col-sm-5" placeholder="<?php echo L('FIELD_NAME'); ?> ">
                     </div>
                 </div>
                 <div class="form-group">
@@ -45,7 +45,7 @@
                     <label for="form-field-2" class="col-sm-3 control-label no-padding-right"> <?php echo L('LANGCONF'); ?></label>
 
                     <div class="col-sm-9">
-                        <input type="text" id="langconf" name="langconf" value="" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LANGCONF'); ?>">
+                        <input type="text" id="title" name="title" value="" class="col-xs-10 col-sm-5" placeholder="<?php echo L('LANGCONF'); ?>">
 
                     </div>
                 </div>
@@ -266,7 +266,7 @@
     }
     $(function () {
         $('#fieldname').blur(function () {
-            $('#langconf').val('<?php echo strtoupper($modelinfo['table']) . '_'; ?>' + $(this).val().toUpperCase());//toUpperCase
+            $('#title').val('<?php echo strtoupper($modelinfo['table']) . '_'; ?>' + $(this).val().toUpperCase());//toUpperCase
         })
     })
 </script>

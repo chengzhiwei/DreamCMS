@@ -46,6 +46,44 @@
                                     <div id="step1" class="step-pane active">
 
                                         <form id="sample-form" class="form-horizontal">
+
+
+
+                                            <div class="form-group has-warning">
+                                                <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">内容模型</label>
+
+                                                <div class="col-xs-12 col-sm-5">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <select>
+                                                            <?php
+                                                            foreach ($modellist as $li)
+                                                            {
+                                                                ?>
+                                                                <option><?php echo L($li['title']);?></option>
+                                                                <?php }
+                                                            ?>
+
+                                                        </select>
+                                                    </span>
+                                                </div>
+                                                <div class="help-block col-xs-12 col-sm-reset inline">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group has-warning">
+                                                <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">采集名称</label>
+
+                                                <div class="col-xs-12 col-sm-5">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <input type="text" class="width-100" id="inputWarning">
+                                                    </span>
+                                                </div>
+                                                <div class="help-block col-xs-12 col-sm-reset inline">
+
+                                                </div>
+                                            </div>
+
                                             <div class="form-group has-warning">
                                                 <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">列表页地址</label>
 
@@ -88,9 +126,9 @@
 
                                     <div id="step2" class="step-pane">
                                         <form id="sample-form" class="form-horizontal ">
-                                            <div class="pull-left  col-xs-12 col-sm-1 ">
+                                            <div class="pull-left  col-xs-12 col-sm-3 ">
                                                 <ul class="list-unstyled spaced2 col-xs-12 col-sm-12 control-label no-padding-right">
-                                                    <li>标题 <a href="#">设置</a></li>
+                                                    <a href="javascript:void(0)" rel="title"  class="fieldlist"><li>标题 </li></a>
                                                     <li>内容</li>
                                                     <li>缩略图</li>
                                                     <li>标题</li>
@@ -102,7 +140,7 @@
                                             <div class="pull-left  col-xs-9  has-warning">
 
                                                 <div class="col-xs-12 col-sm-12 form-group">
-                                                    <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">设置规则</label>
+                                                    <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"  id="setwho">设置规则</label>
                                                     <div class="col-xs-12 col-sm-8">
                                                         <span class="block input-icon-right">
                                                             <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">对象</label>
@@ -152,7 +190,7 @@
 
 
                                                 <div class="col-xs-12 col-sm-12 form-group muiltdiv">
-                                                    <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">设置规则</label>
+                                                    <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"></label>
                                                     <div class="col-xs-12 col-sm-8">
 
                                                         <span class="block input-icon-right">
@@ -179,20 +217,11 @@
                                                     </div>
                                                 </div>
 
+                                                <div class="col-xs-12 col-sm-12 form-group ">
+                                                    <button type="button" id="setrulebtn"  class="pull-right btn btn-success" >确定</button>
 
+                                                </div>
 
-                                            </div>
-
-                                            <div class="pull-left  col-xs-12 col-sm-2">
-                                                <ul class="list-unstyled spaced2 col-xs-12 col-sm-12 control-label no-padding-right">
-                                                    <li>标题</li>
-                                                    <li>内容</li>
-                                                    <li>缩略图</li>
-                                                    <li>标题</li>
-                                                    <li>标题</li>
-                                                    <li>标题</li>
-                                                    <li>标题</li>
-                                                </ul>
                                             </div>
                                         </form>
                                     </div>
@@ -226,6 +255,12 @@
             </div>
         </div>
     </div>
+    <div id="hids">
+        <input type="hidden" value="" id="nowsetfield" />
+        <input type="hidden" value="" id="title_type" name="title_type" />
+        <input type="hidden" value="" id="title_value" name="title_value" />
+    </div>
+
     <script src="http://www.daimajiayuan.com/download/201312/yulan/ace/assets/js/ace-elements.min.js"></script>
     <script type="text/javascript">
         jQuery(function ($) {
@@ -248,4 +283,21 @@
             });
 
         });
+        $(function () {
+            $('.fieldlist').click(function () {
+                $('#setwho').html('设置' + $(this).text());
+
+            });
+            $('#setrulebtn').click(function () {
+                nowsetfield = $('#nowsetfield').val();
+                if ($('#' + nowsetfield + '_type').length > 0)
+                {
+                    $('#' + nowsetfield + '_type').val('');
+                }
+                else
+                {
+                    $('#hids').append('<input type="hidden" value="" id="' + nowsetfield + '_type" name="' + nowsetfield + '_type" />')
+                }
+            });
+        })
     </script>
