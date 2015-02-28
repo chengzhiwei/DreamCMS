@@ -278,15 +278,15 @@ function allmenu($lid)
             {
                 if ($v['mid'] == -1)//单页面模型
                 {
-                    $v['href'] = ROU('Content/Content/page', array('cid' => $v['id']));
+                    $v['href'] = \Org\Helper\Route::CUrl('Content/Content/page', array('cid' => $v['id']));
                 } else
                 {
                     if ($v['isleaf'] == 1)//子级调用list
                     {
-                        $v['href'] = ROU('Content/Content/newslist', array('cid' => $v['id']));
+                        $v['href'] = \Org\Helper\Route::CUrl('Content/Content/newslist', array('cid' => $v['id']));
                     } else //父级调用CATEGORY
                     {
-                        $v['href'] = ROU('Content/Content/category', array('cid' => $v['id']));
+                        $v['href'] = \Org\Helper\Route::CUrl('Content/Content/category', array('cid' => $v['id']));
                     }
                 }
             }

@@ -81,7 +81,7 @@ class TMP
             {
                 $ids.=$c['id'] . ',';
                 $newcontentinfo[$c['id']] = $c;
-                $newcontentinfo[$c['id']]['href'] = \ROU('Content/Content/news', array('id' => $c['id'],'cid'=>$cid));
+                $newcontentinfo[$c['id']]['href'] = Route::CUrl('Content/Content/news', array('id' => $c['id'],'cid'=>$cid));
             }
             if ($sidetable == 1)
             {

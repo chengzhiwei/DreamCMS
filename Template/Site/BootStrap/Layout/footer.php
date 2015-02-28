@@ -10,7 +10,7 @@
                     ?>
                    
                 </p>
-                <p><a href="<?php echo ROU('Content/Content/page', array('cid' => 10)) ?>">Read more...</a></p>
+                <p><a href="<?php echo \Org\Helper\Route::CUrl('Content/Content/page', array('cid' => 10)) ?>">Read more...</a></p>
             </div>
             <div class="widget span3">
                 <h4>版权声明</h4>
@@ -20,7 +20,7 @@
                     echo  \Org\Util\String::msubstr(strip_tags($Copy['content']), 0, 100);
                     ?>
                 </p>
-                 <p><a href="<?php echo ROU('Content/Content/page', array('cid' => 11)) ?>">Read more...</a></p>
+                 <p><a href="<?php echo \Org\Helper\Route::CUrl('Content/Content/page', array('cid' => 11)) ?>">Read more...</a></p>
             </div>
             <div class="widget span3">
                 <h4>商务合作</h4>
@@ -30,7 +30,7 @@
                     echo  \Org\Util\String::msubstr(strip_tags($Business['content']), 0, 100);
                     ?>
                 </p>
-                <p><a href="<?php echo ROU('Content/Content/page', array('cid' => 12)) ?>">Read more...</a></p>
+                <p><a href="<?php echo \Org\Helper\Route::CUrl('Content/Content/page', array('cid' => 12)) ?>">Read more...</a></p>
             </div>
             <div class="widget span3">
                 <h4>联系我们</h4>

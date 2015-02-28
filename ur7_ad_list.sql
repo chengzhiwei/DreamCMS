@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-02-11 17:26:14
+Date: 2015-02-28 17:22:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -492,20 +492,20 @@ CREATE TABLE `ur7_model_field` (
 -- ----------------------------
 -- Records of ur7_model_field
 -- ----------------------------
-INSERT INTO `ur7_model_field` VALUES ('91', null, 'title', 'TITLE', 'text', '', '', '1', 'style=\"width:100%\"', '30', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('92', null, 'keyword', 'KEYWORD', 'text', '', '', '0', 'style=\"width:100%\"', '30', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('93', null, 'desc', 'DESC', 'textarea', '', '', '0', '', '30', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('94', null, 'cid', 'CATEGORY', 'cate', '', '', '0', '', '30', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('95', null, 'thumb', 'THUMB', '', '', '', '0', '', '30', 'Webupload/Hook/Vhook/thumbupload', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('96', null, 'content', 'CONTENT', 'editor', '', '', '0', '', '30', 'Ueditor/Hook/Vhook/ueditor', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('97', null, 'position', 'POSITION', 'position', '', '', '0', '', '30', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('98', null, 'title', 'TITLE', 'text', '', '', '1', 'style=\"width:100%\"', '31', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('99', null, 'keyword', 'KEYWORD', 'text', '', '', '0', 'style=\"width:100%\"', '31', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('100', null, 'desc', 'DESC', 'textarea', '', '', '0', '', '31', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('101', null, 'cid', 'CATEGORY', 'cate', '', '', '0', '', '31', '', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('102', null, 'thumb', 'THUMB', '', '', '', '0', '', '31', 'Webupload/Hook/Vhook/thumbupload', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('103', null, 'content', 'CONTENT', 'editor', '', '', '0', '', '31', 'Ueditor/Hook/Vhook/ueditor', '0', '1');
-INSERT INTO `ur7_model_field` VALUES ('104', null, 'position', 'POSITION', 'position', '', '', '0', '', '31', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('91', 'TITLE', 'title', 'TITLE', 'text', '', '', '1', 'style=\"width:100%\"', '30', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('92', 'KEYWORD', 'keyword', 'KEYWORD', 'text', '', '', '0', 'style=\"width:100%\"', '30', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('93', 'DESC', 'desc', 'DESC', 'textarea', '', '', '0', '', '30', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('94', 'CATEGORY', 'cid', 'CATEGORY', 'cate', '', '', '0', '', '30', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('95', 'THUMB', 'thumb', 'THUMB', '', '', '', '0', '', '30', 'Webupload/Hook/Vhook/thumbupload', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('96', 'CONTENT', 'content', 'CONTENT', 'editor', '', '', '0', '', '30', 'Ueditor/Hook/Vhook/ueditor', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('97', 'POSITION', 'position', 'POSITION', 'position', '', '', '0', '', '30', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('98', 'TITLE', 'title', 'TITLE', 'text', '', '', '1', 'style=\"width:100%\"', '31', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('99', 'KEYWORD', 'keyword', 'KEYWORD', 'text', '', '', '0', 'style=\"width:100%\"', '31', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('100', 'DESC', 'desc', 'DESC', 'textarea', '', '', '0', '', '31', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('101', 'CATEGORY', 'cid', 'CATEGORY', 'cate', '', '', '0', '', '31', '', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('102', 'THUMB', 'thumb', 'THUMB', '', '', '', '0', '', '31', 'Webupload/Hook/Vhook/thumbupload', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('103', 'CONTENT', 'content', 'CONTENT', 'editor', '', '', '0', '', '31', 'Ueditor/Hook/Vhook/ueditor', '0', '1');
+INSERT INTO `ur7_model_field` VALUES ('104', 'POSITION', 'position', 'POSITION', 'position', '', '', '0', '', '31', '', '0', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_page`

@@ -22,11 +22,24 @@ class AdminController extends \Common\Controller\AdminpluginController
      */
     public function add()
     {
-        $model = DD('Model');
-        $modellist = $model->select();
-        \Org\Helper\IncludeLang::QuickInc('Content/model', 'Admin');
-        $this->assign('modellist', $modellist);
-        $this->display();
+        if (IS_POST)
+        {
+            /*
+             * 插入主表 采集标题 列表页规则
+             * 采集标题、模型、列表页地址、列表页规则
+             */
+            /*
+             * 插入副表内容页规则
+             * 主表编号 字段 字段规则
+             */
+        } else
+        {
+            $model = DD('Model');
+            $modellist = $model->select();
+            \Org\Helper\IncludeLang::QuickInc('Content/model', 'Admin');
+            $this->assign('modellist', $modellist);
+            $this->display();
+        }
     }
 
     public function getfields()
