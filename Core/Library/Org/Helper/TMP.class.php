@@ -75,7 +75,6 @@ class TMP
             $contentinfo = $content->SimpleLimit($cid, $limit);
             $contentdata = array();
             $newcontentinfo = array();
-
             $ids = '';
             foreach ($contentinfo as $k => $c)
             {

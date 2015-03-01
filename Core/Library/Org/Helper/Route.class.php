@@ -31,7 +31,7 @@ class Route
         {
             $keys = $param;
             $keys_arr = array_keys($keys);
-            ksort($keys_arr);
+            asort($keys_arr);dump($keys_arr);
             $param_ext = implode('_', $keys_arr);
         }
         //去掉MODULE_NAME;
@@ -40,7 +40,7 @@ class Route
         $parseConfig = self::_parseRule();
         if (key_exists($rule, $parseConfig))
         {
-
+            echo '111';
             $rou_text = preg_split("/\((.*)\)/U", $parseConfig[$rule][0]);
             $rou_url = '';
             foreach ($rou_text as $k => $rt)
@@ -83,9 +83,9 @@ class Route
                     $paramKeyValArr[intval(str_replace(':', '', $paramArr[1]))] = $paramArr[0];
                 }
                 $paramKeyArrSort = $paramKeyArr; //用于键值排序
-                ksort($paramKeyArrSort);
+                asort($paramKeyArrSort);
                 $param_ext = implode('_', $paramKeyArrSort);
-                ksort($paramKeyValArr);
+                asort($paramKeyValArr);
                 $paramKeyValArr = array_values($paramKeyValArr); //重建索引
             }
             $parseConfig[$config_arr[0] . '_' . $param_ext] = array($key, $paramKeyArr, $paramKeyValArr);

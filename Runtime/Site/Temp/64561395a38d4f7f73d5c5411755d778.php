@@ -1,3 +1,3 @@
 <?php
-//000000003600a:2:{i:9;a:8:{s:2:"id";s:1:"9";s:3:"cid";s:1:"8";s:5:"title";s:12:"路由配置";s:7:"keyword";s:12:"路由配置";s:4:"desc";s:12:"路由配置";s:5:"thumb";N;s:8:"position";N;s:4:"href";s:56:"/DreamCMS/index.php/Content/Content/news/id/9/cid/8.html";}i:10;a:8:{s:2:"id";s:2:"10";s:3:"cid";s:1:"8";s:5:"title";s:15:"数据库配置";s:7:"keyword";s:15:"数据库配置";s:4:"desc";s:15:"数据库配置";s:5:"thumb";N;s:8:"position";N;s:4:"href";s:57:"/DreamCMS/index.php/Content/Content/news/id/10/cid/8.html";}}
+//000000003600a:2:{i:9;a:8:{s:2:"id";s:1:"9";s:3:"cid";s:1:"8";s:5:"title";s:12:"路由配置";s:7:"keyword";s:12:"路由配置";s:4:"desc";s:12:"路由配置";s:5:"thumb";N;s:8:"position";N;s:4:"href";s:18:"/DreamCMS/news_8_9";}i:10;a:8:{s:2:"id";s:2:"10";s:3:"cid";s:1:"8";s:5:"title";s:15:"数据库配置";s:7:"keyword";s:15:"数据库配置";s:4:"desc";s:15:"数据库配置";s:5:"thumb";N;s:8:"position";N;s:4:"href";s:19:"/DreamCMS/news_8_10";}}
 ?>
