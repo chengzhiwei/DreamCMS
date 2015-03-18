@@ -34,6 +34,7 @@ class AdminController extends \Common\Controller\AdminpluginController
              */
         } else
         {
+            
             $model = DD('Model');
             $modellist = $model->select();
             \Org\Helper\IncludeLang::QuickInc('Content/model', 'Admin');

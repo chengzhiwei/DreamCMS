@@ -22,7 +22,7 @@ class CategoryController extends \Auth\Controller\AuthbaseController
         {
             $Category = DD('Category');
             $b = $Category->addcate();
-            if ($b!==false)
+            if ($b !== false)
             {
                 $this->redirect('Content/Category/index');
             } else

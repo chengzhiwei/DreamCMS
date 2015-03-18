@@ -3,8 +3,8 @@
 /**
  * 
  * @staticvar array $_adomodel
- * @param type $adomodel
- * @param type $ext
+ * @param string $adomodel
+ * @param string $ext
  * @return Think\Model
  */
 function DD($adomodel, $arg = array(), $ext = 'Ado')

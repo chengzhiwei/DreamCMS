@@ -40,7 +40,6 @@ class Route
         $parseConfig = self::_parseRule();
         if (key_exists($rule, $parseConfig))
         {
-            echo '111';
             $rou_text = preg_split("/\((.*)\)/U", $parseConfig[$rule][0]);
             $rou_url = '';
             foreach ($rou_text as $k => $rt)

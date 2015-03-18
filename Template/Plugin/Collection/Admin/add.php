@@ -139,7 +139,7 @@
                                                         <span class="block input-icon-right">
                                                             <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">类型</label>
                                                             <span class="block input-icon pull-left col-sm-4">
-                                                                <select class="datatype" autocomplete="off">
+                                                                <select class="datatype" id="fieldruletype" autocomplete="off">
                                                                     <option value="0">单条数据</option>
                                                                     <option value="1">多条数据</option>
                                                                 </select>
@@ -154,92 +154,63 @@
                                                         <span class="block input-icon-right">
                                                             <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">对象</label>
                                                             <span class="block input-icon pull-left col-sm-4">
-                                                                <input type="text" class="width-100 " id="inputWarning">
+                                                                <input type="text" class="width-100 " id="SingleObj">
                                                             </span>
                                                         </span>
 
                                                         <span class="block input-icon-right">
                                                             <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
                                                             <span class="block input-icon pull-left col-sm-4">
-                                                                <input type="text" class="width-100 " id="inputWarning">
+                                                                <input type="text" class="width-100 " id="SingleAttr">
                                                             </span>
                                                         </span>
 
                                                     </div>
                                                 </div>
 
-                                                <form>
-                                                    <div class="muiltdiv">
-                                                        <div class="col-xs-12 col-sm-12 form-group ">
-                                                            <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">设置规则</label>
-                                                            <div class="col-xs-12 col-sm-8">
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">列表对象</label>
-                                                                    <span class="block input-icon pull-left col-sm-4">
-                                                                        <input type="text" class="width-100 " id="inputWarning">
-                                                                    </span>
+
+                                                <div class="muiltdiv">
+                                                    <div class="col-xs-12 col-sm-12 form-group ">
+                                                        <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">设置规则</label>
+                                                        <div class="col-xs-12 col-sm-8">
+                                                            <span class="block input-icon-right">
+                                                                <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">列表对象</label>
+                                                                <span class="block input-icon pull-left col-sm-4">
+                                                                    <input type="text" class="width-100 " id="ListObj">
                                                                 </span>
-                                                            </div>
+                                                            </span>
                                                         </div>
+                                                    </div>
 
 
+                                                    <div class="col-xs-12 col-sm-12 form-group muiltdatadiv">
+                                                        <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"></label>
+                                                        <div class="col-xs-12 col-sm-8">
 
-                                                        <div class="col-xs-12 col-sm-12 form-group ">
-                                                            <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"></label>
-                                                            <div class="col-xs-12 col-sm-8">
-
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">数据名</label>
-                                                                    <span class="block pull-left col-sm-2">
-                                                                        <input type="text" name="dataname[]" class="width-100 " id="inputWarning">
-                                                                    </span>
+                                                            <span class="block input-icon-right">
+                                                                <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">数据名</label>
+                                                                <span class="block pull-left col-sm-2">
+                                                                    <input type="text" name="dataname[]"  class="width-100 " id="listdataname">
                                                                 </span>
+                                                            </span>
 
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-1 control-label no-padding-right" for="inputWarning">对象</label>
-                                                                    <span class="block pull-left col-sm-3">
-                                                                        <input type="text" name="objname[]" class="width-100 " id="inputWarning">
-                                                                    </span>
+                                                            <span class="block input-icon-right">
+                                                                <label class="col-xs-12 col-sm-1 control-label no-padding-right" for="inputWarning">对象</label>
+                                                                <span class="block  pull-left col-sm-3">
+                                                                    <input type="text" name="objname[]"  class="width-100 " id="listdataobj">
                                                                 </span>
+                                                            </span>
 
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
-                                                                    <span class="block pull-left col-sm-2">
-                                                                        <input type="text" name="attr[]" class="width-100 " id="inputWarning">
-                                                                    </span>
+                                                            <span class="block input-icon-right">
+                                                                <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
+                                                                <span class="block pull-left col-sm-2">
+                                                                    <input type="text" name="attr[]" class="width-100 " id="listdataattr">
                                                                 </span>
-
-                                                            </div>
+                                                            </span>
                                                         </div>
-
-                                                        <div class="col-xs-12 col-sm-12 form-group ">
-                                                            <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"></label>
-                                                            <div class="col-xs-12 col-sm-8">
-
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">数据名</label>
-                                                                    <span class="block pull-left col-sm-2">
-                                                                        <input type="text" name="dataname[]"  class="width-100 " id="inputWarning">
-                                                                    </span>
-                                                                </span>
-
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-1 control-label no-padding-right" for="inputWarning">对象</label>
-                                                                    <span class="block  pull-left col-sm-3">
-                                                                        <input type="text" name="objname[]"  class="width-100 " id="inputWarning">
-                                                                    </span>
-                                                                </span>
-
-                                                                <span class="block input-icon-right">
-                                                                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
-                                                                    <span class="block pull-left col-sm-2">
-                                                                        <input type="text" name="attr[]" class="width-100 " id="inputWarning">
-                                                                    </span>
-                                                                </span>
-
-                                                            </div>
-                                                        </div>
-                                                    </div></form>
+                                                        <a class="icon-plus" id="addlist" for="" href="javascript:addrulelist()"></a>
+                                                    </div>
+                                                </div>
 
                                                 <div class="col-xs-12 col-sm-12 form-group ">
                                                     <button type="button" id="setrulebtn"  class=" btn-xs pull-right btn btn-success" >设置</button>
@@ -280,14 +251,43 @@
         </div>
     </div>
     <div id="hids">
-        <input type="hidden" value="" id="setfields" name="setfields" />
         <input type="hidden" value="" id="nowsetfield"  />
-        <input type="hidden" value="" id="title_type" name="title_type" />
-        <input type="hidden" value="" id="title_value" name="title_value" />
     </div>
 
+    <div id="HidListObjdata" style="display: none">
+        <div class="col-xs-12 col-sm-12 form-group muiltdatadiv ">
+            <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"></label>
+            <div class="col-xs-12 col-sm-8">
+
+                <span class="block input-icon-right">
+                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">数据名</label>
+                    <span class="block pull-left col-sm-2">
+                        <input type="text" name="dataname[]" class="width-100 " id="listdataname">
+                    </span>
+                </span>
+
+                <span class="block input-icon-right">
+                    <label class="col-xs-12 col-sm-1 control-label no-padding-right" for="inputWarning">对象</label>
+                    <span class="block pull-left col-sm-3">
+                        <input type="text" name="objname[]" class="width-100 " id="listdataobj">
+                    </span>
+                </span>
+
+                <span class="block input-icon-right">
+                    <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
+                    <span class="block pull-left col-sm-2">
+                        <input type="text" name="attr[]" class="width-100 " id="listdataattr">
+                    </span>
+                </span>
+
+            </div>
+        </div>
+
+    </div>
     <script src="http://www.daimajiayuan.com/download/201312/yulan/ace/assets/js/ace-elements.min.js"></script>
+    <script src="<?php echo __ROOT__ ?>/Template/Plugin/Collection/js/json2.js" ></script>
     <script type="text/javascript">
+
         jQuery(function ($) {
             $('#fuelux-wizard').ace_wizard().on('change', function (e, info) {
                 if (info.step == 1)
@@ -300,7 +300,7 @@
                         success: function (data) {
                             var html = '';
                             $.each(data, function (i, item) {
-                                html += '<li><a href="javascript:void(0)"  class="fieldlist">';
+                                html += '<li><a href="javascript:void(0)" attr="' + item.fieldname + '" class="fieldlist">';
                                 html += item.title;
                                 html += '</a></li>';
                             });
@@ -317,45 +317,121 @@
             $('.datatype').change(function () {
                 if ($(this).val() == 1)
                 {
-                    $('.muiltdiv').show();
-                    $('.singlediv').hide();
+                    setListShow();
                 }
                 else
                 {
-                    $('.muiltdiv').hide();
-                    $('.singlediv').show();
+                    setSingleShow();
                 }
             });
 
         });
+
+        var Dataobj = {
+            'type': 1,
+            'obj': '',
+            'val': new Array()
+        };
+
+        var singleData = {
+            'obj': '',
+            'attr': ''
+        };
+
+        var listData = {
+            'data': '',
+            'obj': '',
+            'attr': ''
+        };
         $(function () {
             $(document).on('click', '.fieldlist', function () {
 
                 $('#setwho').html('设置' + $(this).text());
+                $('#nowsetfield').val($(this).attr('attr'));
+                //获取已经设置好的字段规则信息
+                if ($('#' + $(this).attr('attr') + '_rule').length > 0)
+                {
+                    ruleVal = JSON.parse($('#' + $(this).attr('attr') + '_rule').val());
+                    setData(ruleVal);
+                    if (ruleVal.type == 1)
+                    {
+                        setListShow();
+                    } else
+                    {
+                        setSingleShow();
+                    }
+                }
+                else
+                {
+                    setSingleShow();
+                }
+
             });
             $('#setrulebtn').click(function () {
-
-                //#setfields 记录设置过的的字段
-                //#fieldtype 记录类型
-                //#fieldvale 记录规则
+                Dataobj.type = $('#fieldruletype').val();
                 nowsetfield = $('#nowsetfield').val();
-                if($('#fieldruletype').val()==0)//0 单条数据 1 多条数据
+                if ($('#fieldruletype').val() == 0)//0 单条数据 1 多条数据
                 {
                     //获取对象和属性
+                    Dataobj.obj = $('#SingleObj').val();
+                    Dataobj.val[0] = new Array($('#SingleAttr').val())
                 }
                 else
                 {
                     //获取多条数据名对象和属性
+                    Dataobj.obj = $('#ListObj').val();
+                    $(".muiltdatadiv").each(function (index, element) {
+                        var data = new Array($(this).find('#listdataname').val(), $(this).find('#listdataobj').val(), $(this).find('#listdataattr').val());
+                        Dataobj.val[index] = data;
+                    });
                 }
-                
-                if ($('#' + nowsetfield + '_type').length > 0)
+                var ruleJson = JSON.stringify(Dataobj);//序列化之后的值 存放到隐藏域。
+                if ($('#' + nowsetfield + '_rule').length > 0)
                 {
-                    $('#' + nowsetfield + '_type').val('');
+                    $('#' + nowsetfield + '_rule').val(ruleJson);
                 }
                 else
                 {
-                    $('#hids').append('<input type="hidden" value="" id="' + nowsetfield + '_type" name="' + nowsetfield + '_type" />')
+                    $('#hids').append('<input type="" value=\'' + ruleJson + '\' id="' + nowsetfield + '_rule" name="' + nowsetfield + '_rule" />')
                 }
             });
         })
+
+        function setSingleShow()
+        {
+            $('.muiltdiv').hide();
+            $('.singlediv').show();
+        }
+        function setListShow()
+        {
+            $('.muiltdiv').show();
+            $('.singlediv').hide();
+        }
+
+        function setData(dataobj)
+        {
+            $('#fieldruletype').val(dataobj.type);
+            if (dataobj.type == 1)
+            {
+                //多数据
+                $('#ListObj').val(dataobj.obj);
+                $.each(dataobj.val, function (i, v) {
+                    $('#HidListObjdata').find('#listdataname').val();
+                    $('#HidListObjdata').find('#listdataobj').val();
+                    $('#HidListObjdata').find('#listdataattr').val();
+                });
+            }
+            else
+            {
+                $('#SingleObj').val(dataobj.obj);
+                var vals = dataobj.val[0];
+                $('#SingleAttr').val(vals[0]);
+                //单条数据
+            }
+        }
+
+        function addrulelist()
+        {
+            $('.muiltdiv').append($('#HidListObjdata').html());
+        }
     </script>

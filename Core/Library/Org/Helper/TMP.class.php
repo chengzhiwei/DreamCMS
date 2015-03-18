@@ -16,7 +16,7 @@ namespace Org\Helper;
 
 /**
  * 模板操作类
- * 紧用于前台
+ * 仅用于前台
  */
 class TMP
 {
