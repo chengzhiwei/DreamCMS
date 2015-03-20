@@ -131,7 +131,7 @@
 
                                                 </ul>
                                             </div>
-                                            <div class="pull-left  col-xs-9  has-warning">
+                                            <div class="pull-left  col-xs-9  has-warning step2info">
 
                                                 <div class="col-xs-12 col-sm-12 form-group">
                                                     <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"  id="setwho">设置规则</label>
@@ -183,33 +183,6 @@
                                                     </div>
 
 
-                                                    <div class="col-xs-12 col-sm-12 form-group muiltdatadiv">
-                                                        <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"></label>
-                                                        <div class="col-xs-12 col-sm-8">
-
-                                                            <span class="block input-icon-right">
-                                                                <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">数据名</label>
-                                                                <span class="block pull-left col-sm-2">
-                                                                    <input type="text" name="dataname[]"  class="width-100 " id="listdataname">
-                                                                </span>
-                                                            </span>
-
-                                                            <span class="block input-icon-right">
-                                                                <label class="col-xs-12 col-sm-1 control-label no-padding-right" for="inputWarning">对象</label>
-                                                                <span class="block  pull-left col-sm-3">
-                                                                    <input type="text" name="objname[]"  class="width-100 " id="listdataobj">
-                                                                </span>
-                                                            </span>
-
-                                                            <span class="block input-icon-right">
-                                                                <label class="col-xs-12 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
-                                                                <span class="block pull-left col-sm-2">
-                                                                    <input type="text" name="attr[]" class="width-100 " id="listdataattr">
-                                                                </span>
-                                                            </span>
-                                                        </div>
-                                                        <a class="icon-plus" id="addlist" for="" href="javascript:addrulelist()"></a>
-                                                    </div>
                                                 </div>
 
                                                 <div class="col-xs-12 col-sm-12 form-group ">
@@ -230,15 +203,19 @@
 
                                 </div>
 
-                                <hr>
+                                <hr />
                                 <div class="row-fluid wizard-actions">
+                                     <button class="btn " >
+                                        <i class="icon-arrow-left"></i>
+                                        测试采集
+                                    </button>
                                     <button class="btn btn-prev" disabled="disabled">
                                         <i class="icon-arrow-left"></i>
-                                        Prev
+                                        上一步
                                     </button>
 
                                     <button data-last="Finish " class="btn btn-success btn-next">
-                                        Next
+                                        下一步
                                         <i class="icon-arrow-right icon-on-right"></i>
                                     </button>
                                 </div>
@@ -280,7 +257,7 @@
                     </span>
                 </span>
 
-            </div>
+            </div><a href="javascript:addrulelist()" class="icon-plus"></a>
         </div>
 
     </div>
@@ -290,7 +267,8 @@
 
         jQuery(function ($) {
             $('#fuelux-wizard').ace_wizard().on('change', function (e, info) {
-                if (info.step == 1)
+                
+                if (info.step == 1 && info.direction=='next')
                 {
                     $.ajax({
                         type: "post",
@@ -305,6 +283,7 @@
                                 html += '</a></li>';
                             });
                             $('#fieldlist').html(html);
+                            BeginSetData($('#fieldlist').find('li:first').find('.fieldlist'));
                         }
 
                     });
@@ -343,28 +322,40 @@
             'obj': '',
             'attr': ''
         };
-        $(function () {
-            $(document).on('click', '.fieldlist', function () {
 
-                $('#setwho').html('设置' + $(this).text());
-                $('#nowsetfield').val($(this).attr('attr'));
-                //获取已经设置好的字段规则信息
-                if ($('#' + $(this).attr('attr') + '_rule').length > 0)
+        function BeginSetData(FieldObj)
+        {
+            $('#setwho').html('设置' + FieldObj.text());
+            $('#nowsetfield').val(FieldObj.attr('attr'));
+            //获取已经设置好的字段规则信息
+            if ($('#' + FieldObj.attr('attr') + '_rule').length > 0)
+            {
+                ruleVal = JSON.parse($('#' + FieldObj.attr('attr') + '_rule').val());
+                setData(ruleVal);
+                if (ruleVal.type == 1)
                 {
-                    ruleVal = JSON.parse($('#' + $(this).attr('attr') + '_rule').val());
-                    setData(ruleVal);
-                    if (ruleVal.type == 1)
-                    {
-                        setListShow();
-                    } else
-                    {
-                        setSingleShow();
-                    }
-                }
-                else
+                    setListShow();
+                } else
                 {
                     setSingleShow();
                 }
+            }
+            else
+            {
+                $('.muiltdiv').append($('#HidListObjdata').html());
+                setSingleShow();
+            }
+        }
+
+
+
+
+
+
+        $(function () {
+            $(document).on('click', '.fieldlist', function () {
+
+                BeginSetData($(this));
 
             });
             $('#setrulebtn').click(function () {
@@ -380,7 +371,7 @@
                 {
                     //获取多条数据名对象和属性
                     Dataobj.obj = $('#ListObj').val();
-                    $(".muiltdatadiv").each(function (index, element) {
+                    $('.muiltdiv').find(".muiltdatadiv").each(function (index, element) {
                         var data = new Array($(this).find('#listdataname').val(), $(this).find('#listdataobj').val(), $(this).find('#listdataattr').val());
                         Dataobj.val[index] = data;
                     });
@@ -414,11 +405,33 @@
             if (dataobj.type == 1)
             {
                 //多数据
+                $('.muiltdiv').find('.muiltdatadiv').remove();
                 $('#ListObj').val(dataobj.obj);
+                //不管有没有数据默认有一行
+                if (dataobj.val.length != 0)
+                {
+                    objVal = dataobj.val[0];
+                    $('.muiltdiv').append($('#HidListObjdata').html());
+                    var HtmlObj = $('.muiltdiv').find(".muiltdatadiv:last");
+                    HtmlObj.find('#listdataname').val(objVal[0]);
+                    HtmlObj.find('#listdataobj').val(objVal[1]);
+                    HtmlObj.find('#listdataattr').val(objVal[2]);
+
+                }
+                else
+                {
+                    $('.muiltdiv').append($('#HidListObjdata').html());
+                }
                 $.each(dataobj.val, function (i, v) {
-                    $('#HidListObjdata').find('#listdataname').val();
-                    $('#HidListObjdata').find('#listdataobj').val();
-                    $('#HidListObjdata').find('#listdataattr').val();
+                    if (i != 0)
+                    {
+                        $('.muiltdiv').append($('#HidListObjdata').html());
+                        var HtmlObj = $('.muiltdiv').find(".muiltdatadiv:last");
+                        HtmlObj.find('#listdataname').val(v[0]);
+                        HtmlObj.find('#listdataobj').val(v[1]);
+                        HtmlObj.find('#listdataattr').val(v[2]);
+
+                    }
                 });
             }
             else
@@ -432,6 +445,7 @@
 
         function addrulelist()
         {
+            $('#HidListObjdata').find('.icon-plus').remove();
             $('.muiltdiv').append($('#HidListObjdata').html());
         }
     </script>

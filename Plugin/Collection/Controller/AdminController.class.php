@@ -58,5 +58,21 @@ class AdminController extends \Common\Controller\AdminpluginController
             echo json_encode($fieldlist);
         }
     }
+    
+    /**
+     * 测试采集列表
+     */
+    public function testlist()
+    {
+        
+    }
+    
+    /**
+     * 测试采集内容
+     */
+    public function testpage()
+    {
+        
+    }
 
 }
