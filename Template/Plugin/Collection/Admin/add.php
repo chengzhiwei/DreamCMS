@@ -40,29 +40,47 @@
                                         </li>
                                     </ul>
                                 </div>
-
                                 <hr>
-                                <div id="step-container" class="step-content row-fluid position-relative">
-                                    <div id="step1" class="step-pane active">
-
-                                        <form id="sample-form" class="form-horizontal">
-
-
-
-                                            <div class="form-group has-warning">
-                                                <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">内容模型</label>
+                                <form id="Cform" method="post"  class="form-horizontal" action="<?php echo URL('Collection/Admin/testlist', '', 'Plugin.php') ?>">
+                                    <div id="step-container" class="step-content row-fluid position-relative">
+                                        <div id="step1" class="step-pane active">
+                                            <div class="form-group">
+                                                <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">目标站编码</label>
 
                                                 <div class="col-xs-12 col-sm-5">
                                                     <span class="block input-icon input-icon-right">
-                                                        <select id="mid">
+                                                        <input type="text" name="langcode" value="utf-8" autocomplete="off">
+                                                    </span>
+                                                </div>
+                                                <div class="help-block col-xs-12 col-sm-reset inline">
+
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group ">
+                                                <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">选择栏目</label>
+
+                                                <div class="col-xs-12 col-sm-5">
+                                                    <span class="block input-icon input-icon-right">
+                                                        <select id="cate" name="cate">
                                                             <?php
-                                                            foreach ($modellist as $li)
+                                                            foreach ($category as $ca)
                                                             {
                                                                 ?>
-                                                                <option value="<?php echo $li['id']; ?>"><?php echo L($li['title']); ?></option>
-                                                            <?php }
+                                                                <option  value="<?php echo $ca['id']; ?>,<?php echo $ca['mid']; ?>">
+                                                                    <?php
+                                                                    if ($ca['deep'] != 0)
+                                                                    {
+                                                                        for ($i = 0; $i <= $ca['deep']; $i++)
+                                                                        {
+                                                                            echo "　　";
+                                                                        }
+                                                                    }
+                                                                    echo $ca['title'];
+                                                                    ?></option>
+                                                                <?php
+                                                            }
                                                             ?>
-
                                                         </select>
                                                     </span>
                                                 </div>
@@ -71,12 +89,12 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group has-warning">
+                                            <div class="form-group">
                                                 <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">采集名称</label>
 
                                                 <div class="col-xs-12 col-sm-5">
                                                     <span class="block input-icon input-icon-right">
-                                                        <input type="text" class="width-100" id="inputWarning">
+                                                        <input type="text" name="title" class="width-100" id="inputWarning">
                                                     </span>
                                                 </div>
                                                 <div class="help-block col-xs-12 col-sm-reset inline">
@@ -84,12 +102,12 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group has-warning">
+                                            <div class="form-group">
                                                 <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">列表页地址</label>
 
                                                 <div class="col-xs-12 col-sm-5">
                                                     <span class="block input-icon input-icon-right">
-                                                        <input type="text" class="width-100" id="inputWarning">
+                                                        <input type="text" name="listurl" class="width-100" id="inputWarning">
                                                         <i class="icon-leaf"></i>
                                                     </span>
                                                 </div>
@@ -98,40 +116,35 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group has-error">
+                                            <div class="form-group ">
                                                 <label class="col-xs-12 col-sm-3 col-md-3 control-label no-padding-right" for="inputWarning">内容页规则</label>
 
                                                 <div class="col-xs-12 col-sm-5">
                                                     <label class="col-xs-2 col-sm-2 control-label " for="inputWarning">对象</label>
                                                     <span class="block input-icon pull-left col-sm-4">
-                                                        <input type="text" class="width-100 " id="inputWarning">
+                                                        <input type="text" class="width-100 " name="listobj" id="inputWarning">
                                                     </span>
                                                     <label class="col-xs-2 col-sm-2 control-label no-padding-right" for="inputWarning">属性</label>
                                                     <span class="block input-icon pull-right col-sm-4">
-                                                        <select class=" width-100 ">
-                                                            <option>href</option>
-                                                            <option>html</option>
-                                                            <option>text</option>
-
-                                                        </select>
+                                                        <input type="text" name="listattr" class=" width-100 "/>
                                                     </span>
                                                 </div>
                                                 <div class="help-block col-xs-12 col-sm-reset inline"> 获取内容页地址规则 </div>
                                             </div>
 
-                                        </form>
 
 
-                                    </div>
 
-                                    <div id="step2" class="step-pane">
-                                        <form id="sample-form" class="form-horizontal ">
+                                        </div>
+
+                                        <div id="step2" class="step-pane">
+
                                             <div class="pull-left  col-xs-12 col-sm-3 ">
                                                 <ul id="fieldlist" class="list-unstyled spaced2 col-xs-12 col-sm-12 control-label no-padding-right">
 
                                                 </ul>
                                             </div>
-                                            <div class="pull-left  col-xs-9  has-warning step2info">
+                                            <div class="pull-left  col-xs-9  step2info">
 
                                                 <div class="col-xs-12 col-sm-12 form-group">
                                                     <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning"  id="setwho">设置规则</label>
@@ -191,25 +204,26 @@
                                                 </div>
 
                                             </div>
-                                        </form>
-                                    </div>
 
-                                    <div id="step3" class="step-pane">
-                                        <div class="center">
-                                            <h3 class="blue lighter">This is step 3</h3>
+                                        </div>
+
+                                        <div id="step3" class="step-pane">
+                                            <div class="center">
+                                                <h3 class="blue lighter">添加成功</h3>
+                                            </div>
                                         </div>
                                     </div>
-
-
-                                </div>
-
+                                    <div id="hids">
+                                        <input type="hidden" value="" id="nowsetfield"  />
+                                    </div>
+                                </form>
                                 <hr />
                                 <div class="row-fluid wizard-actions">
-                                     <button class="btn " >
+                                    <button onclick="testcollection()" class="btn " >
                                         <i class="icon-arrow-left"></i>
                                         测试采集
                                     </button>
-                                    <button class="btn btn-prev" disabled="disabled">
+                                    <button  class="btn btn-prev" disabled="disabled">
                                         <i class="icon-arrow-left"></i>
                                         上一步
                                     </button>
@@ -219,6 +233,7 @@
                                         <i class="icon-arrow-right icon-on-right"></i>
                                     </button>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -227,9 +242,7 @@
             </div>
         </div>
     </div>
-    <div id="hids">
-        <input type="hidden" value="" id="nowsetfield"  />
-    </div>
+
 
     <div id="HidListObjdata" style="display: none">
         <div class="col-xs-12 col-sm-12 form-group muiltdatadiv ">
@@ -263,189 +276,225 @@
     </div>
     <script src="http://www.daimajiayuan.com/download/201312/yulan/ace/assets/js/ace-elements.min.js"></script>
     <script src="<?php echo __ROOT__ ?>/Template/Plugin/Collection/js/json2.js" ></script>
-    <script type="text/javascript">
+    <script>
 
-        jQuery(function ($) {
-            $('#fuelux-wizard').ace_wizard().on('change', function (e, info) {
-                
-                if (info.step == 1 && info.direction=='next')
-                {
-                    $.ajax({
-                        type: "post",
-                        url: "<?php echo URL('Collection/Admin/getfields', '', 'Plugin.php'); ?>",
-                        data: {mid: $('#mid').val()},
-                        dataType: "json",
-                        success: function (data) {
-                            var html = '';
-                            $.each(data, function (i, item) {
-                                html += '<li><a href="javascript:void(0)" attr="' + item.fieldname + '" class="fieldlist">';
-                                html += item.title;
-                                html += '</a></li>';
-                            });
-                            $('#fieldlist').html(html);
-                            BeginSetData($('#fieldlist').find('li:first').find('.fieldlist'));
-                        }
+                                        jQuery(function ($) {
+                                            $('#fuelux-wizard').ace_wizard().on('change', function (e, info) {
 
-                    });
-                }
-            });
-        })
-        $(function () {
-            $('.muiltdiv').hide();
-            $('.singlediv').show();
-            $('.datatype').change(function () {
-                if ($(this).val() == 1)
-                {
-                    setListShow();
-                }
-                else
-                {
-                    setSingleShow();
-                }
-            });
+                                                if (info.step == 2 && info.direction == 'previous')
+                                                {
+                                                    //修改表单提交地址
+                                                    $('#Cform').attr('action', '<?php echo URL('Collection/Admin/testlist', '', 'Plugin.php'); ?>');
+                                                    $('#Cform').attr('target', '_bank');
+                                                }
+                                                if (info.step == 2 && info.direction == 'next')
+                                                {
+                                                    var b;
+                                                    $.ajax({
+                                                        type: "post",
+                                                        url: "<?php echo URL('Collection/Admin/add', '', 'Plugin.php'); ?>",
+                                                        data: $("#Cform").serialize(),
+                                                        dataType: "text",
+                                                        async:false,
+                                                        success: function (data) {
+                                                           if(data=='OK')
+                                                           {
+                                                               b=true;
+                                                           }
+                                                           else
+                                                           {
+                                                               b=false;
+                                                           }
+                                                        }
+                                                    });
+                                                    if(!b)
+                                                    {
+                                                        alert('发生错误');
+                                                        return false;
+                                                    }
+                                                }
+                                                if (info.step == 1 && info.direction == 'next')
+                                                {
+                                                    $('#Cform').attr('action', '<?php echo URL('Collection/Admin/testpage', '', 'Plugin.php'); ?>');
+                                                    $('#Cform').attr('target', '_bank');
+                                                    var cateinfo = $('#cate').val().split(',');
+                                                    $.ajax({
+                                                        type: "post",
+                                                        url: "<?php echo URL('Collection/Admin/getfields', '', 'Plugin.php'); ?>",
+                                                        data: {mid: cateinfo[1]},
+                                                        dataType: "json",
+                                                        success: function (data) {
+                                                            var html = '';
+                                                            $.each(data, function (i, item) {
+                                                                html += '<li><a href="javascript:void(0)" attr="' + item.fieldname + '" class="fieldlist">';
+                                                                html += item.title;
+                                                                html += '</a></li>';
+                                                            });
+                                                            $('#fieldlist').html(html);
+                                                            BeginSetData($('#fieldlist').find('li:first').find('.fieldlist'));
+                                                        }
 
-        });
+                                                    });
+                                                }
+                                            });
+                                        });
+                                        $(function () {
+                                            $('.muiltdiv').hide();
+                                            $('.singlediv').show();
+                                            $('.datatype').change(function () {
+                                                if ($(this).val() == 1)
+                                                {
+                                                    setListShow();
+                                                }
+                                                else
+                                                {
+                                                    setSingleShow();
+                                                }
+                                            });
 
-        var Dataobj = {
-            'type': 1,
-            'obj': '',
-            'val': new Array()
-        };
+                                        });
 
-        var singleData = {
-            'obj': '',
-            'attr': ''
-        };
+                                        var Dataobj = {
+                                            'type': 1,
+                                            'obj': '',
+                                            'val': new Array()
+                                        };
 
-        var listData = {
-            'data': '',
-            'obj': '',
-            'attr': ''
-        };
+                                        var singleData = {
+                                            'obj': '',
+                                            'attr': ''
+                                        };
 
-        function BeginSetData(FieldObj)
-        {
-            $('#setwho').html('设置' + FieldObj.text());
-            $('#nowsetfield').val(FieldObj.attr('attr'));
-            //获取已经设置好的字段规则信息
-            if ($('#' + FieldObj.attr('attr') + '_rule').length > 0)
-            {
-                ruleVal = JSON.parse($('#' + FieldObj.attr('attr') + '_rule').val());
-                setData(ruleVal);
-                if (ruleVal.type == 1)
-                {
-                    setListShow();
-                } else
-                {
-                    setSingleShow();
-                }
-            }
-            else
-            {
-                $('.muiltdiv').append($('#HidListObjdata').html());
-                setSingleShow();
-            }
-        }
+                                        var listData = {
+                                            'data': '',
+                                            'obj': '',
+                                            'attr': ''
+                                        };
 
+                                        function BeginSetData(FieldObj)
+                                        {
+                                            $('#setwho').html('设置' + FieldObj.text());
+                                            $('#nowsetfield').val(FieldObj.attr('attr'));
+                                            //获取已经设置好的字段规则信息
+                                            if ($('#' + FieldObj.attr('attr') + '_rule').length > 0)
+                                            {
+                                                ruleVal = JSON.parse($('#' + FieldObj.attr('attr') + '_rule').val());
+                                                setData(ruleVal);
+                                                if (ruleVal.type == 1)
+                                                {
+                                                    setListShow();
+                                                } else
+                                                {
+                                                    setSingleShow();
+                                                }
+                                            }
+                                            else
+                                            {
+                                                $('.muiltdiv').append($('#HidListObjdata').html());
+                                                setSingleShow();
+                                            }
+                                        }
 
+                                        $(function () {
+                                            $(document).on('click', '.fieldlist', function () {
 
+                                                BeginSetData($(this));
 
+                                            });
+                                            $('#setrulebtn').click(function () {
+                                                Dataobj.type = $('#fieldruletype').val();
+                                                nowsetfield = $('#nowsetfield').val();
+                                                if ($('#fieldruletype').val() == 0)//0 单条数据 1 多条数据
+                                                {
+                                                    //获取对象和属性
+                                                    Dataobj.obj = $('#SingleObj').val();
+                                                    Dataobj.val[0] = new Array($('#SingleAttr').val())
+                                                }
+                                                else
+                                                {
+                                                    //获取多条数据名对象和属性
+                                                    Dataobj.obj = $('#ListObj').val();
+                                                    $('.muiltdiv').find(".muiltdatadiv").each(function (index, element) {
+                                                        var data = new Array($(this).find('#listdataname').val(), $(this).find('#listdataobj').val(), $(this).find('#listdataattr').val());
+                                                        Dataobj.val[index] = data;
+                                                    });
+                                                }
+                                                var ruleJson = JSON.stringify(Dataobj);//序列化之后的值 存放到隐藏域。
+                                                if ($('#' + nowsetfield + '_rule').length > 0)
+                                                {
+                                                    $('#' + nowsetfield + '_rule').val(ruleJson);
+                                                }
+                                                else
+                                                {
+                                                    $('#hids').append('<input type="hidden" value=\'' + ruleJson + '\' id="' + nowsetfield + '_rule" name="' + nowsetfield + '_rule" />')
+                                                }
+                                            });
+                                        });
 
+                                        function setSingleShow()
+                                        {
+                                            $('.muiltdiv').hide();
+                                            $('.singlediv').show();
+                                        }
+                                        function setListShow()
+                                        {
+                                            $('.muiltdiv').show();
+                                            $('.singlediv').hide();
+                                        }
 
-        $(function () {
-            $(document).on('click', '.fieldlist', function () {
+                                        function setData(dataobj)
+                                        {
+                                            $('#fieldruletype').val(dataobj.type);
+                                            if (dataobj.type == 1)
+                                            {
+                                                //多数据
+                                                $('.muiltdiv').find('.muiltdatadiv').remove();
+                                                $('#ListObj').val(dataobj.obj);
+                                                //不管有没有数据默认有一行
+                                                if (dataobj.val.length != 0)
+                                                {
+                                                    objVal = dataobj.val[0];
+                                                    $('.muiltdiv').append($('#HidListObjdata').html());
+                                                    var HtmlObj = $('.muiltdiv').find(".muiltdatadiv:last");
+                                                    HtmlObj.find('#listdataname').val(objVal[0]);
+                                                    HtmlObj.find('#listdataobj').val(objVal[1]);
+                                                    HtmlObj.find('#listdataattr').val(objVal[2]);
 
-                BeginSetData($(this));
+                                                }
+                                                else
+                                                {
+                                                    $('.muiltdiv').append($('#HidListObjdata').html());
+                                                }
+                                                $.each(dataobj.val, function (i, v) {
+                                                    if (i != 0)
+                                                    {
+                                                        $('.muiltdiv').append($('#HidListObjdata').html());
+                                                        var HtmlObj = $('.muiltdiv').find(".muiltdatadiv:last");
+                                                        HtmlObj.find('#listdataname').val(v[0]);
+                                                        HtmlObj.find('#listdataobj').val(v[1]);
+                                                        HtmlObj.find('#listdataattr').val(v[2]);
 
-            });
-            $('#setrulebtn').click(function () {
-                Dataobj.type = $('#fieldruletype').val();
-                nowsetfield = $('#nowsetfield').val();
-                if ($('#fieldruletype').val() == 0)//0 单条数据 1 多条数据
-                {
-                    //获取对象和属性
-                    Dataobj.obj = $('#SingleObj').val();
-                    Dataobj.val[0] = new Array($('#SingleAttr').val())
-                }
-                else
-                {
-                    //获取多条数据名对象和属性
-                    Dataobj.obj = $('#ListObj').val();
-                    $('.muiltdiv').find(".muiltdatadiv").each(function (index, element) {
-                        var data = new Array($(this).find('#listdataname').val(), $(this).find('#listdataobj').val(), $(this).find('#listdataattr').val());
-                        Dataobj.val[index] = data;
-                    });
-                }
-                var ruleJson = JSON.stringify(Dataobj);//序列化之后的值 存放到隐藏域。
-                if ($('#' + nowsetfield + '_rule').length > 0)
-                {
-                    $('#' + nowsetfield + '_rule').val(ruleJson);
-                }
-                else
-                {
-                    $('#hids').append('<input type="" value=\'' + ruleJson + '\' id="' + nowsetfield + '_rule" name="' + nowsetfield + '_rule" />')
-                }
-            });
-        })
+                                                    }
+                                                });
+                                            }
+                                            else
+                                            {
+                                                $('#SingleObj').val(dataobj.obj);
+                                                var vals = dataobj.val[0];
+                                                $('#SingleAttr').val(vals[0]);
+                                                //单条数据
+                                            }
+                                        }
 
-        function setSingleShow()
-        {
-            $('.muiltdiv').hide();
-            $('.singlediv').show();
-        }
-        function setListShow()
-        {
-            $('.muiltdiv').show();
-            $('.singlediv').hide();
-        }
+                                        function addrulelist()
+                                        {
+                                            $('#HidListObjdata').find('.icon-plus').remove();
+                                            $('.muiltdiv').append($('#HidListObjdata').html());
+                                        }
 
-        function setData(dataobj)
-        {
-            $('#fieldruletype').val(dataobj.type);
-            if (dataobj.type == 1)
-            {
-                //多数据
-                $('.muiltdiv').find('.muiltdatadiv').remove();
-                $('#ListObj').val(dataobj.obj);
-                //不管有没有数据默认有一行
-                if (dataobj.val.length != 0)
-                {
-                    objVal = dataobj.val[0];
-                    $('.muiltdiv').append($('#HidListObjdata').html());
-                    var HtmlObj = $('.muiltdiv').find(".muiltdatadiv:last");
-                    HtmlObj.find('#listdataname').val(objVal[0]);
-                    HtmlObj.find('#listdataobj').val(objVal[1]);
-                    HtmlObj.find('#listdataattr').val(objVal[2]);
-
-                }
-                else
-                {
-                    $('.muiltdiv').append($('#HidListObjdata').html());
-                }
-                $.each(dataobj.val, function (i, v) {
-                    if (i != 0)
-                    {
-                        $('.muiltdiv').append($('#HidListObjdata').html());
-                        var HtmlObj = $('.muiltdiv').find(".muiltdatadiv:last");
-                        HtmlObj.find('#listdataname').val(v[0]);
-                        HtmlObj.find('#listdataobj').val(v[1]);
-                        HtmlObj.find('#listdataattr').val(v[2]);
-
-                    }
-                });
-            }
-            else
-            {
-                $('#SingleObj').val(dataobj.obj);
-                var vals = dataobj.val[0];
-                $('#SingleAttr').val(vals[0]);
-                //单条数据
-            }
-        }
-
-        function addrulelist()
-        {
-            $('#HidListObjdata').find('.icon-plus').remove();
-            $('.muiltdiv').append($('#HidListObjdata').html());
-        }
+                                        function testcollection()
+                                        {
+                                            $('#Cform').attr('target', '_bank');
+                                            $('#Cform').submit();
+                                        }
     </script>

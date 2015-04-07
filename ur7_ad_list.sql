@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-03-20 17:15:25
+Date: 2015-04-07 17:20:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -563,6 +563,26 @@ CREATE TABLE `ur7_photo_data` (
 -- ----------------------------
 -- Records of ur7_photo_data
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `ur7_plg_collection`
+-- ----------------------------
+DROP TABLE IF EXISTS `ur7_plg_collection`;
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ur7_plg_collection
+-- ----------------------------
+INSERT INTO `ur7_plg_collection` VALUES ('4', 'utf-8', '采集', '6,30', '{\"listurl\":\"http:\\/\\/www.helloweba.com\\/index-{$page}.html\",\"listobj\":\".blog_li > h2 >a\",\"listattr\":\"href\"}', '{\"title\":\"{\\\"type\\\":\\\"0\\\",\\\"obj\\\":\\\".blog_title > h2\\\",\\\"val\\\":[[\\\"\\\"]]}\"}');
+INSERT INTO `ur7_plg_collection` VALUES ('5', 'utf-8', '模板开发', '3,30', '{\"listurl\":\"http:\\/\\/www.php100.com\\/html\\/dujia\\/{$page}.html\",\"listobj\":\"li > h2 >a\",\"listattr\":\"href\"}', '{\"title\":\"{\\\"type\\\":\\\"0\\\",\\\"obj\\\":\\\".newsContent > h1\\\",\\\"val\\\":[[\\\"text\\\"]]}\",\"content\":\"{\\\"type\\\":\\\"0\\\",\\\"obj\\\":\\\".p_content\\\",\\\"val\\\":[[\\\"text\\\"]]}\"}');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin`

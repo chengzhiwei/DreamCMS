@@ -6,7 +6,7 @@ namespace Model\Adomodel;
  * Description of FriendLinkModel
  *
  * @author Panxin <americapan@vip.qq.com>
- * @date 2014-8-21 15:31:15
+ * @date 2014-8-21 15:31:15 
  */
 class FriendLinkModel extends \Think\Model\AdvModel
 {

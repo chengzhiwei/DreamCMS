@@ -30,10 +30,13 @@ class CategoryModel extends \Think\Model\AdvModel
         }
     }
 
-    public function selectall($id)
+    public function selectall($lid='')
     {
         $condition = array();
-        $condition['langid'] = $id;
+        if ($lid)
+        {
+            $condition['langid'] = $lid;
+        }
         return $this->where($condition)->order('sort')->select();
     }
 
@@ -76,10 +79,13 @@ class CategoryModel extends \Think\Model\AdvModel
         return $this->where($condition)->find();
     }
 
-    public function selectbylang($lid, $menushow = -1)
+    public function selectbylang($lid = '', $menushow = -1)
     {
         $condition = array();
-        $condition['langid'] = $lid;
+        if ($lid)
+        {
+            $condition['langid'] = $lid;
+        }
         if ($menushow != -1)
         {
             $condition['menushow'] = $menushow;
