@@ -4,11 +4,13 @@ namespace Common\Controller;
 
 class SiteController extends \Think\Controller
 {
-    public $site_tmpl='';
+
+    public $site_tmpl = '';
+
     public function __construct()
     {
         parent::__construct();
-        if(!defined('ADMIN_OR_SITE'))
+        if (!defined('ADMIN_OR_SITE'))
         {
             define('ADMIN_OR_SITE', 'SITE');
         }
@@ -34,12 +36,12 @@ class SiteController extends \Think\Controller
     private function settplpath()
     {
         $nowlang = \SiteNowLang();
-        $tmpl_path = 'Template/Site/' . $nowlang['tmpl'] . '/';
+        $tmpl_path = C('TMPL_PATH') . '/' . APP_NAME . '/' . $nowlang['tmpl'] . '/';
         if (!is_dir($tmpl_path))
         {
-            $tmpl_path = 'Template/Site/Default/';
+            $tmpl_path = C('TMPL_PATH') . '/' . APP_NAME .'/Default/';
         }
-        $this->site_tmpl=$tmpl_path;
+        $this->site_tmpl = $tmpl_path;
         define('TMPL_PATH', $tmpl_path);
         define('CSS_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Css/');
         define('JS_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Js/');

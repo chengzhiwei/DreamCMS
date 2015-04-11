@@ -149,6 +149,10 @@ class AdminController extends AuthbaseController
             $newctllist = array();
             foreach ($ctllist as $cl)
             {
+                if($cl['app']=='plugin.php')
+                {
+                    \Org\Helper\IncludeLang::QuickInc($cl['appname'].'/'. strtolower($cl['appname']),'plugin');//加载插件语言包
+                }
                 $newctllist[$cl['gid']][] = $cl;
             }
             $actmod = DD('AdminAuthAction');

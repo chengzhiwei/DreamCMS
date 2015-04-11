@@ -13,11 +13,11 @@ class AdminbaseController extends \Think\Controller
         parent::__construct();
         if (!defined(TMPL_PATH))
         {
-            define('TMPL_PATH', 'Template/Admin/' . C('ADMIN_THEME') . '/');
-            define('CSS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/css/');
-            define('JS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/js/');
-            define('IMG_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/images/');
-            define('ADMIN_LAYOUT', 'Template/Admin/' . C('ADMIN_THEME') . '/');
+            define('TMPL_PATH', C('TMPL_PATH') . '/' . APP_NAME . '/' . C('ADMIN_THEME') . '/');
+            define('CSS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Css/');
+            define('JS_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Js/');
+            define('IMG_PATH', __ROOT__ . '/' . TMPL_PATH . 'Layout/Images/');
+            define('ADMIN_LAYOUT', C('TMPL_PATH') . '/' . APP_NAME  .'/'. C('ADMIN_THEME') . '/');
         }
         if (!defined('ADMIN_OR_SITE'))
         {

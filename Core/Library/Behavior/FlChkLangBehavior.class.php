@@ -77,19 +77,14 @@ class FlChkLangBehavior extends Behavior
             L(include $file);
 
 
-        $file = getcwd() . '/Lang/' . APP_NAME . '/' . LANG_SET . '/' . MODULE_NAME . '/' . strtolower(CONTROLLER_NAME) . '.php';
+        $file = getcwd() . '/Lang/' . APP_NAME . '/' . LANG_SET . '/' . MODULE_NAME . '/' . CONTROLLER_NAME . '.php';
         if (is_file($file))
             L(include $file);
 
-        $file = './Lang/' . APP_NAME . '/' . LANG_SET . '/Common/common.php';
+        $file = './Lang/' . APP_NAME . '/' . LANG_SET . '/Common/Common.php';
         if (is_file($file))
             L(include $file);
-        if (MODULE_NAME == 'Content')
-        {
-            $file = getcwd() . '/Lang/' . APP_NAME . '/' . LANG_SET . '/Common/comm_content.php';
-            if (is_file($file))
-                L(include $file);
-        }
+        
     }
 
 }

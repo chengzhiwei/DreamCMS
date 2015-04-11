@@ -105,7 +105,7 @@
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <input autocomplete="off" type="checkbox" class="ace-checkbox-2 chkall ace"/><span class="lbl"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse<?php echo $key; ?>">
-                                                        <?php echo L($g['langconf']); ?>
+                                                        <?php echo L($g['title']); ?>
                                                     </a>
                                                 </h4>
                                             </div>
@@ -128,7 +128,7 @@
                                                                 ?>
                                                                 <lable class="col-sm-3 chk_lbl">
                                                                     <input type="checkbox" name="authlist[]" value="<?php echo $al['id']; ?>" class="ace-checkbox-2 ace authlist" txtval="<?php echo L($al['langconf']); ?>" />
-                                                                    <span class="lbl"><?php echo L($al['langconf']); ?> </span>
+                                                                    <span class="lbl"><?php echo L($al['title']); ?> </span>
                                                                 </lable>
                                                             <?php }
                                                             ?>

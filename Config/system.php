@@ -13,6 +13,7 @@ return array(
     'SITE_DESC' => '中国飞龙网',
     'COOKIE_TOKEN' => 'RTG123',
     'PWD_TOKEN' => 'RTG123',
+    'TMPL_PATH' => 'Template',
     'TMPL_TEMPLATE_SUFFIX' => '.php',
     'TMPL_ENGINE_TYPE' => 'php',
     'ADMIN_THEME' => 'bootstrap',

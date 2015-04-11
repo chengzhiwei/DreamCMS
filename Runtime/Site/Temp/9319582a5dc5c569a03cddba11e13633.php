@@ -1,3 +1,0 @@
-<?php
-//000000003600a:2:{i:5;a:8:{s:2:"id";s:1:"5";s:3:"cid";s:1:"6";s:5:"title";s:29:"DreamCMS服务器环境要求";s:7:"keyword";s:32:"DreamCMS,DreamCMS服务器环境";s:4:"desc";s:29:"DreamCMS服务器环境要求";s:5:"thumb";N;s:8:"position";N;s:4:"href";s:18:"/DreamCMS/news_6_5";}i:6;a:8:{s:2:"id";s:1:"6";s:3:"cid";s:1:"6";s:5:"title";s:29:"模型-视图-控制器 (MVC)";s:7:"keyword";s:28:"模型,视图,控制器 ,MVC";s:4:"desc";s:12:"什么是MVC";s:5:"thumb";N;s:8:"position";N;s:4:"href";s:18:"/DreamCMS/news_6_6";}}
-?>
