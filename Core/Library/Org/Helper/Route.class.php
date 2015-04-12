@@ -31,7 +31,7 @@ class Route
         {
             $keys = $param;
             $keys_arr = array_keys($keys);
-            asort($keys_arr);dump($keys_arr);
+            asort($keys_arr);
             $param_ext = implode('_', $keys_arr);
         }
         //去掉MODULE_NAME;

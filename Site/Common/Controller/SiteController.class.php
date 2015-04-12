@@ -36,21 +36,23 @@ class SiteController extends \Think\Controller
     private function settplpath()
     {
         $nowlang = \SiteNowLang();
-        $tmpl_path = C('TMPL_PATH') . '/' . APP_NAME . '/' . $nowlang['tmpl'] . '/';
+        $tmpl_path = C('TMPL_PATH') . '/' . C('SITE_APP_NAME') . '/' . $nowlang['tmpl'] . '/';
         if (!is_dir($tmpl_path))
         {
-            $tmpl_path = C('TMPL_PATH') . '/' . APP_NAME .'/Default/';
+            $tmpl_path = C('TMPL_PATH') . '/' . C('SITE_APP_NAME') . '/Default/';
         }
+
         $this->site_tmpl = $tmpl_path;
         define('TMPL_PATH', $tmpl_path);
-        define('CSS_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Css/');
-        define('JS_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Js/');
-        define('IMG_PATH', __ROOT__ . '/' . $tmpl_path . 'Layout/Image/');
-        $this->assign('CSS_PATH', CSS_PATH);
-        $this->assign('JS_PATH', JS_PATH);
-        $this->assign('IMG_PATH', IMG_PATH);
-        C('TMPL_ACTION_ERROR', 'template/' . APP_NAME . '/' . $nowlang['tmpl'] . '/Layout/error.html');
-        C('TMPL_ACTION_SUCCESS', 'template/' . APP_NAME . '/' . $nowlang['tmpl'] . '/Layout/success.html');
+        $site_css_path = __ROOT__ . '/' . $tmpl_path . 'Layout/Css/';
+        $site_js_path = __ROOT__ . '/' . $tmpl_path . 'Layout/Js/';
+        $site_img_path = __ROOT__ . '/' . $tmpl_path . 'Layout/Image/';
+        define('SITE_CSS_PATH', $site_css_path);
+        define('SITE_JS_PATH', $site_css_path);
+        define('SITE_IMG_PATH', $site_img_path);
+
+        C('TMPL_ACTION_ERROR', 'template/' . C('SITE_APP_NAME') . '/' . $nowlang['tmpl'] . '/Layout/error.html');
+        C('TMPL_ACTION_SUCCESS', 'template/' . C('SITE_APP_NAME') . '/' . $nowlang['tmpl'] . '/Layout/success.html');
     }
 
 }

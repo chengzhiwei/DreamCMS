@@ -49,8 +49,9 @@ class AuthbaseController extends \Common\Controller\AdminbaseController
             {
                 $view = TMPL_PATH . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . C('TMPL_TEMPLATE_SUFFIX');
             }
+            
             $this->assign('view', $view);
-            parent::display(ADMIN_LAYOUT . 'Layout/layout.php');
+            parent::display(ADMIN_LAYOUT . 'Layout/Layout.php');
         } else
         {
             parent::display();

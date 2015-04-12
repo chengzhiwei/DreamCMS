@@ -10,7 +10,8 @@ class CommCls
      */
     public static function _setPlgStatic()
     {
-        PLUGIN_TMPL_PATH . '/' . APP_NAME . '/' . MODULE_NAME . '/Static/';
+        $staticPath = C('TMPL_PATH') . '/' . APP_NAME . '/' . MODULE_NAME . '/Layout/';
+        define('PLG_CSS_JS', $staticPath . 'Css');
     }
 
 }

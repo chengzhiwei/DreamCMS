@@ -1,7 +1,6 @@
 <?php
 
-include_once 'Config/functions.php';
-$mysql_config = require("Config/system.php");
+$mysql_config = require("Config/config.php");
 $site_config = array(
     'LAYOUT_ON' => true,
     'LAYOUT_NAME' => '../../Admin/Default/Layout/layout',

@@ -246,10 +246,6 @@ class AdminController extends \Common\Controller\AdminpluginController
                 }
             }
         }
-
-
-        dump($listRule);
-        die();
         if ($blagStop === true)
         {
             //停止采集

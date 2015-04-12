@@ -6,27 +6,27 @@
         <title>DreamCMS 后台管理系统</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- basic styles -->
-        <link href="<?php echo CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome.min.css" />
+        <link href="<?php echo ADMIN_CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>font-awesome.min.css" />
         <!--[if IE 7]>
-          <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome-ie7.min.css" />
+          <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>font-awesome-ie7.min.css" />
         <![endif]-->
         <!-- page specific plugin styles -->
         <!-- fonts -->
         <!-- ace styles -->
-        <link rel="stylesheet" href="<?php echo CSS_PATH; ?>ace.min.css" />
+        <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>ace.min.css" />
 
 
         <!--[if lte IE 8]>
-          <link rel="stylesheet" href="<?php echo CSS_PATH; ?>ace-ie.min.css" />
+          <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>ace-ie.min.css" />
         <![endif]-->
 
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
         <!--[if lt IE 9]>
-        <script src="<?php echo JS_PATH; ?>html5shiv.js"></script>
-        <script src="<?php echo JS_PATH; ?>respond.min.js"></script>
+        <script src="<?php echo ADMIN_JS_PATH; ?>html5shiv.js"></script>
+        <script src="<?php echo ADMIN_JS_PATH; ?>respond.min.js"></script>
         <![endif]-->
         <style>
             .op_btn a{  margin-left: 5px;}

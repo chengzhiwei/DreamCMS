@@ -1,6 +1,6 @@
-<script src="<?php echo JS_PATH ?>jquery.poshytip.min.js"></script>
-<script src="<?php echo JS_PATH ?>formverify.js"></script>
-<link rel="stylesheet" href="<?php echo CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
+<script src="<?php echo ADMIN_JS_PATH ?>jquery.poshytip.min.js"></script>
+<script src="<?php echo ADMIN_JS_PATH ?>formverify.js"></script>
+<link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>/tip-yellow/tip-yellow.css" />
 <script>
     function getmodule(gid)
     {

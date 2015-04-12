@@ -7,11 +7,11 @@
 
         <!-- basic styles -->
 
-        <link href="<?php echo CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome.min.css" />
+        <link href="<?php echo ADMIN_CSS_PATH; ?>bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>font-awesome.min.css" />
 
         <!--[if IE 7]>
-          <link rel="stylesheet" href="<?php echo CSS_PATH; ?>font-awesome-ie7.min.css" />
+          <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>font-awesome-ie7.min.css" />
         <![endif]-->
 
         <!-- page specific plugin styles -->
@@ -22,11 +22,11 @@
 
         <!-- ace styles -->
 
-        <link rel="stylesheet" href="<?php echo CSS_PATH; ?>ace.min.css" />
-        <link rel="stylesheet" href="<?php echo CSS_PATH; ?>ace-rtl.min.css" />
+        <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>ace.min.css" />
+        <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>ace-rtl.min.css" />
 
         <!--[if lte IE 8]>
-          <link rel="stylesheet" href="<?php echo CSS_PATH; ?>ace-ie.min.css" />
+          <link rel="stylesheet" href="<?php echo ADMIN_CSS_PATH; ?>ace-ie.min.css" />
         <![endif]-->
 
         <!-- inline styles related to this page -->
@@ -34,8 +34,8 @@
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
         <!--[if lt IE 9]>
-        <script src="<?php echo JS_PATH; ?>html5shiv.js"></script>
-        <script src="<?php echo JS_PATH; ?>respond.min.js"></script>
+        <script src="<?php echo ADMIN_JS_PATH; ?>html5shiv.js"></script>
+        <script src="<?php echo ADMIN_JS_PATH; ?>respond.min.js"></script>
         <![endif]-->
     </head>
 
@@ -111,7 +111,7 @@
 
                                         <div class="toolbar clearfix">
                                             <div>
-                                                <a href="#" onclick="show_box('forgot-box');
+                                                <a href="#" onClick="show_box('forgot-box');
                                                         return false;" class="forgot-password-link">
                                                     <i class="icon-arrow-left"></i>
                                                     I forgot my password
@@ -119,7 +119,7 @@
                                             </div>
 
                                             <div>
-                                                <a href="#" onclick="show_box('signup-box');
+                                                <a href="#" onClick="show_box('signup-box');
                                                         return false;" class="user-signup-link">
                                                     I want to register
                                                     <i class="icon-arrow-right"></i>
@@ -143,31 +143,31 @@
 
         <!--[if !IE]> -->
 
-        <script src="<?php echo JS_PATH; ?>jquery.min.js"></script>
+        <script src="<?php echo ADMIN_JS_PATH; ?>jquery.min.js"></script>
 
         <!-- <![endif]-->
 
         <!--[if IE]>
-<script src="<?php echo JS_PATH; ?>jquery.min.js"></script>
+<script src="<?php echo ADMIN_JS_PATH; ?>jquery.min.js"></script>
 <![endif]-->
 
         <!--[if !IE]> -->
 
         <script type="text/javascript">
-                                                    window.jQuery || document.write("<script src='<?php echo JS_PATH; ?>jquery-2.0.3.min.js'>" + "<" + "/script>");
+                                                    window.jQuery || document.write("<script src='<?php echo ADMIN_JS_PATH; ?>jquery-2.0.3.min.js'>" + "<" + "/script>");
         </script>
 
         <!-- <![endif]-->
 
         <!--[if IE]>
 <script type="text/javascript">
-window.jQuery || document.write("<script src='<?php echo JS_PATH; ?>jquery-1.10.2.min.js'>"+"<"+"/script>");
+window.jQuery || document.write("<script src='<?php echo ADMIN_JS_PATH; ?>jquery-1.10.2.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 
         <script type="text/javascript">
             if ("ontouchend" in document)
-                document.write("<script src='<?php echo JS_PATH; ?>jquery.mobile.custom.min.js'>" + "<" + "/script>");
+                document.write("<script src='<?php echo ADMIN_JS_PATH; ?>jquery.mobile.custom.min.js'>" + "<" + "/script>");
         </script>
 
         <!-- inline scripts related to this page -->

@@ -17,7 +17,7 @@ class AdminpluginController extends \Auth\Controller\AuthbaseController
 
     public function display()
     {
-        $view = PLUGIN_TMPL_PATH . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . C('TMPL_TEMPLATE_SUFFIX');
+        $view = C('TMPL_PATH') . '/' . C('PLG_APP_NAME') . '/' . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . C('TMPL_TEMPLATE_SUFFIX');
         parent::display($view);
     }
 

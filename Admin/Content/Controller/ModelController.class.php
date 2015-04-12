@@ -45,7 +45,7 @@ class ModelController extends \Auth\Controller\AuthbaseController
             if ($addmodel && $addtable && $addfield)
             {
                 //添加语言包
-                $setlang = new \Org\Helper\SetLang('Content/model', true);
+                $setlang = new \Org\Helper\SetLang('Content/Model', true);
                 $setlang->setOneLang('MDL_' . strtoupper(I('post.table')), I('post.title'));
                 $mod->commit();
                 $this->success(L('OP_SUCCESS'));
