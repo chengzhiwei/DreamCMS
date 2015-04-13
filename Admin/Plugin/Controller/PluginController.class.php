@@ -211,6 +211,8 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 $hooklistdata[] = $data;
             }
         }
+        //执行插件SQL 主要用于建表
+        
         $Hooklist = DD('HookList');
         $Hooklist->addlist($hooklistdata);
         $this->redirect('Plugin/Plugin/pluginlist');
