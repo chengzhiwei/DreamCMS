@@ -11,7 +11,7 @@
             <menu_group>5</menu_group>
             <menu_module>PLG_COLLECTION_MODULE</menu_module>
             <res>
-                <js></js>
+                <js>fuelux.wizard.min.js,json2.js</js>
                 <css></css>
             </res>
             <ismenu>1</ismenu>

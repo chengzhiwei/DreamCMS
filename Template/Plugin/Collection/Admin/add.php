@@ -1,5 +1,4 @@
-
-<script src="<?php echo __ROOT__ ?>/Template/Plugin/Collection/js/fuelux.wizard.min.js" ></script>
+<script src="<?php echo PLG_JS_PATH ?>fuelux.wizard.min.js" ></script>
 <div class="page-content">
     <div class="page-header">
         <h1>
@@ -56,7 +55,7 @@
 
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="form-group ">
                                                 <label class="col-xs-12 col-sm-3 control-label no-padding-right" for="inputWarning">选择栏目</label>
 
@@ -275,7 +274,7 @@
 
     </div>
     <script src="http://www.daimajiayuan.com/download/201312/yulan/ace/assets/js/ace-elements.min.js"></script>
-    <script src="<?php echo __ROOT__ ?>/Template/Plugin/Collection/js/json2.js" ></script>
+    <script src="<?php echo PLG_JS_PATH ?>json2.js" ></script>
     <script>
 
                                         jQuery(function ($) {
@@ -295,19 +294,19 @@
                                                         url: "<?php echo URL('Collection/Admin/add', '', 'Plugin.php'); ?>",
                                                         data: $("#Cform").serialize(),
                                                         dataType: "text",
-                                                        async:false,
+                                                        async: false,
                                                         success: function (data) {
-                                                           if(data=='OK')
-                                                           {
-                                                               b=true;
-                                                           }
-                                                           else
-                                                           {
-                                                               b=false;
-                                                           }
+                                                            if (data == 'OK')
+                                                            {
+                                                                b = true;
+                                                            }
+                                                            else
+                                                            {
+                                                                b = false;
+                                                            }
                                                         }
                                                     });
-                                                    if(!b)
+                                                    if (!b)
                                                     {
                                                         alert('发生错误');
                                                         return false;

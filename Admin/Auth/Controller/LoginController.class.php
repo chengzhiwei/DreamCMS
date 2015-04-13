@@ -23,6 +23,11 @@ class LoginController extends \Common\Controller\AdminbaseController
             $pwd = I('post.pwd');
             $adminModel = DD('Admin');
             $admininfo = $adminModel->findbyname();
+            if (!$admininfo)
+            {
+                $this->error(L('ACCOUNT_FAILE'));
+            }
+
             if ($admininfo['pwd'] == \cusMd5($pwd, C('PWD_TOKEN')))
             {
                 unset($admininfo['pwd']);

@@ -9,12 +9,12 @@ return array(
     'DB_PREFIX' => 'ur7_',
     'DOMAIN' => 'http://192.168.0.196',
     'COOKIE_TOKEN' => 'RTG123',
+    'PWD_TOKEN' => 'RTG123',
     'TMPL_PATH' => 'Template',
     'TMPL_TEMPLATE_SUFFIX' => '.php',
     'TMPL_ENGINE_TYPE' => 'php',
     'ADMIN_THEME' => 'bootstrap',
     'AUTOLOAD_NAMESPACE' => array(
         'Model' => getcwd() . '\Model',
-        'Element' => getcwd() . '\Element',
     ),
 );
