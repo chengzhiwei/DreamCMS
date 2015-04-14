@@ -57,7 +57,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
     {
         /* 获取插件信息 */
         $plugin = I('get.plugin');
-        $config_path = 'Plugin/' . $plugin . '/config.xml';
+        $config_path = C('PLG_APP_NAME') . '/' . $plugin . '/config.xml';
         $pluginfo = \simplexml_load_file($config_path);
         $name = (string) $pluginfo->name;
         $desc = (string) $pluginfo->desc;
@@ -211,10 +211,11 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 $hooklistdata[] = $data;
             }
         }
-        //执行插件SQL 主要用于建表
-        
         $Hooklist = DD('HookList');
         $Hooklist->addlist($hooklistdata);
+        //执行插件SQL 主要用于建表
+        $install = C('PLG_APP_NAME') . '/' . $plugin . '/install.sql';
+        \Org\Helper\ImportSql::ExecuteSqlFile($install);
         $this->redirect('Plugin/Plugin/pluginlist');
     }
 
@@ -225,17 +226,27 @@ class PluginController extends \Auth\Controller\AuthbaseController
     public function uninstall()
     {
         $file = I('get.file');
+        echo $file;
+        die();
         $pluginmod = DD('Plugin');
         $plugininfo = $pluginmod->findByPlginFile($file);
         $pid = $plugininfo['id'];
         $pluginmod->startTrans();
+        //删除插件信息表
         $delPlugin = $pluginmod->delbyid($pid);
+        //删除插件资源表
         $pluginresmod = DD('PluginRes');
         $delPluginRes = $pluginresmod->delbypid($pid);
+        //删除插件钩子表
         $hooklistmod = DD('HookList');
         $delPluginHook = $hooklistmod->delbypid($pid);
+        /*删除后台权限菜单表*/
+        //删除权限菜单action表
+        $ActionMod=DD('AdminAuthAction');
         if ($delPlugin !== false && $delPluginHook !== false && $delPluginRes !== false)
         {
+            $install = C('PLG_APP_NAME') . '/' . $file . '/uninstall.sql';
+            \Org\Helper\ImportSql::ExecuteSqlFile($install);
             $pluginmod->commit();
             $this->redirect('Plugin/Plugin/pluginlist');
         } else

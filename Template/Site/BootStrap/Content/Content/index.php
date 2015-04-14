@@ -9,12 +9,12 @@
         <?php include (TMPL_PATH . 'Layout/head.php'); ?>
         <style>
             .what-we-do p{ margin: 0 15px; text-align: left}
-            
+
         </style>
     </head>
 
     <body>
-        
+        <?php //Vhook('Test/Hook/Vhook/show', array()); ?>
         <?php //print_r(  Org\Helper\TMP::MENU());?>
         <!-- Header -->
         <?php include (TMPL_PATH . 'Layout/header.php'); ?>

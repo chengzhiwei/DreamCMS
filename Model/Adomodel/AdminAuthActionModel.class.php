@@ -94,8 +94,34 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
                 return true;
             }
         }
-        
+
         return false;
+    }
+
+    /**
+     * 删除插件ACTION
+     * @param string $group 分组模块名
+     */
+    public function delPlgByGroup($group)
+    {
+        $condition = array(
+            'app' => \Model\Enum\AppEnum::PLUGIN, //1 为插件
+            'group' => $group,
+        );
+        return $this->where($condition)->delete();
+    }
+
+    /**
+     * 根据分组模块名查询插件ACTIONS
+     * @param string $group 分组模块名
+     */
+    public function selPlgByGroup($group)
+    {
+        $condition = array(
+            'app' => \Model\Enum\AppEnum::PLUGIN,
+            'group' => $group,
+        );
+        return $this->where($condition)->select();
     }
 
 }

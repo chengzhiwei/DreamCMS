@@ -20,9 +20,9 @@ function DD($adomodel, $arg = array(), $ext = 'Ado')
     //反射
     $RefCls = new ReflectionClass($newmodel);
     //实例化 传参给构造函数
-    if(!$arg)
+    if (!$arg)
     {
-        $arg=array($adomodel);
+        $arg = array($adomodel);
     }
     $newmodel_obj = $RefCls->newInstanceArgs($arg);
     $_adomodel[$staticStr] = $newmodel_obj;
@@ -263,7 +263,7 @@ function Vhook($path, $vars = array())
     unset($path_arr[count($path_arr) - 1]);
     $cls = implode('\\', $path_arr);
     //通过语言来加载不同的语言包
-    import($cls, 'Plugin');
+    import($cls, C('PLG_APP_NAME'));//导入插件类
     static $elt_obj = array();
     if (!$elt_obj[$cls])
     {
@@ -294,13 +294,12 @@ function SiteNowLang()
     $lang = DD('Language');
     if (I('get.l'))
     {
-        $nowlang=S('NOWLANG_' . I('get.l'));
+        $nowlang = S('NOWLANG_' . I('get.l'));
         if (!$nowlang)
         {
             $nowlang = $lang->findbylang(I('get.l'));
         }
         return $nowlang;
-            
     }
     return \SiteDftLang();
 }

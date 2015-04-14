@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2015-04-07 17:20:16
+Date: 2015-04-14 17:21:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,7 +80,7 @@ CREATE TABLE `ur7_admin_auth_action` (
   `action` varchar(50) NOT NULL,
   `isshow` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_action
@@ -120,8 +120,8 @@ INSERT INTO `ur7_admin_auth_action` VALUES ('38', 'ACT_CONTENT_MODEL_ADDFIELD', 
 INSERT INTO `ur7_admin_auth_action` VALUES ('39', 'ACT_AUTH_ADMIN_ADDADMIN', 'admin.php', '4', '6', 'Auth', 'Admin', 'addadmin', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('40', 'ACT_COMPONENT_AD_ADDTYPE', 'admin.php', '5', '10', 'Component', 'Ad', 'addtype', '0');
 INSERT INTO `ur7_admin_auth_action` VALUES ('41', 'ACT_AUTH_PERMISSIONS_MODULELIST', 'admin.php', '4', '13', 'Auth', 'Permissions', 'modulelist', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('52', 'PLG_COLLECTION_LIST', 'plugin.php', '5', '21', 'Collection', 'Admin', 'index', '1');
-INSERT INTO `ur7_admin_auth_action` VALUES ('53', 'PLG_COLLECTION_ADD', 'plugin.php', '5', '21', 'Collection', 'Admin', 'add', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('58', 'PLG_COLLECTION_LIST', 'plugin.php', '5', '22', 'Collection', 'Admin', 'index', '1');
+INSERT INTO `ur7_admin_auth_action` VALUES ('59', 'PLG_COLLECTION_ADD', 'plugin.php', '5', '22', 'Collection', 'Admin', 'add', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_controller`
@@ -136,7 +136,7 @@ CREATE TABLE `ur7_admin_auth_controller` (
   `app` varchar(50) DEFAULT NULL,
   `appname` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ur7_admin_auth_controller
@@ -153,7 +153,7 @@ INSERT INTO `ur7_admin_auth_controller` VALUES ('10', 'CTL_AD', 'Ad', '5', 'icon
 INSERT INTO `ur7_admin_auth_controller` VALUES ('12', 'CTL_PLUGIN', 'Plugin', '6', 'icon-resize-full', null, null);
 INSERT INTO `ur7_admin_auth_controller` VALUES ('13', 'CTL_PERMISSIONS', 'Permissions', '4', 'icon-eye-close', null, null);
 INSERT INTO `ur7_admin_auth_controller` VALUES ('14', 'CTL_MODEL', 'Model', '2', 'icon-hdd', null, null);
-INSERT INTO `ur7_admin_auth_controller` VALUES ('21', 'PLG_COLLECTION_MODULE', 'Admin', '5', 'icon-resize-full', 'plugin.php', 'Collection');
+INSERT INTO `ur7_admin_auth_controller` VALUES ('22', 'PLG_COLLECTION_MODULE', 'Admin', '5', 'icon-resize-full', 'plugin.php', 'Collection');
 
 -- ----------------------------
 -- Table structure for `ur7_admin_auth_group`
@@ -581,8 +581,6 @@ CREATE TABLE `ur7_plg_collection` (
 -- ----------------------------
 -- Records of ur7_plg_collection
 -- ----------------------------
-INSERT INTO `ur7_plg_collection` VALUES ('4', 'utf-8', '采集', '6,30', '{\"listurl\":\"http:\\/\\/www.helloweba.com\\/index-{$page}.html\",\"listobj\":\".blog_li > h2 >a\",\"listattr\":\"href\"}', '{\"title\":\"{\\\"type\\\":\\\"0\\\",\\\"obj\\\":\\\".blog_title > h2\\\",\\\"val\\\":[[\\\"\\\"]]}\"}');
-INSERT INTO `ur7_plg_collection` VALUES ('5', 'utf-8', '模板开发', '3,30', '{\"listurl\":\"http:\\/\\/www.php100.com\\/html\\/dujia\\/{$page}.html\",\"listobj\":\"li > h2 >a\",\"listattr\":\"href\"}', '{\"title\":\"{\\\"type\\\":\\\"0\\\",\\\"obj\\\":\\\".newsContent > h1\\\",\\\"val\\\":[[\\\"text\\\"]]}\",\"content\":\"{\\\"type\\\":\\\"0\\\",\\\"obj\\\":\\\".p_content\\\",\\\"val\\\":[[\\\"text\\\"]]}\"}');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin`
@@ -595,14 +593,14 @@ CREATE TABLE `ur7_plugin` (
   `desc` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ur7_plugin
 -- ----------------------------
 INSERT INTO `ur7_plugin` VALUES ('26', 'PLG_WEBUPLOAD_NAME', 'WebUpload', 'PLG_WEBUPLOAD_DESC', '1');
 INSERT INTO `ur7_plugin` VALUES ('27', 'PLG_UEDITOR_NAME', 'Ueditor', 'PLG_UEDITOR_DESC', '1');
-INSERT INTO `ur7_plugin` VALUES ('37', 'PLG_COLLECTION_NAME', 'Collection', 'PLG_COLLECTION_DESC', '1');
+INSERT INTO `ur7_plugin` VALUES ('40', 'PLG_COLLECTION_NAME', 'Collection', 'PLG_COLLECTION_DESC', '1');
 
 -- ----------------------------
 -- Table structure for `ur7_plugin_res`
