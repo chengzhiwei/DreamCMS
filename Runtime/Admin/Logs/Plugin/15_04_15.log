@@ -1,0 +1,1910 @@
+[ 2015-04-15T14:06:26+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.027003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028003s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'pluginlist' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.1110s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-04-15T14:06:30+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-04-15T14:06:38+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 40 [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0940s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 40 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0640s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 40 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = 22  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_controller` WHERE `id` = 22 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `gid` = 5  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.3710s ]
+
+[ 2015-04-15T14:06:39+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:06:57+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0650s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_controller` (`title`,`cname`,`gid`,`cls`,`app`,`appname`) VALUES ('PLG_COLLECTION_MODULE','Admin','5','icon-resize-full','plugin.php','Collection') [ RunTime:0.0230s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','23','Collection','Admin','index','1') [ RunTime:0.0270s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','23','Collection','Admin','index','1') [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Model\Adomodel\PluginResModel::addlist(), called in D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php on line 180 and defined D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginResModel.class.php 第 20 行.
+NOTIC: [8] Undefined variable: dataList D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginResModel.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0070s ]
+SQL: 
+SET FOREIGN_KEY_CHECKS=0 [ RunTime:0.0280s ]
+SQL: 
+DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0110s ]
+SQL: 
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 [ RunTime:0.1820s ]
+
+[ 2015-04-15T14:06:57+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:31:14+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0080s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:31:16+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0160s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 41 [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 41 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0120s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 41 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0120s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = null  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.1360s ]
+
+[ 2015-04-15T14:31:16+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:31:18+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0390s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','23','Collection','Admin','index','1') [ RunTime:0.0430s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','23','Collection','Admin','add','1') [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+ERR: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+
+[ 2015-04-15T14:32:03+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0430s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','23','Collection','Admin','index','1') [ RunTime:0.0380s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','23','Collection','Admin','add','1') [ RunTime:0.0260s ]
+
+[ 2015-04-15T14:32:38+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0330s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','23','Collection','Admin','index','1') [ RunTime:0.0250s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','23','Collection','Admin','add','1') [ RunTime:0.0330s ]
+
+[ 2015-04-15T14:33:18+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0420s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','23','Collection','Admin','index','1') [ RunTime:0.0230s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','23','Collection','Admin','add','1') [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin_res` (`path`,`js`,`css`,`acname`,`pid`) VALUES ('Collection/Admin/index','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_LIST','45'),('Collection/Admin/add','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_ADD','45') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0090s ]
+SQL: 
+SET FOREIGN_KEY_CHECKS=0 [ RunTime:0.0000s ]
+SQL: 
+DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0000s ]
+SQL: 
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 [ RunTime:0.0740s ]
+
+[ 2015-04-15T14:33:19+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:33:42+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 42 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 42 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 42 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = null  [ RunTime:0.0010s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0580s ]
+
+[ 2015-04-15T14:33:43+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:34:05+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:34:13+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 43 [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 43 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 43 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = null  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0270s ]
+
+[ 2015-04-15T14:34:13+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:34:15+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:34:16+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:34:21+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0020s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 44 [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 44 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 44 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = null  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0420s ]
+
+[ 2015-04-15T14:34:21+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:34:25+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:35:23+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-04-15T14:35:58+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 45 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 45 [ RunTime:0.0000s ]
+
+[ 2015-04-15T14:36:32+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 45 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 45 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 45 [ RunTime:0.0020s ]
+
+[ 2015-04-15T14:36:45+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 45 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 45 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0060s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 45 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = null  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0300s ]
+
+[ 2015-04-15T14:36:46+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:37:06+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0220s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_controller` (`title`,`cname`,`gid`,`cls`,`app`,`appname`) VALUES ('PLG_COLLECTION_MODULE','Admin','5','icon-resize-full','plugin.php','Collection') [ RunTime:0.0190s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','24','Collection','Admin','index','1') [ RunTime:0.0290s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','24','Collection','Admin','add','1') [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0060s ]
+SQL: INSERT INTO `ur7_plugin_res` (`path`,`js`,`css`,`acname`,`pid`) VALUES ('Collection/Admin/index','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_LIST','46'),('Collection/Admin/add','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_ADD','46') [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0060s ]
+SQL: 
+SET FOREIGN_KEY_CHECKS=0 [ RunTime:0.0010s ]
+SQL: 
+DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0000s ]
+SQL: 
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 [ RunTime:0.1280s ]
+
+[ 2015-04-15T14:37:06+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:37:20+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 46 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 46 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 46 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = null  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0540s ]
+
+[ 2015-04-15T14:37:20+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:49:29+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:49:32+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0030s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0490s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_controller` (`title`,`cname`,`gid`,`cls`,`app`,`appname`) VALUES ('PLG_COLLECTION_MODULE','Admin','5','icon-resize-full','plugin.php','Collection') [ RunTime:0.0510s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','plugin.php','5','25','Collection','Admin','index','1') [ RunTime:0.0180s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','plugin.php','5','25','Collection','Admin','add','1') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: INSERT INTO `ur7_plugin_res` (`path`,`js`,`css`,`acname`,`pid`) VALUES ('Collection/Admin/index','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_LIST','47'),('Collection/Admin/add','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_ADD','47') [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0040s ]
+SQL: 
+SET FOREIGN_KEY_CHECKS=0 [ RunTime:0.0000s ]
+SQL: 
+DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0010s ]
+SQL: 
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 [ RunTime:0.1170s ]
+
+[ 2015-04-15T14:49:32+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:49:34+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 47 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 47 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 47 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0020s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+
+[ 2015-04-15T14:50:09+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 47 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 47 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 47 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0010s ]
+
+[ 2015-04-15T14:50:43+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 47 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 47 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 47 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+
+[ 2015-04-15T14:50:55+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 47 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0080s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 47 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0100s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 47 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0000s ]
+
+[ 2015-04-15T14:51:22+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 47 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 47 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0040s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 47 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = 25  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_controller` WHERE `id` = 25 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `gid` = 5  [ RunTime:0.0010s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0620s ]
+
+[ 2015-04-15T14:51:22+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:52:09+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0440s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ur7_admin_auth_controller` (`title`,`cname`,`gid`,`cls`,`app`,`appname`) VALUES ('PLG_COLLECTION_MODULE','Admin','5','icon-resize-full','plugin.php','Collection') [ RunTime:0.0190s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','2','5','26','Collection','Admin','index','1') [ RunTime:0.0160s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','2','5','26','Collection','Admin','add','1') [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ur7_plugin_res` (`path`,`js`,`css`,`acname`,`pid`) VALUES ('Collection/Admin/index','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_LIST','48'),('Collection/Admin/add','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_ADD','48') [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: 
+SET FOREIGN_KEY_CHECKS=0 [ RunTime:0.0010s ]
+SQL: 
+DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0000s ]
+SQL: 
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 [ RunTime:0.0870s ]
+
+[ 2015-04-15T14:52:10+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:52:12+08:00 ] 127.0.0.1 /DreamCMS/Admin.php?s=Plugin/Plugin/uninstall&file=Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'uninstall' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `filetitle` = 'Collection' LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `ur7_plugin` WHERE `id` = 48 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: DELETE FROM `ur7_plugin_res` WHERE `pid` = 48 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0060s ]
+SQL: DELETE FROM `ur7_hook_list` WHERE `pid` = 48 [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection'  [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_action` WHERE `app` = 2 AND `group` = 'Collection' [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `cid` = 26  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `id` = 26 LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `ur7_admin_auth_controller` WHERE `id` = 26 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `gid` = 5  [ RunTime:0.0000s ]
+SQL: DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0510s ]
+
+[ 2015-04-15T14:52:13+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:56:25+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/install/plugin/Collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'install' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `ur7_plugin` (`name`,`desc`,`filetitle`) VALUES ('PLG_COLLECTION_NAME','PLG_COLLECTION_DESC','Collection') [ RunTime:0.0470s ]
+NOTIC: [2048] Declaration of Model\Adomodel\AdminAuthControllerModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\AdminAuthControllerModel.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_controller` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `ur7_admin_auth_controller` (`title`,`cname`,`gid`,`cls`,`app`,`appname`) VALUES ('PLG_COLLECTION_MODULE','Admin','5','icon-resize-full','plugin.php','Collection') [ RunTime:0.0200s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_LIST','2','5','27','Collection','Admin','index','1') [ RunTime:0.0240s ]
+SQL: SELECT * FROM `ur7_admin_auth_controller` WHERE `title` = 'PLG_COLLECTION_MODULE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `ur7_admin_auth_action` (`title`,`app`,`gid`,`cid`,`group`,`controller`,`action`,`isshow`) VALUES ('PLG_COLLECTION_ADD','2','5','27','Collection','Admin','add','1') [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0060s ]
+SQL: INSERT INTO `ur7_plugin_res` (`path`,`js`,`css`,`acname`,`pid`) VALUES ('Collection/Admin/index','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_LIST','49'),('Collection/Admin/add','fuelux.wizard.min.js,json2.js','','PLG_COLLECTION_ADD','49') [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: 
+SET FOREIGN_KEY_CHECKS=0 [ RunTime:0.0000s ]
+SQL: 
+DROP TABLE IF EXISTS `ur7_plg_collection` [ RunTime:0.0010s ]
+SQL: 
+CREATE TABLE `ur7_plg_collection` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `langcode` varchar(50) NOT NULL DEFAULT 'utf-8' COMMENT '目标站编码',
+  `title` varchar(100) NOT NULL,
+  `cate` varchar(50) NOT NULL,
+  `listrule` text NOT NULL,
+  `pagerule` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 [ RunTime:0.0660s ]
+
+[ 2015-04-15T14:56:26+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T14:56:28+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T14:56:56+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 27  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 27  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 27 AND `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 27 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T15:08:08+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T15:47:24+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T15:47:28+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T15:51:47+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T15:51:55+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-04-15T15:52:10+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 27  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 27  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 27 AND `type` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 27 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T15:52:28+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/pluginlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+NOTIC: [8] Undefined variable: p_arr D:\xampp\htdocs\DreamCMS\Template\Admin\bootstrap\Plugin\Plugin\pluginlist.php 第 46 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-04-15T15:52:35+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 335 行.
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-04-15T15:56:47+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-04-15T15:56:51+08:00 ] 127.0.0.1 /DreamCMS/Admin.php/Plugin/Plugin/getconfigure.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\FlChkLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of Auth\Controller\AuthbaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') D:\xampp\htdocs\DreamCMS\Admin\Auth\Controller\AuthbaseController.class.php 第 8 行.
+NOTIC: [8] Use of undefined constant TMPL_PATH - assumed 'TMPL_PATH' D:\xampp\htdocs\DreamCMS\Admin\Common\Controller\AdminbaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `ur7_language` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_admin_auth_group` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ur7_admin_auth_action` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_admin_auth_action` WHERE `group` = 'Plugin' AND `controller` = 'Plugin' AND `action` = 'getconfigure' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Model\Adomodel\PluginModel::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\DreamCMS\Model\Adomodel\PluginModel.class.php 第 69 行.
+SQL: SHOW COLUMNS FROM `ur7_plugin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ur7_plugin` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ur7_plugin_res` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 1 AND `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ur7_plugin_res` WHERE `type` = 2 AND `pid` = 49  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 343 行.
+SQL: SHOW COLUMNS FROM `ur7_hook_list` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 1  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\DreamCMS\Admin\Plugin\Controller\PluginController.class.php 第 351 行.
+SQL: SELECT * FROM `ur7_hook_list` WHERE `pid` = 49 AND `type` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

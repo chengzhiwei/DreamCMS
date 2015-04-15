@@ -68,5 +68,7 @@ class AdminAuthControllerModel extends \Think\Model\AdvModel
     {
         return $this->where(array('title' => $title))->find();
     }
+    
+   
 
 }

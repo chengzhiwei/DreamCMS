@@ -97,7 +97,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
                     {
                         //根据langconf 查询 
                         $groupdata = array(
-                            'title' => $menu_group, 'groupname' => $plugin, 'app' => 'plugin.php',
+                            'title' => $menu_group, 'groupname' => $plugin, 'app' => \Model\Enum\AppEnum::PLUGIN,
                         );
                         $b = $AdminAuthGroup->addgroup($groupdata);
                         if ($b)
@@ -132,7 +132,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
 
                 //添加Action
                 $action_data = array(
-                    'title' => (string) $op->name, 'app' => 'plugin.php', 'gid' => $menu_gid, 'cid' => $menu_mid,
+                    'title' => (string) $op->name, 'app' => \Model\Enum\AppEnum::PLUGIN, 'gid' => $menu_gid, 'cid' => $menu_mid,
                     'group' => $plugin, 'controller' => $control, 'action' => $action,
                 );
                 if (isset($op->ismenu))
@@ -150,7 +150,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 {
                     $plugin_data_list[$k] = array(
                         'path' => $plugin . '/' . $path,
-                        'js' => $op->res->js, 'css' => $op->res->css,
+                        'js' => (string) $op->res->js, 'css' => (string) $op->res->css,
                         'acname' => (string) $op->name, 'pid' => $pluginid,
                     );
                     $k++;
@@ -167,7 +167,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
                 {
                     $plugin_data_list[$k] = array(
                         'path' => $plugin . '/' . $path,
-                        'js' => $op->js, 'css' => $op->css,
+                        'js' => (string) $op->js, 'css' => (string) $op->css,
                         'acname' => (string) $op->name, 'pid' => $pluginid,
                     );
                     $k++;
@@ -177,7 +177,7 @@ class PluginController extends \Auth\Controller\AuthbaseController
 
         //写入插件资源 
         $PluginRes = DD('PluginRes');
-        $b = $PluginRes->addlist();
+        $b = $PluginRes->addlist($plugin_data_list);
         //写入钩子
         $hooklistdata = array();
         if (isset($pluginfo->vhooks->vhook))//视图钩子
@@ -226,8 +226,6 @@ class PluginController extends \Auth\Controller\AuthbaseController
     public function uninstall()
     {
         $file = I('get.file');
-        echo $file;
-        die();
         $pluginmod = DD('Plugin');
         $plugininfo = $pluginmod->findByPlginFile($file);
         $pid = $plugininfo['id'];
@@ -237,12 +235,33 @@ class PluginController extends \Auth\Controller\AuthbaseController
         //删除插件资源表
         $pluginresmod = DD('PluginRes');
         $delPluginRes = $pluginresmod->delbypid($pid);
+
         //删除插件钩子表
         $hooklistmod = DD('HookList');
         $delPluginHook = $hooklistmod->delbypid($pid);
-        /*删除后台权限菜单表*/
+        /* 删除后台权限菜单表 */
+        $ActionMod = DD('AdminAuthAction');
+        //查询cid
+        $actions = $ActionMod->selPlgByGroup($file);
+        $cid = $actions[0]['cid'];
         //删除权限菜单action表
-        $ActionMod=DD('AdminAuthAction');
+        $ActionMod->delPlgByGroup($file);
+        //判断该模块下还有没有其它菜单 没有删除模块导航
+        $CidActions = $ActionMod->selByCid($cid);
+        if (!$CidActions && $cid)
+        {
+            //删除模块菜单Controller
+            $ControllerMod = DD('AdminAuthController');
+            $controlInfo = $ControllerMod->find($cid);
+            $ControllerMod->delById($cid);
+            $Controllers = $ControllerMod->selbygid($controlInfo['gid']);
+            if (!$Controllers && $controlInfo['gid'])
+            {
+                //删除分组
+                $GroupMod = DD('AdminAuthGroup');
+                $GroupMod->delById($controlInfo['gid']);
+            }
+        }
         if ($delPlugin !== false && $delPluginHook !== false && $delPluginRes !== false)
         {
             $install = C('PLG_APP_NAME') . '/' . $file . '/uninstall.sql';

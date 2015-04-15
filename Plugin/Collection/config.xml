@@ -8,7 +8,9 @@
         <operation>
             <path>Admin/index</path>
             <name>PLG_COLLECTION_LIST</name>
+            <!--menu_group如果是数组 必须是官方系统的分组编号 不能是其他插件分组的编号-->
             <menu_group>5</menu_group>
+            <!--menu_module 不能放到已存在的分组 即不能是数字-->
             <menu_module>PLG_COLLECTION_MODULE</menu_module>
             <res>
                 <js>fuelux.wizard.min.js,json2.js</js>
@@ -18,12 +20,12 @@
         </operation>
         
         <operation>
-            <path>Admin/index</path>
+            <path>Admin/add</path>
             <name>PLG_COLLECTION_ADD</name>
             <menu_group>5</menu_group>
             <menu_module>PLG_COLLECTION_MODULE</menu_module>
             <res>
-                <js></js>
+                <js>fuelux.wizard.min.js,json2.js</js>
                 <css></css>
             </res>
             <ismenu>1</ismenu>

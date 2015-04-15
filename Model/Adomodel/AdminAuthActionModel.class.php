@@ -105,7 +105,7 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
     public function delPlgByGroup($group)
     {
         $condition = array(
-            'app' => \Model\Enum\AppEnum::PLUGIN, //1 为插件
+            'app' => \Model\Enum\AppEnum::PLUGIN,
             'group' => $group,
         );
         return $this->where($condition)->delete();
@@ -121,6 +121,17 @@ class AdminAuthActionModel extends \Think\Model\AdvModel
             'app' => \Model\Enum\AppEnum::PLUGIN,
             'group' => $group,
         );
+        return $this->where($condition)->select();
+    }
+
+    /**
+     * 根据CID 查询
+     * @param int $Cid
+     * @return array
+     */
+    public function selByCidApp($cid)
+    {
+        $condition = array('cid' => $cid);
         return $this->where($condition)->select();
     }
 
